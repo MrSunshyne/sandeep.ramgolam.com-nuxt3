@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      // other options...
+      "resolveJsonModule": true,
+      "types": ["node"],
+      "lib": ["es2020", "dom"],
+      "module": "commonjs"
+
+    }
+  }
+  

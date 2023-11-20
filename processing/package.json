@@ -1,0 +1,21 @@
+{
+  "name": "processing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bun run convert.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.9.2"
+  },
+  "dependencies": {
+    "sanitize-html": "^2.11.0",
+    "turndown": "^7.1.2",
+    "yaml": "^2.3.4"
+  }
+}
