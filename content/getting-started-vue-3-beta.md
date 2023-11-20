@@ -4,7 +4,7 @@ uuid: 380cc27d-038e-4a4f-9110-a4b553e03ef4
 title: Getting Started with Vue 3 Beta
 slug: getting-started-vue-3-beta
 comment_id: 5e99c6054abd5d3cdfea424b
-feature_image: __GHOST_URL__/content/images/2023/02/vue-3-beta-getting-started-1000w.jpg
+feature_image: /content/images/2023/02/vue-3-beta-getting-started-1000w.jpg
 featured: 1
 type: post
 status: published
@@ -54,7 +54,7 @@ Next run `yarn` to install the dependencies.
 
 You may now execute `npm run dev` to have a development environment up and running !
 
-![](__GHOST_URL__/content/images/2020/04/Screenshot_20200417_192250.png)
+![](/content/images/2020/04/Screenshot_20200417_192250.png)
 
 ## Notes
 

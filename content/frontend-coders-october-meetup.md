@@ -4,7 +4,7 @@ uuid: 27c1325a-cf6e-4408-b4cf-02ac98ffec56
 title: Front-end Coders October Meetup
 slug: frontend-coders-october-meetup
 comment_id: 5f81d9dc9adbe99a02e37c0d
-feature_image: __GHOST_URL__/content/images/2020/10/meetup-frontend-cover-october-2020.jpg
+feature_image: /content/images/2020/10/meetup-frontend-cover-october-2020.jpg
 featured: 1
 type: post
 status: published
@@ -30,7 +30,7 @@ This meetup was scheduled since two weeks and we had 15 RSVPs on the meetup dot 
 
 I arrived on location an hour earlier because there was no traffic in Port Louis. I met Jules and Shailen at the Bocasay office and they had very generously offered coffee and croissants for all those attending !
 
-![](__GHOST_URL__/content/images/2020/10/meetup-frontend-croissant.jpg)
+![](/content/images/2020/10/meetup-frontend-croissant.jpg)
 
 Pre-meetup croissants
 
@@ -43,7 +43,7 @@ At around 10am we kicked off the meetup with a round-table introduction of all t
 
 Then the floor was offered to Cedric who had a very interesting monologue about "**Developers are not just Code Writers**". This session turned into a discussion where everyone pitched in their opinions and ideas.
 
-![](__GHOST_URL__/content/images/2020/10/meetup-frontend-cedric-session-1.jpg)
+![](/content/images/2020/10/meetup-frontend-cedric-session-1.jpg)
 
 The key take away was "Do not deploy on a friday afternoon"
 
@@ -51,7 +51,7 @@ The key take away was "Do not deploy on a friday afternoon"
 
 The second session was by Jules who did an awesome presentation about "Reactivity Everywhere". This session covered the history of the concept of reactivity, and a hint about all the major frameworks that offer reactivity today.
 
-![](__GHOST_URL__/content/images/2020/10/photo_2020-10-10_20-47-44.jpg)
+![](/content/images/2020/10/photo_2020-10-10_20-47-44.jpg)
 
 Reactivity in Google Sheets
 

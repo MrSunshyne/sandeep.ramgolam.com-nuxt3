@@ -4,7 +4,7 @@ uuid: e2ed85bf-d7e9-4a2f-b726-3db00e095472
 title: Download and convert Youtube videos for FREE using youtube-dl
 slug: youtube-download
 comment_id: 5e087e670b8a5707aaf98b53
-feature_image: __GHOST_URL__/content/images/2020/01/youtube-download-free.jpg
+feature_image: /content/images/2020/01/youtube-download-free.jpg
 featured: 0
 type: post
 status: published

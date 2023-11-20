@@ -4,7 +4,7 @@ uuid: e079a24a-e8a3-41b5-8e4e-d8e5bfee5115
 title: Front-end Coders Meetup - May 2022
 slug: front-end-coders-meetup-may-2022
 comment_id: 6289d539af837023bc980a3d
-feature_image: __GHOST_URL__/content/images/2022/05/may-2022.jpg
+feature_image: /content/images/2022/05/may-2022.jpg
 featured: 1
 type: post
 status: published
@@ -30,7 +30,7 @@ Two in a row! We have a streak going on now as far as organizing front-end meetu
 
 After spending the previous night working on my two presentations, [powered by sli.dev](https://sli.dev/), I was greeted with a nice rainbow morning view on Saturday 21st of May at home.
 
-![](__GHOST_URL__/content/images/2022/05/image-1.png)
+![](/content/images/2022/05/image-1.png)
 
 Morning of May 21st
 
@@ -47,7 +47,7 @@ Everyone was seated and ready to go, and to start things I made a quick intro ab
 
 ## Topic 1: Keys in React - Saamiyah Peerun
 
-![](__GHOST_URL__/content/images/2022/05/image-3.png)
+![](/content/images/2022/05/image-3.png)
 
 She spoke about Keys in react, and how their use case go far beyond rendering lists. There were very interesting demos and explanations around some common bugs that could occur when keys are misused. I thought this was very insightful and most of the recommended patterns in this session also apply to other frameworks such as VueJS.
 
@@ -55,7 +55,7 @@ She spoke about Keys in react, and how their use case go far beyond rendering li
 
 ## Topic 2: Memoisation in React - Zeeshaan Maudarbocus
 
-![](__GHOST_URL__/content/images/2022/05/image-5.png)
+![](/content/images/2022/05/image-5.png)
 
 Zeeshaan Maudarbocus - Demoing Memoisation in REACT
 
@@ -73,7 +73,7 @@ One of the slides read as follows :
 
 One of our speakers had a personal issue and couldn't attend. We wish him a speedy recovery. He informed me a few days before the meetup and [Ish](https://twitter.com/IshSookun) was kind enough to do a presentation on short notice.
 
-![](__GHOST_URL__/content/images/2022/05/image-8.png)
+![](/content/images/2022/05/image-8.png)
 
 Ish Sookin - demonstrating NGINX configuration for SPAs
 
@@ -87,13 +87,13 @@ There were a few questions about tweaking the NGINX conf and also about how to h
 
 After 3 presentations lunch arrived ! Le Wagon made arrangements to get pizza's from Yo L'artisan, which coincidentally is one of my favorite pizza places!
 
-![](__GHOST_URL__/content/images/2022/05/image-6.png)
+![](/content/images/2022/05/image-6.png)
 
 Lunch time!
 
 We had a 30 minutes break for lunch and networking. I spoke to a few people, some who had just participated in the recent WebCup and some who attended the front-end coders meetup for the first time. The atmosphere was buzzing with lots of tech talks, which was very nice to see. That's the real goal of meetups ;)
 
-![](__GHOST_URL__/content/images/2022/05/image-10.png)
+![](/content/images/2022/05/image-10.png)
 
 ## Topic 4 : ViteJS - Sandeep Ramgolam
 
@@ -101,7 +101,7 @@ I clearly wasn't having a great hair-day. :|
 
 I presented the last topic of the day, which was ViteJS and shared my experience of working with it. We had to go down memory lane, explaining how the web works, how bundlers came into existence and why they seemed to be no longer needed.
 
-![](__GHOST_URL__/content/images/2022/05/image-12.png)
+![](/content/images/2022/05/image-12.png)
 
 Sandeep Ramgolam - Speaking on ViteJS 
 
@@ -123,7 +123,7 @@ While packing up we were discussing continuing the networking sessions and I spo
 
 Special thought for our friend Joshua who managed to make it to the parking of LeWagon but then had to go back. Next time !
 
-![](__GHOST_URL__/content/images/2022/05/image-14.png)
+![](/content/images/2022/05/image-14.png)
 
 Front-end Coders Meetup - Group Photo (MASKS ON)
 

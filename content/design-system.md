@@ -4,7 +4,7 @@ uuid: 6e939579-6990-4aee-ace0-30a6c57d6b1b
 title: How to build a Design System
 slug: design-system
 comment_id: 5e0db519febc7b0b980b4f3d
-feature_image: __GHOST_URL__/content/images/2020/01/design-system.jpg
+feature_image: /content/images/2020/01/design-system.jpg
 featured: 1
 type: post
 status: published

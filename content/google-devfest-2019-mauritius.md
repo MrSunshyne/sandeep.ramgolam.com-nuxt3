@@ -4,7 +4,7 @@ uuid: 0074e858-9840-4dca-b7c1-4ba5daea13de
 title: Google DevFest 2019 Mauritius
 slug: google-devfest-2019-mauritius
 comment_id: 5dce8a022ed73480cdcad7df
-feature_image: __GHOST_URL__/content/images/2019/11/google-devfest-mauritius.jpg
+feature_image: /content/images/2019/11/google-devfest-mauritius.jpg
 featured: 1
 type: post
 status: published
@@ -33,21 +33,21 @@ This article is a summary of my experience at the DevFest and it’s special for
 
 Registration started early morning with beautiful weather in Pierre Fond.
 
-![](__GHOST_URL__/content/images/2019/11/devfest-venue-morning.jpg)
+![](/content/images/2019/11/devfest-venue-morning.jpg)
 
 After the nice breakfast and some quick phone calls, everybody gathered in the amphitheater where [JoKi](https://twitter.com/JKirstaetter) officially kicked off the event in a room packed with technology enthusiasts !
 
-![](__GHOST_URL__/content/images/2019/11/devfest-2019-launch-1.jpg)
+![](/content/images/2019/11/devfest-2019-launch-1.jpg)
 
 ## Session 1. 10am
 
 It was time for the first session and [Pritvi](https://twitter.com/zcoldplayer) spoke about HacktoberFest with a little history followed by the hows and whys. The audience was in awe of his unique style and top artistic presentation slides.
 
-![](__GHOST_URL__/content/images/2019/11/hacktober-fest-presentation.jpg)
+![](/content/images/2019/11/hacktober-fest-presentation.jpg)
 
 He encouraged all attendees to contribute to open source through GitHub and send pull requests.
 
-![](__GHOST_URL__/content/images/2019/11/hacktoberfest-crowd.jpg)
+![](/content/images/2019/11/hacktoberfest-crowd.jpg)
 
 ## Session 2. 11am
 
@@ -75,7 +75,7 @@ lit-html
 
 Mike started by explaining writing for the web isn’t that simple enough. The complexity increased many folds over the years.
 
-![](__GHOST_URL__/content/images/2019/11/mike-geyser-explaining-the-web.jpg)
+![](/content/images/2019/11/mike-geyser-explaining-the-web.jpg)
 
 > “This is not the web that I fell in love with” - Mike Geyser
 
@@ -87,7 +87,7 @@ The usage of code snippets to aid with live coding was a nice touch.
 
 Time for the group photo & lunch !
 
-![](__GHOST_URL__/content/images/2019/11/dev-fest-mauritius.jpg)
+![](/content/images/2019/11/dev-fest-mauritius.jpg)
 
 ## Session 4. 13:30
 
@@ -97,7 +97,7 @@ My friends and I got a little early in the room and settled down waiting for the
 
 The speakers introduced themselves as two freelancers and carried on with the prez in a very relaxed style.
 
-![](__GHOST_URL__/content/images/2019/11/vue-firebase-vidush-priyesh.jpg)
+![](/content/images/2019/11/vue-firebase-vidush-priyesh.jpg)
 
 [Vidush](https://twitter.com/VHNamah) & [Priyesh](https://twitter.com/BaphometPrichi) explained their choice of tech, i.e vue + firebase.
 
@@ -111,7 +111,7 @@ They showed how to create a collection on firebase and how to deploy the app on 
 
 The session was very interesting and afterwards I had a chat about issues I encountered with Firebase auth mixed with Vue-Router.
 
-![](__GHOST_URL__/content/images/2019/11/cake-devfest.jpg)
+![](/content/images/2019/11/cake-devfest.jpg)
 
 ## Session 5 14.30
 
@@ -119,7 +119,7 @@ Go : Turbocharge your programs
 
 By this time most of the students were mostly outside eating cake and talking to each other. There was a great dessert table set for everyone after all.
 
-![](__GHOST_URL__/content/images/2019/11/yusuf-jules-lsldigital-devfest.jpg)
+![](/content/images/2019/11/yusuf-jules-lsldigital-devfest.jpg)
 
 [Yusuf](https://twitter.com/__fluxy__) and Jules from LSL digital spoke about why they picked go and proceeded with a demo of what language can do. The demo showed how easy it was to build a websocket powered chat application with minimal tooling.
 
@@ -135,13 +135,13 @@ We set out on an ambitious journey to livecode a meme generator, which was a bum
 
 The session was full of useful information and the Q & A that followed was very lively and informative.
 
-![](__GHOST_URL__/content/images/2019/11/t-rex-devfest.jpg)
+![](/content/images/2019/11/t-rex-devfest.jpg)
 
 ## Closing
 
 Immediately after this session, it was time to wrap up the event and joki used the Google photo album as background during the closing session as he thanked all the attendees, sponsors and helpers.
 
-![](__GHOST_URL__/content/images/2019/11/devfest-mauritius-2019-closing.jpg)
+![](/content/images/2019/11/devfest-mauritius-2019-closing.jpg)
 
 He encouraged attendees to shout out the event to more people and write blog posts about it.
 

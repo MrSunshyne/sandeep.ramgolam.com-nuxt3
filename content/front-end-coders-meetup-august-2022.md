@@ -4,7 +4,7 @@ uuid: d6ea1e24-d35e-40fe-a8bf-987432dcdc61
 title: Front-end Coders Meetup - August 2022
 slug: front-end-coders-meetup-august-2022
 comment_id: 6301f57538cabd83900c973d
-feature_image: __GHOST_URL__/content/images/2022/08/august-2022.jpg
+feature_image: /content/images/2022/08/august-2022.jpg
 featured: 1
 type: post
 status: published
@@ -32,7 +32,7 @@ The 5th frontend meetup of the year was structured a little differently from the
 
 As usual, I kicked off the session by introducing who are the frontend coders, why we do meetups, and a few updates. We have a new homepage on the website, [we have published photos](https://frontend.mu/meetup/38) from previous meetups on the website (thanks [@mgjules](https://github.com/mgjules) for the awesome [photo-sync project](https://github.com/Front-End-Coders-Mauritius/google-photos-sync))
 
-![](__GHOST_URL__/content/images/2022/08/image-1.png)
+![](/content/images/2022/08/image-1.png)
 
 I came prepared with my custom t-shirt
 
@@ -51,7 +51,7 @@ I came prepared with my custom t-shirt
 
 Before starting with the first presentation, The MD of ACENSI Mauritius Reena Seetohul introduced her company and her team and gave an overview of what they do. Of course, they're recruiting if you're interested!
 
-![](__GHOST_URL__/content/images/2022/08/image-3.png)
+![](/content/images/2022/08/image-3.png)
 
 ## Sandeep Ramgolam - Bun a fast all-in-one JavaScript runtime
 
@@ -59,7 +59,7 @@ I spoke about the new JavaScript all-in-one runtime name bun. I introduced the p
 
 ## Mahima Ramgolam - Sli.dev - Presentation tool for developers
 
-![](__GHOST_URL__/content/images/2022/08/image-5.png)
+![](/content/images/2022/08/image-5.png)
 
 Mahima spoke about sli.dev which is a very simple but powerful tool for creating presentations using Markdown. She demonstrated how to create slides, use themes, format the slides and even cool features like having Video or Annotation during a presentation.
 
@@ -67,7 +67,7 @@ Mahima spoke about sli.dev which is a very simple but powerful tool for creating
 
 Arwin spoke about the what and why's of WebAssembly, pointing out the useful use cases with a couple of demos. The first demo was a rust program that compiled to web assembly, then was called using JavaScript in a webpage.
 
-![](__GHOST_URL__/content/images/2022/08/image-7.png)
+![](/content/images/2022/08/image-7.png)
 
 It was very enlightening to see how the process actually works and “what talks to what”. He then ran a video converter, using ffmpeg, in-browser to convert a file from video to GIF.
 
@@ -75,7 +75,7 @@ It was very enlightening to see how the process actually works and “what talks
 
 The next presentation was about a technique called Orthomosaic, nowadays known as Photogrammetry. Jordan walked use through the history of this process dating back to da Vinci time. He showed how a capture of real life objects could be done using a drone and rendered in a web friendly format.
 
-![](__GHOST_URL__/content/images/2022/08/image-9.png)
+![](/content/images/2022/08/image-9.png)
 
 He loaded the capture of a construction site being built onto a webpage that we could interact with in 3d. As he described it, art met science.
 
@@ -83,23 +83,23 @@ He loaded the capture of a construction site being built onto a webpage that we 
 
 Percy showcased Splade, a way to write SPAs but without really writing any JavaScript. It uses blade files and Vue renderless components to tie things together. This is targeted at backend developers who want to stay in their blade environment but still be able to add interactions to a web page, like modals, toasts, show hide panels.
 
-![](__GHOST_URL__/content/images/2022/08/image-11.png)
+![](/content/images/2022/08/image-11.png)
 
 ## Lunch
 
 We had amazing pizzas sponsored by Acensi from L'ardoise Resto. Everyone enjoyed it, and we had a little networking session during the lunch half hour.
 
-![](__GHOST_URL__/content/images/2022/08/image-13.png)
+![](/content/images/2022/08/image-13.png)
 
-![](__GHOST_URL__/content/images/2022/08/image-14.png)
+![](/content/images/2022/08/image-14.png)
 
 Since Jordan was present with his drone, of course we went for drone-group-photo with the beautiful scenery.
 
-![](__GHOST_URL__/content/images/2022/08/image-16.png)
+![](/content/images/2022/08/image-16.png)
 
 ## Abdur-Rahmaan Janhangeer - Contracting: Sharpening the edge to deliver
 
-![](__GHOST_URL__/content/images/2022/08/image-24.png)
+![](/content/images/2022/08/image-24.png)
 
 After exploring new techs for a few hours, it was time to get back down to earth. Abur-Rahmaan helped everyone understand when should someone experiment with something new and when they should pick stable technologies to meet client expectations, especially for contracting or freelancing works. Replying to an audience member question, he said instead of looking at GitHub stars, GitHub forks are a better metric to know if that project can be considered for use.
 
@@ -107,7 +107,7 @@ After exploring new techs for a few hours, it was time to get back down to earth
 
 In his unique ways of explaining things and his vast experience with programming languages, Renghen gave us a brief history of C and C++, before coming to Carbon Lang,  a new languages which aims to have bidirectional interoperability with C++.
 
-![](__GHOST_URL__/content/images/2022/08/image-22.png)
+![](/content/images/2022/08/image-22.png)
 
 It's typesafe to say he wasn't fond of the new language and advised the attendees to follow from afar.
 
@@ -115,7 +115,7 @@ It's typesafe to say he wasn't fond of the new language and advised the attendee
 
 Mike went last this time and he show-cased QUITE THE LIST by demo'ing his newly built portfolio over at mgjules.dev
 
-![](__GHOST_URL__/content/images/2022/08/image-20.png)
+![](/content/images/2022/08/image-20.png)
 
 *   UnoCSS
 *   Astro
@@ -127,7 +127,7 @@ Mike went last this time and he show-cased QUITE THE LIST by demo'ing his newly 
 
 There was a little hiccup when he tried to connect his laptop and of course, windows decided to update. But he patched through nevertheless.
 
-![](__GHOST_URL__/content/images/2022/08/image-18.png)
+![](/content/images/2022/08/image-18.png)
 
 ## Post Meetup Chat
 
@@ -142,30 +142,30 @@ Everyone hang out after the meetup for around half an hour, and we caught up wit
 
 ## Some fun snaps
 
-![](__GHOST_URL__/content/images/2022/08/image-26.png)
+![](/content/images/2022/08/image-26.png)
 
 Prepping for the group photo
 
-![](__GHOST_URL__/content/images/2022/08/image-28.png)
+![](/content/images/2022/08/image-28.png)
 
 Attentive attendees
 
-![](__GHOST_URL__/content/images/2022/08/image-30.png)
+![](/content/images/2022/08/image-30.png)
 
 Happy Attendees
 
-![](__GHOST_URL__/content/images/2022/08/image-32.png)
+![](/content/images/2022/08/image-32.png)
 
 Flexing the new website landing page
 
-![](__GHOST_URL__/content/images/2022/08/image-34.png)
+![](/content/images/2022/08/image-34.png)
 
 Attendees Chilling
 
-![](__GHOST_URL__/content/images/2022/08/image-36.png)
+![](/content/images/2022/08/image-36.png)
 
 PIZZA
 
-![](__GHOST_URL__/content/images/2022/08/image-38.png)
+![](/content/images/2022/08/image-38.png)
 
 Attentive attendees

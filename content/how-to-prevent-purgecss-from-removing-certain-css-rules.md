@@ -4,7 +4,7 @@ uuid: 3bfb023f-4c63-4908-a347-98d4d06fcb55
 title: How to prevent PurgeCSS from removing certain CSS rules
 slug: how-to-prevent-purgecss-from-removing-certain-css-rules
 comment_id: 5dd94a680fc4877c65e36588
-feature_image: __GHOST_URL__/content/images/2019/11/purge-css-exclude-1.jpg
+feature_image: /content/images/2019/11/purge-css-exclude-1.jpg
 featured: 1
 type: post
 status: published

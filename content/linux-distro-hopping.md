@@ -4,7 +4,7 @@ uuid: 12cb33be-0896-4c36-9e95-1fb477a6bc2e
 title: Linux distro hopping
 slug: linux-distro-hopping
 comment_id: 5eaec344173fadc73adf1a7b
-feature_image: __GHOST_URL__/content/images/2020/05/linux-distro-hopping-1.jpg
+feature_image: /content/images/2020/05/linux-distro-hopping-1.jpg
 featured: 1
 type: post
 status: published
@@ -65,7 +65,7 @@ Immediately after that I went for a Manjaro KDE and I've been hooked ever since.
 
 Then I [switched to OpenSUSE tumbleweed](https://twitter.com/__Sun__/status/1145006304500617217?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1145006304500617217&ref_url=http%3A%2F%2Flocalhost%3A3000%2Fblog%2Flinux-distro-hopping) because I wanted a rock solid distro that I could trust. I went for the KDE edition of course and I was pretty happy with it.
 
-![](__GHOST_URL__/content/images/2020/05/sweet-kde-desktop-linux.jpg)
+![](/content/images/2020/05/sweet-kde-desktop-linux.jpg)
 
 Sweet KDE Desktop
 
@@ -93,7 +93,7 @@ I will admit at first I thought it was based on Debian, I came to know later tha
 
 I was able to customize KDE as much as I needed. I loved the "Steam" theme on KDE.
 
-![](__GHOST_URL__/content/images/2020/05/kde-neo-steam-linux-desktop.jpg)
+![](/content/images/2020/05/kde-neo-steam-linux-desktop.jpg)
 
 KDE Neon Steam Theme
 
@@ -109,7 +109,7 @@ I was sold. I had to decide if i would install it on my laptop or on my main PC,
 
 The install process was the best I've used in years. This time I finally decided to have a separate `home` partition in case I want to change distros again.
 
-![](__GHOST_URL__/content/images/2020/05/popos-linux-desktop-gnome.jpg)
+![](/content/images/2020/05/popos-linux-desktop-gnome.jpg)
 
 Pop!\_OS Linux Desktop
 

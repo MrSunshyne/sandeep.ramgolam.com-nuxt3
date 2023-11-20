@@ -4,7 +4,7 @@ uuid: 6b5d7a45-0d1c-4431-8b8d-da4ddb021810
 title: Create a reveal effect using CSS Variables & VueJS
 slug: create-a-reveal-effect-using-css-variables-vuejs
 comment_id: 5e05e7ea0b8a5707aaf989d0
-feature_image: __GHOST_URL__/content/images/2019/12/css-reveal-effect.jpg
+feature_image: /content/images/2019/12/css-reveal-effect.jpg
 featured: 1
 type: post
 status: published

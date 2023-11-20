@@ -4,7 +4,7 @@ uuid: 9fa7e834-e6dc-4477-9487-929264abffe8
 title: Covid19 is real
 slug: covid19-is-real
 comment_id: 5e81bf28463a094592d44107
-feature_image: __GHOST_URL__/content/images/2020/03/covid19-is-real-1.jpg
+feature_image: /content/images/2020/03/covid19-is-real-1.jpg
 featured: 1
 type: post
 status: published

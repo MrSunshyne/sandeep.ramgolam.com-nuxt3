@@ -4,7 +4,7 @@ uuid: e456b133-dcd1-4fed-b26c-6acc817f91c8
 title: What are CSS Variables?
 slug: css-variables
 comment_id: 5e07259d0b8a5707aaf98a45
-feature_image: __GHOST_URL__/content/images/2019/12/css-variables.jpg
+feature_image: /content/images/2019/12/css-variables.jpg
 featured: 1
 type: post
 status: published
@@ -114,7 +114,7 @@ This technique delegates all the rendering responsibilities to CSS and lets you 
 
 [Use them](https://caniuse.com/#feat=css-variables) if you don't need to support IE11. If you do need to support IE11, you have my sympathy.
 
-![](__GHOST_URL__/content/images/2019/12/Screenshot-2019-12-30-at-15.25.04.jpg)
+![](/content/images/2019/12/Screenshot-2019-12-30-at-15.25.04.jpg)
 
 CSS Variable browser support. Screenshot taken on the 30th December 2019
 

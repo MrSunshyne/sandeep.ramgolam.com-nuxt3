@@ -4,7 +4,7 @@ uuid: ed79de1b-487d-46b4-b49c-d8d811c9f4fd
 title: "Go: GDG Mauritius Meetup"
 slug: go-gdg-meetup
 comment_id: 5dfdc6d5b2e578c4a2eed7fc
-feature_image: __GHOST_URL__/content/images/2019/12/gdg-go-meetup-mauritius.jpg
+feature_image: /content/images/2019/12/gdg-go-meetup-mauritius.jpg
 featured: 1
 type: post
 status: published
@@ -49,7 +49,7 @@ There was a short introduction about [Go](https://golang.org/), and promises of 
 
 Grant, a fellow Mauritian gopher who doesn't exist on the internet, intervened to share his love for Go and explain a few concepts. The intervention was interactive and very well received by the audience.
 
-![](__GHOST_URL__/content/images/2019/12/IMG_1637.jpg)
+![](/content/images/2019/12/IMG_1637.jpg)
 
 It was already time for a short break/networking session which lasted around 15 minutes.
 
@@ -67,7 +67,7 @@ A random conversation emerged when Natalie mentioned escaping SQL statements to 
 
 After her presentation there was a few questions from the audience. I naturally asked about applying the security recommendation to frontend stacks.
 
-![](__GHOST_URL__/content/images/2019/12/IMG_1654.jpg)
+![](/content/images/2019/12/IMG_1654.jpg)
 
 Natalie summing up the dependencies checklist of her talk
 
@@ -93,7 +93,7 @@ When we resumed, Mr Daniel spoke about the startup atmosphere in Berlin. He shar
 
 A practical workshop session followed where audience members who brought laptops were invited to install go and have a hands on feel of the language while being assisted by member of Gophers.mu
 
-![](__GHOST_URL__/content/images/2019/12/IMG_1656.jpg)
+![](/content/images/2019/12/IMG_1656.jpg)
 
 Gopher.mu helping the workshop attendees
 

@@ -4,7 +4,7 @@ uuid: d5b3d01b-2db6-42e6-a133-a7708e4875b8
 title: frontend.mu x Zendō x HIKVision September Meetup
 slug: frontend-meetup-zendo-hikvision-september-2023
 comment_id: 650ff34e6a56f500014460f7
-feature_image: __GHOST_URL__/content/images/2023/09/september-2023.jpg
+feature_image: /content/images/2023/09/september-2023.jpg
 featured: 1
 type: post
 status: published
@@ -37,11 +37,11 @@ Sponsors:
 
 This location had less seating capacity than our recent ones, however that made it feel more lively and interactive the whole time. I would say the vibe was really awesome during the meetup, and I'm sure all attendees would agree.
 
-![](__GHOST_URL__/content/images/2023/09/image-3.png)
+![](/content/images/2023/09/image-3.png)
 
 Final adjustments before we start the event
 
-![](__GHOST_URL__/content/images/2023/09/image-4.png)
+![](/content/images/2023/09/image-4.png)
 
 vibe check
 
@@ -49,7 +49,7 @@ vibe check
 
 As it is customary, I introduced the community of frontend.mu, and what we do by showing a few photos from the previous meetups, and updates to the website. I mentioned that everyone is welcomed to contribute and we are all here to learn and help each other.
 
-![](__GHOST_URL__/content/images/2023/09/image-5.png)
+![](/content/images/2023/09/image-5.png)
 
 Speaking about upcode during the intro
 
@@ -63,7 +63,7 @@ I introduced our upcoming speakers to the audience
 
 I then invited Mr Vikash Lallsing, co-founder of Zendō to speak about his company and what they do. It was fascinating to see the services they offer, in addition to co-working spaces or office spaces, things like virtual address etc.. were mentioned.
 
-![](__GHOST_URL__/content/images/2023/09/image-6.png)
+![](/content/images/2023/09/image-6.png)
 
 Vikash Lallsing introducing Zendō
 
@@ -91,35 +91,35 @@ Before jumping to the first segment, I did a small recap of the news in frontend
 
 Nicolas is the dev who helped us build our authentication system for frontend.mu to allow people to RSVP for meetups directly on the website. That system was built using Supabase, and in his first talk ever at the frontend.mu meetup he gave an overview of what supabase is and why it's a great tool.
 
-![](__GHOST_URL__/content/images/2023/09/image-7.png)
+![](/content/images/2023/09/image-7.png)
 
 The Q & A session was really fun. There were questions about RLS, self-hosting and would a DB Admin ever pick supabase instead of something like postgres.
 
-![](__GHOST_URL__/content/images/2023/09/image-8.png)
+![](/content/images/2023/09/image-8.png)
 
 ## Jain Ramchurn - Containerizing a NodeJS application
 
 Jain is a very talentend platform engineer who's also the admin of the Local Linux Mirrors in Mauritius. In his presentation today he showed ways to improve a docker file to take advantages of various features of how containerization works in order to have a more efficient docker configuration. I was really impressed and learned a lot during this talk.
 
-![](__GHOST_URL__/content/images/2023/09/image-9.png)
+![](/content/images/2023/09/image-9.png)
 
 I learned about Layers and entrypoints, PID 1 among other things. There was a lot of interesting questions during this presentation as well, and it was apparent that most people learned new things. Ish gracefully expanded on a few points to elaborate on some answers.
 
-![](__GHOST_URL__/content/images/2023/09/image-11.png)
+![](/content/images/2023/09/image-11.png)
 
 Ish gracefully expanded on a few points to elaborate on some answers.
 
-![](__GHOST_URL__/content/images/2023/09/image-10.png)
+![](/content/images/2023/09/image-10.png)
 
 ## Sandeep Ramgolam - Ways to increase developer happiness.
 
 I prepared a presentation to share my experience about how a developer can increase their own happiness. This presentation was intentionally built to be lighthearted so that the advice dropped along the way could feel relatable. Hopefully, at least one of the numerous things I spoke of, is able to help a developer in their everyday life.
 
-![](__GHOST_URL__/content/images/2023/09/image-12.png)
+![](/content/images/2023/09/image-12.png)
 
 I spoke about how picking a certain role that matches your personality can greatly contribute to your level of happiness. I elaborated on Tooling, Planning, and Environment as well. There were lots of cat pictures included.
 
-![](__GHOST_URL__/content/images/2023/09/image-13.png)
+![](/content/images/2023/09/image-13.png)
 
 ## Conclusion
 
@@ -131,20 +131,20 @@ Since we were already in the ICONES building, a few of us went to the rooftop an
 
 ## Random clicks
 
-![](__GHOST_URL__/content/images/2023/09/image-14.png)
+![](/content/images/2023/09/image-14.png)
 
-![](__GHOST_URL__/content/images/2023/09/image-15.png)
+![](/content/images/2023/09/image-15.png)
 
 someone said let's rebuild this app in ruby
 
-![](__GHOST_URL__/content/images/2023/09/image-16.png)
+![](/content/images/2023/09/image-16.png)
 
 Zain wearing a terminal-themed outfit
 
-![](__GHOST_URL__/content/images/2023/09/image-17.png)
+![](/content/images/2023/09/image-17.png)
 
 Attentive Audience
 
-![](__GHOST_URL__/content/images/2023/09/image-18.png)
+![](/content/images/2023/09/image-18.png)
 
 Jack of all trades

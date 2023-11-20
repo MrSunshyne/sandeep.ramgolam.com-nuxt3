@@ -4,7 +4,7 @@ uuid: da752bf8-60f9-425f-a8ee-b9b73b65a46d
 title: Ghost with Cloudinary as storage adapter
 slug: ghost-cloudinary
 comment_id: 5e84cbc7fb739d54dab92209
-feature_image: __GHOST_URL__/content/images/2020/04/ghost-cloudinary.jpg
+feature_image: /content/images/2020/04/ghost-cloudinary.jpg
 featured: 1
 type: post
 status: published

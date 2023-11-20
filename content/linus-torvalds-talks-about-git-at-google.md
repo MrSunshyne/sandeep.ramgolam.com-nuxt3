@@ -4,7 +4,7 @@ uuid: 5c1358ea-b566-4703-85f7-7c16c027b6bc
 title: Linus Torvalds talk about git at Google in 2007
 slug: linus-torvalds-talks-about-git-at-google
 comment_id: 5dd92abd0fc4877c65e363bd
-feature_image: __GHOST_URL__/content/images/2019/11/linus-at-google-2007.jpg
+feature_image: /content/images/2019/11/linus-at-google-2007.jpg
 featured: 1
 type: post
 status: published
@@ -35,7 +35,7 @@ In 2007 Linus Torvalds gave a talk about git at Google. His presentation style w
 
 This is the kind of talk that nobody would dare to give in post 2019. The language is direct, funny and genuine. You can clearly notice his bias for certain things, like good code and his annoyance towards slow systems. Openly criticising other products based on facts and years of usage or even dissing Google developer, while standing on stage AT GOOGLE, in front of google developers. What a Legend.
 
-![](__GHOST_URL__/content/images/2019/11/Screenshot-2019-11-23-at-17.32.30.jpg)
+![](/content/images/2019/11/Screenshot-2019-11-23-at-17.32.30.jpg)
 
 Evan You, Creator of VueJS, hints at the potential fallout of speaking freely.
 
@@ -140,7 +140,7 @@ Source : [original tweet](https://twitter.com/youyuxi/status/1166689881638281216
 
 **Talks about KDE**
 
-![](__GHOST_URL__/content/images/2019/11/Screenshot-2019-11-23-at-18.20.56.jpg)
+![](/content/images/2019/11/Screenshot-2019-11-23-at-18.20.56.jpg)
 
 > I like KDE but trust me, they put every single component in one repository. Not very smart.
 

@@ -4,7 +4,7 @@ uuid: 3d5c3a17-0f28-4b90-ac46-58af66110cdc
 title: A slideshow using CSS animations & custom properties
 slug: a-slideshow-using-css-animations-custom-properties
 comment_id: 5deb8945cf520498852ee958
-feature_image: __GHOST_URL__/content/images/2019/12/custom-property-slideshow.jpg
+feature_image: /content/images/2019/12/custom-property-slideshow.jpg
 featured: 1
 type: post
 status: published
@@ -113,7 +113,7 @@ What if we used the `opacity` property to fade-out the entire image before it ch
 
 We want to show the image at the green parts but hide the image at the red parts
 
-![](__GHOST_URL__/content/images/2019/12/animation-css-opacity.jpg)
+![](/content/images/2019/12/animation-css-opacity.jpg)
 
 We could write a simple keyframe animation as such :
 
@@ -158,7 +158,7 @@ To achieve that we can duplicate the `.slideshow` element in our html and add ap
         <div class="slideshow"></div>
         <div class="slideshow slideshow2"></div>
 
-![](__GHOST_URL__/content/images/2019/12/animation-css-alternate-1.jpg)
+![](/content/images/2019/12/animation-css-alternate-1.jpg)
 
       .slideshow {
        --numberOfImages: 5;

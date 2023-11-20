@@ -4,7 +4,7 @@ uuid: bd45d771-2252-4e92-959e-91f3a0024105
 title: Virtual Developers Conference 2020 - Mauritius
 slug: virtual-developers-conference-2020-mauritius
 comment_id: 5f5b85f5e178aa584a3a7834
-feature_image: __GHOST_URL__/content/images/2020/09/Frame-19.jpg
+feature_image: /content/images/2020/09/Frame-19.jpg
 featured: 1
 type: post
 status: published
@@ -29,7 +29,7 @@ show_title_and_feature_image: 1
 
 The conference took place on the 9th, 10th and 11th of September and all 4 parallel tracks were streamed on YouTube for everyone to enjoy. As you might have noticed, the theme this year was COMICS, hence the room names being : Batcave, Avengers Tower, New Asgard and Kryptone.
 
-![](__GHOST_URL__/content/images/2020/09/image-2.png)
+![](/content/images/2020/09/image-2.png)
 
 It's the first time that I witnessed a conference of this scale being done online, with multiple hosts on each track welcoming the Speakers and switching between them live on stream, almost doing a "directors" job, and minus some sound issues that happened on Day 1, everything went pretty much super smoothly !
 
@@ -88,13 +88,13 @@ In the closing session, JoKi announced two new websites that were being built in
 
 **Jobs MSCC**
 
-![](__GHOST_URL__/content/images/2020/09/image-1.png)
+![](/content/images/2020/09/image-1.png)
 
 A job portal where companies can post and candidates can apply for tech jobs
 
 **MSCC Podcast**
 
-![](__GHOST_URL__/content/images/2020/09/image.png)
+![](/content/images/2020/09/image.png)
 
 A weekly podcast hosted by MSCC with new guests every week. 
 

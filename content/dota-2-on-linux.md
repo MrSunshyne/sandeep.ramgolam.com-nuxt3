@@ -4,7 +4,7 @@ uuid: 3de22180-86db-4e8d-9103-646732278c31
 title: Dota 2 on linux
 slug: dota-2-on-linux
 comment_id: 5dcf9495bf5c0e76259687eb
-feature_image: __GHOST_URL__/content/images/2023/02/software-updates-ubuntu-1-1000w.png
+feature_image: /content/images/2023/02/software-updates-ubuntu-1-1000w.png
 featured: 1
 type: post
 status: published
@@ -62,7 +62,7 @@ This could be a blog post in itself, but coming straight to the point, right now
 
 I play on South African valve servers as I get 200ms+ latency to EU and 350ms+ latency on other regions.
 
-![](__GHOST_URL__/content/images/2019/11/latency-map-dota2-1.jpg)
+![](/content/images/2019/11/latency-map-dota2-1.jpg)
 
 ## Dota 2 with Vulkan
 

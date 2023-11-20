@@ -4,7 +4,7 @@ uuid: 689bf202-8124-4201-923d-0e60ce8eb497
 title: Front-end Coders Meetup -September 2022
 slug: front-end-coders-meetup-september
 comment_id: 632fed746a754b47afeccaf1
-feature_image: __GHOST_URL__/content/images/2022/09/september-meetup.jpg
+feature_image: /content/images/2022/09/september-meetup.jpg
 featured: 1
 type: post
 status: published
@@ -52,13 +52,13 @@ Frontend Coders Mauritius mission statement
 
 I welcomed Pritee Gungah-Dabeea, MD at [Objectivity](https://www.linkedin.com/company/objectivityltd/) to speak about our host for the day.
 
-![](__GHOST_URL__/content/images/2022/09/image-1.png)
+![](/content/images/2022/09/image-1.png)
 
 She gave an overview of the company and welcomed anyone interested in software development to apply for open positions in the company. She mentioned they're especially looking for Senior Angular devs. Many thanks to Pritee & Yashi for supporting our community.
 
 ## Saamiyah Peerun - Styled Components, a state of ambivalence
 
-![](__GHOST_URL__/content/images/2022/09/image-7.png)
+![](/content/images/2022/09/image-7.png)
 
 [Saamiyah](https://www.linkedin.com/in/saamiyah-peerun-9a9507a3/) kicked off the first technical presentation by introducing the audience to Styled Components. She showed the different ways of doing CSS-in-JS and why they can be useful. She mentioned she did not like it at first, but then it grew on her, and now she prefers this over utility based frameworks like tailwind for big react projects.
 
@@ -68,7 +68,7 @@ I was convinced to consider it seriously for the future as it does seem to bring
 
 [I was up next.](https://www.linkedin.com/in/sandeepramgolam/) This is the same presentation I gave during the Breakfast Learning Session at Ringier SA one week ago, and I thought it just made sense to share it with the local audience.
 
-![](__GHOST_URL__/content/images/2022/09/image-3.png)
+![](/content/images/2022/09/image-3.png)
 
 I spoke about the origins of CSS and the major evolutions that happened over the years. For me, it's always !important to remember where we came from before we flex where we intend to float to.
 
@@ -86,7 +86,7 @@ I gave demos of each and explained how the two css features are very easy to use
 
 He introduced it by talking a little about the author of Uno, Anthony Fu and we were all left wondering if he is a real person, an AI, or a whole company. Because his work-rate is unreal.
 
-![](__GHOST_URL__/content/images/2022/09/image-5.png)
+![](/content/images/2022/09/image-5.png)
 
 Mike showcased the features of UNOCSS by demo'ing his own website, built using that tech, and a special page he made just for today's presentation.
 
@@ -100,13 +100,13 @@ In short, the framework does a lot of things people want in a CSS framework:
 
 There were many questions from the audience comparing it to Tailwind and other CSS frameworks, and it was a lot of fun. These kinds of discussions are one of the reasons our meetups are so much fun.
 
-![](__GHOST_URL__/content/images/2022/09/image-11.png)
+![](/content/images/2022/09/image-11.png)
 
 ## Lunch
 
 We took a small break for lunch and group photo as usual. Pizzas were delicious!
 
-![](__GHOST_URL__/content/images/2022/09/image-9.png)
+![](/content/images/2022/09/image-9.png)
 
 ## CSS Battle
 

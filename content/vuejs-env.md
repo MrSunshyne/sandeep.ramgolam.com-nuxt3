@@ -4,7 +4,7 @@ uuid: 06264ec5-6ecf-494b-9d63-701820c091f1
 title: Environment Variables in VueJS
 slug: vuejs-env
 comment_id: 5e1581a73c11b2c62732f0be
-feature_image: __GHOST_URL__/content/images/2020/01/vuejs-environment-variables.jpg
+feature_image: /content/images/2020/01/vuejs-environment-variables.jpg
 featured: 1
 type: post
 status: published

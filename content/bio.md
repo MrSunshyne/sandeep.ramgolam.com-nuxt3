@@ -4,7 +4,7 @@ uuid: 02dc0887-a19f-47fa-8540-b6852fae0835
 title: Bio
 slug: bio
 comment_id: 5dd103c2cdcde8d32435f6c6
-feature_image: __GHOST_URL__/content/images/2019/11/IMG_8923.jpg
+feature_image: /content/images/2019/11/IMG_8923.jpg
 featured: 0
 type: page
 status: published

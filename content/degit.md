@@ -4,7 +4,7 @@ uuid: 2defbf5d-48cf-4270-8cc4-c5508cbf305a
 title: Blazing fast bootstrapping with degit
 slug: degit
 comment_id: 5e1b418e3c11b2c62732f111
-feature_image: __GHOST_URL__/content/images/2020/01/degit-blazing-fast.jpg
+feature_image: /content/images/2020/01/degit-blazing-fast.jpg
 featured: 1
 type: post
 status: published
@@ -60,7 +60,7 @@ Boilerplate : [https://github.com/MrSunshyne/vue-tailwind-boilerplate](https://g
 
 This is the result:
 
-![](__GHOST_URL__/content/images/2020/01/Screenshot-2020-01-12-at-20.13.10.jpg)
+![](/content/images/2020/01/Screenshot-2020-01-12-at-20.13.10.jpg)
 
 ## UPDATE(5 April 2020) : Private repos
 

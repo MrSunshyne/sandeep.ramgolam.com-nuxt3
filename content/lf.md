@@ -4,7 +4,7 @@ uuid: db765411-a754-4566-8d18-3cfc2aae89c4
 title: lf - A terminal file manager written in Go
 slug: lf
 comment_id: 5e01deccb2e578c4a2eed931
-feature_image: __GHOST_URL__/content/images/2019/12/lf-go.jpg
+feature_image: /content/images/2019/12/lf-go.jpg
 featured: 1
 type: post
 status: published

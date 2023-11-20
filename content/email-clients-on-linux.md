@@ -29,7 +29,7 @@ An email client is a software that provides a user interface to read emails that
 
 Let's take a look at the desktop email clients that i've used:
 
-![](__GHOST_URL__/content/images/2020/05/image.png)
+![](/content/images/2020/05/image.png)
 
 Email clients installed in a GNOME Desktop Environment
 

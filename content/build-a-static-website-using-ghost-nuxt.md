@@ -4,7 +4,7 @@ uuid: cf88dc23-1db8-48bf-a8ea-fb94bedc57e1
 title: Build a static website with Ghost API, Nuxt & Gitlab (FIRST DRAF)
 slug: build-a-static-website-using-ghost-nuxt
 comment_id: 5de4fe51352930856b0432d9
-feature_image: __GHOST_URL__/content/images/2019/12/pre-rendered-and-spa-1.jpg
+feature_image: /content/images/2019/12/pre-rendered-and-spa-1.jpg
 featured: 0
 type: post
 status: draft
@@ -56,7 +56,7 @@ You've probably heard of Static Websites. After the craze of SPAs, part of the d
 
 Nuxt.js, a framework built on top of VueJS, sought to bring back some of the glory of static website by pre-rendering pages and serving HTML pages that existed on disk whenever a request would occur. However this wouldn't behave like a full static website. After the first page loads, the page is 'hydrated' and any subsequent navigation is handled by the framework, on the client side. This means, if the next page requires an API call, that API call would occur and the navigation would happen without any page reload! They called it 'universal' as it combines best of both worlds, i.e SPA & Pre-rendered Website
 
-![The flow when navigating a pre-render + spa website](__GHOST_URL__/content/images/2019/12/pre-rendered-and-spa.jpg)
+![The flow when navigating a pre-render + spa website](/content/images/2019/12/pre-rendered-and-spa.jpg)
 
 The flow when navigating a pre-render + spa website
 

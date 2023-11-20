@@ -4,7 +4,7 @@ uuid: 46621ce0-66bc-4a90-9248-c39c433f1fa4
 title: Generate a sitemap.xml for VueJS app
 slug: vuejs-sitemap-webpack
 comment_id: 5e872164886b191c7114d66a
-feature_image: __GHOST_URL__/content/images/2020/04/generate-sitemap-vue-webpack.jpg
+feature_image: /content/images/2020/04/generate-sitemap-vue-webpack.jpg
 featured: 1
 type: post
 status: published

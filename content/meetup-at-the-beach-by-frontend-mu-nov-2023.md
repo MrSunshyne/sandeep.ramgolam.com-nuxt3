@@ -4,7 +4,7 @@ uuid: fc327f5b-aac3-4f80-a5a5-7a0b071393d7
 title: Seaside Meetup by frontend.mu
 slug: meetup-at-the-beach-by-frontend-mu-nov-2023
 comment_id: 6559d753d71eed00012723bb
-feature_image: __GHOST_URL__/content/images/2023/11/november-2023--1-.jpg
+feature_image: /content/images/2023/11/november-2023--1-.jpg
 featured: 1
 type: post
 status: published
@@ -139,7 +139,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   Cambuse\",\"type\":\"extended-text\",\"version\":1},{\"type\":\"linebreak\",\
   \"version\":1}],\"direction\":\"ltr\",\"format\":\"\",\"indent\":0,\"type\":\
   \"heading\",\"version\":1,\"tag\":\"h2\"},{\"type\":\"image\",\"version\":1,\
-  \"src\":\"__GHOST_URL__/content/images/2023/11/image.png\",\"width\":2550,\"h\
+  \"src\":\"/content/images/2023/11/image.png\",\"width\":2550,\"h\
   eight\":1652,\"title\":\"\",\"alt\":\"\",\"caption\":\"\",\"cardWidth\":\"full\
   \",\"href\":\"\"},{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\
   \",\"style\":\"\",\"text\":\"When we reached the beach, Alex and Mrs Delphine
@@ -148,7 +148,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   back and everyone helped.
   🙏\",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"format\
   \":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\"image\
-  \",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-1.png\",\
+  \",\"version\":1,\"src\":\"/content/images/2023/11/image-1.png\",\
   \"width\":1444,\"height\":1572,\"title\":\"\",\"alt\":\"\",\"caption\":\"\",\
   \"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\"detail\":0,\"format\
   \":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"It took some time to set up
@@ -186,7 +186,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   The
   Meetup\",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"f\
   ormat\":\"\",\"indent\":0,\"type\":\"heading\",\"version\":1,\"tag\":\"h2\"},{\
-  \"type\":\"image\",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/\
+  \"type\":\"image\",\"version\":1,\"src\":\"/content/images/2023/\
   11/image-2.png\",\"width\":1432,\"height\":1668,\"title\":\"\",\"alt\":\"\",\
   \"caption\":\"\",\"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\"d\
   etail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"At around
@@ -203,7 +203,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   Mike, Dan etc joined
   us.\",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"form\
   at\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\"image\
-  \",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-3.png\",\
+  \",\"version\":1,\"src\":\"/content/images/2023/11/image-3.png\",\
   \"width\":1440,\"height\":1466,\"title\":\"\",\"alt\":\"\",\"caption\":\"\",\
   \"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\"detail\":0,\"format\
   \":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"Speakers\",\"type\":\"exte\
@@ -267,7 +267,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   Monorepos and the world of tools that exist to manage monorepos.
   \",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"format\
   \":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\"image\
-  \",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-13.png\
+  \",\"version\":1,\"src\":\"/content/images/2023/11/image-13.png\
   \",\"width\":2542,\"height\":1904,\"title\":\"\",\"alt\":\"\",\"caption\":\"\
   \",\"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\"detail\":0,\"fo\
   rmat\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"There were quite a few
@@ -275,7 +275,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   on the
   topic.\",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"f\
   ormat\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\"i\
-  mage\",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-4.p\
+  mage\",\"version\":1,\"src\":\"/content/images/2023/11/image-4.p\
   ng\",\"width\":2552,\"height\":1776,\"title\":\"\",\"alt\":\"\",\"caption\":\"\
   \",\"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\"detail\":0,\"fo\
   rmat\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"Golang for Beginners by
@@ -286,7 +286,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   into understanding its main strengths and who could benefit from it.
   \",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"format\
   \":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\"image\
-  \",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-15.png\
+  \",\"version\":1,\"src\":\"/content/images/2023/11/image-15.png\
   \",\"width\":1478,\"height\":1218,\"title\":\"\",\"alt\":\"\",\"caption\":\"\
   \",\"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\"detail\":0,\"fo\
   rmat\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"Yusuf elaborated on a
@@ -294,7 +294,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   into go very soon for his personal
   projects.\",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\
   \"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\
-  \"image\",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-\
+  \"image\",\"version\":1,\"src\":\"/content/images/2023/11/image-\
   5.png\",\"width\":1446,\"height\":1686,\"title\":\"\",\"alt\":\"\",\"caption\
   \":\"\",\"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\"detail\":0,\
   \"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"Understanding the
@@ -312,7 +312,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   involved here. And yes, it
   worked.\",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"\
   format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\"\
-  image\",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-6.\
+  image\",\"version\":1,\"src\":\"/content/images/2023/11/image-6.\
   png\",\"width\":1430,\"height\":1790,\"title\":\"\",\"alt\":\"\",\"caption\":\
   \"\",\"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\"detail\":0,\"\
   format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"I appreciate how well
@@ -321,7 +321,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   shows trustworthiness and reliability.
   \",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"format\
   \":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\"image\
-  \",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-7.png\",\
+  \",\"version\":1,\"src\":\"/content/images/2023/11/image-7.png\",\
   \"width\":2536,\"height\":1786,\"title\":\"\",\"alt\":\"\",\"caption\":\"\",\
   \"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\"detail\":0,\"format\
   \":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"Lunch break & group
@@ -333,14 +333,14 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   networked.
   \",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"format\
   \":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\"image\
-  \",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-9.png\",\
+  \",\"version\":1,\"src\":\"/content/images/2023/11/image-9.png\",\
   \"width\":2554,\"height\":1904,\"title\":\"\",\"alt\":\"\",\"caption\":\"\",\
   \"cardWidth\":\"full\",\"href\":\"\"},{\"children\":[{\"detail\":0,\"format\"\
   :0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"After a while, I asked
   everyone to gather in front of the beach, where we took a group photo.
   \",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"format\
   \":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\"image\
-  \",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-8.png\",\
+  \",\"version\":1,\"src\":\"/content/images/2023/11/image-8.png\",\
   \"width\":1442,\"height\":1766,\"title\":\"\",\"alt\":\"\",\"caption\":\"\",\
   \"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\"detail\":0,\"format\
   \":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"I couldn't take one with my
@@ -351,7 +351,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   lding trivia games with AI by
   Cedric.\",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"\
   format\":\"\",\"indent\":0,\"type\":\"heading\",\"version\":1,\"tag\":\"h3\"}\
-  ,{\"type\":\"image\",\"version\":1,\"src\":\"__GHOST_URL__/content/images/202\
+  ,{\"type\":\"image\",\"version\":1,\"src\":\"/content/images/202\
   3/11/image-10.png\",\"width\":1420,\"height\":1854,\"title\":\"\",\"alt\":\"\
   \",\"caption\":\"\",\"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\
   \"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"Cedric
@@ -374,7 +374,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   \":\"normal\",\"style\":\"\",\"text\":\" licenses were up for raffles.
   \",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"format\
   \":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\"image\
-  \",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-11.png\
+  \",\"version\":1,\"src\":\"/content/images/2023/11/image-11.png\
   \",\"width\":1430,\"height\":1890,\"title\":\"\",\"alt\":\"\",\"caption\":\"\
   \",\"cardWidth\":\"regular\",\"href\":\"\"},{\"children\":[{\"detail\":0,\"fo\
   rmat\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"In
@@ -412,7 +412,7 @@ lexical: "{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"\
   stuff and empty pizza boxes to the garbage
   bins.\",\"type\":\"extended-text\",\"version\":1}],\"direction\":\"ltr\",\"fo\
   rmat\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"type\":\"im\
-  age\",\"version\":1,\"src\":\"__GHOST_URL__/content/images/2023/11/image-12.p\
+  age\",\"version\":1,\"src\":\"/content/images/2023/11/image-12.p\
   ng\",\"width\":2542,\"height\":1830,\"title\":\"\",\"alt\":\"\",\"caption\":\"\
   \",\"cardWidth\":\"wide\",\"href\":\"\"},{\"children\":[{\"detail\":0,\"format\
   \":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"Interested to host a meetup
@@ -459,11 +459,11 @@ After obtaining everyone's contact detail via the RSVP form, we shortlisted the 
 
 ## Arriving at La Cambuse  
 
-![](__GHOST_URL__/content/images/2023/11/image.png)
+![](/content/images/2023/11/image.png)
 
 When we reached the beach, Alex and Mrs Delphine and Ankshita were already there. Shortly after, Dereck and Noorani joined us, and we started setting up. We had to carry the chairs, tent, and table on our back and everyone helped. 🙏
 
-![](__GHOST_URL__/content/images/2023/11/image-1.png)
+![](/content/images/2023/11/image-1.png)
 
 It took some time to set up the tent, plastic carpet, test the internet connection and meanwhile the crowd grew. Everyone who joined was wearing a big smile and the mood was very vibrant and positive !
 
@@ -475,11 +475,11 @@ In the end [Ish](https://www.linkedin.com/in/ishsookun/) hosted a jitsi server f
 
 ## The Meetup
 
-![](__GHOST_URL__/content/images/2023/11/image-2.png)
+![](/content/images/2023/11/image-2.png)
 
 At around 10:40am I started the meetup by greeting everyone and welcoming the new faces. I asked Yusuf to say a few words as our sponsor, and he mentioned the revival of the [GophersMU](https://gophers.mu/) user group and invited anyone interested in the language to join their activities. Shortly after, Cherwine, Mervyn, Mike, Dan etc joined us.
 
-![](__GHOST_URL__/content/images/2023/11/image-3.png)
+![](/content/images/2023/11/image-3.png)
 
 ## Speakers
 
@@ -492,21 +492,21 @@ At around 10:40am I started the meetup by greeting everyone and welcoming the ne
 
 Abdallah opened the meetup by speaking about his experience on Monorepos and the world of tools that exist to manage monorepos.
 
-![](__GHOST_URL__/content/images/2023/11/image-13.png)
+![](/content/images/2023/11/image-13.png)
 
 There were quite a few questions and answers around the topic, with people sharing their experience on the topic.
 
-![](__GHOST_URL__/content/images/2023/11/image-4.png)
+![](/content/images/2023/11/image-4.png)
 
 ### Golang for Beginners by Ankshita
 
 Ankshita shared an introduction to the language to ease people into understanding its main strengths and who could benefit from it.
 
-![](__GHOST_URL__/content/images/2023/11/image-15.png)
+![](/content/images/2023/11/image-15.png)
 
 Yusuf elaborated on a few questions from the audience, and it appears Cedric, might take the dive into go very soon for his personal projects.
 
-![](__GHOST_URL__/content/images/2023/11/image-5.png)
+![](/content/images/2023/11/image-5.png)
 
 ### Understanding the Basics of Kubernetes by Alex
 
@@ -514,31 +514,31 @@ Alex took the "stage" next and gave us a very well crafted presentation and live
 
 That was really cool for those who understand the different layers of awesomeness involved here. And yes, it worked.
 
-![](__GHOST_URL__/content/images/2023/11/image-6.png)
+![](/content/images/2023/11/image-6.png)
 
 I appreciate how well he was able to convey what he knows but also when he couldn't answer something, he didn't beat around the bush and acknowledged it immediately. It shows trustworthiness and reliability.
 
-![](__GHOST_URL__/content/images/2023/11/image-7.png)
+![](/content/images/2023/11/image-7.png)
 
 ### Lunch break & group photo
 
 Pizza was here, after Kushul managed to convince them to deliver it at the beach, and it was still hot! We took a break, had food while everyone networked.
 
-![](__GHOST_URL__/content/images/2023/11/image-9.png)
+![](/content/images/2023/11/image-9.png)
 
 After a while, I asked everyone to gather in front of the beach, where we took a group photo.
 
-![](__GHOST_URL__/content/images/2023/11/image-8.png)
+![](/content/images/2023/11/image-8.png)
 
 I couldn't take one with my drone because the area is a restricted zone.
 
 ### Building trivia games with AI by Cedric.
 
-![](__GHOST_URL__/content/images/2023/11/image-10.png)
+![](/content/images/2023/11/image-10.png)
 
 Cedric prepared a presentation and demo of his game and how he incorporated AI into his coding process. If you don't know Cedric, [streams on twitch regularly](https://www.twitch.tv/cedpoilly) where he builds his projects live on stream ! After his presentation, we actually played the game once as a test and then held another round where 3 [JetBrains](https://jetbarins.com/) licenses were up for raffles.
 
-![](__GHOST_URL__/content/images/2023/11/image-11.png)
+![](/content/images/2023/11/image-11.png)
 
 ### In conclusion
 
@@ -553,7 +553,7 @@ The meetup went much better than we could have expected. The vibe be really posi
 
 A few of us stayed back to enjoy the cool breeze and great view after the meetup. The nerdy discussions continued, of course. And we had a really great time together ! We packed up around 4.30PM and carried all our stuff and empty pizza boxes to the garbage bins.
 
-![](__GHOST_URL__/content/images/2023/11/image-12.png)
+![](/content/images/2023/11/image-12.png)
 
 ### Interested to host a meetup next year?
 

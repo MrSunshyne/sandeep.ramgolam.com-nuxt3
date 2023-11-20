@@ -4,7 +4,7 @@ uuid: 937a8642-5822-475d-be54-213b26e4d4a9
 title: Implementing Neumorphism with CSS
 slug: neumorphism
 comment_id: 5e0360d2b2e578c4a2eed98c
-feature_image: __GHOST_URL__/content/images/2019/12/neumorphism-trend-2020.jpg
+feature_image: /content/images/2019/12/neumorphism-trend-2020.jpg
 featured: 1
 type: post
 status: published
@@ -32,7 +32,7 @@ There has been some buzz about this term in the techsphere lately and like every
 
 It's basically a mix between New & Skeumophism. The latter was a design trend popularised by apple in which digital user interface elements would be made to look like physical ones.
 
-![](__GHOST_URL__/content/images/2019/12/image-1.png)
+![](/content/images/2019/12/image-1.png)
 
 Old iOS look 
 
@@ -42,7 +42,7 @@ Of course, the "Flat" design trend that follow post "Windows 8" era was the exac
 
 So Skeumophism is back, but with a 2020 twist.  It seems to have begun with [this Dribble post](https://dribbble.com/shots/7994421-Skeuomorph-Mobile-Banking) by alexplyuto.
 
-![](__GHOST_URL__/content/images/2019/12/alexplyuto-dribble-skeu.png)
+![](/content/images/2019/12/alexplyuto-dribble-skeu.png)
 
 The dribbble shot by alexplyuto that might have restarted the trend
 
@@ -50,7 +50,7 @@ The dribbble shot by alexplyuto that might have restarted the trend
 
 Naturally I had to try it and what better place to test than my own website. I picked the "Events" page on this website, which has a flat design.
 
-![](__GHOST_URL__/content/images/2019/12/Screenshot-2019-12-25-at-17.29.58.jpg)
+![](/content/images/2019/12/Screenshot-2019-12-25-at-17.29.58.jpg)
 
 Events page, Flat UI
 
@@ -66,7 +66,7 @@ To apply the neumorphism look, you simply have to apply two shadows on the same 
 
 After applying the effect to the events page it now looks like the following :
 
-![](__GHOST_URL__/content/images/2019/12/Screenshot-2019-12-25-at-17.42.00.jpg)
+![](/content/images/2019/12/Screenshot-2019-12-25-at-17.42.00.jpg)
 
 Events page with neumorphism applied
 

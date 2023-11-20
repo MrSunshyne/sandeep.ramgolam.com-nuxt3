@@ -4,7 +4,7 @@ uuid: ca3b9a04-ca70-4d59-a22e-6671c9c11e67
 title: I got to attend JSNation 2023 in Amsterdam
 slug: attending-jsnation-in-amsterdam
 comment_id: 649085c58a99886171613d08
-feature_image: __GHOST_URL__/content/images/2023/06/jsnation-june-2023.jpg
+feature_image: /content/images/2023/06/jsnation-june-2023.jpg
 featured: 1
 type: post
 status: published
@@ -33,13 +33,13 @@ I was attending my company retreat in Europe(which was AMAZING BTW) one week bef
 
 Kushul joined me in Amsterdam as well and we both attended the conference and various events around it on June 1st & 2nd.
 
-![](__GHOST_URL__/content/images/2023/06/image-15.png)
+![](/content/images/2023/06/image-15.png)
 
 ### Conference organization
 
 The conference was absolutely amazing. There were two tracks called Resident & Community and the schedules were very well spread out. Just being there was breathtaking ! I mean, just look at this:
 
-![](__GHOST_URL__/content/images/2023/06/image-16.png)
+![](/content/images/2023/06/image-16.png)
 
 ### Seeing JS Heros in real life
 
@@ -53,23 +53,23 @@ I got to see some familiar names from the frontend tech sphere in person and it 
 *   Wes Bos -  THE Web Bos  
     
 
-![](__GHOST_URL__/content/images/2023/06/image-17.png)
+![](/content/images/2023/06/image-17.png)
 
 One of my favorite technologies to work with, [Astro](https://astro.build/), won the [Breakthrough of the Year](https://twitter.com/__Sun__/status/1664280410828963840) award during the event, which I'm super happy about.
 
-![](__GHOST_URL__/content/images/2023/06/image-18.png)
+![](/content/images/2023/06/image-18.png)
 
 Astro wins Breakthrough of the Year
 
 ### Frontend.mu in Amsterdam
 
-![](__GHOST_URL__/content/images/2023/06/image-14.png)
+![](/content/images/2023/06/image-14.png)
 
-![](__GHOST_URL__/content/images/2023/06/image-19.png)
+![](/content/images/2023/06/image-19.png)
 
 Enjoying a beer while watching a live coding battle
 
-![](__GHOST_URL__/content/images/2023/06/image-20.png)
+![](/content/images/2023/06/image-20.png)
 
 Putting Mauritius on the Map
 

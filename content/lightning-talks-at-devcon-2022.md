@@ -4,7 +4,7 @@ uuid: 33012632-bb52-48fc-bff8-befe20bfb8bd
 title: Hosting the Lightning Talks at DevCon 2022
 slug: lightning-talks-at-devcon-2022
 comment_id: 63ed0914c42b76c579d6be5b
-feature_image: __GHOST_URL__/content/images/2023/02/Screenshot-from-2023-02-15-20-34-11.png
+feature_image: /content/images/2023/02/Screenshot-from-2023-02-15-20-34-11.png
 featured: 1
 type: post
 status: published
@@ -60,66 +60,66 @@ I made custom intro videos for all the speakers, as a treat, and to hype them up
 
 I setup a small countdown so that the audience knows exactly when we would begin. It's funny that a [small side project of mine](https://clock-css.netlify.app/) made it up to that huge screen, and the confetti actually worked when the timer expires. That clock was literally made with CSS.
 
-![](__GHOST_URL__/content/images/2023/02/image-8.png)
+![](/content/images/2023/02/image-8.png)
 
 ### Ish Sookun - Why mirrors matter?
 
-![](__GHOST_URL__/content/images/2023/02/vlcsnap-2022-11-20-12h55m31s414.png)
+![](/content/images/2023/02/vlcsnap-2022-11-20-12h55m31s414.png)
 
 As he is the most versatile speaker out of us all, I asked Ish to open the floor and take his time as we had 30 more minutes than planned. I wanted to avoid some kind of awkward 30 minute of downtime between the end of the lightning talks and when the organizers start the closing ceremony. We did end up finishing right on time, but I couldn't do a fun quiz session I planned for last for fear of running overtime. It all worked out in the end.
 
-![](__GHOST_URL__/content/images/2023/02/image.png)
+![](/content/images/2023/02/image.png)
 
 He spoke about Mirrors, and why they're important. Especially for our African region. We are far away from most EU/US datacenters, and having mirrors here really change our experience of the internet.
 
 ### Girish Mahabir- Containers
 
-![](__GHOST_URL__/content/images/2023/02/vlcsnap-2022-11-20-12h55m22s803.png)
+![](/content/images/2023/02/vlcsnap-2022-11-20-12h55m22s803.png)
 
 Girish was up next, and he spoke about containers. He's a very enthusiastic and energetic young person in tech who has been involving himself in the community, and it was refreshing seeing him up on stage sharing his experience with containers. We joked about making him stand on an actual container for the intro video, but that ended up remaining in the realm of dreams.
 
-![](__GHOST_URL__/content/images/2023/02/image-1.png)
+![](/content/images/2023/02/image-1.png)
 
 ### Jestha B  - Web Bundles
 
-![](__GHOST_URL__/content/images/2023/02/vlcsnap-2022-11-20-12h55m37s983.png)
+![](/content/images/2023/02/vlcsnap-2022-11-20-12h55m37s983.png)
 
 Jestha who's a full-stack woman in tech and has a soft spot for Go, spoke about Web Bundles. Something relative new and unknown to most people in web development.
 
-![](__GHOST_URL__/content/images/2023/02/image-2.png)
+![](/content/images/2023/02/image-2.png)
 
 ### Michael Jules- Directus
 
-![](__GHOST_URL__/content/images/2023/02/vlcsnap-2022-11-20-12h55m51s518.png)
+![](/content/images/2023/02/vlcsnap-2022-11-20-12h55m51s518.png)
 
 Mike, who is too humble to admit that he is a 10x engineer, spoke about Directus. It's a free and open source CMS built in Vue and has been getting better and better every month. It can be considered a low/no code tool that helps you manage the content side of your websites.
 
-![](__GHOST_URL__/content/images/2023/02/image-3.png)
+![](/content/images/2023/02/image-3.png)
 
 ### Priyeshan Sreeneebus - How to juice up your game
 
-![](__GHOST_URL__/content/images/2023/02/vlcsnap-2022-11-20-12h56m11s874.png)
+![](/content/images/2023/02/vlcsnap-2022-11-20-12h56m11s874.png)
 
 Priyesh took the stage and impressed everyone with his amazing 5-minutes talk about how to juice up your game. The demo was fascinating and the way it was delivered really conveyed the original idea.
 
-![](__GHOST_URL__/content/images/2023/02/image-4.png)
+![](/content/images/2023/02/image-4.png)
 
 ### Chittesh Sham - Sound Design
 
-![](__GHOST_URL__/content/images/2023/02/vlcsnap-2022-11-20-12h54m50s123.png)
+![](/content/images/2023/02/vlcsnap-2022-11-20-12h54m50s123.png)
 
 All the intros that I made for the speakers had original soundtracks made by Chittesh. I asked him to do the lightning talk about sound design itself, and boy did he show up to the party. He built a track live on stage and within a few minutes had everyone clapping.
 
-![](__GHOST_URL__/content/images/2023/02/image-5.png)
+![](/content/images/2023/02/image-5.png)
 
 ### Sandeep Ramgolam
 
-![](__GHOST_URL__/content/images/2023/02/vlcsnap-2022-11-20-12h56m29s661.png)
+![](/content/images/2023/02/vlcsnap-2022-11-20-12h56m29s661.png)
 
 It was hard to top the previous session, I ended the lightning talks with a small demo of a Cloud based IDE called Codeflow that was recently released by stack blitz. I feel like I could have done a better job on this one and probably rushed it a little. I did get feedback after the talk that people didn't know about the tool and went on to use it. That was awesome to hear.
 
-![](__GHOST_URL__/content/images/2023/02/image-6.png)
+![](/content/images/2023/02/image-6.png)
 
-![](__GHOST_URL__/content/images/2023/02/image-7.png)
+![](/content/images/2023/02/image-7.png)
 
 ## All Speaker Intros

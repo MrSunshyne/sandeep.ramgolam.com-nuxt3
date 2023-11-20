@@ -4,7 +4,7 @@ uuid: 7b3f9f14-1f0a-4947-94f2-94e018472591
 title: Front-end Coders Meetup - April 2022
 slug: front-end-coders-meetup-april-2022
 comment_id: 6251a9bb5686548d2c98f030
-feature_image: __GHOST_URL__/content/images/2022/04/april-2022.jpg
+feature_image: /content/images/2022/04/april-2022.jpg
 featured: 1
 type: post
 status: published
@@ -32,7 +32,7 @@ Today, Front-end Coders organized an in-person meetup today in Ebene. I was the 
 
 Prodigious brands and Logistics welcomed our community in their offices today and provided everything we needed for a successful tech presentation. The AC room / ergonomic chairs / Projector were all top-notch, and we couldn't have asked for anymore! Vishwadev, a project manager from the company, spoke for a few minutes about them and listed a few job opportunities currently available !
 
-![](__GHOST_URL__/content/images/2022/04/fec-april-group-photo.jpg)
+![](/content/images/2022/04/fec-april-group-photo.jpg)
 
 ## Intro
 
@@ -45,7 +45,7 @@ I began the meetup with a few slides to introduce our sponsors, speakers, and up
 
 ## Topics 1: TailwindCSS by Mahima Ramgolam
 
-![](__GHOST_URL__/content/images/2022/04/mahima-ramgolam-presentation-tailwind.jpg)
+![](/content/images/2022/04/mahima-ramgolam-presentation-tailwind.jpg)
 
 TailwindCSS by Mahima Ramgolam
 
@@ -55,7 +55,7 @@ Link to presentation : [https://github.com/mahima98/tailwindCSS-demo/blob/main/s
 
 ## Topic 2: ReactivityEverywhere by Jules Michael Giovanni
 
-![](__GHOST_URL__/content/images/2022/04/jules-giovanni-reactivity-presentation.jpg)
+![](/content/images/2022/04/jules-giovanni-reactivity-presentation.jpg)
 
 Although Jules is not a dedicated front-end developer, he was kind enough to showcase one of the most interesting sessions I've attended. Jules demonstrated how we can use packages from the core of VueJS to build reactive applications that run in the CLI. Yes you heard that right.
 
@@ -63,19 +63,19 @@ Link to demo & presentation : [https://github.com/JulesMike/reactivity\_everywhe
 
 ## Lunch Time
 
-![](__GHOST_URL__/content/images/2022/04/image.png)
+![](/content/images/2022/04/image.png)
 
 Lunch was sponsored by the wonderful people at Ringier South Afica
 
 Lunch was sponsored by Ringier South Africa, and we order Pizza and some soft drinks ! We are very grateful that we get sponsors who can take care of essentials such as lunch because it allows us to have a break and network before engaging with the next presentations.
 
-![](__GHOST_URL__/content/images/2022/04/lunch-pizza-meetup.jpg)
+![](/content/images/2022/04/lunch-pizza-meetup.jpg)
 
 ## Topic 3: Open Data in Mauritius by myself
 
 I presented one of my recent side-projects about open-data and how I built it as an open source project. I encouraged students and jobseekers to do the same to enhance their CVs and skills.
 
-![](__GHOST_URL__/content/images/2022/04/sandeep-ramgolam-open-data-presentation.jpg)
+![](/content/images/2022/04/sandeep-ramgolam-open-data-presentation.jpg)
 
 Link to project : [https://power-outages-mauritius.netlify.app/](https://power-outages-mauritius.netlify.app/)
 

@@ -4,7 +4,7 @@ uuid: 526cf4c1-f57a-41f8-a8a2-f9d0516c1cc3
 title: Dark Mode support in browsers
 slug: simple-dark-mode
 comment_id: 5e23ea133c11b2c62732f1a7
-feature_image: __GHOST_URL__/content/images/2020/01/dark-mode.jpg
+feature_image: /content/images/2020/01/dark-mode.jpg
 featured: 1
 type: post
 status: published
@@ -43,7 +43,7 @@ Source: [webkit.org](https://webkit.org/blog/8840/dark-mode-support-in-webkit/)
 
 I tested it so you don't have to. For now it only works in safari. Since most browsers(except the mighty Firefox) have switched to webkit under the hood, i'm hopeful that it'll be supported soon.
 
-![](__GHOST_URL__/content/images/2020/01/dark-mode-switch.gif)
+![](/content/images/2020/01/dark-mode-switch.gif)
 
 Browser comparison when switching OS appearance
 

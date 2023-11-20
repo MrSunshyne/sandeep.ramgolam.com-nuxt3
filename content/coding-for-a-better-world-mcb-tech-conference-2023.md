@@ -4,7 +4,7 @@ uuid: 3ffc2179-47b6-44c5-817a-22a521328b46
 title: Speaking at Coding for a Better World - MCB Tech Conference
 slug: coding-for-a-better-world-mcb-tech-conference-2023
 comment_id: 650ffcd71cdfee0001aaba81
-feature_image: __GHOST_URL__/content/images/2023/09/mcb-conference-2023--1-.jpg
+feature_image: /content/images/2023/09/mcb-conference-2023--1-.jpg
 featured: 1
 type: post
 status: published
@@ -30,7 +30,7 @@ MCB organized a tech conference to celebrate "Developer's Day" titled "Coding fo
 
 The event happened the same day as the frontend.mu meetup, which means I could only attended the 2nd half of the event. After hosting and speaking at the frontend.mu meetup in the morning and grabbing lunch, I reached there with Saamiyah and Neil around 2.30pm. I was due to take the stage at 3:15pm, so that was right on time.
 
-![](__GHOST_URL__/content/images/2023/09/image.png)
+![](/content/images/2023/09/image.png)
 
 Upon reaching the MCB premises, we were greeted and accompanied in the conference room. There were around 70 people in attendance at the time, and I assisted to the ending of a talk around automation. Once the speaker ended, there was a small break of 15 mins, and I was up next.
 
@@ -38,13 +38,13 @@ I tested the HDMI cable with my laptop, and sadly the MacBook refused to connect
 
 I grabbed a quick coffee, and it was time to talk about Developer Happiness.
 
-![](__GHOST_URL__/content/images/2023/09/image-1.png)
+![](/content/images/2023/09/image-1.png)
 
 My presentation was light-hearted and contained a lot of material that I thought developers could relate to, and I packed it with advice that works for me and hopefully would be helpful to others as well. I conducted a small quiz of two questions, and the people who answered correctly got gifts from MCB. I also received a gift as a speaker ! Awesome
 
 After the session, they held a panel discussion with four participants around “Coding for a better world”, the theme of the conference.
 
-![](__GHOST_URL__/content/images/2023/09/image-2.png)
+![](/content/images/2023/09/image-2.png)
 
 The panel featured Nicolas Hurdoyal, Dr Bholanath Surajbali, Velen Perianen, Sanyukta Hulkhoree and was moderated by Jeremy Flore.
 

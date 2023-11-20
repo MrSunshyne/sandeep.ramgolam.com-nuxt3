@@ -4,7 +4,7 @@ uuid: 386bd353-fbf1-42fe-ba8d-ab4bd6c8675a
 title: Developers.Institute x Front-end Coders - April Meetup 2023
 slug: developers-institute-x-front-end-coders-april-meetup-2023
 comment_id: 64521ce3711da00001e82625
-feature_image: __GHOST_URL__/content/images/2023/05/april-2023.jpg
+feature_image: /content/images/2023/05/april-2023.jpg
 featured: 1
 type: post
 status: published
@@ -32,7 +32,7 @@ This was probably our biggest and most successful meetup till date, with over 45
 
 As it is customary, I kicked off the meetup by welcoming the new faces and introducing frontend coders Mauritius, our mission and what we do.
 
-![](__GHOST_URL__/content/images/2023/05/image-12.png)
+![](/content/images/2023/05/image-12.png)
 
 I also spoke about our website, frontend.mu and the contributions it has been receiving from fellow meetup attendees. The gallery challenge was the highlight and Mr Nikhil, who submitted this version, will have his PR merged because it's awesome.
 
@@ -40,13 +40,13 @@ I also spoke about our website, frontend.mu and the contributions it has been re
 
 I welcomed Abraham to speak about the venue and what they do to help developers by offering various training and placements. He spoke about former students who went on to work at very successful businesses, and that was really awesome to see.
 
-![](__GHOST_URL__/content/images/2023/05/image-13.png)
+![](/content/images/2023/05/image-13.png)
 
 ## Behind the scenes: Insights into the IT Recruitment Process by Luisa Bruno
 
 Luisa, who is very well versed in the tech recruitment space, shared the experience of reviewing countless job applications and interviews.
 
-![](__GHOST_URL__/content/images/2023/05/image-14.png)
+![](/content/images/2023/05/image-14.png)
 
 She shared extremely helpful tips to the attendees and how to best tackle the tech interview process. I learned a lot from this session and agreed with most of the points. There were some interesting questions from the crowd as well which helped elaborate deeper in this topic. I wish this session was recorded because of how filled with valueable information it was.
 
@@ -54,7 +54,7 @@ She shared extremely helpful tips to the attendees and how to best tackle the te
 
 Jules, a seasoned developer, has gone through a lot of CV iterations and job interviews. In his presentation, he shared 14 straight to the point tips that can be applied to improve any tech CV.
 
-![](__GHOST_URL__/content/images/2023/05/image-28.png)
+![](/content/images/2023/05/image-28.png)
 
 Some trends that appear in CVs might not be so useful, while other aspects such as impact on the business are often understated. He gave clear examples of things that are relevant as well as a proper logical layout to structure a CV.
 
@@ -62,7 +62,7 @@ Some trends that appear in CVs might not be so useful, while other aspects such 
 
 Cedric, who is one of the original organizer of Frontend Coders, is back today to share his experience on what's been keeping busy. He explained what different aspects are involved in freelancing and what are things that people should avoid.
 
-![](__GHOST_URL__/content/images/2023/05/image-27.png)
+![](/content/images/2023/05/image-27.png)
 
 Freelancing is not just coding, but you are essentially an entire company, with the responsibility and expenses. He shared some stories of his journey which was inspiring to many people present.
 
@@ -70,17 +70,17 @@ Freelancing is not just coding, but you are essentially an entire company, with 
 
 We headed outside to enjoy some pizza, and network. I mingled with some people present and mostly answered questions about freelancing to the best of my ability.
 
-![](__GHOST_URL__/content/images/2023/05/image-29.png)
+![](/content/images/2023/05/image-29.png)
 
 Then we found a nice sunny spot for a group photo before heading back in the AC room to continue the meetup!
 
-![](__GHOST_URL__/content/images/2023/05/image.png)
+![](/content/images/2023/05/image.png)
 
 ## Entrepreneurship Tips - Nayar Joolfoo
 
 Nayar, a hardworking entrepreneur who has gone through various journeys in a short time, had a lot to share with everyone. He showcased, like Cedric, that entrepreneurship hide more than one would expect behind the scenes, but it's also very fulfilling.
 
-![](__GHOST_URL__/content/images/2023/05/image-21.png)
+![](/content/images/2023/05/image-21.png)
 
 He talked about the KFC Online Ordering Chatbot he built and how he got to the final product, but also the other ideas that didn't materialize into functional businesses for various reasons. We also veered into some business discussions about equity vs loan to fund businesses.
 
@@ -88,7 +88,7 @@ He talked about the KFC Online Ordering Chatbot he built and how he got to the f
 
 Bolt Talent reached out to us after we announced the topic, and we were happy to give them a session during the meetup.
 
-![](__GHOST_URL__/content/images/2023/05/image-22.png)
+![](/content/images/2023/05/image-22.png)
 
 Asma, Talent Management Partner was present and throughout the meetup helped answer some audience questions from a recruiter's perspective which I think everyone really appreciated. She spoke about newer ways of doing interviews that are already in place in US markets, namely, one-way video interviewing. Those are for first-contacts and listed some benefits of that technique to interviewees and companies recruiting.
 
@@ -96,7 +96,7 @@ Asma, Talent Management Partner was present and throughout the meetup helped ans
 
 To end the session I thanked everyone present and outlined some support we need to run the website. We are looking for sponsors to keep the meetups healthy and lively to fulfill our goal of improving the level of frontend development in Mauritius.
 
-![](__GHOST_URL__/content/images/2023/05/image-23.png)
+![](/content/images/2023/05/image-23.png)
 
 ## Post Meetup
 

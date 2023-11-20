@@ -4,7 +4,7 @@ uuid: 4f03272f-24ac-4841-a5bb-9eb204a3f963
 title: "February Front-end Coders Meetup #1"
 slug: february-front-end-coders-meetup-1
 comment_id: 5e4bdab12b3b172afa32735e
-feature_image: __GHOST_URL__/content/images/2020/02/meetup-frontend-15feb.jpg
+feature_image: /content/images/2020/02/meetup-frontend-15feb.jpg
 featured: 1
 type: post
 status: published
@@ -30,13 +30,13 @@ This meetup was planned since December last year, but unfortunately due to the v
 
 The weather was great in Mauritius on the 15th and I set out towards Ebene with the projector in my car. Special thanks to Rajneesh who lent us his projector for the meetup.
 
-![](__GHOST_URL__/content/images/2020/02/photo_2020-02-18-16.55.48.jpg)
+![](/content/images/2020/02/photo_2020-02-18-16.55.48.jpg)
 
 Nice weather and Traffic jam in Port Louis on my way to Ebene
 
 Reaching there I met with Tristan who was very kind. He was preparing the office to host us. I setup the projector and of course I forgot the VGA to type-C adapter :)
 
-![](__GHOST_URL__/content/images/2020/02/photo_2020-02-18-16.55.51.jpg)
+![](/content/images/2020/02/photo_2020-02-18-16.55.51.jpg)
 
 Tristan & Cedric opened the meetup by welcoming everyone
 
@@ -62,7 +62,7 @@ The [MSCC](https://twitter.com/MSCraftsman) covered our expenses for the Pizzas,
 
 Cedric spoke about promises and calbacks in JavaScript in a very well prepared presentation, which everyone followed attentively. I learned a couple of tricks during this session that i'm going to use from now on!
 
-![](__GHOST_URL__/content/images/2020/02/photo_2020-02-18-16.55.56.jpg)
+![](/content/images/2020/02/photo_2020-02-18-16.55.56.jpg)
 
 There was a lot of interactions from the audience during this session which is very encouraging I think.
 
@@ -70,11 +70,11 @@ There was a lot of interactions from the audience during this session which is v
 
 Two company representatives were present during the meetup and they offer front-end job opporunities to the attendees !
 
-![](__GHOST_URL__/content/images/2020/02/photo_2020-02-18-16.56.00.jpg)
+![](/content/images/2020/02/photo_2020-02-18-16.56.00.jpg)
 
 Happy faces after the meetup !
 
-![](__GHOST_URL__/content/images/2020/02/photo_2020-02-18-16.56.05.jpg)
+![](/content/images/2020/02/photo_2020-02-18-16.56.05.jpg)
 
 Had to sneak in a picture of myself somewhere :P 
 

@@ -4,7 +4,7 @@ uuid: 43723fc3-d2e0-4c0f-9d10-13edb1225460
 title: Front-end Coders Meetup - October 2022
 slug: front-end-coders-meetup-october-2022
 comment_id: 635f83a09fd6fdf602986602
-feature_image: __GHOST_URL__/content/images/2022/10/october-meetup.jpg
+feature_image: /content/images/2022/10/october-meetup.jpg
 featured: 1
 type: post
 status: published
@@ -28,7 +28,7 @@ show_title_and_feature_image: 1
 
 7 in a row ! We've hosted another meetup around frontend topics and this time we had 4 speakers, a wonderful venue at ELCA Mauritius and good pizza! There was no specific topic this time, so we just named the meetup “The October Meetup” and I suppose we had a Halloween kind of theme going on. I also organized a quiz around the web development topic and that was a lot of fun.
 
-![](__GHOST_URL__/content/images/2022/10/image-35.png)
+![](/content/images/2022/10/image-35.png)
 
 ELCA Mauritius Office
 
@@ -36,7 +36,7 @@ ELCA Mauritius Office
 
 As usual, I introduced our community to the new faces in the audience. I noted there were around 35 people present this time.
 
-![](__GHOST_URL__/content/images/2022/10/image-3.png)
+![](/content/images/2022/10/image-3.png)
 
 Me, Kicking off the Meetup !
 
@@ -57,31 +57,31 @@ Since I am not doing any presentation for this meetup, I had two quick slides fo
 
 ## Sponsor / Host Intro
 
-![](__GHOST_URL__/content/images/2022/10/image-5.png)
+![](/content/images/2022/10/image-5.png)
 
 I welcomed Adarsh Hasnah, Web Architect at ELCA to speak about his company and share some details with the audience.
 
-![](__GHOST_URL__/content/images/2022/10/image-1.png)
+![](/content/images/2022/10/image-1.png)
 
 He was very eloquent and quickly went over the different tech stack they accomodate. If you're looking for a spot in web dev, reach out to him!
 
 ## Kushul Soomaree - Cool CSS tricks
 
-![](__GHOST_URL__/content/images/2022/10/image-8.png)
+![](/content/images/2022/10/image-8.png)
 
 Kushul, who is also co-organizer of Frontend Coders Meetups, was first for the presentations of the day. He shared a bunch of cool CSS one-liners with demos. A lot of useful stuff that can make our lives as a frontend developer easier.
 
-![](__GHOST_URL__/content/images/2022/10/image-10.png)
+![](/content/images/2022/10/image-10.png)
 
 I learned about `transform: scale(-1)` to invert an image, CSS @supports, scroll snapping among others things. There were a few questions from the audience and the session was quite fun and defintely informative.
 
 ## Renghen - Public speaking for developers
 
-![](__GHOST_URL__/content/images/2022/10/image-12.png)
+![](/content/images/2022/10/image-12.png)
 
 Renghen shared his knowledge about public speaking with the audience. His presentation was geared towards technical presentations given by software engineers at meetups and conferences. He shared tips about things to do, and NOT to do during presentations.
 
-![](__GHOST_URL__/content/images/2022/10/image-14.png)
+![](/content/images/2022/10/image-14.png)
 
 A few of his recommendations as follows:
 
@@ -95,17 +95,17 @@ A few of his recommendations as follows:
 
 As usual, when noon approached, we took a break and had some pizza and soft drinks. We then gathered the crowd for a group photo in the office.
 
-![](__GHOST_URL__/content/images/2022/10/image-16.png)
+![](/content/images/2022/10/image-16.png)
 
 ## Aditya Bholah - Data Visualization
 
-![](__GHOST_URL__/content/images/2022/10/image-21.png)
+![](/content/images/2022/10/image-21.png)
 
 Aditya, Data Scientist at RAPP gave a presentation about the different kinds of data visualizations that exists and when to use them.
 
 I learned about a few names of charts that i've used before without knowing their names.
 
-![](__GHOST_URL__/content/images/2022/10/image-20.png)
+![](/content/images/2022/10/image-20.png)
 
 Data by itself is not very useful and Data Viz is one of the powerful tools that can be used to give meaning to data and quickly convey meaning quickly.
 
@@ -113,7 +113,7 @@ Data by itself is not very useful and Data Viz is one of the powerful tools that
 
 Next up was Adarsh. He gave a very interesting presentation that goes through the history of web dev. From the old days when HTML & CSS began, through the newer eras of Component Driven frameworks such as AngularJS to the latest and greatest tech like React, Nuxt, Qwik, Astro.
 
-![](__GHOST_URL__/content/images/2022/10/image-22.png)
+![](/content/images/2022/10/image-22.png)
 
 It was a fun presentation with some lively questions. It was refreshing to see someone really well versed in the field of web development, how things eventually came to be. He mentioned that a lot of people nowadays can be very proficient in a particular framework, but don't actually understand the tooling behind their framework. A sentiment I fully agree with. It's both a good and a bad thing, because it allows someone to be productive fast, but also they can get stuck in loops should they meet tool-level issues.
 
@@ -121,29 +121,29 @@ It was a fun presentation with some lively questions. It was refreshing to see s
 
 We had another give away this month, a 1-year JetBrains license for any of their products. Instead of going for the CSS Battle, we tried another formula, a quiz hosted on Kahoot in which everyone could participate.
 
-![](__GHOST_URL__/content/images/2022/10/image-28.png)
+![](/content/images/2022/10/image-28.png)
 
 The logistic requirements were much less and participation much higher. Special thanks to Michael Jules for helping me prepare the questions. We were the only two people not allowed to participate, naturally.
 
-![](__GHOST_URL__/content/images/2022/10/image-27.png)
+![](/content/images/2022/10/image-27.png)
 
 Participants in the Quiz
 
 The quiz had 26 participants and lasted around 10 minutes. We had 23 questions, multiple choice, and the participants would see the questions on the screen and be able to submit their answer using their phone.
 
-![](__GHOST_URL__/content/images/2022/10/image-31.png)
+![](/content/images/2022/10/image-31.png)
 
 Me hosting the Quiz segment
 
 It was honestly a lot of fun and very lively session.
 
-![](__GHOST_URL__/content/images/2022/10/image-33.png)
+![](/content/images/2022/10/image-33.png)
 
 Everyone ready to answer on their phone
 
 We'll do this again. Congrats to Mahima for narrowly winning the first place.
 
-![](__GHOST_URL__/content/images/2022/10/image-29.png)
+![](/content/images/2022/10/image-29.png)
 
 Leaderboard at the end
 

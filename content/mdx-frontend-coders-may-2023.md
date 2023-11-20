@@ -4,7 +4,7 @@ uuid: e363583b-1a4c-4e5a-99f7-484b0fc0a364
 title: MDX University x Front-end Coders Mauritius - May Meetup 2023
 slug: mdx-frontend-coders-may-2023
 comment_id: 649079358a99886171613c0b
-feature_image: __GHOST_URL__/content/images/2023/06/may-2023.jpg
+feature_image: /content/images/2023/06/may-2023.jpg
 featured: 1
 type: post
 status: published
@@ -33,11 +33,11 @@ This meetup was also very well-supported by our sponsors:
 *   Red & Yellow – Creative School of Business – Lunch for attendees
 *   Bolt Talent Solutions – Lunch and Goodies for attendees
 
-![](__GHOST_URL__/content/images/2023/06/image-1.png)
+![](/content/images/2023/06/image-1.png)
 
 We got to use an actual lecture theater with great screen, seats, and sound. It was awesome. As usual, I started the meetup by introducing who are the frontend coders, how people can contribute back to the community before introducing our speakers and sponsors for the day.
 
-![](__GHOST_URL__/content/images/2023/06/image.png)
+![](/content/images/2023/06/image.png)
 
 ## Speakers
 
@@ -48,7 +48,7 @@ We got to use an actual lecture theater with great screen, seats, and sound. It 
 
 ### [Saamiyah Peerun](https://www.linkedin.com/in/saamiyah-peerun-9a9507a3/) – Git Going: Starting your Version Control Journey with Git
 
-![](__GHOST_URL__/content/images/2023/06/image-2.png)
+![](/content/images/2023/06/image-2.png)
 
 Saamiyah went for the first presentation and spoke about using Git and how it is one of the most common tools any software engineers use daily. She gave examples of common commands and pitfalls. For those who use git, it's hard to imagine our industry without this tool, and for those who are not using it yet, well you should be !
 
@@ -56,7 +56,7 @@ She also spoke about GitHub and how they're both related. To finish her session,
 
 ### [Michaël Jules](https://www.linkedin.com/in/mgjules/) – Stand out from the crowd – Tips to improve your CV
 
-![](__GHOST_URL__/content/images/2023/06/image-3.png)
+![](/content/images/2023/06/image-3.png)
 
 I asked Mike to do a re-run of his session of the previous month because it was filled with excellent advice. He tailored it for a younger local audience, and it was a very fun and lively presentation. He received a lot of questions from the audience who wanted advice on specific ways to level up career-wise.
 
@@ -64,7 +64,7 @@ I asked Mike to do a re-run of his session of the previous month because it was 
 
 We're grateful to Ish for being in the lineup and sharing his vast experience in the local tech industry with the young minds present. He shed light on the difficulties that can arise in this job and how to persevere, or even pivot fields, within tech.
 
-![](__GHOST_URL__/content/images/2023/06/image-4.png)
+![](/content/images/2023/06/image-4.png)
 
 He is always fantastic at delivering his talks with minimum slides required, and it was very well received by the audience.
 
@@ -72,17 +72,17 @@ He is always fantastic at delivering his talks with minimum slides required, and
 
 We broke for lunch, and we're so grateful to both our sponsors for helping order pizzas for around 80 attendees. It was the biggest budget yet and everything went super smoothly. Special thanks to [Asma Dinat](https://www.linkedin.com/in/asma-dinat-25b18794/) and her team at [Bolt Talent Solutions](https://www.linkedin.com/company/bolt-talent-solutions/), and [Javed Jaumally](https://www.linkedin.com/in/javed-jaumally-56541369/) and his team at [Honoris](https://www.linkedin.com/school/honoriseducationalnetwork/) for making this possible at all.
 
-![](__GHOST_URL__/content/images/2023/06/image-5.png)
+![](/content/images/2023/06/image-5.png)
 
 Right before we got back, we gathered all the attendees for a photoshoot on the campus with my drone. It does look freaking cool !  :D
 
-![](__GHOST_URL__/content/images/2023/06/image-6.png)
+![](/content/images/2023/06/image-6.png)
 
 ### [Sandeep Ramgolam](https://www.linkedin.com/in/sandeepramgolam/) – How to get started with Frontend Dev
 
 When we got back in the lecture theater, I gave the final presentation about how to get started with frontend development. The TLDR; is to simply avoid all the noisy frameworks and start with the basics. Then build stuff. This will get you started, and you will naturally level up without skipping the foundation.
 
-![](__GHOST_URL__/content/images/2023/06/image-7.png)
+![](/content/images/2023/06/image-7.png)
 
 Mr Vadimir Jiji- My cat - Featured on my first slide
 
@@ -90,7 +90,7 @@ I noticed the biggest problem frontend developers have with modern tooling is th
 
 This is because they haven't learned the basics properly and end up hating the state of frontend.
 
-![](__GHOST_URL__/content/images/2023/06/image-13.png)
+![](/content/images/2023/06/image-13.png)
 
 ## Quiz
 
@@ -109,22 +109,22 @@ We ran a kahoot with more than 40 participants, and it was a lot of fun! Congrat
 
 ### Photos from the event
 
-![](__GHOST_URL__/content/images/2023/06/image-9.png)
+![](/content/images/2023/06/image-9.png)
 
 Follow the trail
 
-![](__GHOST_URL__/content/images/2023/06/image-8.png)
+![](/content/images/2023/06/image-8.png)
 
 Dereck addressing the audience
 
-![](__GHOST_URL__/content/images/2023/06/image-10.png)
+![](/content/images/2023/06/image-10.png)
 
 Attentive audience
 
-![](__GHOST_URL__/content/images/2023/06/image-11.png)
+![](/content/images/2023/06/image-11.png)
 
 Once upon a time pizza's lived here
 
-![](__GHOST_URL__/content/images/2023/06/image-12.png)
+![](/content/images/2023/06/image-12.png)
 
 Asma speaking about Bolt Talent to the audience
