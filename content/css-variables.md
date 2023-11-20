@@ -91,6 +91,8 @@ Plot-twist! They can have multiple parameters, which serve as fallbacks
 
 In the example above the `--color` variable is never defined, hence it will fallback to the 2nd parameter and you have a blue background. The fallback can also be a CSS Variable.
 
+![Screenshot 2023-11-19 at 21.26.34.png](/Screenshot%202023-11-19%20at%2021.26.34.png)
+
 ## Inline CSS Variables
 
 It's possible to define the css variable inline, like you would do with any normal css.
@@ -121,6 +123,8 @@ CSS Variable browser support. Screenshot taken on the 30th December 2019
 This part is brand new and it's ok if you're not ready to dive into Houdini right now. No pressure.
 
 You might have noticed all the custom properties we defined were 'text', i.e they have no Types. With the Houdini API it is possible to register a CSS Custom Property using the `registerProperty` method.
+
+![Screenshot 2023-11-19 at 21.25.07.png](/blog/images/Screenshot%202023-11-19%20at%2021.25.07.png)
 
 The code is very simple and looks like this
 

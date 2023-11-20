@@ -118,6 +118,7 @@ It was a lot of fun spectating the coders at work, some were quite stressed, oth
 
 In the end we had our 3 Winners, [Ish](https://www.linkedin.com/in/ishsookun/), [Nythiennzo](https://www.linkedin.com/in/nythiennzo/) and [Nikhil](https://www.linkedin.com/in/nikhil-aukhaj-8662501b7/), who each won a 1 year license for any [Jetbrains](https://www.jetbrains.com/products/#type=ide) product. We are grateful to Jetbrains for supporting our community.
 
+
 ## Conclusion& Thanks
 
 It was another fun event. Some of us eventually went for a little "after party" at flying dodo to end the evening with some beer.
@@ -131,3 +132,5 @@ Thanks to Michaël &Kushul for his advices and help to organize the CSS Battle
 Thanks to Mahima for taking care of the RSVP process.
 
 And of course, thanks to everyone who attended. We hope you learned something new.
+
+
