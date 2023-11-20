@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.9.0",
+    "@nuxthq/studio": "^1.0.5",
     "@nuxtjs/tailwindcss": "^6.9.5",
     "nuxt": "^3.8.1"
   },
