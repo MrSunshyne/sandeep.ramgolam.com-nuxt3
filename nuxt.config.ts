@@ -1,5 +1,12 @@
+import tailwindTypography from '@tailwindcss/typography'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxt/content']
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
+  tailwindcss: {
+    config: {
+        plugins: [tailwindTypography],
+    }
+},
 })
