@@ -7,6 +7,7 @@ comment_id: 5e07259d0b8a5707aaf98a45
 feature_image: /content/images/2019/12/css-variables.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

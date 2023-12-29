@@ -7,6 +7,7 @@ comment_id: 6432761b3d5d400001c33147
 feature_image: /content/images/2023/04/february-2023.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

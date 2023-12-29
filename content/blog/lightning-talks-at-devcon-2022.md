@@ -7,6 +7,7 @@ comment_id: 63ed0914c42b76c579d6be5b
 feature_image: /content/images/2023/02/Screenshot-from-2023-02-15-20-34-11.png
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

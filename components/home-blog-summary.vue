@@ -35,7 +35,7 @@ const { data: posts } = await useAsyncData(
           I like to write about code.
         </p>
         <div class="py-5">
-          <div v-for="post in lastFivePosts" class="text-sm lg:text-xl flex gap-2 my-3">
+          <div v-for="post in posts" class="text-sm lg:text-xl flex gap-2 my-3">
             <nuxt-link :to="'/blog/' + post.slug" class="hover:text-green-500">
               {{ post.title }}
             </nuxt-link>

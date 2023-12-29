@@ -7,6 +7,7 @@ comment_id: 5e4bdab12b3b172afa32735e
 feature_image: /content/images/2020/02/meetup-frontend-15feb.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

@@ -7,6 +7,7 @@ comment_id: 5de75c39cf520498852ee951
 feature_image: null
 featured: 0
 type: post
+indexable: true
 status: draft
 locale: null
 visibility: public

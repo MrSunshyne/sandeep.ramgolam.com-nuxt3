@@ -7,6 +7,7 @@ comment_id: 5e84cbc7fb739d54dab92209
 feature_image: /content/images/2020/04/ghost-cloudinary.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

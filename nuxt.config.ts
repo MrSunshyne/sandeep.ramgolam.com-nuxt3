@@ -2,12 +2,18 @@ import tailwindTypography from '@tailwindcss/typography'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  site: {
+    url: 'https://sandeep.ramgolam.com',
+    name: 'Sandeep Ramgolam',
+    description: 'thoughts, experiments, experiences',
+    defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
+    indexable: false
+  },
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxthq/studio', '@nuxtjs/color-mode'],
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxthq/studio', '@nuxtjs/color-mode', '@nuxtseo/module'],
   colorMode: {
     classSuffix: ''
   },
-  // import css from '@/styles/global.css
   css: ['@/styles/global.css'],
   tailwindcss: {
     config: {

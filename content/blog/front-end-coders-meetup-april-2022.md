@@ -7,6 +7,7 @@ comment_id: 6251a9bb5686548d2c98f030
 feature_image: /content/images/2022/04/april-2022.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

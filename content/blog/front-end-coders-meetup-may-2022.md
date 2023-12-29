@@ -7,6 +7,7 @@ comment_id: 6289d539af837023bc980a3d
 feature_image: /content/images/2022/05/may-2022.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

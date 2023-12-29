@@ -7,6 +7,7 @@ comment_id: 62b88853a8578763b0f7f4bc
 feature_image: /content/images/2022/06/june-2022.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

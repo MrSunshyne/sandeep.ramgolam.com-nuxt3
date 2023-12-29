@@ -7,6 +7,7 @@ comment_id: 5deb8945cf520498852ee958
 feature_image: /content/images/2019/12/custom-property-slideshow.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

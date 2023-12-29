@@ -7,6 +7,7 @@ comment_id: 5e81bf28463a094592d44107
 feature_image: /content/images/2020/03/covid19-is-real-1.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

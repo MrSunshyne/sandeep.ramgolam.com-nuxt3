@@ -7,6 +7,7 @@ comment_id: 635f83a09fd6fdf602986602
 feature_image: /content/images/2022/10/october-meetup.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

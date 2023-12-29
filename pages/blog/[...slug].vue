@@ -66,6 +66,7 @@ if (post.value) {
     ],
   });
 }
+
 </script>
 
 <template>

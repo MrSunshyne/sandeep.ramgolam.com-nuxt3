@@ -7,6 +7,7 @@ comment_id: 5f5b85f5e178aa584a3a7834
 feature_image: /content/images/2020/09/Frame-19.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

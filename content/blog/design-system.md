@@ -7,6 +7,7 @@ comment_id: 5e0db519febc7b0b980b4f3d
 feature_image: /content/images/2020/01/design-system.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

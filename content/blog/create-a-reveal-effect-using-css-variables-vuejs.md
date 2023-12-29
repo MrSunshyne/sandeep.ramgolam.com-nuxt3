@@ -7,6 +7,7 @@ comment_id: 5e05e7ea0b8a5707aaf989d0
 feature_image: /content/images/2019/12/css-reveal-effect.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

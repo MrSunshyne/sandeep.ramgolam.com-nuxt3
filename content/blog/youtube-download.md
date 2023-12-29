@@ -7,6 +7,7 @@ comment_id: 5e087e670b8a5707aaf98b53
 feature_image: /content/images/2020/01/youtube-download-free.jpg
 featured: 0
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

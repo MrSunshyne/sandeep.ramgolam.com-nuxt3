@@ -7,6 +7,7 @@ comment_id: 5eaec344173fadc73adf1a7b
 feature_image: /content/images/2020/05/linux-distro-hopping-1.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

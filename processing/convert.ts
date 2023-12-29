@@ -71,7 +71,8 @@ async function convertToMarkdown(post: BlogPost): Promise<string> {
     comment_id: post.comment_id,
     feature_image: post.feature_image,
     featured: post.featured,
-    type: post.type,
+    type: post
+indexable: true.type,
     status: post.status,
     locale: post.locale,
     visibility: post.visibility,

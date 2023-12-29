@@ -7,6 +7,7 @@ comment_id: 5dcf9495bf5c0e76259687eb
 feature_image: /content/images/2023/02/software-updates-ubuntu-1-1000w.png
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public
