@@ -2,7 +2,7 @@
 import type { BlogPost } from '@/types/types'
 
 const props = defineProps<{
-    post: BlogPost
+    post: BlogPost 
 }>()
 </script>
 

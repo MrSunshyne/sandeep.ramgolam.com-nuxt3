@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { PostOrPage } from '@tryghost/content-api';
+import type { BlogPost } from '~/types/types';
 
 
-const props = defineProps({
-    post: {
-        type: Object as PropType<PostOrPage>,
-        required: true,
-    },
-});
+
+const props = defineProps<{
+    post: BlogPost;
+}>();
+
+const tags = computed(() => {
+    return props.post.title.split(',').map((tag) => tag.trim());
+})
 
 
 </script>
@@ -16,10 +18,10 @@ const props = defineProps({
 <template>
     <div class="content-container">
         <div class="flex gap-4 py-4">
-            <template v-for="tag in post.tags" :key="tag.id">
-                <NuxtLink :href="`/tag/${tag.name}`" class="text-xl font-medium">
-                    #{{ tag.name }}
-                </NuxtLink>
+            <template v-for="tag in tags" :key="tag.id">
+                <a :href="`/tag/${tag}`" class="text-xl font-medium">
+                    #{{ tag }}
+                </a>
             </template>
         </div>
     </div>

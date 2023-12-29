@@ -1,34 +1,39 @@
 <script setup lang="ts">
 import type { BlogPost } from '@/types/types'
 
-// const { data: posts } = await useFetch<PostOrPage[]>("/api/posts");
-const { data: posts } = await useAsyncData('blogs', () => queryContent<BlogPost>('blog').find())
+const { data: posts } = await useAsyncData(
+  'blogs', 
+  () => queryContent<BlogPost>('blog')
+    .where({ visibility: { $eq:'public' } })
+    .sort({ updated_at: -1 })
+    .find()
+  )
 
-// useHead({
-//   title: "Articles | Sandeep Ramgolam",
-//   meta: [
-//     {
-//       hid: "description",
-//       name: "description",
-//       content: "Blog articles by Sandeep Ramgolam",
-//     },
-//     { hid: "og:type", property: "og:type", content: "page" },
-//     {
-//       hid: "og:title",
-//       property: "og:title",
-//       content: "Articles | Sandeep Ramgolam",
-//     },
-//     {
-//       hid: "og:description",
-//       property: "og:description",
-//       content: "Articles written by Sandeep Ramgolam",
-//     },
-//     {
-//       hid: "og:url",
-//       property: "og:url",
-//     },
-//   ],
-// });
+useHead({
+  title: "Articles | Sandeep Ramgolam",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content: "Blog articles by Sandeep Ramgolam",
+    },
+    { hid: "og:type", property: "og:type", content: "page" },
+    {
+      hid: "og:title",
+      property: "og:title",
+      content: "Articles | Sandeep Ramgolam",
+    },
+    {
+      hid: "og:description",
+      property: "og:description",
+      content: "Articles written by Sandeep Ramgolam",
+    },
+    {
+      hid: "og:url",
+      property: "og:url",
+    },
+  ],
+});
 </script>
 
 <template>
@@ -36,8 +41,8 @@ const { data: posts } = await useAsyncData('blogs', () => queryContent<BlogPost>
     <!-- <OgImageStatic component="OgImageGeneric" /> -->
     <div class="blog-posts">
       <template v-for="post in posts">
-        <BlogCard :post="post" /> 
-      </template>
+          <BlogCard :post="post" />
+        </template>
     </div>
   </div>
 </template>

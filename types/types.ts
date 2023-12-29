@@ -4,4 +4,7 @@ export type BlogPost = {
     feature_image: string
     published_at: string
     custom_excerpt: string
+    created_at: string
+    html: string
+    
 }
