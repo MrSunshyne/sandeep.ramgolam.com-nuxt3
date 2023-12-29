@@ -1,8 +1,10 @@
+
 <template>
-    <!-- <NuxtLayout> -->
-        <div class="dark:bg-slate-900 dark:text-white">
-            <ColorModeSwitcher />
+    <div class="relative">
+        <SiteMenu />
+        <div>
             <slot />
         </div>
-    <!-- </NuxtLayout> -->
+        <SiteFooter />
+    </div>
 </template>
