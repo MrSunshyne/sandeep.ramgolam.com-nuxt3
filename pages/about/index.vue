@@ -151,8 +151,8 @@
 </style>
 
 <script setup lang="ts">
-import { employment, education, stack } from "~/data/experience";
-import { projects } from "~/data/projects/";
+import { employment, education, stack } from "@/data/experience";
+import { projects } from "@/data/projects/";
 
 function print() {
   window.print();
