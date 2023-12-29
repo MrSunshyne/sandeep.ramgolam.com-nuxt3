@@ -1,0 +1,22 @@
+{
+  "event_date": "04/01/2015",
+  "event_name": "Developers Conference 2015",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking"
+  ],
+  "published": true,
+  "topic": "Front-end Tools & Workflow",
+  "description": "The idea is to give developers a glimpse of modern tools & techniques made that greatly improves productivity and bring back the fun in front-end development.",
+  "links": [
+    {
+      "title": "Slides",
+      "url": "http://www.slideshare.net/MrSunshyne/front-end-tipstrickstools"
+    },
+    {
+      "title": "Conference Schedule",
+      "url": "http://2015.mscc.mu/"
+    }
+  ],
+  "video": null
+}

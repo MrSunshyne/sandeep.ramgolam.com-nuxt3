@@ -1,0 +1,26 @@
+{
+  "event_date": "11/08/2018",
+  "event_name": "Code Saturday by MSCC",
+  "location": "Digital Factory, Mauritius",
+  "event_type": [
+    "speaking"
+  ],
+  "published": true,
+  "topic": "Modern front end development ",
+  "description": "Spoke about CSS custom properties and it's lesser known features and annouced Vue Cli 3 !",
+  "links": [
+    {
+      "title": "Meetup Page",
+      "url": "https://www.meetup.com/MauritiusSoftwareCraftsmanshipCommunity/events/253335385/"
+    },
+    {
+      "title": "Slides",
+      "url": "https://www.slideshare.net/MrSunshyne/front-end-dev-and-stuff"
+    },
+    {
+      "title": "Photo Album",
+      "url": "https://www.facebook.com/bildulloo/media_set?set=a.2072068246136753&type=3"
+    }
+  ],
+  "video": ""
+}

@@ -1,0 +1,18 @@
+{
+  "event_date": "10/23/2020",
+  "event_name": "Anou Participe dans Hacktoberfest",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking"
+  ],
+  "published": true,
+  "topic": "Open Source in Mauritius",
+  "description": "Help organize and co-host",
+  "links": [
+    {
+      "title": "MLH Event Page",
+      "url": "https://organize.mlh.io/participants/events/5022-anou-participe-dans-hacktoberfest"
+    }
+  ],
+  "video": null
+}

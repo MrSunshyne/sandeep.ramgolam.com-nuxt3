@@ -1,0 +1,17 @@
+{
+  "event_date": "05/01/2018",
+  "event_name": "Developers Conference 2018",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking"
+  ],
+  "published": true,
+  "topic": "Power User moves for developers.",
+  "links": [
+    {
+      "title": "Conference Schedule",
+      "url": "http://2018.mscc.mu"
+    }
+  ],
+  "video": ""
+}

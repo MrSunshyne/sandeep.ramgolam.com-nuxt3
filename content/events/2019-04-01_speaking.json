@@ -1,0 +1,30 @@
+{
+  "event_date": "04/01/2019",
+  "event_name": "Developers Conference 2019",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking"
+  ],
+  "published": true,
+  "topic": "Lightining Talks",
+  "description": "This time at the developers conference I hosted the Lightning talks that included 7 short talks about interesting topics. I had a lot of fun preparing this session and we even made intro videos for each speaker",
+  "links": [
+    {
+      "title": "Conference Schedule",
+      "url": "http://2019.mscc.mu"
+    },
+    {
+      "title": "Blog post by Ish Sookun",
+      "url": "https://hacklog.in/devcon-2019-lightning-talks/"
+    },
+    {
+      "title": "Intro Videos for Lightning Talks",
+      "url": "https://twitter.com/__Sun__/status/1117460206395494400"
+    },
+    {
+      "title": "Tweet by Vanessa C",
+      "url": "https://twitter.com/VanessaChellen/status/1117045231592013825"
+    }
+  ],
+  "video": ""
+}

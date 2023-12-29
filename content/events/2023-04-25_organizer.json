@@ -1,0 +1,22 @@
+{
+  "event_date": "04/25/2023",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "organizer"
+  ],
+  "published": true,
+  "topic": "Interviews / CVs / Freelancing",
+  "description": "Host and Organize this meetup",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://frontend.mu/meetup/43"
+    },
+    {
+      "title": "Blog Post",
+      "url": "https://sandeep.ramgolam.com/blog/developers-institute-x-front-end-coders-april-meetup-2023/"
+    }
+  ],
+  "video": null
+}

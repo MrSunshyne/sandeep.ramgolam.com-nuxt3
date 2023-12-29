@@ -1,0 +1,22 @@
+{
+  "event_date": "05/20/2023",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "organizer"
+  ],
+  "published": true,
+  "topic": "Git, CVs & getting in to tech",
+  "description": "Host and Speak at this meetup",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://frontend.mu/meetup/44"
+    },
+    {
+      "title": "Blog Post",
+      "url": "https://sandeep.ramgolam.com/blog/mdx-frontend-coders-may-2023/"
+    }
+  ],
+  "video": null
+}

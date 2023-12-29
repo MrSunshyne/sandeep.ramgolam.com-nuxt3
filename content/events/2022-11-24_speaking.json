@@ -1,0 +1,23 @@
+{
+  "event_date": "11/24/2022",
+  "event_name": "Developers Conference 2022",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking",
+    "organizer"
+  ],
+  "published": true,
+  "topic": "Lightning Talks 2022",
+  "description": "I organized and hosted the lightning talks session at the conference",
+  "links": [
+    {
+      "title": "Website",
+      "url": "https://2022.mscc.mu/agenda/302537"
+    },
+    {
+      "title": "Blogpost",
+      "url": "https://sandeep.ramgolam.com/blog/lightning-talks-at-devcon-2022"
+    }
+  ],
+  "video": null
+}

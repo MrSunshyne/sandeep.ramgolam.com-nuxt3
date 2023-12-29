@@ -1,0 +1,19 @@
+{
+  "event_date": "05/05/2020",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking",
+    "organizer"
+  ],
+  "published": true,
+  "topic": "Vue 3 Portals + Vite - vuejs, development without a bundler",
+  "description": "I helped organize this meetup as well as give two talks about the latest hottest features coming for Vue 3",
+  "links": [
+    {
+      "title": "Meetup Page",
+      "url": "https://www.meetup.com/frontendcodersmauritius/events/270381025/"
+    }
+  ],
+  "video": null
+}

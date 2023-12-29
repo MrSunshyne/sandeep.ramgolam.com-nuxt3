@@ -1,0 +1,19 @@
+{
+  "event_date": "06/02/2020",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking",
+    "organizer"
+  ],
+  "published": true,
+  "topic": "Front-end open discussions",
+  "description": "Helped organize this meetup and run the open discussion about front-end topics during the last session",
+  "links": [
+    {
+      "title": "Meetup Page",
+      "url": "https://www.meetup.com/frontendcodersmauritius/events/270971949/"
+    }
+  ],
+  "video": null
+}

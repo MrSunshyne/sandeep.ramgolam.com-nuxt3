@@ -1,0 +1,23 @@
+{
+  "event_date": "02/03/2018",
+  "event_name": "Front-End Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking",
+    "organizer"
+  ],
+  "published": true,
+  "topic": "Building a keylogger using CSS",
+  "description": "How to use abuse a css functionality to create a keylogger that can track clients from the serve using CSS!",
+  "links": [
+    {
+      "title": "Meetup Page",
+      "url": "https://www.meetup.com/frontendcodersmauritius/events/247184015/"
+    },
+    {
+      "title": "Photo Album",
+      "url": "https://www.meetup.com/frontendcodersmauritius/photos/all_photos/?photoAlbumId=28549290"
+    }
+  ],
+  "video": ""
+}

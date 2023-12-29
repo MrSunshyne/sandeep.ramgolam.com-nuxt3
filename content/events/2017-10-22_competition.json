@@ -1,0 +1,22 @@
+{
+  "event_date": "10/22/2017",
+  "event_name": "Krakathon 2017",
+  "location": "Mauritius",
+  "event_type": [
+    "competition"
+  ],
+  "published": true,
+  "topic": "4th place in the Krakathon",
+  "description": "We participated under the banner of Team Undefined.",
+  "links": [
+    {
+      "title": "Report by ict.io",
+      "url": "https://ict.io/krakathon-2017-force-coders-remportent-deuxieme-edition-code-challenge/"
+    },
+    {
+      "title": "Photo album by lexpress.mu",
+      "url": "https://www.lexpress.mu/photos/319077/krakathon-force-coders-remportent-2e-edition#lg=1&slide=10"
+    }
+  ],
+  "video": null
+}

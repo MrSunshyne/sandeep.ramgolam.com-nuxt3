@@ -1,0 +1,23 @@
+{
+  "event_date": "07/20/2019",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking",
+    "organizer"
+  ],
+  "published": true,
+  "topic": "Trigonometry in CSS",
+  "description": "During between the preplanned sessions I shared my experience regarding how to handle Trigonometry in CSS using traditional mathemetics techniques and proceeded to show how it could be applied to animations in a live demo.",
+  "links": [
+    {
+      "title": "Meetup Event",
+      "url": "https://www.meetup.com/frontendcodersmauritius/events/263025328/"
+    },
+    {
+      "title": "Twitter Moment",
+      "url": "https://twitter.com/i/events/1152597473522642944"
+    }
+  ],
+  "video": ""
+}

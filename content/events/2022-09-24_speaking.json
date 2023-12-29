@@ -1,0 +1,23 @@
+{
+  "event_date": "09/24/2022",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking",
+    "organizer"
+  ],
+  "published": true,
+  "topic": "Upcoming Features of CSS",
+  "description": "Host and Speaker at this meetup",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://frontend.mu/meetup/39"
+    },
+    {
+      "title": "Blog Post",
+      "url": "https://sandeep.ramgolam.com/blog/front-end-coders-meetup-september"
+    }
+  ],
+  "video": null
+}

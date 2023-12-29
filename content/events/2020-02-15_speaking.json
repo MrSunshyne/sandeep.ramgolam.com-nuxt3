@@ -1,0 +1,23 @@
+{
+  "event_date": "02/15/2020",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking",
+    "organizer"
+  ],
+  "published": true,
+  "topic": "Contributing to Open Source & Data visualizations with VueJS",
+  "description": "In this event I spoke about open source contributions, data visualization and how to contribute to the DevCon Website",
+  "links": [
+    {
+      "title": "Meetup Page",
+      "url": "https://www.meetup.com/frontendcodersmauritius/events/268295472/?"
+    },
+    {
+      "title": "Photo Album",
+      "url": "https://photos.app.goo.gl/pSAS8nZ7o4zatDKF7"
+    }
+  ],
+  "video": ""
+}

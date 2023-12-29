@@ -1,0 +1,18 @@
+{
+  "event_date": "11/23/2022",
+  "event_name": "Developers Conference 2022",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking"
+  ],
+  "published": true,
+  "topic": "Modern Front-End Development With Vitejs",
+  "description": "I spoke about the rise of vite and how it is being used to build modern front-end applications",
+  "links": [
+    {
+      "title": "Website",
+      "url": "https://2022.mscc.mu/agenda/302541"
+    }
+  ],
+  "video": null
+}

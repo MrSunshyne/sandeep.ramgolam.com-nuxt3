@@ -1,0 +1,18 @@
+{
+  "event_date": "12/13/2018",
+  "event_name": "Google Dev Fest 2018",
+  "location": "Mauritius",
+  "event_type": [
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Google Dev Fest Mauritius",
+  "description": "The 1st Google Dev fest event in Mauritius",
+  "links": [
+    {
+      "title": "MSCC blog post",
+      "url": "https://www.mscc.mu/devfest-mauritius-2018/"
+    }
+  ],
+  "video": null
+}

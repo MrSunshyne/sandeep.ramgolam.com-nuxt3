@@ -1,0 +1,19 @@
+{
+  "event_date": "10/10/2020",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking",
+    "organizer"
+  ],
+  "published": true,
+  "topic": "FEC October Meetup",
+  "description": "Organize this meetup",
+  "links": [
+    {
+      "title": "Meetup Page",
+      "url": "https://www.meetup.com/frontendcodersmauritius/events/273573909/"
+    }
+  ],
+  "video": null
+}

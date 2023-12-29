@@ -1,0 +1,22 @@
+{
+  "event_date": "06/01/2023",
+  "event_name": "JSNation Amsterdam 2023",
+  "location": "Amsterdam",
+  "event_type": [
+    "attendee"
+  ],
+  "published": true,
+  "topic": "JSNation Amsterdam 2023",
+  "description": "Attended this conference",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://jsnation.com/"
+    },
+    {
+      "title": "Blog Post",
+      "url": "https://sandeep.ramgolam.com/blog/attending-jsnation-in-amsterdam/"
+    }
+  ],
+  "video": null
+}

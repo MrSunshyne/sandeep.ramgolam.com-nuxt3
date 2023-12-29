@@ -1,0 +1,18 @@
+{
+  "event_date": "09/05/2016",
+  "event_name": "Jury Member",
+  "location": "Mauritius",
+  "event_type": [
+    "jury"
+  ],
+  "published": true,
+  "topic": "Prodigious Science Fair",
+  "description": "It was a great experience being part of the panel of jury that assessed 17 projects from 3 countries.",
+  "links": [
+    {
+      "title": "Report by lexpress.mu",
+      "url": "http://www.lexpress.mu/article/290590/prodigious-science-fair-2016-foire-aux-idees"
+    }
+  ],
+  "video": null
+}

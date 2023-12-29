@@ -1,0 +1,18 @@
+{
+  "event_date": "09/10/2020",
+  "event_name": "Virtual Developers Conference",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking"
+  ],
+  "published": true,
+  "topic": "Vue 3.0 - a glimpse of the Composition API",
+  "description": "For this session I paired with Kushul to talk about new upcoming features of Vue 3.0",
+  "links": [
+    {
+      "title": "Website",
+      "url": "https://conference.mscc.mu"
+    }
+  ],
+  "video": null
+}

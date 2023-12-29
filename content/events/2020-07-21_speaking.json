@@ -1,0 +1,19 @@
+{
+  "event_date": "07/21/2020",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking",
+    "organizer"
+  ],
+  "published": true,
+  "topic": "SPAs vs SSR discussions",
+  "description": "Organize this meetup and get the conversation going about the need for SSR in modern SPAs",
+  "links": [
+    {
+      "title": "Meetup Page",
+      "url": "https://www.meetup.com/frontendcodersmauritius/events/271940927/"
+    }
+  ],
+  "video": null
+}

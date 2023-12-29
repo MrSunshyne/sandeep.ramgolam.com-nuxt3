@@ -1,0 +1,18 @@
+{
+  "event_date": "03/01/2017",
+  "event_name": "Developers Conference 2017",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking"
+  ],
+  "published": true,
+  "topic": "Panel Discussion : Web Development in Mauritius",
+  "description": "I organized and hosted a panel discussion regrouping experienced professionals of the Web working in Mauritius",
+  "links": [
+    {
+      "title": "Conference Schedule",
+      "url": "http://2017.mscc.mu/"
+    }
+  ],
+  "video": ""
+}

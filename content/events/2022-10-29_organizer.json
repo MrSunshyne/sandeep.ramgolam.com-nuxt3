@@ -1,0 +1,22 @@
+{
+  "event_date": "10/29/2022",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "organizer"
+  ],
+  "published": true,
+  "topic": "October Meetup",
+  "description": "Host at this meetup",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://frontend.mu/meetup/40"
+    },
+    {
+      "title": "Blog Post",
+      "url": "https://sandeep.ramgolam.com/blog/front-end-coders-meetup-october-2022"
+    }
+  ],
+  "video": null
+}

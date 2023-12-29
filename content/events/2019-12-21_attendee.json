@@ -1,0 +1,22 @@
+{
+  "event_date": "12/21/2019",
+  "event_name": "GDG Mauritius Meetup",
+  "location": "Flying Dodo, Mauritius",
+  "event_type": [
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Go: All you ever wanted to know but didn't dare to ask...",
+  "description": "Attended a very lively event organized by Gopher Mauritius and MSCC",
+  "links": [
+    {
+      "title": "Meetup Page",
+      "url": "https://www.meetup.com/GDG-Mauritius/events/266919961/"
+    },
+    {
+      "title": "Blog Post",
+      "url": "/blog/go-gdg-meetup"
+    }
+  ],
+  "video": ""
+}

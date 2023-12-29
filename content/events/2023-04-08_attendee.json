@@ -1,0 +1,22 @@
+{
+  "event_date": "04/08/2023",
+  "event_name": "MSCC Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "attendee"
+  ],
+  "published": true,
+  "topic": "The Power of AI",
+  "description": "I attended this meetup",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://www.meetup.com/mauritiussoftwarecraftsmanshipcommunity/events/291590129/"
+    },
+    {
+      "title": "Blog Post",
+      "url": "https://sandeep.ramgolam.com/blog/the-power-of-ai-mscc-meetup/"
+    }
+  ],
+  "video": null
+}

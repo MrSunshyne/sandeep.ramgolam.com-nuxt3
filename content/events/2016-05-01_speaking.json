@@ -1,0 +1,22 @@
+{
+  "event_date": "05/01/2016",
+  "event_name": "Developers Conference 2016",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking"
+  ],
+  "published": true,
+  "topic": "lexpress.mu - the story of decks and card",
+  "description": "A presentatoin about an awesome front-end tool we used to build lexpress.mu, namely : Flint.gs. We'll also talk about our inhouse decks & cards system and some upcoming features of lexpress.mu",
+  "links": [
+    {
+      "title": "Conference Schedule",
+      "url": "http://2016.mscc.mu/"
+    },
+    {
+      "title": "Slides",
+      "url": "https://www.slideshare.net/MrSunshyne/a-story-of-deck-cards"
+    }
+  ],
+  "video": ""
+}

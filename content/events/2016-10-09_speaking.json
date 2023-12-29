@@ -1,0 +1,18 @@
+{
+  "event_date": "10/09/2016",
+  "event_name": "Front-End Mauritius Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking"
+  ],
+  "published": true,
+  "topic": "AureliaJS & GulpJS",
+  "description": "A look into then-emerging framework Aurelia and live demo of a photo resizing application.",
+  "links": [
+    {
+      "title": "Github Repo of Live Demo",
+      "url": "https://github.com/MrSunshyne/frontend-meetup-demo"
+    }
+  ],
+  "video": ""
+}

@@ -1,0 +1,26 @@
+{
+  "event_date": "10/08/2019",
+  "event_name": "Google Dev Fest 2019",
+  "location": "Mauritius",
+  "event_type": [
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Google Dev Fest Mauritius",
+  "description": "The 2nd Google Dev fest event in Mauritius",
+  "links": [
+    {
+      "title": "My blog post of the event",
+      "url": "https://sandeep.ramgolam.com/blog/google-devfest-2019-mauritius"
+    },
+    {
+      "title": "MSCC blog post",
+      "url": "https://www.mscc.mu/devfest-mauritius-2019/"
+    },
+    {
+      "title": "Twitter Moment",
+      "url": "https://twitter.com/i/events/1180380010621763584"
+    }
+  ],
+  "video": null
+}

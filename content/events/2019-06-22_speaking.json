@@ -1,0 +1,23 @@
+{
+  "event_date": "06/22/2019",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking",
+    "organizer"
+  ],
+  "published": true,
+  "topic": "Design Systems and how to build one",
+  "description": "An lively interactive session about current trends in Front-end techsphere, mainly design systems and how the MSCC Jobs website was designed in Figma",
+  "links": [
+    {
+      "title": "Meetup Page",
+      "url": "https://www.meetup.com/frontendcodersmauritius/events/261929807/"
+    },
+    {
+      "title": "Photo Album",
+      "url": "https://www.meetup.com/frontendcodersmauritius/photos/30097275/482456959/"
+    }
+  ],
+  "video": ""
+}
