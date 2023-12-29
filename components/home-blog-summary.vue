@@ -1,11 +1,17 @@
 <script setup lang="ts">
-import { PostOrPage } from "@tryghost/content-api";
-const { data: posts } = await useAsyncData<PostOrPage[]>("posts", () =>
-  $fetch("/api/posts")
-);
+import type { BlogPost } from '~/types/types';
+
+
+const { data: posts } = await useAsyncData(
+  'blogs', 
+  () => queryContent<BlogPost>('blog')
+    .where({ visibility: { $eq:'public' } })
+    .sort({ updated_at: -1 })
+    .limit(5)
+    .find()
+  )
 
 // computed of last five posts with null check
-const lastFivePosts = computed(() => posts.value?.slice(0, 5));
 </script>
 
 <template>
@@ -20,7 +26,7 @@ const lastFivePosts = computed(() => posts.value?.slice(0, 5));
       <div class="md:w-1/2 py-10">
         <h2 class="text-3xl font-black pt-10">
           Blog posts
-          <span class="text-black/10" v-if="posts && lastFivePosts">
+          <span class="text-black/10" v-if="posts && posts">
             // {{ posts.length }}</span
           >
         </h2>

@@ -9,7 +9,7 @@ featured: 0
 type: page
 status: published
 locale: null
-visibility: public
+visibility: private
 created_at: 2019-11-17 08:24:34
 updated_at: 2019-11-17 08:29:03
 published_at: 2019-11-17 08:24:39

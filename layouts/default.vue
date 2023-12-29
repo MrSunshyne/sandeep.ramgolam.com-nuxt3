@@ -3,7 +3,9 @@
     <div class="relative">
         <SiteMenu />
         <div>
-            <slot />
+            <!-- <NuxtLayout > -->
+                <slot />    
+            <!-- </NuxtLayout> -->
         </div>
         <SiteFooter />
     </div>

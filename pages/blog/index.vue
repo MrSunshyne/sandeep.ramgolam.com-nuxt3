@@ -4,7 +4,10 @@ import type { BlogPost } from '@/types/types'
 const { data: posts } = await useAsyncData(
   'blogs', 
   () => queryContent<BlogPost>('blog')
-    .where({ visibility: { $eq:'public' } })
+    .where({ 
+      visibility: { $eq:'public' },
+      status: { $eq:'published' },
+    })
     .sort({ updated_at: -1 })
     .find()
   )
