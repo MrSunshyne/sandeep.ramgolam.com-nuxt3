@@ -46,16 +46,6 @@ const isDev = import.meta.env.MODE === "development";
                             <NuxtLink href="/projects/">Projects</NuxtLink>
                             <SiteMenuSvgMenuBg />
                         </li>
-                        <li v-if="isDev">
-                            <a
-                               target="_blank"
-                               class="text-yellow-400"
-                               href="http://localhost:2368/ghost/">
-                                Write
-                            </a>
-                            <SiteMenuSvgMenuBg />
-                        </li>
-
                     </ul>
                 </div>
             </div>

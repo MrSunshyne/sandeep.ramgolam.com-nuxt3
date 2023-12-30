@@ -12,7 +12,7 @@ const props = defineProps<{
        class="rounded bg-white overflow-hidden shadow-neumorphismlight dark:shadow-neumorphismdark hover:shadow-lg transition-all duration-500 blog-box">
         <img
              v-if="post?.feature_image"
-             :src="unGhostUrl(post?.feature_image)"
+             :src="post?.feature_image"
              :alt="post.title"
              loading="lazy" />
         <div class="px-6 py-4">

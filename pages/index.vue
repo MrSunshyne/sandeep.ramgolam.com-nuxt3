@@ -31,11 +31,13 @@ useHead({
   ],
 });
 
-defineOgImage({
-  html: `<div class="w-full h-full text-6xl flex justify-end items-end bg-blue-500 text-white">
-    <div class="mb-10 underline mr-10">hello world</div>
-</div>`,
-})
+defineOgImageComponent('NuxtSeo', {
+  title: 'Welcome to Nuxt OG Image',
+  description: 'You can modify the og:image by changing these props.',
+  icon: 'carbon:help',
+  colorMode: 'dark',
+});
+
 </script>
 
 <template>
