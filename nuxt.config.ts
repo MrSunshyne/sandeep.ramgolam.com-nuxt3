@@ -11,6 +11,17 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxthq/studio', '@nuxtjs/color-mode', '@nuxtseo/module'],
+  ogImage: {
+    runtimeChromium: false,
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/',
+      ],
+    },
+  },
   colorMode: {
     classSuffix: ''
   },

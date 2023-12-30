@@ -12,7 +12,7 @@
     "@nuxthq/studio": "^1.0.6",
     "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/tailwindcss": "^6.10.3",
-    "@nuxtseo/module": "2.0.0-beta.51",
+    "@nuxtseo/module": "2.0.0-beta.52",
     "nuxt": "^3.9.0"
   },
   "dependencies": {
