@@ -186,4 +186,9 @@ useHead({
     },
   ],
 })
+
+defineOgImageComponent('GenericTemplate', {
+  title: "Work & Projects",
+  description: "A summary my professional contribution to the tech world",
+});
 </script>

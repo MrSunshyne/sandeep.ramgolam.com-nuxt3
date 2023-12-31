@@ -67,6 +67,12 @@ if (post.value) {
   });
 }
 
+defineOgImageComponent('BlogTemplate', {
+  title: post.value?.title,
+  description: dateFormat(new Date(post.value?.created_at || '')),
+  customImage: post.value?.feature_image,
+});
+
 </script>
 
 <template>
