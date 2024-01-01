@@ -94,9 +94,6 @@ defineProps({
   --shadowSize: 9px;
   padding: 15px 20px;
   border-radius: 9px;
-  /* border: 1px solid rgb(31, 31, 31); */
-  /* background: #16181e; */
-  background: rgb(250, 250, 250);
 }
 
 .mode-dark .event-card {

@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <a
     :href="`/blog/${post.slug}`"
-    class="rounded bg-white overflow-hidden shadow-neumorphismlight dark:shadow-neumorphismdark hover:shadow-lg transition-all duration-500 blog-box"
+    class="rounded overflow-hidden shadow-neumorphismlight dark:shadow-neumorphismdark hover:shadow-lg transition-all duration-500 blog-box"
   >
     <img
       v-if="post?.feature_image"

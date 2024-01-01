@@ -1,6 +1,6 @@
 <template>
   <span
-    class="logo inline-block w-40 md:w-32 lg:w-48 relative pl-1"
+    class="logo inline-block w-40 md:w-32 lg:w-48 relative pl-1 text-black dark:text-white"
     style="top: 5px"
     data-v-266847f6=""
     data-v-c1b418d8=""
@@ -28,16 +28,6 @@
 </template>
 
 <style scoped>
-.logo {
-  /* animation: reveal 1s linear forwards; */
-  /* transition: all 0.4s linear; */
-  position: relative;
-  color: black;
-  /* width: 262px;
-    height: 62px;*/
-  display: block;
-}
-
 .animated {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;

@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     "@nuxthq/studio",
     "@nuxtjs/color-mode",
     "nuxt-og-image",
-    "@nuxtjs/eslint-config-typescript",
+    "nuxt-icon",
   ],
   nitro: {
     prerender: {

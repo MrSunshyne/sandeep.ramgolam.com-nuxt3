@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative dark:bg-slate-800 dark:text-gray-100">
     <SiteMenu />
     <div>
       <!-- <NuxtLayout > -->

@@ -26,14 +26,14 @@ import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
     </svg>
   </div>
   <div
-    class="py-3 sm:py-8 sticky h-[128px] lg:top-[-32px] z-10 menu-outer-wrapper"
+    class="py-3 sm:py-8 sticky h-[128px] lg:top-[-32px] z-10 menu-outer-wrapper dark:bg-gray-900 dark:text-white"
   >
     <div class="sticky h-[64px] top-0">
       <div
         class="main-menu container font-bold md:flex justify-center md:justify-between items-center"
       >
         <NuxtLink class="hidden text-center md:inline" title="Logo" href="/">
-          <Logo class="inline-block w-40 md:w-32 lg:w-48 relative pl-1" />
+          <SiteLogo class="inline-block w-40 md:w-32 lg:w-48 relative pl-1" />
           <span class="sr-only">Sandeep Ramgolam Logo</span>
         </NuxtLink>
 
@@ -63,6 +63,7 @@ import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
             </li>
           </ul>
         </div>
+        <ColorModeSwitcher />
       </div>
     </div>
   </div>
@@ -86,7 +87,8 @@ import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
   transform: translateY(-10px);
 }
 
-.menu-outer-wrapper {
+html.light .menu-outer-wrapper,
+html.sepia .menu-outer-wrapper {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
