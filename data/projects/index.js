@@ -200,7 +200,7 @@ const projects = [
     company: "Voluntary",
   },
   {
-    name: "lexpress.mu",
+    name: "Previous version lexpress.mu",
     url: "https://www.lexpress.mu",
     role: ["Front-end "],
     tech: ["CSS", "Drupal"],

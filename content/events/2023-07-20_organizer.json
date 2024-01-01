@@ -1,0 +1,19 @@
+{
+  "event_date": "07/20/2023",
+  "event_name": "Developers Conference 2023",
+  "location": "Mauritius",
+  "event_type": [
+    "organizer",
+    "speaker"
+  ],
+  "published": true,
+  "topic": "Lightning Talks",
+  "description": "Organize and speak the lightning talks",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://conference.mscc.mu/agenda/454699"
+    }
+  ],
+  "video": null
+}

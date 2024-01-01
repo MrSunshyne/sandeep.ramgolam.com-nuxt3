@@ -1,0 +1,20 @@
+{
+    "event_date": "08/26/2023",
+    "event_name": "Front-end Coders Meetup",
+    "location": "Mauritius",
+    "event_type": ["organizer"],
+    "published": true,
+    "topic": "Philosophy, AI & Security",
+    "description": "Host and Organize this meetup",
+    "links": [
+      {
+        "title": "Event Page",
+        "url": "https://frontend.mu/meetup/47"
+      },
+      {
+        "title": "Blogpost",
+        "url": "https://sandeep.ramgolam.com/blog/udm-x-ceridian-x-frontend-mu"
+      }
+    ],
+    "video": null
+  }
