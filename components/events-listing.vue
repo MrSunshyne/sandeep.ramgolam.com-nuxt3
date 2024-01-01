@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import EventCard from "~/components/event-card.vue";
-import events from "~/data/events.js";
+// import events from "~/data/events.js";
+
+const { data: events } = await useAsyncData("events", () =>
+  queryContent("events").sort({ event_date: -1 }).find(),
+);
 
 defineProps({
   count: {
@@ -32,7 +36,11 @@ const presentAsList: {
 const currentEventType: Ref<EventType> = ref("all");
 
 const eventsSortedByDate = computed(() => {
-  return localEvents.value.sort(
+  if (localEvents.value && localEvents.value.length === 0) {
+    return [];
+  }
+
+  return localEvents.value?.sort(
     (a, b) =>
       new Date(b.event_date).getTime() - new Date(a.event_date).getTime(),
   );
@@ -42,7 +50,7 @@ const showCurrentEventType = computed(() => {
   if (currentEventType.value === "all") {
     return eventsSortedByDate.value;
   } else {
-    return eventsSortedByDate.value.filter((event) =>
+    return eventsSortedByDate.value?.filter((event) =>
       event.event_type.includes(currentEventType.value),
     );
   }
@@ -126,7 +134,10 @@ function setCurrentEventType(eventType: EventType) {
 
     <!-- {{ showCurrentEventType }} -->
 
-    <div v-if="showCurrentEventType.length > 0" class="event-wrapper">
+    <div
+      v-if="showCurrentEventType && showCurrentEventType.length > 0"
+      class="event-wrapper"
+    >
       <template
         v-for="(event, index) in showCurrentEventType.slice(0, count)"
         :key="event.topic + event.event_date"

@@ -1,0 +1,18 @@
+{
+  "event_date": "07/20/2023",
+  "event_name": "Developers Conference 2023",
+  "location": "Mauritius",
+  "event_type": [
+    "speaker"
+  ],
+  "published": true,
+  "topic": "Astro to the Moon",
+  "description": "Speak about Astro and meta frameworks at this conference",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://2023.mscc.mu/agenda/454698"
+    }
+  ],
+  "video": null
+}
