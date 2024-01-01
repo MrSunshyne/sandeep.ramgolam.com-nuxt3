@@ -13,6 +13,17 @@ export default defineNuxtConfig({
     // production URL
     url: "https://sandeep.ramgolam.com",
   },
+  app: {
+    head: {
+      link: [
+        {
+          rel: "icon",
+          type: "image/svg+xml",
+          href: "/favicon.svg",
+        },
+      ],
+    },
+  },
   devtools: { enabled: true },
   modules: [
     "@nuxt/content",

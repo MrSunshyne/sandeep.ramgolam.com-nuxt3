@@ -23,7 +23,7 @@ a {
 }
 
 .button {
-  @apply bg-white rounded-full px-8 py-2 shadow-sm hover:shadow-lg font-medium transition-all border border-gray-100;
+  @apply bg-white dark:bg-green-400 dark:text-slate-600 dark:border-green-600 rounded-full px-8 py-2 shadow-sm hover:shadow-lg font-medium transition-all border border-gray-100;
 }
 
 /*

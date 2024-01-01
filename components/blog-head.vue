@@ -12,10 +12,10 @@ const formattedDate =
 
 <template>
   <header class="mx-auto px-4 md:px-20 max-w-4xl py-8 md:py-16">
-    <div class="prose">
+    <div class="prose dark:prose-invert">
       <h1>{{ post.title }}</h1>
 
-      <p class="text-xl text-gray-500">
+      <p class="text-xl text-gray-500 dark:text-gray-300">
         {{ post.custom_excerpt }}
       </p>
     </div>
@@ -38,7 +38,9 @@ const formattedDate =
         </ul>
 
         <section class="">
-          <h4 class="text-lg md:text-xl font-semibold text-gray-600">
+          <h4
+            class="text-lg md:text-xl font-semibold text-gray-600 dark:text-gray-300"
+          >
             <a :href="`/about`"> Sandeep Ramgolam </a>
           </h4>
 

@@ -61,9 +61,9 @@ const { data: posts } = await useAsyncData("blogs-summary", () =>
   background: #ebfff585;
 }
 
-html.mode-dark {
+html.dark {
   .blog-summary {
-    background: #111;
+    @apply bg-gray-900;
   }
 }
 
