@@ -33,4 +33,6 @@ useHead({
     },
   ],
 });
+
+defineOgImageComponent("GenericTemplate");
 </script>

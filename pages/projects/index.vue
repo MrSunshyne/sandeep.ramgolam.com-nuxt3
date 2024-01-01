@@ -52,7 +52,7 @@
 import { projects } from "~/data/projects/index";
 
 useHead({
-  title: "Projects",
+  title: "Work & Projects",
   meta: [
     {
       hid: "text",
@@ -81,6 +81,8 @@ useHead({
     },
   ],
 });
+
+defineOgImageComponent("GenericTemplate");
 </script>
 
 <style scoped lang="postcss">

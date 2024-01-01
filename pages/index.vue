@@ -24,10 +24,6 @@ useHead({
       content:
         "Technologist, Mauritian, who loves front-end, UX design, Linux, & nature. This is where I share my thoughts, experiments and experiences.",
     },
-    {
-      hid: "og:url",
-      property: "og:url",
-    },
   ],
 });
 
@@ -47,11 +43,6 @@ defineOgImageComponent("IndexTemplate", {
         <HomeSelfIntro />
 
         <div class="splash-wrapper hidden md:flex content-center md:w-1/3">
-          <!--          <img-->
-          <!--            class="w-full picture object-bottom object-center object-contain"-->
-          <!--            src="../assets/images/sun.svg"-->
-          <!--            alt=""-->
-          <!--          />-->
           <SharedSunBust class="dark:text-gray-500" />
         </div>
       </div>
@@ -60,7 +51,7 @@ defineOgImageComponent("IndexTemplate", {
 
       <HomeEventSummary />
 
-      <!-- <GalleryInsert />  -->
+      <!-- <GalleryInsert /> -->
 
       <HomeProjectsFeatured />
     </div>

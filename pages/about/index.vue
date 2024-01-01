@@ -186,7 +186,7 @@ function print() {
 }
 
 useHead({
-  title: "Work & Projects",
+  title: "Sandeep Ramgolam",
   meta: [
     {
       hid: "description",
@@ -212,10 +212,7 @@ useHead({
   ],
 });
 
-defineOgImageComponent("GenericTemplate", {
-  title: "Work & Projects",
-  description: "A summary my professional contribution to the tech world",
-});
+defineOgImageComponent("GenericTemplate");
 </script>
 
 <style scoped>
