@@ -31,18 +31,19 @@ useHead({
   ],
 });
 
-defineOgImageComponent('IndexTemplate', {
-  title: 'Welcome to Nuxt OG Image',
-  description: 'You can modify the og:image by changing these props.',
+defineOgImageComponent("IndexTemplate", {
+  title: "Welcome to Nuxt OG Image",
+  description: "You can modify the og:image by changing these props.",
 });
-
 </script>
 
 <template>
   <section class="page-home flex flex-wrap content-center">
     <!-- <OgImageStatic component="OgImageIndex" /> -->
     <div class="w-full flex flex-col">
-      <div class="container mx-auto intro-wrapper text-center sm:text-left flex flex-wrap items-center w-full">
+      <div
+        class="container mx-auto intro-wrapper text-center sm:text-left flex flex-wrap items-center w-full"
+      >
         <HomeSelfIntro />
 
         <div class="splash-wrapper hidden md:flex content-center md:w-1/3">

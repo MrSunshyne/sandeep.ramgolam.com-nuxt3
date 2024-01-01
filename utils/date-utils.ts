@@ -18,7 +18,10 @@ export const getMonthInWords = (date: Date) => {
   return monthInWords[month];
 };
 
-export const dateFormat = (date?: Date | undefined, format: string = "date") => {
+export const dateFormat = (
+  date?: Date | undefined,
+  format: string = "date",
+) => {
   if (!date) {
     return "";
   }

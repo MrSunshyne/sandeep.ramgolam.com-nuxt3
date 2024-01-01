@@ -1,81 +1,113 @@
 <script setup lang="ts">
-const props = withDefaults(defineProps<{
-    title: string,
-    backgroundColor: string,
-    description: string,
-    customImage: string,
-}>(), {
-    title: 'Hello World',
-    backgroundColor: 'bg-green-500',
-    description: '',
-    customImage: '',
-});
+const props = withDefaults(
+  defineProps<{
+    title: string;
+    backgroundColor: string;
+    description: string;
+    customImage: string;
+  }>(),
+  {
+    title: "Hello World",
+    backgroundColor: "bg-green-500",
+    description: "",
+    customImage: "",
+  },
+);
 
 // remove " | Sandeep Ramgolam" from title
-const strippedTitle = props.title && props.title.replace(' | Sandeep Ramgolam', '')
-const hasFeaturedImage = props.customImage && props.customImage !== ''
+const strippedTitle =
+  props.title && props.title.replace(" | Sandeep Ramgolam", "");
+const hasFeaturedImage = props.customImage && props.customImage !== "";
 </script>
 <template>
-    <div class="w-full h-full flex text-black items-center relative justify-center">
-        <img v-if="hasFeaturedImage" :style="{
+  <div
+    class="w-full h-full flex text-black items-center relative justify-center"
+  >
+    <img
+      v-if="hasFeaturedImage"
+      :style="{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        filter: 'brightness(0.3) blur(2px)',
+      }"
+      :src="customImage"
+    />
+
+    <img
+      v-if="customImage"
+      :style="{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '100%',
+      }"
+      :src="'/assets/images/og-image-assets/blog-custom-image.png'"
+    />
+
+    <img
+      v-else
+      :style="{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '100%',
+      }"
+      :src="'/assets/images/og-image-assets/blog.png'"
+    />
+
+    <div class="w-full h-full flex items-center justify-center" :style="[]">
+      <div
+        :style="[
+          {
             position: 'absolute',
-            left: 0,
-            top: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            filter: 'brightness(0.3) blur(2px)',
-        }" :src="customImage" />
+            left: '0',
+            top: '60px',
+            maxWidth: '550px',
+          },
+          {
+            color: customImage ? 'white' : 'black',
+          },
+        ]"
+      >
+        <div
+          :style="{
+            position: 'relative',
+          }"
+        >
+          <h1
+            :style="{
+              fontSize: '50px',
+              left: '118px',
+              top: '90px',
+            }"
+          >
+            {{ strippedTitle }}
+          </h1>
 
-        <img v-if="customImage" :style="{
-            position: 'absolute',
-            left: 0,
-            top: 0,
-            width: '100%',
-            height: '100%',
-        }" :src="'/assets/images/og-image-assets/blog-custom-image.png'" />
-
-        <img v-else :style="{
-            position: 'absolute',
-            left: 0,
-            top: 0,
-            width: '100%',
-            height: '100%',
-        }" :src="'/assets/images/og-image-assets/blog.png'" />
-
-        <div class="w-full h-full flex items-center justify-center" :style="[
-        ]">
-            <div :style="[{
-                position: 'absolute',
-                left: '0',
-                top: '60px',
-                maxWidth: '550px',
-            }, {
-                color: customImage ? 'white' : 'black',
-            }]">
-                <div :style="{
-                    position: 'relative'
-                }">
-                    <h1 :style="{
-                        fontSize: '50px',
-                        left: '118px',
-                        top: '90px',
-                    }">{{ strippedTitle }}</h1>
-
-                    <p :style="{
-                        fontSize: '36px',
-                        left: '118px',
-                        top: '100px',
-                        color: 'white',
-                        lineHeight: '1.5em',
-                    }" v-if="description">
-                        {{ description }}
-                    </p>
-                </div>
-            </div>
+          <p
+            v-if="description"
+            :style="{
+              fontSize: '36px',
+              left: '118px',
+              top: '100px',
+              color: 'white',
+              lineHeight: '1.5em',
+            }"
+          >
+            >
+            {{ description }}
+          </p>
         </div>
+      </div>
     </div>
-</template> 
+  </div>
+</template>
 
 <style lang="postcss" scoped>
 /* .og-image-wrapper {

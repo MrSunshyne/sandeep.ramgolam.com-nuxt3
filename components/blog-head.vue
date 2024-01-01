@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { BlogPost } from "~/types/types";
+import type { BlogPost } from "~/types";
 import { dateFormat } from "~/utils/date-utils";
 
 const props = defineProps<{
-  post: BlogPost
-}>()
+  post: BlogPost;
+}>();
 
 const formattedDate =
   props.post?.published_at && dateFormat(new Date(props.post?.published_at));
@@ -22,13 +22,13 @@ const formattedDate =
 
     <div class="py-6">
       <section class="flex items-center gap-4">
-        <ul class="author-list" v-if="post">
+        <ul v-if="post" class="author-list">
           <li class="author-list-item">
             <a
               href="/about"
               class="w-20 h-20 rounded-full overflow-hidden block"
             >
-              <img                
+              <img
                 class="w-full h-full block"
                 src="https://github.com/MrSunshyne.png"
                 alt="Written by Sandeep Ramgolam"
@@ -38,12 +38,8 @@ const formattedDate =
         </ul>
 
         <section class="">
-          <h4            
-            class="text-lg md:text-xl font-semibold text-gray-600"
-          >
-            <a :href="`/about`">
-              Sandeep Ramgolam
-            </a>
+          <h4 class="text-lg md:text-xl font-semibold text-gray-600">
+            <a :href="`/about`"> Sandeep Ramgolam </a>
           </h4>
 
           <div class="text-gray-500">

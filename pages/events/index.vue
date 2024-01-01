@@ -12,7 +12,8 @@ useHead({
     {
       hid: "description",
       name: "description",
-      content: "A summary of all the events I participated throught recent years",
+      content:
+        "A summary of all the events I participated throught recent years",
     },
     { hid: "og:type", property: "og:type", content: "page" },
     {
@@ -23,7 +24,8 @@ useHead({
     {
       hid: "og:description",
       property: "og:description",
-      content: "A summary of all the events I participated throught recent years",
+      content:
+        "A summary of all the events I participated throught recent years",
     },
     {
       hid: "og:url",

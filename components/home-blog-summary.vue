@@ -1,17 +1,13 @@
 <script setup lang="ts">
-import type { BlogPost } from '@/types'
+import type { BlogPost } from "@/types";
 
-
-const { data: posts } = await useAsyncData(
-  'blogs-summary', 
-  () => queryContent<BlogPost>('blog')
-    .where({ visibility: { $eq:'public' } })
+const { data: posts } = await useAsyncData("blogs-summary", () =>
+  queryContent<BlogPost>("blog")
+    .where({ visibility: { $eq: "public" } })
     .sort({ updated_at: -1 })
     .limit(5)
-    .find()
-  )
-
-// computed of last five posts with null check
+    .find(),
+);
 </script>
 
 <template>
@@ -26,7 +22,7 @@ const { data: posts } = await useAsyncData(
       <div class="md:w-1/2 py-10">
         <h2 class="text-3xl font-black pt-10">
           Blog posts
-          <span class="text-black/10" v-if="posts && posts">
+          <span v-if="posts && posts" class="text-black/10">
             // {{ posts.length }}</span
           >
         </h2>
@@ -35,7 +31,11 @@ const { data: posts } = await useAsyncData(
           I like to write about code.
         </p>
         <div class="py-5">
-          <div v-for="post in posts" class="text-sm lg:text-xl flex gap-2 my-3">
+          <div
+            v-for="post in posts"
+            :key="post.slug"
+            class="text-sm lg:text-xl flex gap-2 my-3"
+          >
             <nuxt-link :to="'/blog/' + post.slug" class="hover:text-green-500">
               {{ post.title }}
             </nuxt-link>
@@ -72,7 +72,8 @@ html.mode-dark {
     padding: 0 0 10vh 0;
 
     .bg-container {
-      background: no-repeat url("/data/blog-summary/blogger.svg") right center / contain;
+      background: no-repeat url("/data/blog-summary/blogger.svg") right center /
+        contain;
     }
   }
 }

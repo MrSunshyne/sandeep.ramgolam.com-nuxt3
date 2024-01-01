@@ -735,8 +735,8 @@ const events = [
       },
       {
         title: "Blogpost",
-        url: "https://sandeep.ramgolam.com/blog/lightning-talks-at-devcon-2022"
-      }
+        url: "https://sandeep.ramgolam.com/blog/lightning-talks-at-devcon-2022",
+      },
     ],
     video: null,
   },
@@ -759,7 +759,7 @@ const events = [
       },
     ],
     video: null,
-  },  
+  },
   {
     event_date: "02/25/2023",
     event_name: "Front-end Coders Meetup",
@@ -892,7 +892,7 @@ const events = [
       {
         title: "Event Page",
         url: "https://frontend.mu/meetup/45",
-      }
+      },
     ],
     video: null,
   },

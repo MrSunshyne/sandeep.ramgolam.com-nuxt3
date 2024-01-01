@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import type { BlogPost } from '@/types'
+import type { BlogPost } from "@/types";
 
-const { data: posts } = await useAsyncData(
-  'blogs', 
-  () => queryContent<BlogPost>('blog')
-    .where({ 
-      visibility: { $eq:'public' },
-      status: { $eq:'published' },
+const { data: posts } = await useAsyncData("blogs", () =>
+  queryContent<BlogPost>("blog")
+    .where({
+      visibility: { $eq: "public" },
+      status: { $eq: "published" },
     })
     .sort({ updated_at: -1 })
-    .find()
-  )
+    .find(),
+);
 
 useHead({
   title: "Articles | Sandeep Ramgolam",
@@ -42,8 +41,8 @@ useHead({
 <template>
   <div class="contain">
     <div class="blog-posts">
-      <template v-for="post in posts">
-          <BlogCard :post="post" />
+      <template v-for="post in posts" :key="post.slug">
+        <BlogCard :post="post" />
       </template>
     </div>
   </div>
@@ -51,7 +50,6 @@ useHead({
 
 <style scoped lang="postcss">
 .blog-posts {
-
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   grid-gap: 30px;
