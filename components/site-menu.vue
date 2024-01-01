@@ -26,7 +26,7 @@ import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
     </svg>
   </div>
   <div
-    class="py-3 sm:py-8 sticky h-[128px] lg:top-[-32px] z-10 menu-outer-wrapper dark:bg-gray-900 dark:text-white"
+    class="py-3 sm:py-8 sticky h-[128px] lg:top-[-32px] z-10 menu-outer-wrapper dark:bg-slate-800 dark:text-white"
   >
     <div class="sticky h-[64px] top-0">
       <div
@@ -96,6 +96,17 @@ html.sepia .menu-outer-wrapper {
     #ffffff 75%,
     #ffffff 76%,
     rgba(255, 255, 255, 0) 95%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+html.dark .menu-outer-wrapper {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(30 41 59) 30%,
+    rgba(30 41 59) 75%,
+    rgba(30 41 59) 75%,
+    rgba(255, 255, 255, 0) 90%,
     rgba(255, 255, 255, 0) 100%
   );
 }
