@@ -1,4 +1,4 @@
-import tailwindTypography from '@tailwindcss/typography'
+import tailwindTypography from "@tailwindcss/typography";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -11,31 +11,30 @@ export default defineNuxtConfig({
   // },
   site: {
     // production URL
-    url: 'https://sandeep.ramgolam.com',
+    url: "https://sandeep.ramgolam.com",
   },
   devtools: { enabled: true },
   modules: [
-    '@nuxt/content',
-    '@nuxtjs/tailwindcss',
-    '@nuxthq/studio',
-    '@nuxtjs/color-mode',
-    'nuxt-og-image',
+    "@nuxt/content",
+    "@nuxtjs/tailwindcss",
+    "@nuxthq/studio",
+    "@nuxtjs/color-mode",
+    "nuxt-og-image",
+    "@nuxtjs/eslint-config-typescript",
   ],
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: [
-        '/',
-      ],
+      routes: ["/"],
     },
   },
   colorMode: {
-    classSuffix: ''
+    classSuffix: "",
   },
-  css: ['@/styles/global.css'],
+  css: ["@/styles/global.css"],
   tailwindcss: {
     config: {
-      darkMode: 'class',
+      darkMode: "class",
       plugins: [tailwindTypography],
       theme: {
         extend: {
@@ -58,8 +57,8 @@ export default defineNuxtConfig({
             neumorphismlight:
               "inset 1px 1px 5px #fff, 9px 9px 20px rgba(222, 222, 222, 0.8),-0px -0px 20px #ffffff",
           },
-        }
-      }
-    }
+        },
+      },
+    },
   },
-})
+});
