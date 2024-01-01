@@ -7,6 +7,7 @@ comment_id: 650ffcd71cdfee0001aaba81
 feature_image: /content/images/2023/09/mcb-conference-2023--1-.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

@@ -7,6 +7,7 @@ comment_id: 5de4fe51352930856b0432d9
 feature_image: /content/images/2019/12/pre-rendered-and-spa-1.jpg
 featured: 0
 type: post
+indexable: true
 status: draft
 locale: null
 visibility: public

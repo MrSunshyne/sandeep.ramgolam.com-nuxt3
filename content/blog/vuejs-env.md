@@ -7,6 +7,7 @@ comment_id: 5e1581a73c11b2c62732f0be
 feature_image: /content/images/2020/01/vuejs-environment-variables.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

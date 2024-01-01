@@ -1,28 +1,21 @@
 <script setup lang="ts">
-import type { BlogPost } from '~/types/types';
-
-
+import type { BlogPost } from "~/types";
 
 const props = defineProps<{
-    post: BlogPost;
+  post: BlogPost;
 }>();
 
 const tags = computed(() => {
-    return props.post.title.split(',').map((tag) => tag.trim());
-})
-
-
+  return props.post.title.split(",").map((tag) => tag.trim());
+});
 </script>
 
-
 <template>
-    <div class="content-container">
-        <div class="flex gap-4 py-4">
-            <template v-for="tag in tags" :key="tag.id">
-                <a :href="`/tag/${tag}`" class="text-xl font-medium">
-                    #{{ tag }}
-                </a>
-            </template>
-        </div>
+  <div class="content-container">
+    <div class="flex gap-4 py-4">
+      <template v-for="tag in tags" :key="tag.id">
+        <a :href="`/tag/${tag}`" class="text-xl font-medium"> #{{ tag }} </a>
+      </template>
     </div>
+  </div>
 </template>

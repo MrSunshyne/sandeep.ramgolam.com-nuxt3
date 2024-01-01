@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import type { BlogPost } from '@/types/types'
+import type { BlogPost } from "@/types";
 
-const { data: posts } = await useAsyncData(
-  'blogs', 
-  () => queryContent<BlogPost>('blog')
-    .where({ 
-      visibility: { $eq:'public' },
-      status: { $eq:'published' },
+const { data: posts } = await useAsyncData("blogs", () =>
+  queryContent<BlogPost>("blog")
+    .where({
+      visibility: { $eq: "public" },
+      status: { $eq: "published" },
     })
     .sort({ updated_at: -1 })
-    .find()
-  )
+    .find(),
+);
 
 useHead({
   title: "Articles | Sandeep Ramgolam",
@@ -37,15 +36,16 @@ useHead({
     },
   ],
 });
+
+defineOgImageComponent("GenericTemplate");
 </script>
 
 <template>
   <div class="contain">
-    <!-- <OgImageStatic component="OgImageGeneric" /> -->
     <div class="blog-posts">
-      <template v-for="post in posts">
-          <BlogCard :post="post" />
-        </template>
+      <template v-for="post in posts" :key="post.slug">
+        <BlogCard :post="post" />
+      </template>
     </div>
   </div>
 </template>

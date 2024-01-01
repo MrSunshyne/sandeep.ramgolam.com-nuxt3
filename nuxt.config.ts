@@ -1,17 +1,51 @@
-import tailwindTypography from '@tailwindcss/typography'
+import tailwindTypography from "@tailwindcss/typography";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxthq/studio', '@nuxtjs/color-mode'],
-  colorMode: {
-    classSuffix: ''
+  // site: {
+  //   url: 'https://sandeep.ramgolam.com',
+  //   name: 'Sandeep Ramgolam',
+  //   description: 'thoughts, experiments, experiences',
+  //   defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
+  //   indexable: false
+  // },
+  site: {
+    // production URL
+    url: "https://sandeep.ramgolam.com",
   },
-  // import css from '@/styles/global.css
-  css: ['@/styles/global.css'],
+  app: {
+    head: {
+      link: [
+        {
+          rel: "icon",
+          type: "image/svg+xml",
+          href: "/favicon.svg",
+        },
+      ],
+    },
+  },
+  devtools: { enabled: true },
+  modules: [
+    "@nuxt/content",
+    "@nuxtjs/tailwindcss",
+    "@nuxthq/studio",
+    "@nuxtjs/color-mode",
+    "nuxt-og-image",
+    "nuxt-icon",
+  ],
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/"],
+    },
+  },
+  colorMode: {
+    classSuffix: "",
+  },
+  css: ["@/styles/global.css"],
   tailwindcss: {
     config: {
-      darkMode: 'class',
+      darkMode: "class",
       plugins: [tailwindTypography],
       theme: {
         extend: {
@@ -34,8 +68,8 @@ export default defineNuxtConfig({
             neumorphismlight:
               "inset 1px 1px 5px #fff, 9px 9px 20px rgba(222, 222, 222, 0.8),-0px -0px 20px #ffffff",
           },
-        }
-      }
-    }
+        },
+      },
+    },
   },
-})
+});

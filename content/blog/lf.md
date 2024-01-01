@@ -7,6 +7,7 @@ comment_id: 5e01deccb2e578c4a2eed931
 feature_image: /content/images/2019/12/lf-go.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

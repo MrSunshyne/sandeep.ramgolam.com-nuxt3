@@ -18,12 +18,15 @@ export const getMonthInWords = (date: Date) => {
   return monthInWords[month];
 };
 
-export const dateFormat = (date?: Date | undefined, format: string = "date") => {
+export const dateFormat = (
+  date?: Date | undefined,
+  format: string = "date",
+) => {
   if (!date) {
     return "";
   }
   const year = date.getFullYear();
-  const month = date.getMonth() + 1;
+  // const month = date.getMonth() + 1;
   const Month = getMonthInWords(date);
   const day = date.getDate();
   const hour = date.getHours();

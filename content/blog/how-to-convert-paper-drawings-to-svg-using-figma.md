@@ -7,6 +7,7 @@ comment_id: 5df4a04cb2e578c4a2eed715
 feature_image: /content/images/2019/12/Screenshot-2019-12-14-at-13.33.20.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

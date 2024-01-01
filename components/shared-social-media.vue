@@ -34,18 +34,14 @@
 
 <script>
 import Email from "./icons/email.vue";
-import Facebook from "./icons/facebook.vue";
 import Instagram from "./icons/instagram.vue";
 import Linkedin from "./icons/linkedin.vue";
-import Rss from "./icons/rss.vue";
 import Twitter from "./icons/twitter.vue";
 export default {
   components: {
     Email,
-    Facebook,
     Instagram,
     Linkedin,
-    Rss,
     Twitter,
   },
 };

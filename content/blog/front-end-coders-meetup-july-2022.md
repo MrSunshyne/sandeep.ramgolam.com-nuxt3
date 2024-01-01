@@ -7,6 +7,7 @@ comment_id: 62dceb7bb499a63977289dce
 feature_image: /content/images/2022/07/front-end-coders-july-2022.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

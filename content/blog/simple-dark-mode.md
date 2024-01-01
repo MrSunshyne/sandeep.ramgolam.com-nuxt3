@@ -7,6 +7,7 @@ comment_id: 5e23ea133c11b2c62732f1a7
 feature_image: /content/images/2020/01/dark-mode.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

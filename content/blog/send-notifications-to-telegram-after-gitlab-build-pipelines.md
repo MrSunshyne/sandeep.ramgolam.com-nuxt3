@@ -7,6 +7,7 @@ comment_id: 5dda319c0fc4877c65e365b2
 feature_image: /content/images/2019/11/gitlab-telegram-notifications.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

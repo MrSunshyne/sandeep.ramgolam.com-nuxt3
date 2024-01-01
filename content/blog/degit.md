@@ -7,6 +7,7 @@ comment_id: 5e1b418e3c11b2c62732f111
 feature_image: /content/images/2020/01/degit-blazing-fast.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

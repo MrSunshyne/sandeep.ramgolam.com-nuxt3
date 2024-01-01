@@ -7,6 +7,7 @@ comment_id: 5dce8a022ed73480cdcad7df
 feature_image: /content/images/2019/11/google-devfest-mauritius.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

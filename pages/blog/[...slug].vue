@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import type { BlogPost } from "~/types/types";
+import type { BlogPost } from "@/types";
 
 const route = useRoute();
 const slug = route.params.slug[0];
 
-const { data: post } = await useAsyncData(
-  'blogpost' + slug, 
-  () => queryContent<BlogPost>('blog')
+const { data: post } = await useAsyncData("blogpost" + slug, () =>
+  queryContent<BlogPost>("blog")
     .where({ slug: { $eq: slug } })
-    .findOne()
-  )
-
+    .findOne(),
+);
 
 if (post.value) {
   useHead({
@@ -66,10 +64,16 @@ if (post.value) {
     ],
   });
 }
+
+defineOgImageComponent("BlogTemplate", {
+  title: post.value?.title,
+  description: dateFormat(new Date(post.value?.created_at || "")),
+  customImage: post.value?.feature_image,
+});
 </script>
 
 <template>
-  <article class="" v-if="post">
+  <article v-if="post" class="">
     <!-- <OgImageStatic
       component="OgImageBlog"
       :description="dateFormat(new Date(post?.created_at || ''))"
@@ -84,10 +88,10 @@ if (post.value) {
     <ContentDoc v-slot="{ doc }">
       <article>
         <div class="prose dark:prose-invert mx-auto">
-          <ContentRenderer :value="doc" >
+          <ContentRenderer :value="doc">
             <h1>{{ doc.title }}</h1>
-            <img :src="doc.feature_image" alt="">
-            <ContentRendererMarkdown :value="doc"  />
+            <img :src="doc.feature_image" alt="" />
+            <ContentRendererMarkdown :value="doc" />
           </ContentRenderer>
         </div>
       </article>

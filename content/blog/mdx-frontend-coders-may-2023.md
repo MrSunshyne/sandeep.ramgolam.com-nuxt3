@@ -7,6 +7,7 @@ comment_id: 649079358a99886171613c0b
 feature_image: /content/images/2023/06/may-2023.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

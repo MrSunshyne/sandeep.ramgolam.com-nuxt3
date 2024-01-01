@@ -1,13 +1,8 @@
-// @ts-expect-error
-import { promises as fsPromises } from 'fs';
-// @ts-expect-error
-import { fileURLToPath } from 'url';
-// @ts-expect-error
-import { dirname, join } from 'path';
-// @ts-expect-error
-import Turndown from 'turndown';
-// @ts-expect-error
-import * as yaml from 'yaml';
+import { promises as fsPromises } from "fs";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+import Turndown from "turndown";
+import * as yaml from "yaml";
 
 interface BlogPost {
   id: number;
@@ -39,7 +34,7 @@ interface BlogPost {
 }
 
 interface File {
-    posts: BlogPost[];
+  posts: BlogPost[];
 }
 
 // @ts-expect-error
@@ -47,18 +42,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 function convertHtmlToMarkdown(html: string): string {
-    // Implement HTML to Markdown conversion logic here
-    // You can use a library like 'turndown' or 'showdown'
-    // Example using 'turndown':
-    const turndownConfig = {
-        headingStyle: 'atx',
-    }
-    const turndownService = new Turndown(turndownConfig);
-    return turndownService.turndown(html);
-  
-    // For simplicity, let's assume a basic conversion
-    return html;
-  }
+  // Implement HTML to Markdown conversion logic here
+  // You can use a library like 'turndown' or 'showdown'
+  // Example using 'turndown':
+  const turndownConfig = {
+    headingStyle: "atx",
+  };
+  const turndownService = new Turndown(turndownConfig);
+  return turndownService.turndown(html);
+
+  // For simplicity, let's assume a basic conversion
+  return html;
+}
 
 async function convertToMarkdown(post: BlogPost): Promise<string> {
   const markdownContent = convertHtmlToMarkdown(post.html);
@@ -88,52 +83,52 @@ async function convertToMarkdown(post: BlogPost): Promise<string> {
     lexical: post.lexical,
     show_title_and_feature_image: post.show_title_and_feature_image,
   });
-    return `---\n${frontmatter}\n---\n\n${markdownContent}`;
+  return `---\n${frontmatter}\n---\n\n${markdownContent}`;
 }
 
 async function exportToMarkdown(posts: BlogPost[]): Promise<void> {
   await Promise.all(
     posts.map(async (post) => {
-        const fileName = `${post.slug}.md`;
-        
-        const filePath = join(__dirname, '..', 'content', fileName);
-        const markdownContent = await convertToMarkdown(post);
+      const fileName = `${post.slug}.md`;
 
-        await fsPromises.writeFile(filePath, markdownContent);
+      const filePath = join(__dirname, "..", "content", fileName);
+      const markdownContent = await convertToMarkdown(post);
 
-        console.log(`Exported ${fileName}`);
-    })
+      await fsPromises.writeFile(filePath, markdownContent);
+
+      console.log(`Exported ${fileName}`);
+    }),
   );
 }
 
 async function deleteMarkdownFiles(directoryPath: string): Promise<void> {
-    try {
-        const files = await fsPromises.readdir(directoryPath);
-        const markdownFiles = files.filter((file) => file.endsWith('.md'));
+  try {
+    const files = await fsPromises.readdir(directoryPath);
+    const markdownFiles = files.filter((file) => file.endsWith(".md"));
 
-        await Promise.all(
-            markdownFiles.map(async (file) => {
-                const filePath = join(directoryPath, file);
-                await fsPromises.unlink(filePath);
-                console.log(`Deleted ${file}`);
-            })
-        );
+    await Promise.all(
+      markdownFiles.map(async (file) => {
+        const filePath = join(directoryPath, file);
+        await fsPromises.unlink(filePath);
+        console.log(`Deleted ${file}`);
+      }),
+    );
 
-        console.log('All .md files deleted successfully.');
-    } catch (error) {
-        console.error('Error deleting .md files:', error);
-    }
+    console.log("All .md files deleted successfully.");
+  } catch (error) {
+    console.error("Error deleting .md files:", error);
+  }
 }
 
 async function readPostsFromFile(filePath: string): Promise<File> {
-  const data = await fsPromises.readFile(filePath, 'utf-8');
+  const data = await fsPromises.readFile(filePath, "utf-8");
   return JSON.parse(data);
 }
 
 async function main() {
-    await deleteMarkdownFiles('../content/*.md');
-  const postsFilePath = join(__dirname,'../', 'legacy', 'clean.json');
-  const blogPosts: File = await readPostsFromFile(postsFilePath)
+  await deleteMarkdownFiles("../content/*.md");
+  const postsFilePath = join(__dirname, "../", "legacy", "clean.json");
+  const blogPosts: File = await readPostsFromFile(postsFilePath);
   await exportToMarkdown(blogPosts.posts);
 }
 

@@ -7,6 +7,7 @@ comment_id: 5dd94a680fc4877c65e36588
 feature_image: /content/images/2019/11/purge-css-exclude-1.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

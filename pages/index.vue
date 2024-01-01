@@ -24,11 +24,12 @@ useHead({
       content:
         "Technologist, Mauritian, who loves front-end, UX design, Linux, & nature. This is where I share my thoughts, experiments and experiences.",
     },
-    {
-      hid: "og:url",
-      property: "og:url",
-    },
   ],
+});
+
+defineOgImageComponent("IndexTemplate", {
+  title: "Welcome to Nuxt OG Image",
+  description: "You can modify the og:image by changing these props.",
 });
 </script>
 
@@ -36,15 +37,12 @@ useHead({
   <section class="page-home flex flex-wrap content-center">
     <!-- <OgImageStatic component="OgImageIndex" /> -->
     <div class="w-full flex flex-col">
-      <div class="container mx-auto intro-wrapper text-center sm:text-left flex flex-wrap items-center w-full">
+      <div
+        class="container mx-auto intro-wrapper text-center sm:text-left flex flex-wrap items-center w-full"
+      >
         <HomeSelfIntro />
 
         <div class="splash-wrapper hidden md:flex content-center md:w-1/3">
-          <!--          <img-->
-          <!--            class="w-full picture object-bottom object-center object-contain"-->
-          <!--            src="../assets/images/sun.svg"-->
-          <!--            alt=""-->
-          <!--          />-->
           <SharedSunBust class="dark:text-gray-500" />
         </div>
       </div>
@@ -53,7 +51,7 @@ useHead({
 
       <HomeEventSummary />
 
-      <!-- <GalleryInsert />  -->
+      <!-- <GalleryInsert /> -->
 
       <HomeProjectsFeatured />
     </div>

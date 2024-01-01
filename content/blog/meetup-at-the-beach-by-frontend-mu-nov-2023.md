@@ -7,6 +7,7 @@ comment_id: 6559d753d71eed00012723bb
 feature_image: /content/images/2023/11/november-2023--1-.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

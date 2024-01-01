@@ -7,6 +7,7 @@ comment_id: 5dd92abd0fc4877c65e363bd
 feature_image: /content/images/2019/11/linus-at-google-2007.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

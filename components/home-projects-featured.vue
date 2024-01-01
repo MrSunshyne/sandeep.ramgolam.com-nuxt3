@@ -6,8 +6,8 @@
         Some projects I helped build
       </p>
       <div v-if="projects" class="projects-wrapper">
-        <template v-for="(project, index) in projects">
-          <div class="project" v-if="project.featured" data-aos="fade-left">
+        <template v-for="(project, index) in projects" :key="'project' + index">
+          <div v-if="project.featured" class="project" data-aos="fade-left">
             <div class="image-container">
               <img
                 :src="'/data/projects/' + project.thumbnail"
@@ -25,11 +25,17 @@
               <p v-if="project.text">{{ project.text }}</p>
               <div class="pt-2 pb-5">
                 <div class="text-md">
-                  <span v-for="role in project.role">{{ role }}</span>
+                  <span v-for="role in project.role" :key="'role' + role">{{
+                    role
+                  }}</span>
                   | {{ project.company }}
                 </div>
-                <div class="uppercase text-xs py-2 text-gray-800 dark:text-gray-500">
-                  <span v-for="tech in project.tech">{{ tech }} / &nbsp;</span>
+                <div
+                  class="uppercase text-xs py-2 text-gray-800 dark:text-gray-500"
+                >
+                  <span v-for="tech in project.tech" :key="'tech' + tech"
+                    >{{ tech }} / &nbsp;</span
+                  >
                 </div>
                 <!-- <div>{{ project.year}}</div> -->
               </div>
@@ -58,6 +64,17 @@
     </div>
   </div>
 </template>
+
+<script>
+import { projects } from "../data/projects";
+export default {
+  data() {
+    return {
+      projects: projects.filter((project) => project.featured == true),
+    };
+  },
+};
+</script>
 
 <style scoped lang="postcss">
 .darkest-bg {
@@ -104,14 +121,3 @@
   }
 }
 </style>
-
-<script>
-import { projects } from "../data/projects";
-export default {
-  data() {
-    return {
-      projects: projects.filter((project) => project.featured == true),
-    };
-  },
-};
-</script>

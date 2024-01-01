@@ -7,6 +7,7 @@ comment_id: 5e99c6054abd5d3cdfea424b
 feature_image: /content/images/2023/02/vue-3-beta-getting-started-1000w.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

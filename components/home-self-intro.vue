@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import SocialMedia from './shared-social-media.vue';
-
-
+import SocialMedia from "./shared-social-media.vue";
 </script>
 
 <template>
@@ -13,8 +11,9 @@ import SocialMedia from './shared-social-media.vue';
       </a>-->
     <div class="mb-4">
       <div
-           title="Yes, you can run that in your terminal"
-           class="dark:bg-gray-900 bg-gray-200 py-1 px-2 mt-2 rounded cursor-help inline-block">
+        title="Yes, you can run that in your terminal"
+        class="dark:bg-gray-900 bg-gray-200 py-1 px-2 mt-2 rounded cursor-help inline-block"
+      >
         $ npx sandeepramgolam
       </div>
       <!-- <a
@@ -30,12 +29,15 @@ import SocialMedia from './shared-social-media.vue';
       Technologist, Mauritian, who loves front-end, UX design, Linux, & nature.
       <br />This is where I share my
       <a class="underline hover:text-green-500" href="/blog">thoughts</a>,
-      <a class="underline hover:text-green-500 pr-1" target="_blank" href="https://github.com/MrSunshyne?tab=repositories&q=&type=&language=&sort=stargazers">experiments
-      </a>and
+      <a
+        class="underline hover:text-green-500 pr-1"
+        target="_blank"
+        href="https://github.com/MrSunshyne?tab=repositories&q=&type=&language=&sort=stargazers"
+        >experiments </a
+      >and
       <a class="underline hover:text-green-500" href="events">experiences</a>.
     </p>
 
     <SocialMedia />
   </div>
-
 </template>

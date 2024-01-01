@@ -7,6 +7,7 @@ comment_id: 5e872164886b191c7114d66a
 feature_image: /content/images/2020/04/generate-sitemap-vue-webpack.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

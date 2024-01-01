@@ -7,6 +7,7 @@ comment_id: 6301f57538cabd83900c973d
 feature_image: /content/images/2022/08/august-2022.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

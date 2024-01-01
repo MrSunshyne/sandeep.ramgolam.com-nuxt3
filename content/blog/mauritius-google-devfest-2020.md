@@ -7,6 +7,7 @@ comment_id: 5fb9340356eeb1146b070d62
 feature_image: /content/images/2020/11/dev-fest-2020-mauritius.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

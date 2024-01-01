@@ -7,6 +7,7 @@ comment_id: 632fed746a754b47afeccaf1
 feature_image: /content/images/2022/09/september-meetup.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

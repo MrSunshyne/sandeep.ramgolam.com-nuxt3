@@ -7,6 +7,7 @@ comment_id: 64eb5329bfc7090001336270
 feature_image: /content/images/2023/08/august-2023.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

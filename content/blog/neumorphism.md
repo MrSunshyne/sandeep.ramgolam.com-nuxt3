@@ -7,6 +7,7 @@ comment_id: 5e0360d2b2e578c4a2eed98c
 feature_image: /content/images/2019/12/neumorphism-trend-2020.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

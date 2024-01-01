@@ -7,6 +7,7 @@ comment_id: 650ff34e6a56f500014460f7
 feature_image: /content/images/2023/09/september-2023.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

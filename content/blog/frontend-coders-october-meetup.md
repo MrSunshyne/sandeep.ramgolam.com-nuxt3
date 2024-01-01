@@ -7,6 +7,7 @@ comment_id: 5f81d9dc9adbe99a02e37c0d
 feature_image: /content/images/2020/10/meetup-frontend-cover-october-2020.jpg
 featured: 1
 type: post
+indexable: true
 status: published
 locale: null
 visibility: public

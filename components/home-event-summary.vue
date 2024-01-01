@@ -7,8 +7,11 @@
   </div>
 </template>
 
-<style lang="postcss">
+<script setup lang="ts">
+import EventsListing from "./events-listing.vue";
+</script>
 
+<style lang="postcss">
 .event-page {
   --competition-color: theme(colors.red.500);
   --speaking-color: theme(colors.blue.500);
@@ -17,9 +20,3 @@
   --organizer-color: theme(colors.purple.500);
 }
 </style>
-
-
-
-<script setup lang="ts">
-import EventsListing from './events-listing.vue';
-</script>
