@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BlogPost } from "~/types/types";
+import type { BlogPost } from '@/types'
 
 const route = useRoute();
 const slug = route.params.slug[0];

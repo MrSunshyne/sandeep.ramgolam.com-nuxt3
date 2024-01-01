@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { BlogPost } from '~/types/types';
+import type { BlogPost } from '@/types'
 
 
 const { data: posts } = await useAsyncData(
-  'blogs', 
+  'blogs-summary', 
   () => queryContent<BlogPost>('blog')
     .where({ visibility: { $eq:'public' } })
     .sort({ updated_at: -1 })

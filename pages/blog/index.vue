@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BlogPost } from '@/types/types'
+import type { BlogPost } from '@/types'
 
 const { data: posts } = await useAsyncData(
   'blogs', 
@@ -41,17 +41,17 @@ useHead({
 
 <template>
   <div class="contain">
-    <!-- <OgImageStatic component="OgImageGeneric" /> -->
     <div class="blog-posts">
       <template v-for="post in posts">
           <BlogCard :post="post" />
-        </template>
+      </template>
     </div>
   </div>
 </template>
 
 <style scoped lang="postcss">
 .blog-posts {
+
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   grid-gap: 30px;

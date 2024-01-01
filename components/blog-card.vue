@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { BlogPost } from '@/types/types'
 
-const props = defineProps<{
+defineProps<{
     post: BlogPost 
 }>()
 </script>
