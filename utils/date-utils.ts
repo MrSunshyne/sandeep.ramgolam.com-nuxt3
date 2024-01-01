@@ -26,7 +26,7 @@ export const dateFormat = (
     return "";
   }
   const year = date.getFullYear();
-  const month = date.getMonth() + 1;
+  // const month = date.getMonth() + 1;
   const Month = getMonthInWords(date);
   const day = date.getDate();
   const hour = date.getHours();

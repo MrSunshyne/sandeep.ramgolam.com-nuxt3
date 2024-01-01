@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
-
-const isDev = import.meta.env.MODE === "development";
 </script>
 
 <template>

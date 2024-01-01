@@ -1,11 +1,8 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   title: String,
   backgroundColor: String,
 });
-
-const { app } = useRuntimeConfig();
-const baseUrl = app.baseUrl;
 </script>
 <template>
   <div
