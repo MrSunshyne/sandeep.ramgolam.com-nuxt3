@@ -63,7 +63,7 @@ import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
             </li>
           </ul>
         </div>
-        <ColorModeSwitcher />
+        <site-color-picker />
       </div>
     </div>
   </div>
