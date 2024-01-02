@@ -7,13 +7,11 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-11-21T15:36:35.000Z
-updated_at: 2023-05-03T15:03:17.000Z
-published_at: 2020-11-21T16:48:50.000Z
 custom_excerpt: >-
   The 1-day even took place at Uniciti Pierrefonds on Saturday 21st Nov 2020
   with 101 attendees, two parallel tracks and lots of fun sessions on
   google-related topics.
+date: 2020-11-21T15:36:35.000Z
 ---
 
 While all other DevFest events around the globe seem to have gone virtual, we are lucky enough in Mauritius to be Covid-safe, so we had a physical event with all the security precautions.

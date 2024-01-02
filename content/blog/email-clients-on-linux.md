@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-05-13T13:33:21.000Z
-updated_at: 2020-05-13T14:02:06.000Z
-published_at: 2020-05-13T13:47:40.000Z
 custom_excerpt: null
+date: 2020-05-13T13:33:21.000Z
 ---
 
 An email client is a software that provides a user interface to read emails that it fetches from a mail server. People are quite used to online email clients such as Gmail or Outlook.com but some prefer desktop email clients that are installed on the users and not in a browser.

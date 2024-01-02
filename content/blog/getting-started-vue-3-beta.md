@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-04-17T15:06:45.000Z
-updated_at: 2023-02-15T16:24:19.000Z
-published_at: 2020-04-17T15:41:30.000Z
 custom_excerpt: >-
   This is a small explanation of how to setup Vue 3 beta with webpack and start
   playing with it 
+date: 2020-04-17T15:06:45.000Z
 ---
 
 Yesterday Vue 3 Beta was released and it's finally time to start playing with it!

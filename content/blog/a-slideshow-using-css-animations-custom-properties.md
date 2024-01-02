@@ -7,13 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-12-07T11:13:09.000Z
-updated_at: 2023-05-03T15:03:19.000Z
-published_at: 2019-12-07T11:19:15.000Z
-custom_excerpt: >+
+custom_excerpt: >
   In this article I explain a little trick I used to build an image slideshow by
   combining css animation & custom properties.
-
+date: 2019-12-07T11:13:09.000Z
 ---
 
 The target is to build a full page background slideshow.

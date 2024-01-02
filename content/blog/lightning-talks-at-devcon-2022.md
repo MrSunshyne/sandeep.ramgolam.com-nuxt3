@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2023-02-15T16:32:20.000Z
-updated_at: 2023-02-15T17:34:41.000Z
-published_at: 2023-02-15T17:09:28.000Z
 custom_excerpt: >-
   I hosted the Lighting Talks at the Developers Conference 2022 and it was a lot
   of fun! 
+date: 2023-02-15T16:32:20.000Z
 ---
 
 > This blog post is 3 months late! Life happened.

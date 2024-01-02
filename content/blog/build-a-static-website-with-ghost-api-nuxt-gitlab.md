@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: draft
 visibility: public
-created_at: 2019-12-28T09:54:31.000Z
-updated_at: 2020-04-03T11:42:17.000Z
-published_at: null
 custom_excerpt: null
+date: 2019-12-28T09:54:31.000Z
 ---
 
 There are many ways to build websites. Each of them have their own pros and cons. One of them is static website. In this article I am going to describe how I built a static website while also overcoming some disadvantages of the latter by using little tricks.

@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-04-01T17:13:43.000Z
-updated_at: 2020-06-30T16:41:57.000Z
-published_at: 2020-04-01T17:38:00.000Z
 custom_excerpt: >-
   Ghost lets you completely swap out this image processing feature an offload it
   to an image processing cloud service.
+date: 2020-04-01T17:13:43.000Z
 ---
 
 You've probably heard about Ghost, the amazing free and open source blogging CMS. One cool thing about it is how easy it is to integrate with other services.

@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-12-29T10:22:31.000Z
-updated_at: 2020-01-02T08:19:19.000Z
-published_at: 2020-01-01T10:14:17.000Z
 custom_excerpt: How to download YouTube videos for free
+date: 2019-12-29T10:22:31.000Z
 ---
 
 Every once in a while people need to download a youtube video for research purposes. Of course you should delete the video after downloading them for research purposes, unless they're youtube videos that you own.

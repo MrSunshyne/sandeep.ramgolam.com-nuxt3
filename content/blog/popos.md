@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-05-03T12:57:33.000Z
-updated_at: 2023-05-03T15:03:17.000Z
-published_at: 2020-05-03T12:58:26.000Z
 custom_excerpt: I installed Pop!_OS and I liked it
+date: 2020-05-03T12:57:33.000Z
 ---
 
 ## Obtain the ISO

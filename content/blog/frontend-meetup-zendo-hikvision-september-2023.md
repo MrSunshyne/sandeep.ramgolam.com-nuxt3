@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2023-09-24T08:29:02.000Z
-updated_at: 2023-09-24T11:54:14.000Z
-published_at: 2023-09-24T11:43:19.000Z
 custom_excerpt: >-
   The september frontend.mu meetup was about Supabase, Docker and developer
   happiness.
+date: 2023-09-24T08:29:02.000Z
 ---
 
 The September frontend.mu meetup happened with the help of [Zendō](https://www.facebook.com/ZendoCoWorking/) at the Command Centre of HIKVision, in the ICONES tower ebene on the 23rd of September 2023.

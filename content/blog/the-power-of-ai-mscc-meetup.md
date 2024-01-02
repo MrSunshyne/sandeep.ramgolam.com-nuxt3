@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2023-04-09T09:26:31.000Z
-updated_at: 2023-04-09T09:47:45.000Z
-published_at: 2023-04-09T09:47:45.000Z
 custom_excerpt: I attended the MSCC meetup on the 8th of April 2023 about the power of ai
+date: 2023-04-09T09:26:31.000Z
 ---
 
 I attended the MSCC meetup this month titled “The Power of AI”. It's always fun to show and meet tech geeks during the MSCC meetups.

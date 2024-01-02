@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-04-03T11:43:32.000Z
-updated_at: 2020-04-03T12:09:07.000Z
-published_at: 2020-04-03T11:54:57.000Z
 custom_excerpt: >-
   Front-end Framworks do not give you a sitemap.xml by default. It is possible
   to generate one using a webpack plugin
+date: 2020-04-03T11:43:32.000Z
 ---
 
 Front-end frameworks are awesome to work with, however they suck at SEO. Google [claims that it executes JS](https://webmasters.googleblog.com/2019/05/the-new-evergreen-googlebot.html) and will render your page, but too many times I have seen websites built with front-end frameworks get completely ignored if you don't setup Google Search Console.

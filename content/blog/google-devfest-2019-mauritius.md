@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-11-15T11:20:34.000Z
-updated_at: 2023-05-03T15:03:20.000Z
-published_at: 2019-10-05T11:22:00.000Z
 custom_excerpt: This article is a summary of my experience at the Google DevFest in Mauritius
+date: 2019-11-15T11:20:34.000Z
 ---
 
 Saturday 5th October was marked on my calendar for the annual Google DevFest Mauritius and I had to get up unusually early to reach west of the island. Luckily we reached right on time !

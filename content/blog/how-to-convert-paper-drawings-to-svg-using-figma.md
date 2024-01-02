@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-12-14T08:41:48.000Z
-updated_at: 2023-05-03T15:03:19.000Z
-published_at: 2019-12-14T09:31:25.000Z
 custom_excerpt: >-
   This post demonstrates the process of taking a paper based drawing and turning
   it into vector graphic using free & open source tools.
+date: 2019-12-14T08:41:48.000Z
 ---
 
 The process is really simple and can be done by anyone. Drawing however isn't anyone's piece of cake. I hope this post helps the talented people who can draw amazing stuff on paper to digitize and even animate their content.

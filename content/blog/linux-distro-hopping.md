@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-05-03T13:12:36.000Z
-updated_at: 2023-05-03T15:03:17.000Z
-published_at: 2020-05-03T13:13:52.000Z
 custom_excerpt: My linux distro hopping journey since last year
+date: 2020-05-03T13:12:36.000Z
 ---
 
 ## Elementary OS

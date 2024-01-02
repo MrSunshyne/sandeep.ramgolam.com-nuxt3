@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-01-19T05:33:07.000Z
-updated_at: 2023-05-03T15:03:18.000Z
-published_at: 2020-01-19T05:45:49.000Z
 custom_excerpt: Get to know dark mode and a neat little trick
+date: 2020-01-19T05:33:07.000Z
 ---
 
 Since the introduction of macOS Mojave, which brought system-wide dark mode, webkit introduced a way to cascade the styles to the browser.

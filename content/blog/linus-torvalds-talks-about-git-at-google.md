@@ -7,13 +7,11 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-11-23T12:49:01.000Z
-updated_at: 2023-05-03T15:03:20.000Z
-published_at: 2019-11-23T14:36:08.000Z
 custom_excerpt: >-
   In 2007 Linus Torvalds gave a talk about git at Google. His presentation style
   was very spontaneous and half of the session was spent answering questions
   from the audience.
+date: 2019-11-23T12:49:01.000Z
 ---
 
 Linus Torvalds on Git

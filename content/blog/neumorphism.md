@@ -7,11 +7,9 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-12-25T13:14:58.000Z
-updated_at: 2023-05-03T15:03:19.000Z
-published_at: 2019-12-25T13:58:22.000Z
 custom_excerpt: |
   I set out to test Neumorphism by implementing it on my blog
+date: 2019-12-25T13:14:58.000Z
 ---
 
 There has been some buzz about this term in the techsphere lately and like every sane person would do on Christmas day, I decided to implement it on my blog to see what the fuss is all about.

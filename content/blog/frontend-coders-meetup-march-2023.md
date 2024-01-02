@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2023-04-09T08:55:50.000Z
-updated_at: 2023-04-09T09:24:10.000Z
-published_at: 2023-03-27T09:20:00.000Z
 custom_excerpt: >-
   In the march meetup we spoke about WebContainers, CSS, NextJS and had an
   awesome quiz session
+date: 2023-04-09T08:55:50.000Z
 ---
 
 Kushul and I had been in touch with the awesome people at Providus since the Developers conference last year, and we finally got to collaborate on a frontend coders meetup in March.

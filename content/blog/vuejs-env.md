@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-01-08T07:15:51.000Z
-updated_at: 2020-01-08T11:43:12.000Z
-published_at: 2020-01-08T10:37:51.000Z
 custom_excerpt: >-
   Use Vue CLI to automatically load your environment variables without the need
   to install any additional plugins.
+date: 2020-01-08T07:15:51.000Z
 ---
 
 Environment variables, or `.env` files are generally used to store environment specific information, i.e Production, Staging, Pre-prod, dev, local etc.

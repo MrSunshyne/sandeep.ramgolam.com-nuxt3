@@ -7,13 +7,11 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-09-11T14:13:09.000Z
-updated_at: 2023-05-03T15:03:17.000Z
-published_at: 2020-09-11T14:57:38.000Z
 custom_excerpt: >-
   The developers conference is organized by the Mauritius Software Craftsmanship
   Community every year and this time due to the global pandemic, it took place
   online. 
+date: 2020-09-11T14:13:09.000Z
 ---
 
 The conference took place on the 9th, 10th and 11th of September and all 4 parallel tracks were streamed on YouTube for everyone to enjoy. As you might have noticed, the theme this year was COMICS, hence the room names being : Batcave, Avengers Tower, New Asgard and Kryptone.

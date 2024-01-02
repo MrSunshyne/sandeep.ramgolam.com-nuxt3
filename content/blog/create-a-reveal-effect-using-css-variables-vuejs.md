@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-12-27T11:15:54.000Z
-updated_at: 2020-01-01T09:27:07.000Z
-published_at: 2019-12-27T11:51:33.000Z
 custom_excerpt: A simple reveal effect using custom properties in CSS.
+date: 2019-12-27T11:15:54.000Z
 ---
 
 If you're using VueJS to print a list of repeating items such as article cards etc.. it may be desirable to add a subtle animation should you with to attract the eyes of the viewer.

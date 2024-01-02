@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2022-04-09T15:43:55.000Z
-updated_at: 2022-05-22T09:38:36.000Z
-published_at: 2022-04-09T15:57:33.000Z
 custom_excerpt: >-
   The first in-person front-end meetup in 2022! Tailwind, Reactivity and Open
   Data were the topics were on the menu.
+date: 2022-04-09T15:43:55.000Z
 ---
 
 Today, Front-end Coders organized an in-person meetup today in Ebene. I was the co-organizer, along with Kushul, and 27 people were present during the meetup. We had 3 speakers who spoke about various topics and demos! There were many students, front-end developers, system admins, DevOps people present.

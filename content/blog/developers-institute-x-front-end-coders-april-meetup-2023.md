@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2023-05-03T08:35:47.000Z
-updated_at: 2023-05-03T15:05:04.000Z
-published_at: 2023-05-03T09:17:21.000Z
 custom_excerpt: >-
   The April meetup we spoke about Interviews, CVs, Freelancing and
   Entrepreneurship.
+date: 2023-05-03T08:35:47.000Z
 ---
 
 The topic of this meetup had been in the works since quite a while, and we were waiting for the perfect and neutral location to host it because it was centered around Interviews and how to improve your CVs.

@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2022-06-26T16:24:51.000Z
-updated_at: 2022-06-26T18:32:41.000Z
-published_at: 2022-06-26T17:22:23.000Z
 custom_excerpt: >-
   UI/UX was the center attention during this meetup. We covered a11y,
   microinteractions, threeJS and css themes
+date: 2022-06-26T16:24:51.000Z
 ---
 
 Never 2 without 3. The third Front-end Coders meetup took place on the Saturday 25th June 2022 around the topic of UI/UX. The topic itself opened the gate to very visually appealing presentations, and I think all the speakers delivered on the day !

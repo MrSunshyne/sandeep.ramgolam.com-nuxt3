@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-11-16T06:17:57.000Z
-updated_at: 2023-05-03T15:03:20.000Z
-published_at: 2017-05-16T06:19:00.000Z
 custom_excerpt: >-
   I read numerous articles about people running Dota 2 successfully on Linux,
   and it was the moment to try it myself.
+date: 2019-11-16T06:17:57.000Z
 ---
 
 I’ve been using Ubuntu a lot since I got my Fibre internet connection installed a last year. I still had to get back to Windows just for gaming. I read numerous articles about people running Dota 2 successfully on Linux, and it was the moment to try it myself.

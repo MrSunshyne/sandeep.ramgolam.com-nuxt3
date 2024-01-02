@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2022-10-31T08:13:20.000Z
-updated_at: 2023-05-03T15:03:16.000Z
-published_at: 2022-10-31T09:11:16.000Z
 custom_excerpt: >-
   The 7th Front-end Coders meetup of 2022 was at ELCA Mauritius, Vivea Park,
   Mauritius on the 29th October 2022.
+date: 2022-10-31T08:13:20.000Z
 ---
 
 7 in a row ! We've hosted another meetup around frontend topics and this time we had 4 speakers, a wonderful venue at ELCA Mauritius and good pizza! There was no specific topic this time, so we just named the meetup “The October Meetup” and I suppose we had a Halloween kind of theme going on. I also organized a quiz around the web development topic and that was a lot of fun.

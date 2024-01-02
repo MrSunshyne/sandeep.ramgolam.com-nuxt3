@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-12-24T09:47:56.000Z
-updated_at: 2020-01-01T09:27:45.000Z
-published_at: 2019-12-24T09:53:25.000Z
 custom_excerpt: >-
   lf is a terminal file manager. It allows you to navigate your file system and
   dispatch commands all from one place. 
+date: 2019-12-24T09:47:56.000Z
 ---
 
 lf is a terminal file manager. It allows you to navigate your file system and dispatch commands without leaving the terminal. In most cases it's faster than using 'cd' yet gives you a visual interface closer to the feel of a GUI file manager such as Finder or Dolphin. It was written by [gokcehan](https://github.com/gokcehan)

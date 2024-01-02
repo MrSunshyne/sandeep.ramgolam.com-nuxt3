@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: draft
 visibility: public
-created_at: 2019-12-02T12:06:41.000Z
-updated_at: 2023-05-03T15:03:14.000Z
-published_at: 2019-12-02T13:35:13.000Z
 custom_excerpt: null
+date: 2019-12-02T12:06:41.000Z
 ---
 
 ## Preface

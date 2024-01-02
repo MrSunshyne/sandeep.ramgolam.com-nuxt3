@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2023-06-19T16:43:49.000Z
-updated_at: 2023-06-19T17:14:35.000Z
-published_at: 2023-06-19T17:14:35.000Z
 custom_excerpt: I attended JSNation 2023 in Amsterdam thanks to Frontend Coders Mauritius
+date: 2023-06-19T16:43:49.000Z
 ---
 
 Through a series of events that lined up perfectly, I was able to attend JSNation 2023 in-person in Amsterdam. This was an amazing opportunity to travel and meet people who share the same passion for frontend development from across the world.

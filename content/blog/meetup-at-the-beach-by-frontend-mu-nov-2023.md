@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2023-11-19T09:37:23.000Z
-updated_at: 2023-11-19T19:03:13.000Z
-published_at: 2023-11-19T13:35:15.000Z
 custom_excerpt: >-
   On the 18th Nov 2023, frontend.mu hosted a meetup at the beach where we spoke
   about Monorepos, goland, kubernetes and AI.
+date: 2023-11-19T09:37:23.000Z
 ---
 
 We are on a tropical island, and it should be doable to have a fun event among geeks, outdoors, near white sand! The idea had been thrown around a few times, but we never tried to make it happen seriously …until now. A tech meetup at the seaside actually happened, and we all had a great time !

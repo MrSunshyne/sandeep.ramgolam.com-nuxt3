@@ -8,23 +8,40 @@ function removeFrontmatterProperties(frontmatter, propertiesToRemove) {
   for (const property of propertiesToRemove) {
     delete frontmatter[property];
   }
-  return yaml.dump(frontmatter);
+  return frontmatter;
+}
+
+// Function to update specified properties in frontmatter
+function updateFrontmatterProperties(frontmatter, propertyUpdates) {
+  for (const [oldProperty, newProperty] of Object.entries(propertyUpdates)) {
+    if (frontmatter[oldProperty] !== undefined) {
+      frontmatter[newProperty] = frontmatter[oldProperty];
+      delete frontmatter[oldProperty];
+    }
+  }
+  return frontmatter;
 }
 
 // Function to process a single Markdown file
-function processMarkdownFile(filePath, propertiesToRemove) {
+function processMarkdownFile(filePath, propertiesToRemove, propertyUpdates) {
   const content = fs.readFileSync(filePath, "utf-8");
   const { data, content: body } = grayMatter(content);
 
   if (data) {
     // Remove specified properties from frontmatter
-    const updatedFrontmatter = removeFrontmatterProperties(
+    let updatedFrontmatter = removeFrontmatterProperties(
       data,
       propertiesToRemove,
     );
 
+    // Update specified properties in frontmatter
+    updatedFrontmatter = updateFrontmatterProperties(
+      updatedFrontmatter,
+      propertyUpdates,
+    );
+
     // Update the content with the modified frontmatter
-    const updatedContent = `---\n${updatedFrontmatter}---\n${body}`;
+    const updatedContent = `---\n${yaml.dump(updatedFrontmatter)}---\n${body}`;
 
     // Save the updated content back to the file
     fs.writeFileSync(filePath, updatedContent, "utf-8");
@@ -34,19 +51,19 @@ function processMarkdownFile(filePath, propertiesToRemove) {
 }
 
 // Function to process all Markdown files in a folder
-function processMarkdownFiles(folderPath, propertiesToRemove) {
+function processMarkdownFiles(folderPath, propertiesToRemove, propertyUpdates) {
   const files = fs.readdirSync(folderPath);
 
   for (const file of files) {
     if (file.endsWith(".md")) {
       const filePath = path.join(folderPath, file);
-      processMarkdownFile(filePath, propertiesToRemove);
+      processMarkdownFile(filePath, propertiesToRemove, propertyUpdates);
       console.log(`Processed: ${file}`);
     }
   }
 }
 
-// Specify the folder path and properties to remove
+// Specify the folder path, properties to remove, and property updates
 const folderPath = path.join(__dirname, "../content/blog"); // Update with your actual path
 const propertiesToRemove = [
   "id",
@@ -60,6 +77,14 @@ const propertiesToRemove = [
   "email_recipient_filter",
   "newsletter_id",
   "show_title_and_feature_image",
-]; // Update with the properties you want to remove
+  "updated_at",
+  "published_at",
+];
 
-processMarkdownFiles(folderPath, propertiesToRemove);
+// Update with the properties you want to remove
+const propertyUpdates = {
+  created_at: "date", // Example: Update 'created_at' to 'date'
+  // Add more property updates as needed
+};
+
+processMarkdownFiles(folderPath, propertiesToRemove, propertyUpdates);

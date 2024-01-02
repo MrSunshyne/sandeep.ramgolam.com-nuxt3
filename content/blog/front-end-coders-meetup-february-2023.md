@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2023-04-09T08:23:55.000Z
-updated_at: 2023-04-09T09:24:21.000Z
-published_at: 2023-02-27T08:43:00.000Z
 custom_excerpt: >-
   The february frontend meetup was about JavaScript, Testing and Frontend
   Updates
+date: 2023-04-09T08:23:55.000Z
 ---
 
 The first frontend coders meetup of the year happened at MCB Digital factory on the 25 Feb. We had been planning this one since a few weeks and it was only possible with the help of Chervine Bhiwoo from the MCB side.

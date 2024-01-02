@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2023-08-27T13:44:09.000Z
-updated_at: 2023-08-28T09:04:32.000Z
-published_at: 2023-08-27T14:29:42.000Z
 custom_excerpt: >-
   In the August meetup we spoke about Conference Talks, Building Games, How to
   level up as a Developer and Security Tips
+date: 2023-08-27T13:44:09.000Z
 ---
 
 The august frontend coders meetup took place on the 26th of August 2023 at the Universite des Mascareignes campus. After taking a pause in July, Kushul and I planned another meetup featuring really awesome speakers.

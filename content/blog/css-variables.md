@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-12-28T09:51:25.000Z
-updated_at: 2023-05-03T15:03:19.000Z
-published_at: 2019-12-30T11:07:51.000Z
 custom_excerpt: Everything you need to know about CSS Variables.
+date: 2019-12-28T09:51:25.000Z
 ---
 
 CSS Variables are also commonly known as "CSS Custom Properties". These terms can be used interchangeably. They do what you would expect them to : define variables and be able to refer back to them in your CSS.

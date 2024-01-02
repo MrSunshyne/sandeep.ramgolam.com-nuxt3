@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-10-10T15:57:16.000Z
-updated_at: 2023-05-03T15:03:17.000Z
-published_at: 2020-10-10T17:02:33.000Z
 custom_excerpt: >-
   The front-end coders October meetup was fun and interesting as usual. There
   was talks about Vue 3 and discussions about programmers.
+date: 2020-10-10T15:57:16.000Z
 ---
 
 This meetup was scheduled since two weeks and we had 15 RSVPs on the meetup dot com [event page](https://www.meetup.com/frontendcodersmauritius/events/273573909/). 14 people actually showed up on an early Saturday morning!

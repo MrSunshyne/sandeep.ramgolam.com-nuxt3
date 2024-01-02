@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-11-23T15:04:08.000Z
-updated_at: 2020-01-01T09:28:15.000Z
-published_at: 2019-11-23T15:14:35.000Z
 custom_excerpt: >-
   You may run into edge cases when using PurgeCSS where you might really want to
   keep some css in the final build files. 
+date: 2019-11-23T15:04:08.000Z
 ---
 
 You may run into edge cases when using PurgeCSS where you might really want to keep some css in the final build files. These can be for various reasons :

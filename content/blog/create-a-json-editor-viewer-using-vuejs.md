@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: draft
 visibility: public
-created_at: 2019-12-04T07:11:53.000Z
-updated_at: 2019-12-04T07:11:57.000Z
-published_at: null
 custom_excerpt: null
+date: 2019-12-04T07:11:53.000Z
 ---
 
 s

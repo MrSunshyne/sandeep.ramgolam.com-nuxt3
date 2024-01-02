@@ -7,11 +7,9 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2019-11-24T07:30:36.000Z
-updated_at: 2023-05-03T15:03:19.000Z
-published_at: 2019-11-24T08:04:27.000Z
 custom_excerpt: |
   Using a telegram bot to send notifications from Gitlab.com to telegram
+date: 2019-11-24T07:30:36.000Z
 ---
 
 After a little digging online about sending a notifications from Gitlab.com to your telegram account, I found this required setting up a server and run something that would intercept the webhook from Gitlab and send it to your telegram account. Fortunately the nice people at integram.org already solved the issue by creating a bot for this.

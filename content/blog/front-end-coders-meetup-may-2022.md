@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2022-05-22T06:16:25.000Z
-updated_at: 2022-05-22T09:38:20.000Z
-published_at: 2022-05-22T06:31:00.000Z
 custom_excerpt: >-
   This meetup was around REACT and there were presentations about react keys,
   memoization, hosting SPAs and ViteJS
+date: 2022-05-22T06:16:25.000Z
 ---
 
 Two in a row! We have a streak going on now as far as organizing front-end meetups go. This time we were welcomed by Le Wagon - Mauritius. Many thanks to Zakiya B from FINAM who helped me get in touch with Basile M in order to secure this location.

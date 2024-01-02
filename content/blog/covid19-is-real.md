@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-03-30T09:43:04.000Z
-updated_at: 2020-03-30T10:52:50.000Z
-published_at: 2020-03-30T10:52:45.000Z
 custom_excerpt: >-
   There aren't many events that forces the entire planet to pause and start
   paying attention. 
+date: 2020-03-30T09:43:04.000Z
 ---
 
 Event the worse catastrophes that we've known recently were somewhat localized, and some regions of the world had the luxury of watching from far away, a lot of times sending aid, other times moving on as if nothing happened.

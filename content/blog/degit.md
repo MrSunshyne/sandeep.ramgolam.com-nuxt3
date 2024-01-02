@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-01-12T15:55:58.000Z
-updated_at: 2023-05-03T15:03:18.000Z
-published_at: 2020-01-12T16:31:52.000Z
 custom_excerpt: Use degit to reduce repetitive tasks while starting new projects
+date: 2020-01-12T15:55:58.000Z
 ---
 
 In the front-end world, bootstrapping a project has gone through a lot of iterations. From cloning boilerplates from github, via Yeoman, to create-react-app, vue create, till the beautiful `vue ui`, we've always been improving. Lately I have been working on a lot of small projects, mostly Vue based but

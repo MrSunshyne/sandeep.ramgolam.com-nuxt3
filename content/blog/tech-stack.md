@@ -6,10 +6,8 @@ featured: 0
 type: page
 status: published
 visibility: public
-created_at: 2019-12-13T07:17:33.000Z
-updated_at: 2020-01-02T08:21:09.000Z
-published_at: 2019-12-13T07:18:59.000Z
 custom_excerpt: This blog is an on-going experiment built on open source tech
+date: 2019-12-13T07:17:33.000Z
 ---
 
 This blog itself is an experiment. There is no server/api running on the cloud that it gets the data from. The entire site is pre-rendered with the content built-in and then hosted on gitlab pages. A blogpost is coming soon to explain how it works.

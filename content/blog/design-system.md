@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-01-02T09:17:13.000Z
-updated_at: 2020-01-02T10:02:54.000Z
-published_at: 2020-01-02T10:00:26.000Z
 custom_excerpt: Steps to build your own design system based on my experience.
+date: 2020-01-02T09:17:13.000Z
 ---
 
 Design system is not just a buzz word. I found that it was a well defined method that helps engineering teams when building medium to large size projects. In this article I share my experience in building a design system and what are the steps you may follow to get it right.

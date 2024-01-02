@@ -7,10 +7,8 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2023-06-19T15:50:13.000Z
-updated_at: 2023-06-19T17:33:59.000Z
-published_at: 2023-06-19T16:42:30.000Z
 custom_excerpt: In the May meetup we spoke about Git, CVs & getting in to tech
+date: 2023-06-19T15:50:13.000Z
 ---
 
 The biggest meetup we've organized so far happened at the Middlesex University of Mauritius on the 20th of May 2023. Following the great reception of last month's meetup of non-technical subjects geared towards the tech industry, we continued along the same line and picked topics that were relevant to people who are interested or just getting started in tech/frontend.

@@ -7,12 +7,10 @@ type: post
 indexable: true
 status: published
 visibility: public
-created_at: 2020-02-18T12:38:09.000Z
-updated_at: 2023-05-03T15:03:18.000Z
-published_at: 2020-02-18T12:59:10.000Z
 custom_excerpt: >-
   The 1st Front-end meetup of Front-end Coders Mauritius happened on the 15th of
   Feb
+date: 2020-02-18T12:38:09.000Z
 ---
 
 This meetup was planned since December last year, but unfortunately due to the various cyclones we had to postpone every time.
