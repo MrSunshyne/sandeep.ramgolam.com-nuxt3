@@ -1,30 +1,16 @@
 ---
-id: 5df4a04cb2e578c4a2eed715
-uuid: 8c85b25e-8e72-4386-90bf-4ab0f99c7c7c
 title: How to convert paper drawings to SVG using Figma
 slug: how-to-convert-paper-drawings-to-svg-using-figma
-comment_id: 5df4a04cb2e578c4a2eed715
 feature_image: /content/images/2019/12/Screenshot-2019-12-14-at-13.33.20.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-12-14 08:41:48
-updated_at: 2023-05-03 15:03:19
-published_at: 2019-12-14 09:31:25
-custom_excerpt: This post demonstrates the process of taking a paper based
-  drawing and turning it into vector graphic using free & open source tools.
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  This post demonstrates the process of taking a paper based drawing and turning
+  it into vector graphic using free & open source tools.
+date: 2019-12-14T08:41:48.000Z
 ---
 
 The process is really simple and can be done by anyone. Drawing however isn't anyone's piece of cake. I hope this post helps the talented people who can draw amazing stuff on paper to digitize and even animate their content.

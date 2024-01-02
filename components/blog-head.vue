@@ -7,7 +7,7 @@ const props = defineProps<{
 }>();
 
 const formattedDate =
-  props.post?.published_at && dateFormat(new Date(props.post?.published_at));
+  props.post?.date && dateFormat(new Date(props.post?.date));
 </script>
 
 <template>

@@ -1,30 +1,16 @@
 ---
-id: 5e1581a73c11b2c62732f0be
-uuid: 06264ec5-6ecf-494b-9d63-701820c091f1
 title: Environment Variables in VueJS
 slug: vuejs-env
-comment_id: 5e1581a73c11b2c62732f0be
 feature_image: /content/images/2020/01/vuejs-environment-variables.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-01-08 07:15:51
-updated_at: 2020-01-08 11:43:12
-published_at: 2020-01-08 10:37:51
-custom_excerpt: Use Vue CLI to automatically load your environment variables
-  without the need to install any additional plugins.
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  Use Vue CLI to automatically load your environment variables without the need
+  to install any additional plugins.
+date: 2020-01-08T07:15:51.000Z
 ---
 
 Environment variables, or `.env` files are generally used to store environment specific information, i.e Production, Staging, Pre-prod, dev, local etc.

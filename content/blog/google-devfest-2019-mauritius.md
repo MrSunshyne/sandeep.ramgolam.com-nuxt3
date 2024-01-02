@@ -1,29 +1,14 @@
 ---
-id: 5dce8a022ed73480cdcad7df
-uuid: 0074e858-9840-4dca-b7c1-4ba5daea13de
 title: Google DevFest 2019 Mauritius
 slug: google-devfest-2019-mauritius
-comment_id: 5dce8a022ed73480cdcad7df
 feature_image: /content/images/2019/11/google-devfest-mauritius.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-11-15 11:20:34
-updated_at: 2023-05-03 15:03:20
-published_at: 2019-10-05 11:22:00
 custom_excerpt: This article is a summary of my experience at the Google DevFest in Mauritius
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+date: 2019-11-15T11:20:34.000Z
 ---
 
 Saturday 5th October was marked on my calendar for the annual Google DevFest Mauritius and I had to get up unusually early to reach west of the island. Luckily we reached right on time !

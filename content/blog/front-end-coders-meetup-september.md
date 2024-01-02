@@ -1,31 +1,16 @@
 ---
-id: 632fed746a754b47afeccaf1
-uuid: 689bf202-8124-4201-923d-0e60ce8eb497
 title: Front-end Coders Meetup -September 2022
 slug: front-end-coders-meetup-september
-comment_id: 632fed746a754b47afeccaf1
 feature_image: /content/images/2022/09/september-meetup.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2022-09-25 05:56:04
-updated_at: 2022-09-29 05:20:23
-published_at: 2022-09-25 06:39:16
-custom_excerpt: The 6th Front-end Coders meetup of 2022 was at Objectivity
-  Mauritius, NEX Tower, Ebene, Mauritius on the 24th September 2022 around the
-  topic of CSS
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  The 6th Front-end Coders meetup of 2022 was at Objectivity Mauritius, NEX
+  Tower, Ebene, Mauritius on the 24th September 2022 around the topic of CSS
+date: 2022-09-25T05:56:04.000Z
 ---
 
 The 6th meetup of the year happened, and it was yet another success. This time the theme was much simpler and basic than previous occasions: CSS. The very essence of basic and advanced frontend development. We also planned a fun CSS battle with prizes to give away in the 2nd half of the meetup.

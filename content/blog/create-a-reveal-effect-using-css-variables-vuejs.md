@@ -1,29 +1,14 @@
 ---
-id: 5e05e7ea0b8a5707aaf989d0
-uuid: 6b5d7a45-0d1c-4431-8b8d-da4ddb021810
 title: Create a reveal effect using CSS Variables & VueJS
 slug: create-a-reveal-effect-using-css-variables-vuejs
-comment_id: 5e05e7ea0b8a5707aaf989d0
 feature_image: /content/images/2019/12/css-reveal-effect.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-12-27 11:15:54
-updated_at: 2020-01-01 09:27:07
-published_at: 2019-12-27 11:51:33
 custom_excerpt: A simple reveal effect using custom properties in CSS.
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+date: 2019-12-27T11:15:54.000Z
 ---
 
 If you're using VueJS to print a list of repeating items such as article cards etc.. it may be desirable to add a subtle animation should you with to attract the eyes of the viewer.

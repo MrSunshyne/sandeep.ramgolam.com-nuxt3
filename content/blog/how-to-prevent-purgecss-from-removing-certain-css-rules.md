@@ -1,30 +1,16 @@
 ---
-id: 5dd94a680fc4877c65e36588
-uuid: 3bfb023f-4c63-4908-a347-98d4d06fcb55
 title: How to prevent PurgeCSS from removing certain CSS rules
 slug: how-to-prevent-purgecss-from-removing-certain-css-rules
-comment_id: 5dd94a680fc4877c65e36588
 feature_image: /content/images/2019/11/purge-css-exclude-1.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-11-23 15:04:08
-updated_at: 2020-01-01 09:28:15
-published_at: 2019-11-23 15:14:35
-custom_excerpt: "You may run into edge cases when using PurgeCSS where you might
-  really want to keep some css in the final build files. "
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  You may run into edge cases when using PurgeCSS where you might really want to
+  keep some css in the final build files. 
+date: 2019-11-23T15:04:08.000Z
 ---
 
 You may run into edge cases when using PurgeCSS where you might really want to keep some css in the final build files. These can be for various reasons :

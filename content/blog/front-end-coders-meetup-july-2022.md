@@ -1,31 +1,16 @@
 ---
-id: 62dceb7bb499a63977289dce
-uuid: d84a194c-6481-4ace-949d-b76ae8af70ff
 title: Front-end Coders Meetup - July 2022
 slug: front-end-coders-meetup-july-2022
-comment_id: 62dceb7bb499a63977289dce
 feature_image: /content/images/2022/07/front-end-coders-july-2022.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2022-07-24 06:49:31
-updated_at: 2023-05-03 15:03:16
-published_at: 2022-07-24 07:12:46
-custom_excerpt: The 4th Front-end Coders meetup of 2022 was at the XEFI situated
-  at The Core 8th Floor, Ebene, Mauritius on the 23rd July 2022 around the topic
-  of Laravel
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  The 4th Front-end Coders meetup of 2022 was at the XEFI situated at The Core
+  8th Floor, Ebene, Mauritius on the 23rd July 2022 around the topic of Laravel
+date: 2022-07-24T06:49:31.000Z
 ---
 
 I reached around 9.30am to grab some soft drinks and pain au chocolats at Intermart for the attendees before heading to the venue. We waited for the attendees to be seated and the meetup started at around 10.20AM

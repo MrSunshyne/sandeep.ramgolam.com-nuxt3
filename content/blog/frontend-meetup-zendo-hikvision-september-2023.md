@@ -1,30 +1,16 @@
 ---
-id: 650ff34e6a56f500014460f7
-uuid: d5b3d01b-2db6-42e6-a133-a7708e4875b8
 title: frontend.mu x Zendō x HIKVision September Meetup
 slug: frontend-meetup-zendo-hikvision-september-2023
-comment_id: 650ff34e6a56f500014460f7
 feature_image: /content/images/2023/09/september-2023.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2023-09-24 08:29:02
-updated_at: 2023-09-24 11:54:14
-published_at: 2023-09-24 11:43:19
-custom_excerpt: The september frontend.mu meetup was about Supabase, Docker and
-  developer happiness.
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  The september frontend.mu meetup was about Supabase, Docker and developer
+  happiness.
+date: 2023-09-24T08:29:02.000Z
 ---
 
 The September frontend.mu meetup happened with the help of [Zendō](https://www.facebook.com/ZendoCoWorking/) at the Command Centre of HIKVision, in the ICONES tower ebene on the 23rd of September 2023.

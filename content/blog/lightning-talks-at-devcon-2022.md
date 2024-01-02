@@ -1,30 +1,16 @@
 ---
-id: 63ed0914c42b76c579d6be5b
-uuid: 33012632-bb52-48fc-bff8-befe20bfb8bd
 title: Hosting the Lightning Talks at DevCon 2022
 slug: lightning-talks-at-devcon-2022
-comment_id: 63ed0914c42b76c579d6be5b
 feature_image: /content/images/2023/02/Screenshot-from-2023-02-15-20-34-11.png
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2023-02-15 16:32:20
-updated_at: 2023-02-15 17:34:41
-published_at: 2023-02-15 17:09:28
-custom_excerpt: "I hosted the Lighting Talks at the Developers Conference 2022
-  and it was a lot of fun! "
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  I hosted the Lighting Talks at the Developers Conference 2022 and it was a lot
+  of fun! 
+date: 2023-02-15T16:32:20.000Z
 ---
 
 > This blog post is 3 months late! Life happened.

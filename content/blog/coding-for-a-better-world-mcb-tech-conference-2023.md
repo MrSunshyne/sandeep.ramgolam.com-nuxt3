@@ -1,30 +1,16 @@
 ---
-id: 650ffcd71cdfee0001aaba81
-uuid: 3ffc2179-47b6-44c5-817a-22a521328b46
 title: Speaking at Coding for a Better World - MCB Tech Conference
 slug: coding-for-a-better-world-mcb-tech-conference-2023
-comment_id: 650ffcd71cdfee0001aaba81
 feature_image: /content/images/2023/09/mcb-conference-2023--1-.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2023-09-24 09:09:43
-updated_at: 2023-09-24 11:52:46
-published_at: 2023-09-24 11:43:26
-custom_excerpt: I spoke about "Developer Happiness" at the MCB Tech Conference
-  Coding for a better world
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  I spoke about "Developer Happiness" at the MCB Tech Conference Coding for a
+  better world
+date: 2023-09-24T09:09:43.000Z
 ---
 
 MCB organized a tech conference to celebrate "Developer's Day" titled "Coding for a better world". [Mervyn Manilall](https://www.linkedin.com/in/mervyn-manilall/), one of the organizers of the event, extended an invitation to speak at that event a couple of months ago.

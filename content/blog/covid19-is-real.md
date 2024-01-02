@@ -1,30 +1,16 @@
 ---
-id: 5e81bf28463a094592d44107
-uuid: 9fa7e834-e6dc-4477-9487-929264abffe8
 title: Covid19 is real
 slug: covid19-is-real
-comment_id: 5e81bf28463a094592d44107
 feature_image: /content/images/2020/03/covid19-is-real-1.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-03-30 09:43:04
-updated_at: 2020-03-30 10:52:50
-published_at: 2020-03-30 10:52:45
-custom_excerpt: "There aren't many events that forces the entire planet to pause
-  and start paying attention. "
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  There aren't many events that forces the entire planet to pause and start
+  paying attention. 
+date: 2020-03-30T09:43:04.000Z
 ---
 
 Event the worse catastrophes that we've known recently were somewhat localized, and some regions of the world had the luxury of watching from far away, a lot of times sending aid, other times moving on as if nothing happened.

@@ -1,30 +1,16 @@
 ---
-id: 64521ce3711da00001e82625
-uuid: 386bd353-fbf1-42fe-ba8d-ab4bd6c8675a
 title: Developers.Institute x Front-end Coders - April Meetup 2023
 slug: developers-institute-x-front-end-coders-april-meetup-2023
-comment_id: 64521ce3711da00001e82625
 feature_image: /content/images/2023/05/april-2023.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2023-05-03 08:35:47
-updated_at: 2023-05-03 15:05:04
-published_at: 2023-05-03 09:17:21
-custom_excerpt: The April meetup we spoke about Interviews, CVs, Freelancing and
+custom_excerpt: >-
+  The April meetup we spoke about Interviews, CVs, Freelancing and
   Entrepreneurship.
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+date: 2023-05-03T08:35:47.000Z
 ---
 
 The topic of this meetup had been in the works since quite a while, and we were waiting for the perfect and neutral location to host it because it was centered around Interviews and how to improve your CVs.

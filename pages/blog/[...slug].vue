@@ -67,7 +67,7 @@ if (post.value) {
 
 defineOgImageComponent("BlogTemplate", {
   title: post.value?.title,
-  description: dateFormat(new Date(post.value?.created_at || "")),
+  description: dateFormat(new Date(post.value?.date || "")),
   customImage: post.value?.feature_image,
 });
 </script>

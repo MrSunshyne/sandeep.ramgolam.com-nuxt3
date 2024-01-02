@@ -1,29 +1,14 @@
 ---
-id: 5e1b418e3c11b2c62732f111
-uuid: 2defbf5d-48cf-4270-8cc4-c5508cbf305a
 title: Blazing fast bootstrapping with degit
 slug: degit
-comment_id: 5e1b418e3c11b2c62732f111
 feature_image: /content/images/2020/01/degit-blazing-fast.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-01-12 15:55:58
-updated_at: 2023-05-03 15:03:18
-published_at: 2020-01-12 16:31:52
 custom_excerpt: Use degit to reduce repetitive tasks while starting new projects
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+date: 2020-01-12T15:55:58.000Z
 ---
 
 In the front-end world, bootstrapping a project has gone through a lot of iterations. From cloning boilerplates from github, via Yeoman, to create-react-app, vue create, till the beautiful `vue ui`, we've always been improving. Lately I have been working on a lot of small projects, mostly Vue based but

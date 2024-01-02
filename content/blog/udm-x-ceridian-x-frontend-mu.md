@@ -1,30 +1,16 @@
 ---
-id: 64eb5329bfc7090001336270
-uuid: 28d17fea-2d66-4e1d-9c2d-5aa643ff2110
 title: frontend.mu x UDM x Ceridian Meetup - August 2023
 slug: udm-x-ceridian-x-frontend-mu
-comment_id: 64eb5329bfc7090001336270
 feature_image: /content/images/2023/08/august-2023.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2023-08-27 13:44:09
-updated_at: 2023-08-28 09:04:32
-published_at: 2023-08-27 14:29:42
-custom_excerpt: In the August meetup we spoke about Conference Talks, Building
-  Games, How to level up as a Developer and Security Tips
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  In the August meetup we spoke about Conference Talks, Building Games, How to
+  level up as a Developer and Security Tips
+date: 2023-08-27T13:44:09.000Z
 ---
 
 The august frontend coders meetup took place on the 26th of August 2023 at the Universite des Mascareignes campus. After taking a pause in July, Kushul and I planned another meetup featuring really awesome speakers.

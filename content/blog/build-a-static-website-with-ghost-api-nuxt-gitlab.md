@@ -1,29 +1,14 @@
 ---
-id: 5e0726570b8a5707aaf98a4e
-uuid: e80c792d-fac3-4d47-bedf-2658df438b73
 title: Build a static website with Ghost API, NuxtJS & Gitlab(SECOND DRAFT)
 slug: build-a-static-website-with-ghost-api-nuxt-gitlab
-comment_id: 5e0726570b8a5707aaf98a4e
 feature_image: null
 featured: 0
 type: post
 indexable: true
 status: draft
-locale: null
 visibility: public
-created_at: 2019-12-28 09:54:31
-updated_at: 2020-04-03 11:42:17
-published_at: null
 custom_excerpt: null
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+date: 2019-12-28T09:54:31.000Z
 ---
 
 There are many ways to build websites. Each of them have their own pros and cons. One of them is static website. In this article I am going to describe how I built a static website while also overcoming some disadvantages of the latter by using little tricks.

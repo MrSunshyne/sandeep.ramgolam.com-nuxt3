@@ -1,30 +1,16 @@
 ---
-id: 5dfdc6d5b2e578c4a2eed7fc
-uuid: ed79de1b-487d-46b4-b49c-d8d811c9f4fd
-title: "Go: GDG Mauritius Meetup"
+title: 'Go: GDG Mauritius Meetup'
 slug: go-gdg-meetup
-comment_id: 5dfdc6d5b2e578c4a2eed7fc
 feature_image: /content/images/2019/12/gdg-go-meetup-mauritius.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-12-21 07:16:37
-updated_at: 2023-05-03 15:03:19
-published_at: 2019-12-21 12:40:11
-custom_excerpt: The monthly GDG Mauritius meetup was about Go this time. It was
-  hosted by MSCC and there was a special guest was present
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  The monthly GDG Mauritius meetup was about Go this time. It was hosted by MSCC
+  and there was a special guest was present
+date: 2019-12-21T07:16:37.000Z
 ---
 
 After a stop at the Post Office in Port Louis, I managed to reach the Flying Dodo just in time for the [meetup](https://www.meetup.com/GDG-Mauritius/events/266919961/). This time "Go: All you ever wanted to know but didn't dare to ask..[.](https://www.meetup.com/GDG-Mauritius/events/266919961/)" was happening, an event by [GDG Mauritius.](https://twitter.com/GDGMauritius)

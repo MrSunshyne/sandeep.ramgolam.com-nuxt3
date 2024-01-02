@@ -1,29 +1,14 @@
 ---
-id: 5eaebfbd173fadc73adf1a67
-uuid: 30b25d4d-1e05-4955-a84b-887d0eeccaa4
 title: Pop!_OS! 20.04 - My First Impressions
 slug: popos
-comment_id: 5eaebfbd173fadc73adf1a67
 feature_image: /content/images/2020/05/pop_os.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-05-03 12:57:33
-updated_at: 2023-05-03 15:03:17
-published_at: 2020-05-03 12:58:26
 custom_excerpt: I installed Pop!_OS and I liked it
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+date: 2020-05-03T12:57:33.000Z
 ---
 
 ## Obtain the ISO

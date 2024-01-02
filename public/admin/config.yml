@@ -1,0 +1,28 @@
+
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+media_folder: static/img
+public_folder: /content/images/2024/
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Feature Image', name: 'feature_image', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Custom Excerpt', name: 'custom_excerpt', widget: 'string' }
+      - { label: 'Featured', name: 'featured', widget: 'string' }
+      - { label: 'Type', name: 'type', widget: 'select', options: ['post', 'page'] }
+      - { label: 'Indexable', name: 'indexable', widget: 'boolean' }
+      - { label: 'Status', name: 'status', widget: 'select', options: ['published', 'draft'] }
+      - { label: 'Visibility', name: 'visibility', widget: 'select', options: ['public', 'private'] }

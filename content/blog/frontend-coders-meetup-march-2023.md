@@ -1,30 +1,16 @@
 ---
-id: 64327d963d5d400001c331a9
-uuid: 444cad5e-52b5-44f7-a2e8-d73006539a0e
 title: Providus x Front-end Coders – March Meetup 2023
 slug: frontend-coders-meetup-march-2023
-comment_id: 64327d963d5d400001c331a9
 feature_image: /content/images/2023/04/march-2023.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2023-04-09 08:55:50
-updated_at: 2023-04-09 09:24:10
-published_at: 2023-03-27 09:20:00
-custom_excerpt: In the march meetup we spoke about WebContainers, CSS, NextJS
-  and had an awesome quiz session
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  In the march meetup we spoke about WebContainers, CSS, NextJS and had an
+  awesome quiz session
+date: 2023-04-09T08:55:50.000Z
 ---
 
 Kushul and I had been in touch with the awesome people at Providus since the Developers conference last year, and we finally got to collaborate on a frontend coders meetup in March.

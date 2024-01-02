@@ -1,29 +1,14 @@
 ---
-id: 643284c73d5d400001c33237
-uuid: d1bc36a2-d23a-4507-b080-f3a8604b238e
 title: The Power of AI - MSCC Meetup
 slug: the-power-of-ai-mscc-meetup
-comment_id: 643284c73d5d400001c33237
 feature_image: /content/images/2023/04/power-of-ai-2023.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2023-04-09 09:26:31
-updated_at: 2023-04-09 09:47:45
-published_at: 2023-04-09 09:47:45
 custom_excerpt: I attended the MSCC meetup on the 8th of April 2023 about the power of ai
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+date: 2023-04-09T09:26:31.000Z
 ---
 
 I attended the MSCC meetup this month titled “The Power of AI”. It's always fun to show and meet tech geeks during the MSCC meetups.

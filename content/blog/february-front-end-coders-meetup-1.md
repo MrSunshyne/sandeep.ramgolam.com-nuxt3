@@ -1,30 +1,16 @@
 ---
-id: 5e4bdab12b3b172afa32735e
-uuid: 4f03272f-24ac-4841-a5bb-9eb204a3f963
-title: "February Front-end Coders Meetup #1"
+title: 'February Front-end Coders Meetup #1'
 slug: february-front-end-coders-meetup-1
-comment_id: 5e4bdab12b3b172afa32735e
 feature_image: /content/images/2020/02/meetup-frontend-15feb.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-02-18 12:38:09
-updated_at: 2023-05-03 15:03:18
-published_at: 2020-02-18 12:59:10
-custom_excerpt: The 1st Front-end meetup of Front-end Coders Mauritius happened
-  on the 15th of Feb
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+custom_excerpt: >-
+  The 1st Front-end meetup of Front-end Coders Mauritius happened on the 15th of
+  Feb
+date: 2020-02-18T12:38:09.000Z
 ---
 
 This meetup was planned since December last year, but unfortunately due to the various cyclones we had to postpone every time.

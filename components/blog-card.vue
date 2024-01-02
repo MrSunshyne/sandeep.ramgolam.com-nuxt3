@@ -22,7 +22,7 @@ defineProps<{
         {{ post.title }}
       </div>
       <div class="text-xs uppercase pt-2 pb-4">
-        {{ dateFormat(new Date(post?.published_at)) }}
+        {{ dateFormat(new Date(post?.date)) }}
       </div>
       <p class="text-gray-700 dark:text-gray-400">
         {{ post.custom_excerpt }}
