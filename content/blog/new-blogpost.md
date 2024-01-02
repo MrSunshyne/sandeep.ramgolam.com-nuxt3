@@ -10,4 +10,9 @@ indexable: true
 status: published
 visibility: public
 ---
+
 Hello this is a new blog post
+
+Another blog post
+
+This is is a test
