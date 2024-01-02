@@ -17,6 +17,12 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Feature Image', name: 'feature_image', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Custom Excerpt', name: 'custom_excerpt', widget: 'string' }
+      - { label: 'Featured', name: 'featured', widget: 'string' }
+      - { label: 'Type', name: 'type', widget: 'select', options: ['post', 'page'] }
+      - { label: 'Indexable', name: 'indexable', widget: 'boolean' }
+      - { label: 'Status', name: 'status', widget: 'select', options: ['published', 'draft'] }
+      - { label: 'Visibility', name: 'visibility', widget: 'select', options: ['public', 'private'] }
