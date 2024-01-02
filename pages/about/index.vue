@@ -1,7 +1,5 @@
 <template>
   <div class="container work-page pb-10">
-    <!-- <OgImageStatic component="OgImageGeneric" /> -->
-
     <div class="flex items-center print:hidden">
       <button
         class="border-2 p-2 bg-green-500 text-white uppercase text-sm font-bold"

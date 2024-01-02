@@ -1,6 +1,5 @@
 <template>
   <div class="container event-page pb-10">
-    <!-- <OgImageStatic component="OgImageGeneric" /> -->
     <EventsListing />
   </div>
 </template>
