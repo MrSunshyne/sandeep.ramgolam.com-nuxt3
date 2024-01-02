@@ -26,3 +26,4 @@ collections:
       - { label: 'Indexable', name: 'indexable', widget: 'boolean' }
       - { label: 'Status', name: 'status', widget: 'select', options: ['published', 'draft'] }
       - { label: 'Visibility', name: 'visibility', widget: 'select', options: ['public', 'private'] }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
