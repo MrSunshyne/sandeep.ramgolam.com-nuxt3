@@ -1,29 +1,16 @@
 ---
-id: 649085c58a99886171613d08
-uuid: ca3b9a04-ca70-4d59-a22e-6671c9c11e67
 title: I got to attend JSNation 2023 in Amsterdam
 slug: attending-jsnation-in-amsterdam
-comment_id: 649085c58a99886171613d08
 feature_image: /content/images/2023/06/jsnation-june-2023.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2023-06-19 16:43:49
-updated_at: 2023-06-19 17:14:35
-published_at: 2023-06-19 17:14:35
+created_at: 2023-06-19T16:43:49.000Z
+updated_at: 2023-06-19T17:14:35.000Z
+published_at: 2023-06-19T17:14:35.000Z
 custom_excerpt: I attended JSNation 2023 in Amsterdam thanks to Frontend Coders Mauritius
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 Through a series of events that lined up perfectly, I was able to attend JSNation 2023 in-person in Amsterdam. This was an amazing opportunity to travel and meet people who share the same passion for frontend development from across the world.

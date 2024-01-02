@@ -1,30 +1,18 @@
 ---
-id: 6301f57538cabd83900c973d
-uuid: d6ea1e24-d35e-40fe-a8bf-987432dcdc61
 title: Front-end Coders Meetup - August 2022
 slug: front-end-coders-meetup-august-2022
-comment_id: 6301f57538cabd83900c973d
 feature_image: /content/images/2022/08/august-2022.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2022-08-21 09:05:57
-updated_at: 2023-05-03 15:03:16
-published_at: 2022-08-21 11:01:36
-custom_excerpt: The 5th Front-end Coders meetup of 2022 was at ACENSI Mauritius,
-  St Pierre, Mauritius on the 20th August 2022 around fancy new tech
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+created_at: 2022-08-21T09:05:57.000Z
+updated_at: 2023-05-03T15:03:16.000Z
+published_at: 2022-08-21T11:01:36.000Z
+custom_excerpt: >-
+  The 5th Front-end Coders meetup of 2022 was at ACENSI Mauritius, St Pierre,
+  Mauritius on the 20th August 2022 around fancy new tech
 ---
 
 The 5th frontend meetup of the year was structured a little differently from the previous ones. We went for a lightning-talk style this time, which means more speakers and shorter sessions. This has the advantage of covering a larger range of topics, but doesn't let the presenter deep dive in the subject. The topic this time around was Fancy New Tech, in which we tried to cover a lot of the “new” web technologies that are sometimes legit, sometimes buzzwords ! The goal was to have an overview of each tech and let the audience member investigate further if they're interested. Also, we had a semi-outdoor setup in the beautiful office of ACENSI Mauritius.

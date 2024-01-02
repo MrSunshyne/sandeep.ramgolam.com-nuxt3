@@ -1,29 +1,16 @@
 ---
-id: 5e087e670b8a5707aaf98b53
-uuid: e2ed85bf-d7e9-4a2f-b726-3db00e095472
 title: Download and convert Youtube videos for FREE using youtube-dl
 slug: youtube-download
-comment_id: 5e087e670b8a5707aaf98b53
 feature_image: /content/images/2020/01/youtube-download-free.jpg
 featured: 0
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-12-29 10:22:31
-updated_at: 2020-01-02 08:19:19
-published_at: 2020-01-01 10:14:17
+created_at: 2019-12-29T10:22:31.000Z
+updated_at: 2020-01-02T08:19:19.000Z
+published_at: 2020-01-01T10:14:17.000Z
 custom_excerpt: How to download YouTube videos for free
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 Every once in a while people need to download a youtube video for research purposes. Of course you should delete the video after downloading them for research purposes, unless they're youtube videos that you own.

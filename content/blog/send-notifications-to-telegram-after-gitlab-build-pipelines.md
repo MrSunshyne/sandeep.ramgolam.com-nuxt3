@@ -1,30 +1,17 @@
 ---
-id: 5dda319c0fc4877c65e365b2
-uuid: d0788548-399d-4949-9797-f90482be09bb
 title: Send notifications to Telegram after GitLab build pipelines
 slug: send-notifications-to-telegram-after-gitlab-build-pipelines
-comment_id: 5dda319c0fc4877c65e365b2
 feature_image: /content/images/2019/11/gitlab-telegram-notifications.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-11-24 07:30:36
-updated_at: 2023-05-03 15:03:19
-published_at: 2019-11-24 08:04:27
+created_at: 2019-11-24T07:30:36.000Z
+updated_at: 2023-05-03T15:03:19.000Z
+published_at: 2019-11-24T08:04:27.000Z
 custom_excerpt: |
   Using a telegram bot to send notifications from Gitlab.com to telegram
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 After a little digging online about sending a notifications from Gitlab.com to your telegram account, I found this required setting up a server and run something that would intercept the webhook from Gitlab and send it to your telegram account. Fortunately the nice people at integram.org already solved the issue by creating a bot for this.

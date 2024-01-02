@@ -1,29 +1,16 @@
 ---
-id: 5de4fe51352930856b0432d9
-uuid: cf88dc23-1db8-48bf-a8ea-fb94bedc57e1
 title: Build a static website with Ghost API, Nuxt & Gitlab (FIRST DRAF)
 slug: build-a-static-website-using-ghost-nuxt
-comment_id: 5de4fe51352930856b0432d9
 feature_image: /content/images/2019/12/pre-rendered-and-spa-1.jpg
 featured: 0
 type: post
 indexable: true
 status: draft
-locale: null
 visibility: public
-created_at: 2019-12-02 12:06:41
-updated_at: 2023-05-03 15:03:14
-published_at: 2019-12-02 13:35:13
+created_at: 2019-12-02T12:06:41.000Z
+updated_at: 2023-05-03T15:03:14.000Z
+published_at: 2019-12-02T13:35:13.000Z
 custom_excerpt: null
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 ## Preface

@@ -1,31 +1,19 @@
 ---
-id: 5fb9340356eeb1146b070d62
-uuid: 856beeca-712a-4ab6-9413-db77e2a27169
 title: Mauritius Google DevFest 2020
 slug: mauritius-google-devfest-2020
-comment_id: 5fb9340356eeb1146b070d62
 feature_image: /content/images/2020/11/dev-fest-2020-mauritius.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-11-21 15:36:35
-updated_at: 2023-05-03 15:03:17
-published_at: 2020-11-21 16:48:50
-custom_excerpt: The 1-day even took place at Uniciti Pierrefonds on Saturday
-  21st Nov 2020 with 101 attendees, two parallel tracks and lots of fun sessions
-  on google-related topics.
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+created_at: 2020-11-21T15:36:35.000Z
+updated_at: 2023-05-03T15:03:17.000Z
+published_at: 2020-11-21T16:48:50.000Z
+custom_excerpt: >-
+  The 1-day even took place at Uniciti Pierrefonds on Saturday 21st Nov 2020
+  with 101 attendees, two parallel tracks and lots of fun sessions on
+  google-related topics.
 ---
 
 While all other DevFest events around the globe seem to have gone virtual, we are lucky enough in Mauritius to be Covid-safe, so we had a physical event with all the security precautions.

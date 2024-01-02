@@ -1,29 +1,16 @@
 ---
-id: 5ebbf7214a948360aaec9d3c
-uuid: 8bb358e5-ebdf-4da5-9936-59af7b5085c0
 title: Email clients on Linux
 slug: email-clients-on-linux
-comment_id: 5ebbf7214a948360aaec9d3c
 feature_image: null
 featured: 0
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-05-13 13:33:21
-updated_at: 2020-05-13 14:02:06
-published_at: 2020-05-13 13:47:40
+created_at: 2020-05-13T13:33:21.000Z
+updated_at: 2020-05-13T14:02:06.000Z
+published_at: 2020-05-13T13:47:40.000Z
 custom_excerpt: null
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 An email client is a software that provides a user interface to read emails that it fetches from a mail server. People are quite used to online email clients such as Gmail or Outlook.com but some prefer desktop email clients that are installed on the users and not in a browser.

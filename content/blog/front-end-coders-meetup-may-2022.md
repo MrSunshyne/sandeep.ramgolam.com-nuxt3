@@ -1,30 +1,18 @@
 ---
-id: 6289d539af837023bc980a3d
-uuid: e079a24a-e8a3-41b5-8e4e-d8e5bfee5115
 title: Front-end Coders Meetup - May 2022
 slug: front-end-coders-meetup-may-2022
-comment_id: 6289d539af837023bc980a3d
 feature_image: /content/images/2022/05/may-2022.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2022-05-22 06:16:25
-updated_at: 2022-05-22 09:38:20
-published_at: 2022-05-22 06:31:00
-custom_excerpt: This meetup was around REACT and there were presentations about
-  react keys, memoization, hosting SPAs and ViteJS
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+created_at: 2022-05-22T06:16:25.000Z
+updated_at: 2022-05-22T09:38:20.000Z
+published_at: 2022-05-22T06:31:00.000Z
+custom_excerpt: >-
+  This meetup was around REACT and there were presentations about react keys,
+  memoization, hosting SPAs and ViteJS
 ---
 
 Two in a row! We have a streak going on now as far as organizing front-end meetups go. This time we were welcomed by Le Wagon - Mauritius. Many thanks to Zakiya B from FINAM who helped me get in touch with Basile M in order to secure this location.

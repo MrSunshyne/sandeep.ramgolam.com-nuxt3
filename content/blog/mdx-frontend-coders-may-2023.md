@@ -1,29 +1,16 @@
 ---
-id: 649079358a99886171613c0b
-uuid: e363583b-1a4c-4e5a-99f7-484b0fc0a364
 title: MDX University x Front-end Coders Mauritius - May Meetup 2023
 slug: mdx-frontend-coders-may-2023
-comment_id: 649079358a99886171613c0b
 feature_image: /content/images/2023/06/may-2023.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2023-06-19 15:50:13
-updated_at: 2023-06-19 17:33:59
-published_at: 2023-06-19 16:42:30
+created_at: 2023-06-19T15:50:13.000Z
+updated_at: 2023-06-19T17:33:59.000Z
+published_at: 2023-06-19T16:42:30.000Z
 custom_excerpt: In the May meetup we spoke about Git, CVs & getting in to tech
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 The biggest meetup we've organized so far happened at the Middlesex University of Mauritius on the 20th of May 2023. Following the great reception of last month's meetup of non-technical subjects geared towards the tech industry, we continued along the same line and picked topics that were relevant to people who are interested or just getting started in tech/frontend.

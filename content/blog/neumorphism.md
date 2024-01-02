@@ -1,30 +1,17 @@
 ---
-id: 5e0360d2b2e578c4a2eed98c
-uuid: 937a8642-5822-475d-be54-213b26e4d4a9
 title: Implementing Neumorphism with CSS
 slug: neumorphism
-comment_id: 5e0360d2b2e578c4a2eed98c
 feature_image: /content/images/2019/12/neumorphism-trend-2020.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-12-25 13:14:58
-updated_at: 2023-05-03 15:03:19
-published_at: 2019-12-25 13:58:22
+created_at: 2019-12-25T13:14:58.000Z
+updated_at: 2023-05-03T15:03:19.000Z
+published_at: 2019-12-25T13:58:22.000Z
 custom_excerpt: |
   I set out to test Neumorphism by implementing it on my blog
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 There has been some buzz about this term in the techsphere lately and like every sane person would do on Christmas day, I decided to implement it on my blog to see what the fuss is all about.

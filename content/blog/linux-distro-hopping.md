@@ -1,29 +1,16 @@
 ---
-id: 5eaec344173fadc73adf1a7b
-uuid: 12cb33be-0896-4c36-9e95-1fb477a6bc2e
 title: Linux distro hopping
 slug: linux-distro-hopping
-comment_id: 5eaec344173fadc73adf1a7b
 feature_image: /content/images/2020/05/linux-distro-hopping-1.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-05-03 13:12:36
-updated_at: 2023-05-03 15:03:17
-published_at: 2020-05-03 13:13:52
+created_at: 2020-05-03T13:12:36.000Z
+updated_at: 2023-05-03T15:03:17.000Z
+published_at: 2020-05-03T13:13:52.000Z
 custom_excerpt: My linux distro hopping journey since last year
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 ## Elementary OS

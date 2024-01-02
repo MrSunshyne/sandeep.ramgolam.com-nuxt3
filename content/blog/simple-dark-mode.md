@@ -1,29 +1,16 @@
 ---
-id: 5e23ea133c11b2c62732f1a7
-uuid: 526cf4c1-f57a-41f8-a8a2-f9d0516c1cc3
 title: Dark Mode support in browsers
 slug: simple-dark-mode
-comment_id: 5e23ea133c11b2c62732f1a7
 feature_image: /content/images/2020/01/dark-mode.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-01-19 05:33:07
-updated_at: 2023-05-03 15:03:18
-published_at: 2020-01-19 05:45:49
+created_at: 2020-01-19T05:33:07.000Z
+updated_at: 2023-05-03T15:03:18.000Z
+published_at: 2020-01-19T05:45:49.000Z
 custom_excerpt: Get to know dark mode and a neat little trick
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 Since the introduction of macOS Mojave, which brought system-wide dark mode, webkit introduced a way to cascade the styles to the browser.

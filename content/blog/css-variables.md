@@ -1,29 +1,16 @@
 ---
-id: 5e07259d0b8a5707aaf98a45
-uuid: e456b133-dcd1-4fed-b26c-6acc817f91c8
 title: What are CSS Variables?
 slug: css-variables
-comment_id: 5e07259d0b8a5707aaf98a45
 feature_image: /content/images/2019/12/css-variables.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-12-28 09:51:25
-updated_at: 2023-05-03 15:03:19
-published_at: 2019-12-30 11:07:51
+created_at: 2019-12-28T09:51:25.000Z
+updated_at: 2023-05-03T15:03:19.000Z
+published_at: 2019-12-30T11:07:51.000Z
 custom_excerpt: Everything you need to know about CSS Variables.
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 CSS Variables are also commonly known as "CSS Custom Properties". These terms can be used interchangeably. They do what you would expect them to : define variables and be able to refer back to them in your CSS.

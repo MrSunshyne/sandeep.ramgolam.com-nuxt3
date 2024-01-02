@@ -1,30 +1,18 @@
 ---
-id: 5dcf9495bf5c0e76259687eb
-uuid: 3de22180-86db-4e8d-9103-646732278c31
 title: Dota 2 on linux
 slug: dota-2-on-linux
-comment_id: 5dcf9495bf5c0e76259687eb
 feature_image: /content/images/2023/02/software-updates-ubuntu-1-1000w.png
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-11-16 06:17:57
-updated_at: 2023-05-03 15:03:20
-published_at: 2017-05-16 06:19:00
-custom_excerpt: I read numerous articles about people running Dota 2
-  successfully on Linux, and it was the moment to try it myself.
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+created_at: 2019-11-16T06:17:57.000Z
+updated_at: 2023-05-03T15:03:20.000Z
+published_at: 2017-05-16T06:19:00.000Z
+custom_excerpt: >-
+  I read numerous articles about people running Dota 2 successfully on Linux,
+  and it was the moment to try it myself.
 ---
 
 I’ve been using Ubuntu a lot since I got my Fibre internet connection installed a last year. I still had to get back to Windows just for gaming. I read numerous articles about people running Dota 2 successfully on Linux, and it was the moment to try it myself.

@@ -1,28 +1,15 @@
 ---
-id: 5df33b0db2e578c4a2eed6ed
-uuid: e3749bcf-e4e5-4f63-b848-b00ad4bb6587
 title: Tech Stack
 slug: tech-stack
-comment_id: 5df33b0db2e578c4a2eed6ed
 feature_image: null
 featured: 0
 type: page
 status: published
-locale: null
 visibility: public
-created_at: 2019-12-13 07:17:33
-updated_at: 2020-01-02 08:21:09
-published_at: 2019-12-13 07:18:59
+created_at: 2019-12-13T07:17:33.000Z
+updated_at: 2020-01-02T08:21:09.000Z
+published_at: 2019-12-13T07:18:59.000Z
 custom_excerpt: This blog is an on-going experiment built on open source tech
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 This blog itself is an experiment. There is no server/api running on the cloud that it gets the data from. The entire site is pre-rendered with the content built-in and then hosted on gitlab pages. A blogpost is coming soon to explain how it works.

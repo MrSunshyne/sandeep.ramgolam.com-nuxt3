@@ -1,31 +1,18 @@
 ---
-id: 5deb8945cf520498852ee958
-uuid: 3d5c3a17-0f28-4b90-ac46-58af66110cdc
 title: A slideshow using CSS animations & custom properties
 slug: a-slideshow-using-css-animations-custom-properties
-comment_id: 5deb8945cf520498852ee958
 feature_image: /content/images/2019/12/custom-property-slideshow.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-12-07 11:13:09
-updated_at: 2023-05-03 15:03:19
-published_at: 2019-12-07 11:19:15
+created_at: 2019-12-07T11:13:09.000Z
+updated_at: 2023-05-03T15:03:19.000Z
+published_at: 2019-12-07T11:19:15.000Z
 custom_excerpt: >+
   In this article I explain a little trick I used to build an image slideshow by
   combining css animation & custom properties.
-
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
 
 ---
 

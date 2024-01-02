@@ -1,29 +1,18 @@
 ---
-id: 6432761b3d5d400001c33147
-uuid: ccae044f-ef92-4125-b4e0-97cc4b9abe78
 title: MCB Digital Factory x Front-end Coders – February Meetup 2023
 slug: front-end-coders-meetup-february-2023
-comment_id: 6432761b3d5d400001c33147
 feature_image: /content/images/2023/04/february-2023.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2023-04-09 08:23:55
-updated_at: 2023-04-09 09:24:21
-published_at: 2023-02-27 08:43:00
-custom_excerpt: The february frontend meetup was about JavaScript, Testing and Frontend Updates
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+created_at: 2023-04-09T08:23:55.000Z
+updated_at: 2023-04-09T09:24:21.000Z
+published_at: 2023-02-27T08:43:00.000Z
+custom_excerpt: >-
+  The february frontend meetup was about JavaScript, Testing and Frontend
+  Updates
 ---
 
 The first frontend coders meetup of the year happened at MCB Digital factory on the 25 Feb. We had been planning this one since a few weeks and it was only possible with the help of Chervine Bhiwoo from the MCB side.

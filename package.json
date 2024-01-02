@@ -8,7 +8,7 @@
     "preview": "nuxt preview",
     "lint:js": "eslint --ext .js,.ts,.mjs,.vue --fix --ignore-path .gitignore .",
     "lint": "pnpm lint:js",
-    "prune": "node ./processing/kill-frontmatter.js"
+    "prune": "node ./processing/edit-frontmatter-batch.js"
   },
   "devDependencies": {
     "@nuxt/content": "2.8.5",

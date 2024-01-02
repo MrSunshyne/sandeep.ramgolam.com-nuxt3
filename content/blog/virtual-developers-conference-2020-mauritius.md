@@ -1,31 +1,19 @@
 ---
-id: 5f5b85f5e178aa584a3a7834
-uuid: bd45d771-2252-4e92-959e-91f3a0024105
 title: Virtual Developers Conference 2020 - Mauritius
 slug: virtual-developers-conference-2020-mauritius
-comment_id: 5f5b85f5e178aa584a3a7834
 feature_image: /content/images/2020/09/Frame-19.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-09-11 14:13:09
-updated_at: 2023-05-03 15:03:17
-published_at: 2020-09-11 14:57:38
-custom_excerpt: "The developers conference is organized by the Mauritius
-  Software Craftsmanship Community every year and this time due to the global
-  pandemic, it took place online. "
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+created_at: 2020-09-11T14:13:09.000Z
+updated_at: 2023-05-03T15:03:17.000Z
+published_at: 2020-09-11T14:57:38.000Z
+custom_excerpt: >-
+  The developers conference is organized by the Mauritius Software Craftsmanship
+  Community every year and this time due to the global pandemic, it took place
+  online. 
 ---
 
 The conference took place on the 9th, 10th and 11th of September and all 4 parallel tracks were streamed on YouTube for everyone to enjoy. As you might have noticed, the theme this year was COMICS, hence the room names being : Batcave, Avengers Tower, New Asgard and Kryptone.

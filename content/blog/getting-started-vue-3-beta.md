@@ -1,30 +1,18 @@
 ---
-id: 5e99c6054abd5d3cdfea424b
-uuid: 380cc27d-038e-4a4f-9110-a4b553e03ef4
 title: Getting Started with Vue 3 Beta
 slug: getting-started-vue-3-beta
-comment_id: 5e99c6054abd5d3cdfea424b
 feature_image: /content/images/2023/02/vue-3-beta-getting-started-1000w.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-04-17 15:06:45
-updated_at: 2023-02-15 16:24:19
-published_at: 2020-04-17 15:41:30
-custom_excerpt: "This is a small explanation of how to setup Vue 3 beta with
-  webpack and start playing with it "
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+created_at: 2020-04-17T15:06:45.000Z
+updated_at: 2023-02-15T16:24:19.000Z
+published_at: 2020-04-17T15:41:30.000Z
+custom_excerpt: >-
+  This is a small explanation of how to setup Vue 3 beta with webpack and start
+  playing with it 
 ---
 
 Yesterday Vue 3 Beta was released and it's finally time to start playing with it!

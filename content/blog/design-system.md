@@ -1,29 +1,16 @@
 ---
-id: 5e0db519febc7b0b980b4f3d
-uuid: 6e939579-6990-4aee-ace0-30a6c57d6b1b
 title: How to build a Design System
 slug: design-system
-comment_id: 5e0db519febc7b0b980b4f3d
 feature_image: /content/images/2020/01/design-system.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-01-02 09:17:13
-updated_at: 2020-01-02 10:02:54
-published_at: 2020-01-02 10:00:26
+created_at: 2020-01-02T09:17:13.000Z
+updated_at: 2020-01-02T10:02:54.000Z
+published_at: 2020-01-02T10:00:26.000Z
 custom_excerpt: Steps to build your own design system based on my experience.
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
 ---
 
 Design system is not just a buzz word. I found that it was a well defined method that helps engineering teams when building medium to large size projects. In this article I share my experience in building a design system and what are the steps you may follow to get it right.

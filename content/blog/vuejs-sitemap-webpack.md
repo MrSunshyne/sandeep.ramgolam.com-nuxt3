@@ -1,30 +1,18 @@
 ---
-id: 5e872164886b191c7114d66a
-uuid: 46621ce0-66bc-4a90-9248-c39c433f1fa4
 title: Generate a sitemap.xml for VueJS app
 slug: vuejs-sitemap-webpack
-comment_id: 5e872164886b191c7114d66a
 feature_image: /content/images/2020/04/generate-sitemap-vue-webpack.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-04-03 11:43:32
-updated_at: 2020-04-03 12:09:07
-published_at: 2020-04-03 11:54:57
-custom_excerpt: Front-end Framworks do not give you a sitemap.xml by default. It
-  is possible to generate one using a webpack plugin
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+created_at: 2020-04-03T11:43:32.000Z
+updated_at: 2020-04-03T12:09:07.000Z
+published_at: 2020-04-03T11:54:57.000Z
+custom_excerpt: >-
+  Front-end Framworks do not give you a sitemap.xml by default. It is possible
+  to generate one using a webpack plugin
 ---
 
 Front-end frameworks are awesome to work with, however they suck at SEO. Google [claims that it executes JS](https://webmasters.googleblog.com/2019/05/the-new-evergreen-googlebot.html) and will render your page, but too many times I have seen websites built with front-end frameworks get completely ignored if you don't setup Google Search Console.

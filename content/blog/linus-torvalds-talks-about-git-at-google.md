@@ -1,31 +1,19 @@
 ---
-id: 5dd92abd0fc4877c65e363bd
-uuid: 5c1358ea-b566-4703-85f7-7c16c027b6bc
 title: Linus Torvalds talk about git at Google in 2007
 slug: linus-torvalds-talks-about-git-at-google
-comment_id: 5dd92abd0fc4877c65e363bd
 feature_image: /content/images/2019/11/linus-at-google-2007.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2019-11-23 12:49:01
-updated_at: 2023-05-03 15:03:20
-published_at: 2019-11-23 14:36:08
-custom_excerpt: In 2007 Linus Torvalds gave a talk about git at Google. His
-  presentation style was very spontaneous and half of the session was spent
-  answering questions from the audience.
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+created_at: 2019-11-23T12:49:01.000Z
+updated_at: 2023-05-03T15:03:20.000Z
+published_at: 2019-11-23T14:36:08.000Z
+custom_excerpt: >-
+  In 2007 Linus Torvalds gave a talk about git at Google. His presentation style
+  was very spontaneous and half of the session was spent answering questions
+  from the audience.
 ---
 
 Linus Torvalds on Git

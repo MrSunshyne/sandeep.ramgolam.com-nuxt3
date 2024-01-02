@@ -1,30 +1,18 @@
 ---
-id: 5e84cbc7fb739d54dab92209
-uuid: da752bf8-60f9-425f-a8ee-b9b73b65a46d
 title: Ghost with Cloudinary as storage adapter
 slug: ghost-cloudinary
-comment_id: 5e84cbc7fb739d54dab92209
 feature_image: /content/images/2020/04/ghost-cloudinary.jpg
 featured: 1
 type: post
 indexable: true
 status: published
-locale: null
 visibility: public
-created_at: 2020-04-01 17:13:43
-updated_at: 2020-06-30 16:41:57
-published_at: 2020-04-01 17:38:00
-custom_excerpt: Ghost lets you completely swap out this image processing feature
-  an offload it to an image processing cloud service.
-codeinjection_head: null
-codeinjection_foot: null
-custom_template: null
-canonical_url: null
-email_recipient_filter: all
-newsletter_id: null
-lexical: null
-show_title_and_feature_image: 1
-
+created_at: 2020-04-01T17:13:43.000Z
+updated_at: 2020-06-30T16:41:57.000Z
+published_at: 2020-04-01T17:38:00.000Z
+custom_excerpt: >-
+  Ghost lets you completely swap out this image processing feature an offload it
+  to an image processing cloud service.
 ---
 
 You've probably heard about Ghost, the amazing free and open source blogging CMS. One cool thing about it is how easy it is to integrate with other services.
