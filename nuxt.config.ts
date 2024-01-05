@@ -4,14 +4,14 @@ import tailwindTypography from "@tailwindcss/typography";
 export default defineNuxtConfig({
   // site: {
   //   url: 'https://sandeep.ramgolam.com',
-  //   name: 'Sandeep Ramgolam',
-  //   description: 'thoughts, experiments, experiences',
-  //   defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
   //   indexable: false
   // },
   site: {
     // production URL
     url: "https://sandeep.ramgolam.com",
+    name: "Sandeep Ramgolam",
+    description: "thoughts, experiments, experiences",
+    defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
   },
   app: {
     head: {
