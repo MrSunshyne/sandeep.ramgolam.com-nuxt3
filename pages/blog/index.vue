@@ -7,7 +7,7 @@ const { data: posts } = await useAsyncData("blogs", () =>
       visibility: { $eq: "public" },
       status: { $eq: "published" },
     })
-    .sort({ updated_at: -1 })
+    .sort({ date: -1 })
     .find(),
 );
 
