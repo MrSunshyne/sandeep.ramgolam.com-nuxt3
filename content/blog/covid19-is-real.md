@@ -6,7 +6,7 @@ featured: 1
 type: post
 indexable: true
 status: published
-visibility: public
+visibility: private
 custom_excerpt: >-
   There aren't many events that forces the entire planet to pause and start
   paying attention. 

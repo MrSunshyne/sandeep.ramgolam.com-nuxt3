@@ -8,7 +8,7 @@ featured: "1"
 type: post
 indexable: true
 status: published
-visibility: public
+visibility: private
 ---
 
 Hello this is a new blog post

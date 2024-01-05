@@ -6,7 +6,7 @@ featured: 1
 type: post
 indexable: true
 status: published
-visibility: public
+visibility: private
 custom_excerpt: >
   In this article I explain a little trick I used to build an image slideshow by
   combining css animation & custom properties.

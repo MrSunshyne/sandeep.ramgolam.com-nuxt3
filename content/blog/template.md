@@ -6,7 +6,7 @@ featured: 1
 type: post
 indexable: true
 status: published
-visibility: public
+visibility: private
 custom_excerpt: A sample blog template
 date: 2024-01-03T15:55:58.000Z
 ---
