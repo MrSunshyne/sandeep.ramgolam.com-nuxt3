@@ -70,6 +70,14 @@ defineOgImageComponent("BlogTemplate", {
   description: dateFormat(new Date(post.value?.date || "")),
   customImage: post.value?.feature_image,
 });
+
+const coverImage = computed(() => {
+  if (post.value?.feature_image) {
+    return post.value?.feature_image;
+  }
+
+  return `/__og-image__/image/blog/${slug}/og.png`;
+});
 </script>
 
 <template>
@@ -85,12 +93,14 @@ defineOgImageComponent("BlogTemplate", {
           </pre> -->
     <BlogHead :post="post" />
 
+    <div class="mx-auto w-full">
+      <img :src="coverImage" class="mx-auto" alt="" />
+    </div>
+
     <ContentDoc v-slot="{ doc }">
       <article>
         <div class="prose dark:prose-invert mx-auto">
           <ContentRenderer :value="doc">
-            <h1>{{ doc.title }}</h1>
-            <img :src="doc.feature_image" alt="" />
             <ContentRendererMarkdown :value="doc" />
           </ContentRenderer>
         </div>
