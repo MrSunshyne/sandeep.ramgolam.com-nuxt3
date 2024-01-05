@@ -2,7 +2,7 @@
     "event_date": "09/23/2023",
     "event_name": "Front-end Coders Meetup",
     "location": "Mauritius",
-    "event_type": ["organizer", "speaker"],
+    "event_type": ["organizer", "speaking"],
     "published": true,
     "topic": "Docker, Supabase & Developer Happiness",
     "description": "Host, Organize & Speak at this meetup",

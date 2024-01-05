@@ -3,7 +3,7 @@
   "event_name": "Developers Conference 2023",
   "location": "Mauritius",
   "event_type": [
-    "speaker"
+    "speaking"
   ],
   "published": true,
   "topic": "Astro to the Moon",
