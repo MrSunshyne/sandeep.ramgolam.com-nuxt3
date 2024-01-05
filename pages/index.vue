@@ -27,10 +27,7 @@ useHead({
   ],
 });
 
-defineOgImageComponent("IndexTemplate", {
-  title: "Welcome to Nuxt OG Image",
-  description: "You can modify the og:image by changing these props.",
-});
+defineOgImageComponent("IndexTemplate", {});
 </script>
 
 <template>
