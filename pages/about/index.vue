@@ -94,11 +94,19 @@
           <div class="font-bold tracking-widest pr-4 w-56">
             {{ job.date_start }} - {{ job.date_end }}
           </div>
-          <div
+          <component
+            :is="job.company_website ? 'a' : 'div'"
+            :href="job.company_website ? job.company_website : ''"
             class="employer text-lg md:text-2xl font-black print:font-bold print:text-lg dark:text-white text-black"
+            :class="job.company_website ? 'hover:underline' : ''"
           >
             {{ job.company }}
-          </div>
+            <Icon
+              v-if="job.company_website"
+              name="solar:link-bold"
+              class="ml-1 text-base"
+            />
+          </component>
           <div
             class="job-title text-lg md:text-2xl print:font-normal print:text-lg md:pl-2"
           >
@@ -216,5 +224,16 @@ defineOgImageComponent("GenericTemplate");
 <style scoped>
 .page-break-before {
   page-break-before: left;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 2em;
+}
+
+.page-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 </style>
