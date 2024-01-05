@@ -1,42 +1,9 @@
-# Content v2 Minimal Starter
+This is the code and content for my personal website, built in Nuxt.
 
-Look at the [Content documentation](https://content.nuxt.com/) to learn more.
+> [!NOTE]  
+> This sites exists since 2018 and has been rebuilt several times. The current version is a Nuxt 3 + Nuxt Content v2. The previous version went through phases of Nuxt2 SSG, Astro SSG with a Ghost backend.
 
-## Setup
+Following [Anthony Fu](https://github.com/antfu/antfu.me) & [Daniel Roe's](https://github.com/danielroe/roe.dev) example, the code is licensed under [MIT](https://github.com/danielroe/roe.dev/blob/main/LICENSE), and my words and original images are licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
-Make sure to install the dependencies:
+The design of this is original and has been crafted over many years and countless experimentation and iterations. I feel like in this age of every website looking pretty much the same, the hand-drawn style of 2018 is holding up pretty well !
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
