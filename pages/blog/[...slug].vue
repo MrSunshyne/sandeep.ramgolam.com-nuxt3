@@ -94,7 +94,12 @@ const coverImage = computed(() => {
     <BlogHead :post="post" />
 
     <div class="mx-auto w-full">
-      <img :src="coverImage" class="mx-auto" alt="" />
+      <img
+        :src="coverImage"
+        class="mx-auto"
+        :alt="post.title"
+        :style="transitionName(post.slug, 'blog-cover')"
+      />
     </div>
 
     <ContentDoc v-slot="{ doc }">

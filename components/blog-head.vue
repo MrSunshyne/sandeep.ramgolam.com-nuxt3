@@ -13,7 +13,7 @@ const formattedDate =
 <template>
   <header class="mx-auto px-4 md:px-20 max-w-4xl py-8 md:py-16">
     <div class="prose dark:prose-invert">
-      <h1>{{ post.title }}</h1>
+      <h1 :style="transitionName(post.slug, 'blog-title')">{{ post.title }}</h1>
 
       <p class="text-xl text-gray-500 dark:text-gray-300">
         {{ post.custom_excerpt }}

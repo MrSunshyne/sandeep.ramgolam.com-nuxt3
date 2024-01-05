@@ -36,7 +36,11 @@ const { data: posts } = await useAsyncData("blogs-summary", () =>
             :key="post.slug"
             class="text-sm lg:text-xl flex gap-2 my-3"
           >
-            <nuxt-link :to="'/blog/' + post.slug" class="hover:text-green-500">
+            <nuxt-link
+              :to="'/blog/' + post.slug"
+              class="hover:text-green-500"
+              :style="transitionName(post.slug, 'blog-title')"
+            >
               {{ post.title }}
             </nuxt-link>
             <div>

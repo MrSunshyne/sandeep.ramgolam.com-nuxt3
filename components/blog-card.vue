@@ -15,13 +15,21 @@ const coverImage = computed(() => {
 </script>
 
 <template>
-  <a
+  <NuxtLink
     :href="`/blog/${post.slug}`"
     class="rounded overflow-hidden shadow-neumorphismlight dark:shadow-neumorphismdark hover:shadow-lg transition-all duration-500 blog-box"
   >
-    <img :src="coverImage" :alt="post.title" loading="lazy" />
+    <img
+      :src="coverImage"
+      :alt="post.title"
+      loading="lazy"
+      :style="transitionName(post.slug, 'blog-cover')"
+    />
     <div class="px-6 py-4">
-      <div class="font-bold text-xl">
+      <div
+        class="font-bold text-xl"
+        :style="transitionName(post.slug, 'blog-title')"
+      >
         {{ post.title }}
       </div>
       <div class="text-xs uppercase pt-2 pb-4">
@@ -31,5 +39,5 @@ const coverImage = computed(() => {
         {{ post.custom_excerpt }}
       </p>
     </div>
-  </a>
+  </NuxtLink>
 </template>
