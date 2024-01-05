@@ -4,7 +4,7 @@ import type { BlogPost } from "@/types";
 const { data: posts } = await useAsyncData("blogs-summary", () =>
   queryContent<BlogPost>("blog")
     .where({ visibility: { $eq: "public" } })
-    .sort({ updated_at: -1 })
+    .sort({ date: -1 })
     .limit(5)
     .find(),
 );
