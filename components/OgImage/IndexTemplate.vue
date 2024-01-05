@@ -1,12 +1,11 @@
 <script setup lang="ts">
-defineProps({
-  title: String,
-  backgroundColor: String,
-});
+defineProps<{
+  tailwindClass?: string;
+}>();
 </script>
 <template>
   <div
-    :class="[backgroundColor]"
+    :class="[tailwindClass]"
     class="w-full h-full flex text-white items-center justify-center og-image-wrapper"
   ></div>
 </template>

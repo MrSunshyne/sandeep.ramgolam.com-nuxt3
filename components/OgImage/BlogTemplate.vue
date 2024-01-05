@@ -7,7 +7,7 @@ const props = withDefaults(
     customImage: string;
   }>(),
   {
-    title: "Hello World",
+    title: "Blog post",
     backgroundColor: "bg-green-500",
     description: "",
     customImage: "",

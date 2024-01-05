@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const props = defineProps({
-  title: String,
-  description: String,
-});
+const props = defineProps<{
+  title: string;
+  description: string;
+}>();
 
 // remove " | Sandeep Ramgolam" from title
 const strippedTitle =
