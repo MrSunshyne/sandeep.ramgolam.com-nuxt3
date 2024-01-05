@@ -4,15 +4,31 @@ const employment = [
     date_end: "Present",
     job_title: "Senior Front-end Developer",
     company: "Livestorm",
-    company_website: "https//www.livestorm.co",
+    company_website: "https://www.livestorm.co",
     text: "Ecosystem Team // Enjoying Vue and GraphQL.",
+  },
+  {
+    date_start: "2019",
+    date_end: "Present",
+    job_title: "Lead Organizer",
+    company: "frontend.mu",
+    company_website: "https://www.frontend.mu",
+    text: "Frontend Community & Meetups in Mauritius",
+  },
+  {
+    date_start: "2022",
+    date_end: "Present",
+    job_title: "Founder & Trainer",
+    company: "Upcode.mu",
+    company_website: "https://www.upcode.mu",
+    text: "Professional Frontend Development Training",
   },
   {
     date_start: "Sep 2022",
     date_end: "Feb 2023",
     job_title: "Senior Front-end Developer",
     company: "Atellio",
-    company_website: "https//www.atellio.com",
+    company_website: "https://www.atellio.com",
     text: "Collaborating with developers from various countries to build the V2 of atellio in React.",
   },
   {
@@ -29,7 +45,7 @@ const employment = [
     date_end: "2021",
     job_title: "Senior Front-end Developer",
     company: "Ringier SA",
-    company_website: "https//www.ringier.com",
+    company_website: "https://www.ringier.com",
     text: "Working within multiple teams to build beautiful frontends for the Ringier SA products.",
   },
   {
@@ -37,7 +53,7 @@ const employment = [
     date_end: "2020",
     job_title: "Software Architect (Front-end)",
     company: "LSL Digital",
-    company_website: "https//lsl.digital",
+    company_website: "https://lsl.digital",
     text: "I design software solutions for LSL Digital",
   },
   {
@@ -45,7 +61,7 @@ const employment = [
     date_end: "2017",
     job_title: "Senior Front-end Developer",
     company: "LSL Digital",
-    company_website: "https//lsl.digital",
+    company_website: "https://lsl.digital",
     text: "Working with the most talented developers on the island",
   },
   {
@@ -108,7 +124,7 @@ const education = [
 const stack = [
   {
     title: "Frontend",
-    tech: "Vue 3, Astro, React, NuxtJS, TailwindCSS, TypeScript",
+    tech: "Vue 3, Nuxt, Astro, React, TailwindCSS, TypeScript, GraphQL",
   },
   {
     title: "UX/Design",
@@ -120,7 +136,7 @@ const stack = [
   },
   {
     title: "CMS",
-    tech: "Directus, Ghost, Notion, Google Sheets",
+    tech: "Directus, Nuxt Content, Ghost, Notion, Google Sheets",
   },
   {
     title: "OS",
