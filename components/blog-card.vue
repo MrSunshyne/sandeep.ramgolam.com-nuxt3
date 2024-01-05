@@ -1,9 +1,17 @@
 <script setup lang="ts">
 import type { BlogPost } from "@/types";
 
-defineProps<{
+const props = defineProps<{
   post: BlogPost;
 }>();
+
+const coverImage = computed(() => {
+  if (props.post.feature_image) {
+    return props.post.feature_image;
+  }
+
+  return `/__og-image__/image/blog/${props.post.slug}/og.png?component=Wave`;
+});
 </script>
 
 <template>
@@ -11,12 +19,7 @@ defineProps<{
     :href="`/blog/${post.slug}`"
     class="rounded overflow-hidden shadow-neumorphismlight dark:shadow-neumorphismdark hover:shadow-lg transition-all duration-500 blog-box"
   >
-    <img
-      v-if="post?.feature_image"
-      :src="post?.feature_image"
-      :alt="post.title"
-      loading="lazy"
-    />
+    <img :src="coverImage" :alt="post.title" loading="lazy" />
     <div class="px-6 py-4">
       <div class="font-bold text-xl">
         {{ post.title }}
