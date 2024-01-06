@@ -26,11 +26,11 @@ import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
     </svg>
   </div>
   <div
-    class="py-3 sm:py-8 sticky h-[128px] lg:top-[-32px] z-10 menu-outer-wrapper dark:bg-slate-800 dark:text-white"
+    class="py-3 sm:py-8 sticky md:h-[128px] lg:top-[-32px] z-10 menu-outer-wrapper dark:bg-slate-800 dark:text-white"
   >
-    <div class="sticky h-[64px] top-0">
+    <div class="sticky md:h-[64px] top-0">
       <div
-        class="main-menu container font-bold md:flex justify-center md:justify-between items-center"
+        class="main-menu container font-bold flex md:flex-row flex-col justify-center md:justify-between items-center"
       >
         <NuxtLink class="hidden text-center md:inline" title="Logo" href="/">
           <SiteLogo class="inline-block w-40 md:w-32 lg:w-48 relative pl-1" />
@@ -40,7 +40,7 @@ import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
         <div
           class="flex h-full items-center justify-center content-center text-gray-900 dark:text-white text-sm md:text-md cursor-pointer pt-0"
         >
-          <ul class="flex mr-3">
+          <ul class="flex mr-3 flex-wrap">
             <li class="md:hidden">
               <NuxtLink href="/">Home</NuxtLink>
               <SiteMenuSvgMenuBg />
@@ -63,7 +63,9 @@ import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
             </li>
           </ul>
         </div>
-        <!-- <site-color-picker /> -->
+        <ClientOnly>
+          <site-color-picker />
+        </ClientOnly>
       </div>
     </div>
   </div>

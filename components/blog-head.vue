@@ -11,16 +11,18 @@ const formattedDate =
 </script>
 
 <template>
-  <header class="mx-auto px-4 md:px-20 max-w-4xl py-8 md:py-16">
+  <header class="mx-auto px-4 md:px-20 max-w-4xl py-8">
     <div class="prose dark:prose-invert">
-      <h1 :style="transitionName(post.slug, 'blog-title')">{{ post.title }}</h1>
+      <h1 class="text-balance" :style="transitionName(post.slug, 'blog-title')">
+        {{ post.title }}
+      </h1>
 
-      <p class="text-xl text-gray-500 dark:text-gray-300">
+      <p class="text-xl text-gray-500 dark:text-gray-300 text-pretty">
         {{ post.custom_excerpt }}
       </p>
     </div>
 
-    <div class="py-6">
+    <div class="pt-6">
       <section class="flex items-center gap-4">
         <ul v-if="post" class="author-list">
           <li class="author-list-item">

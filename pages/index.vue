@@ -31,7 +31,7 @@ defineOgImageComponent("IndexTemplate", {});
 </script>
 
 <template>
-  <section class="page-home flex flex-wrap content-center">
+  <section class="page-home flex flex-wrap content-center py-16 md:py-0">
     <!-- <OgImageStatic component="OgImageIndex" /> -->
     <div class="w-full flex flex-col">
       <div
@@ -56,7 +56,7 @@ defineOgImageComponent("IndexTemplate", {});
 </template>
 
 <style>
-main {
+/* main {
   margin: auto;
   padding: 1.5rem;
   max-width: 60ch;
@@ -66,7 +66,7 @@ h1 {
   font-size: 3rem;
   font-weight: 800;
   margin: 0;
-}
+} */
 
 .text-gradient {
   background-image: var(--accent-gradient);

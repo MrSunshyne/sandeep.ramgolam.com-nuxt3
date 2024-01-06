@@ -21,13 +21,13 @@ Kushul joined me in Amsterdam as well and we both attended the conference and va
 
 ![](/content/images/2023/06/image-15.png)
 
-### Conference organization
+## Conference organization
 
 The conference was absolutely amazing. There were two tracks called Resident & Community and the schedules were very well spread out. Just being there was breathtaking ! I mean, just look at this:
 
 ![](/content/images/2023/06/image-16.png)
 
-### Seeing JS Heros in real life
+## Seeing JS Heros in real life
 
 I got to see some familiar names from the frontend tech sphere in person and it was a surreal.
 
@@ -47,7 +47,7 @@ One of my favorite technologies to work with, [Astro](https://astro.build/), won
 
 Astro wins Breakthrough of the Year
 
-### Frontend.mu in Amsterdam
+## Frontend.mu in Amsterdam
 
 ![](/content/images/2023/06/image-14.png)
 
@@ -59,13 +59,13 @@ Enjoying a beer while watching a live coding battle
 
 Putting Mauritius on the Map
 
-### What I learned by attending the conference ?
+## What I learned by attending the conference ?
 
 All the session were top-notch, and the recordings will be available soon on their YouTube channel.
 
 As an introvert, it was quite hard for me to just start talking to strangers, but I tried to overcome that and spoke to the sponsor booths present there and learn about them. I met fellow a fellow African company from SA called Offerzen, and an auth company called Descope which I want to implement on frontend.mu soon.
 
-### The (in) accessibility of tech conferences to Mauritians.
+## The (in) accessibility of tech conferences to Mauritians.
 
 Unfortunately, due to our geographical location and inferior currency, EU Tech conferences are very inaccessible for Mauritians. Travelling such long distances can be very costly, time-consuming, and tiring. I was lucky enough to attend due to a series of events lining up perfectly, but I would have loved that more people can attend such conferences from the African countries. Of course the content is available online, and there is one awesome yearly tech conference in Mauritius, but nothing that's solely frontend focussed and boasting high caliber line-ups.
 

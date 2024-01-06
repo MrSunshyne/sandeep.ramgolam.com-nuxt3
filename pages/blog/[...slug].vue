@@ -65,18 +65,58 @@ if (post.value) {
   });
 }
 
+// OG Images
 defineOgImageComponent("BlogTemplate", {
   title: post.value?.title,
   description: dateFormat(new Date(post.value?.date || "")),
   customImage: post.value?.feature_image,
 });
 
+// Cover Image
 const coverImage = computed(() => {
   if (post.value?.feature_image) {
     return post.value?.feature_image;
   }
 
   return `/__og-image__/image/blog/${slug}/og.png`;
+});
+
+// Table of Contents
+
+const activeTocId = ref<string | null>(null);
+
+const nuxtContent = ref(null);
+
+const observer: Ref<IntersectionObserver | null | undefined> = ref(null);
+const router = useRouter();
+
+const observerOptions = reactive({
+  root: nuxtContent.value,
+  threshold: 0.5,
+});
+
+onMounted(() => {
+  observer.value = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+
+      if (entry.isIntersecting) {
+        activeTocId.value = id;
+
+        router.push({ hash: `#${id}` });
+      }
+    });
+  }, observerOptions);
+
+  document
+    .querySelectorAll("article h2[id], article h3[id]")
+    .forEach((section) => {
+      observer.value?.observe(section);
+    });
+});
+
+onUnmounted(() => {
+  observer.value?.disconnect();
 });
 </script>
 
@@ -96,20 +136,29 @@ const coverImage = computed(() => {
     <div class="mx-auto w-full">
       <img
         :src="coverImage"
-        class="mx-auto"
+        class="mx-auto pb-8"
         :alt="post.title"
         :style="transitionName(post.slug, 'blog-cover')"
       />
     </div>
 
     <ContentDoc v-slot="{ doc }">
-      <article>
-        <div class="prose dark:prose-invert mx-auto">
-          <ContentRenderer :value="doc">
-            <ContentRendererMarkdown :value="doc" />
-          </ContentRenderer>
+      <div class="contain mx-auto justify-center flex gap-8">
+        <article>
+          <div class="prose dark:prose-invert mx-auto">
+            <ContentRenderer :value="doc">
+              <ContentRendererMarkdown :value="doc" />
+            </ContentRenderer>
+          </div>
+        </article>
+        <div class="col-span-3 max-w-[250px]">
+          <div class="sticky top-[128px] flex flex-col items-center">
+            <ClientOnly>
+              <BlogTableOfContent :active-toc-id="activeTocId" :slug="slug" />
+            </ClientOnly>
+          </div>
         </div>
-      </article>
+      </div>
     </ContentDoc>
   </article>
 </template>
