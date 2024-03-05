@@ -143,7 +143,9 @@ onUnmounted(() => {
     </div>
 
     <ContentDoc v-slot="{ doc }">
-      <div class="contain mx-auto justify-center flex gap-8">
+      <div
+        class="contain mx-auto justify-center flex flex-col md:flex-row gap-8"
+      >
         <article>
           <div class="prose dark:prose-invert mx-auto">
             <ContentRenderer :value="doc">

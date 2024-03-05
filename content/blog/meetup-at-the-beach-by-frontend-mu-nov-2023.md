@@ -7,9 +7,7 @@ type: post
 indexable: true
 status: published
 visibility: public
-custom_excerpt: >-
-  On the 18th Nov 2023, frontend.mu hosted a meetup at the beach where we spoke
-  about Monorepos, goland, kubernetes and AI.
+custom_excerpt: On the 18th Nov 2023, frontend.mu hosted a meetup at the beach where we spoke about Monorepos, goland, kubernetes and AI.
 date: 2023-11-19T09:37:23.000Z
 ---
 
@@ -21,7 +19,7 @@ Like all previous meetups we invest a lot of time into planning the next one and
 
 ### Location
 
-We debated a few location ideas, and it was [Kushul's](https://www.linkedin.com/in/kushul-soomaree-515502147/) idea to do it at La Cambuse Public beach. Around a month ago we visited Bois des Amourettes Government school where we participated in an [early Christmas gathering](https://www.linkedin.com/feed/update/urn:li:activity:7120794588373475329) on behalf of [Upcode.mu](https://upcode.mu/) with the kids. On the same day, we headed towards the beach to scout for a spot that would be suitable for the meetup. We picked a place that would be mostly covered by the trees for maximum shade, close to the water, and far from the public, to avoid potential partying noises.
+We debated a few location ideas, and it was [Kushul's](https://www.linkedin.com/in/kushul-soomaree-515502147/) idea to do it at La Cambuse Public beach. Around a month ago we visited Bois des Amourettes Government school where we participated in an [early Christmas gathering](https://www.linkedin.com/feed/update/urn\:li\:activity:7120794588373475329) on behalf of [Upcode.mu](https://upcode.mu/) with the kids. On the same day, we headed towards the beach to scout for a spot that would be suitable for the meetup. We picked a place that would be mostly covered by the trees for maximum shade, close to the water, and far from the public, to avoid potential partying noises.
 
 ### (not) Finding sponsors
 
@@ -41,7 +39,7 @@ Kushul asked me for an artwork with a beach background to promote the event. In 
 
 After obtaining everyone's contact detail via the RSVP form, we shortlisted the people who needed a lift. Kushul liaised with each of them individually to make sure someone else coming to the meetup could give them a lift. I picked up Ravi, Cedric and Aina from Vacoas at around 8.45am and proceeded to the location.
 
-## Arriving at La Cambuse  
+## Arriving at La Cambuse
 
 ![](/content/images/2023/11/image.png)
 
@@ -67,10 +65,10 @@ At around 10:40am I started the meetup by greeting everyone and welcoming the ne
 
 ## Speakers
 
-*   [Abdallah Yashir RamsingNavigating Monorepos: Your Gentle Introduction to Efficient Web Development](https://frontend.mu/speaker/2af3f3bb-0de2-45a2-bd31-a452c85db2da)
-*   [Alexandre BissessurUnderstanding the basics of Kubernetes](https://frontend.mu/speaker/a17bf7fa-e3ab-485a-9f28-06dfd5ecf89b)
-*   [Cedric PoillyTrivia is more fun with a touch of AI](https://frontend.mu/speaker/549be7b0-1e7d-4deb-9fb3-273cfe0da5b0)
-*   [Ankshita MaunthrooaGolang for beginners](https://frontend.mu/speaker/1268900f-f172-42a7-b075-036854c9daff)
+- [Abdallah Yashir RamsingNavigating Monorepos: Your Gentle Introduction to Efficient Web Development](https://frontend.mu/speaker/2af3f3bb-0de2-45a2-bd31-a452c85db2da)
+- [Alexandre BissessurUnderstanding the basics of Kubernetes](https://frontend.mu/speaker/a17bf7fa-e3ab-485a-9f28-06dfd5ecf89b)
+- [Cedric PoillyTrivia is more fun with a touch of AI](https://frontend.mu/speaker/549be7b0-1e7d-4deb-9fb3-273cfe0da5b0)
+- [Ankshita MaunthrooaGolang for beginners](https://frontend.mu/speaker/1268900f-f172-42a7-b075-036854c9daff)
 
 ### Navigating Monorepos by Abdallah
 
@@ -130,8 +128,8 @@ The meetup went much better than we could have expected. The vibe be really posi
 
 ### Improvements
 
-*   Audio - Most speakers had to raise their voices so that they were audible to the audience. A device to amplify the sound would have greatly improved the experience. This is something we want to improve in general. Audio engineers in the crowd? Please get in touch!
-*   The location was great, but quite remote. Perhaps next time we could find a place that is more accessible.
+- Audio - Most speakers had to raise their voices so that they were audible to the audience. A device to amplify the sound would have greatly improved the experience. This is something we want to improve in general. Audio engineers in the crowd? Please get in touch!
+- The location was great, but quite remote. Perhaps next time we could find a place that is more accessible.
 
 ## Post Meetup
 
