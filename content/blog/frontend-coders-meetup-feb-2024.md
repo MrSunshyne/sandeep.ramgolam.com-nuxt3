@@ -1,7 +1,7 @@
 ---
 title: frontend.mu x SDWorx Meetup
 slug: frontend-coders-meetup-feb-2024
-feature_image: /content/images/2023/11/november-2023--1-.jpg
+feature_image: /content/images/2024/03/feb-2024.jpg
 featured: 1
 type: post
 indexable: true
