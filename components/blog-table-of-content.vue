@@ -76,7 +76,9 @@ watchDebounced(
           :key="id"
           ref="tocLinksH2"
           class="mb-2 ml-0 cursor-pointer list-none text-sm text-slate-500 last:mb-0"
-          :class="{ 'text-slate-900 font-bold': id === activeTocId }"
+          :class="{
+            'text-slate-900 dark:text-white font-bold': id === activeTocId,
+          }"
           @click="onClick(id)"
         >
           {{ text }}
@@ -87,7 +89,7 @@ watchDebounced(
               :key="childId"
               ref="tocLinksH3"
               class="mb-2 ml-0 cursor-pointer list-none text-xs last:mb-0"
-              :class="{ 'font-bold': childId === activeTocId }"
+              :class="{ 'font-bold dark:text-white': childId === activeTocId }"
               @click.stop="onClick(childId)"
             >
               {{ childText }}
