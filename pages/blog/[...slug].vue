@@ -83,41 +83,41 @@ const coverImage = computed(() => {
 
 // Table of Contents
 
-const activeTocId = ref<string | null>(null);
+// const activeTocId = ref<string | null>(null);
 
-const nuxtContent = ref(null);
+// const nuxtContent = ref(null);
 
-const observer: Ref<IntersectionObserver | null | undefined> = ref(null);
-const router = useRouter();
+// const observer: Ref<IntersectionObserver | null | undefined> = ref(null);
+// const router = useRouter();
 
-const observerOptions = reactive({
-  root: nuxtContent.value,
-  threshold: 0.5,
-});
+// const observerOptions = reactive({
+//   root: nuxtContent.value,
+//   threshold: 0.5,
+// });
 
-onMounted(() => {
-  observer.value = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const id = entry.target.getAttribute("id");
+// onMounted(() => {
+//   observer.value = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       const id = entry.target.getAttribute("id");
 
-      if (entry.isIntersecting) {
-        activeTocId.value = id;
+//       if (entry.isIntersecting) {
+//         activeTocId.value = id;
 
-        router.push({ hash: `#${id}` });
-      }
-    });
-  }, observerOptions);
+//         router.push({ hash: `#${id}` });
+//       }
+//     });
+//   }, observerOptions);
 
-  document
-    .querySelectorAll("article h2[id], article h3[id]")
-    .forEach((section) => {
-      observer.value?.observe(section);
-    });
-});
+//   document
+//     .querySelectorAll("article h2[id], article h3[id]")
+//     .forEach((section) => {
+//       observer.value?.observe(section);
+//     });
+// });
 
-onUnmounted(() => {
-  observer.value?.disconnect();
-});
+// onUnmounted(() => {
+//   observer.value?.disconnect();
+// });
 </script>
 
 <template>
