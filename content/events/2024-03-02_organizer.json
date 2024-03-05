@@ -1,0 +1,20 @@
+{
+    "event_date": "03/02/2024",
+    "event_name": "Front-end Coders Meetup",
+    "location": "Mauritius",
+    "event_type": ["organizer","speaking"],
+    "published": true,
+    "topic": "Streamlit, HTMX, git, frontend news",
+    "description": "Host, Organize & Speak at this meetup",
+    "links": [
+      {
+        "title": "Event Page",
+        "url": "https://frontend.mu/meetup/50"
+      },
+      {
+        "title": "Blogpost",
+        "url": "https://sandeep.ramgolam.com/blog/meetup-at-the-beach-by-frontend-mu-nov-2023"
+      }
+    ],
+    "video": null
+  }
