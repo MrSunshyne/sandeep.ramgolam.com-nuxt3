@@ -11,19 +11,19 @@ custom_excerpt: On the 2nd of March 2024, frontend.mu hosted a meetup in the off
 date: 2024-03-05T20:37:23.000Z
 ---
 
-After 2 months of break, and an amazing last meetup on the beach, the first frontend.mu meetup of 2024 finally happened. We had to postpone it because of the cyclone last week, which means the Feb meetup actually happened in March.
+After 2 months of break, and an amazing last meetup on the beach, the first frontend.mu meetup of 2024 finally happened. We had to postpone it because of the cyclone last week, which means the February meetup actually happened in March.
 
 ![feb-2024-thumbnail](/content/images/2024/03/feb-2024.jpg)
 
 ## Planning
 
-Due to the postponing, there were a lot of communications to be done behind the scenes to inform everyone and make sure nobody leaves home unnecessarily. Kushul used our handy custom messaging script to ping everyone and checked for confirmation.
+Due to the postponing, there was a lot of communication to be done behind the scenes to inform everyone and make sure nobody leaves home unnecessarily. Kushul used our handy custom messaging script to ping everyone and checked for confirmation. A big thanks to Nadia & Saamiyah who got us in contact with Didier at SDWorx to make this meetup possible. 
 
 ## Arriving at SD Worx
 
 ![Screenshot from 2024-03-06 00-35-25.png](/content/images/2024/03/Screenshot%20from%202024-03-06%2000-35-25.png)
 
-I left home slightly later than I would have preferred, but managed to reach around 9.45am. When writing in the logbook at the entrance, I saw there were already a lot of people who joined, which was super encouraging! I joined everyone and started unpacking my laptop and keyboards. Yes Keyboards !
+I left home slightly later than I would have preferred, but managed to reach around 9.45am. When writing in the logbook at the entrance, I saw there were already a lot of people arrived, which was super encouraging! I greeted everyone and started unpacking my laptop and keyboards. Yes, Keyboards !
 
 ## The Keyboard Corner
 
@@ -35,11 +35,11 @@ As previously announced, we wanted to invite everyone who have nice keyboards to
 
 ## Logistics
 
-SDWorx had a really delightful setup with a big projector screen, more than 50 seats and even microphones and loudspeakers for the presenters. Yes please !
+SDWorx had a really delightful setup with a big projector screen, more than 50 seats and even microphones and loudspeakers for the presenters. That's really nice for people who can't talk too loud for extended periods of time, such as myself.
 
 ## Meetup RSVPs
 
-The past few weeks, a few of us have been working hard to build an RSVP system that we can use for frontend  coders meetup. It's all open source and on our GitHub. We merged an[“attendance/verification” feature](https://github.com/Front-End-Coders-Mauritius/frontendmu-astro/pull/129) the previous night, and it allows someone from the organizing team to scan a qr code from attendees, and “mark them as verified”. This means they get a badge on the account, and it's trusted that they really attended the event !
+The past few weeks, a few of us have been working hard to build an RSVP system that we can use for frontend  coders meetup. It's all open source and on our GitHub. We merged an [“attendance/verification” feature](https://github.com/Front-End-Coders-Mauritius/frontendmu-astro/pull/129) the previous night, and it allows someone from the organizing team to scan a QR code from attendees, and “mark them as verified”. This means they get a badge on the account, and it's trusted that they really attended the event !
 
 ![rsvp-badges-meetup-frontendmu.png](/content/images/2024/03/rsvp-badges-meetup-frontendmu.png)
 
@@ -94,7 +94,7 @@ The cat is out of the bag. We are working hard to make our first frontend.mu con
 
 ### Streamlit
 
-Karasarajen was next up. He reached out to me at the November meetup saying he would like to present something for the upcoming meetup. It's encouraging to see young developers take the leap and go in front of an audience. There were some technical difficulties with the HDMI cable, so we just mirrored his screen on another device over a video call screen share and that stabilized things.
+Karasarajen was up next. He reached out to me at the November meetup saying he would like to present something for the upcoming meetup. It's encouraging to see young developers take the leap and go in front of an audience. There were some technical difficulties with the HDMI cable, so we just mirrored his screen on another device over a video call screen share and that stabilized things.
 
 ![kasarajen-streamlit-presentation-feb-2024.png](/content/images/2024/03/kasarajen-streamlit-presentation-feb-2024.png)
 
@@ -129,7 +129,9 @@ The goal was to inform people about the changes that are happening, and get them
 
 ### In conclusion
 
-Yet another awesome meetup, good vibes all around. Met a few new faces and learned a lot of new things ! frontend.mu conference is now official ! Get in touch with me or kushul if you want to sponsor the event.
+Yet another awesome meetup, good vibes all around. Met a few new faces and learned a lot of new things ! 
+The frontend.mu conference is now official. 
+Get in touch with me or kushul if you want to support or sponsor the event happening on the 30-31 August 2024
 
 ### Interested to host a meetup next year?
 
