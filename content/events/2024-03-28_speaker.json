@@ -1,0 +1,20 @@
+{
+    "event_date": "03/28/2024",
+    "event_name": "Front-end Coders Meetup",
+    "location": "Twitch",
+    "event_type": ["speaking"],
+    "published": true,
+    "topic": "Data Fetching Strategies in frontend development",
+    "description": " Speak at this online meetup",
+    "links": [
+      {
+        "title": "Demo repository",
+        "url": "https://frontend.mu/meetup/50"
+      },
+      {
+        "title": "Twitch Recording",
+        "url": "https://www.twitch.tv/cedpoilly"
+      }
+    ],
+    "video": null
+  }

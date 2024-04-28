@@ -12,7 +12,7 @@ const { data: posts } = await useAsyncData("blogs", () =>
 );
 
 useHead({
-  title: "Articles | Sandeep Ramgolam",
+  title: "Articles by Sandeep Ramgolam",
   meta: [
     {
       hid: "description",
@@ -42,8 +42,8 @@ defineOgImageComponent("GenericTemplate");
 
 <template>
   <div class="contain">
-    <h1 class="page-title">Blog</h1>
-    <p class="page-subtitle">A list of events I was present at</p>
+    <h1 class="page-title">Sandeep Ramgolam's Blog</h1>
+    <p class="page-subtitle">Writings and thoughts</p>
 
     <div class="blog-posts pt-12">
       <template v-for="post in posts" :key="post.slug">

@@ -12,7 +12,7 @@ const projects = [
   },
   {
     name: "Mauritius Power Outages",
-    url: "https://power-outages-mauritius.netlify.app/",
+    url: "https://courant.ramgolam.com/",
     role: ["Maintainer"],
     tech: ["TailwindCSS", "Vue3", "Vite"],
     text: "A web app to display power outages in Mauritius",
@@ -111,7 +111,7 @@ const projects = [
   },
   {
     name: "Mauritius Fuel Prices",
-    url: "https://mauritius-fuel-prices.netlify.app",
+    url: "https://mauritius-fuel-prices.ramgolam.com/",
     role: ["Maintainer"],
     tech: ["TailwindCSS", "VueJS", "Google Sheet API"],
     text: "Progression of fuel prices in Mauritius (2002 - Present)",
@@ -165,18 +165,6 @@ const projects = [
     year: "2015",
     company: "LSL Digital",
   },
-
-  {
-    name: "Airport Cab Mauritius",
-    url: "https://airportcab.mu",
-    role: ["Front-end Developer"],
-    tech: ["VueJS", "CSS", "NuxtJS"],
-    text: "Taxi reservation service online",
-    featured: false,
-    thumbnail: "airportcab.png",
-    year: "2019",
-    company: "Freelance",
-  },
   // {
   //   name: 'Sai Mauritius',
   //   url: 'https://saibabamauritius.org',
@@ -200,7 +188,7 @@ const projects = [
     company: "Voluntary",
   },
   {
-    name: "Previous version lexpress.mu",
+    name: "Previous version lexpress.mu (2015-2023)",
     url: "https://www.lexpress.mu",
     role: ["Front-end "],
     tech: ["CSS", "Drupal"],
