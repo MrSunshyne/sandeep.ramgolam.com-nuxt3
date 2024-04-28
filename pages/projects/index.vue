@@ -1,5 +1,5 @@
 <template>
-  <div class="contain mx-auto">
+  <div class="contain">
     <!-- <OgImageStatic component="OgImageGeneric" /> -->
 
     <h1 class="page-title">Projects</h1>

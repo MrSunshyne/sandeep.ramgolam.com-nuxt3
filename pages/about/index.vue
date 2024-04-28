@@ -51,7 +51,7 @@
         </div>
       </div>
     </div>
-    <h2 class="page-title">Tech Stack</h2>
+    <h2 class="page-title">My tech stack</h2>
     <p class="page-subtitle">This is what I've been using lately</p>
 
     <div
