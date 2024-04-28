@@ -13,22 +13,22 @@
   "devDependencies": {
     "@nuxt/content": "2.8.5",
     "@nuxt/eslint-config": "^0.2.0",
-    "@nuxthq/studio": "^1.0.6",
-    "@nuxtjs/color-mode": "^3.3.2",
-    "@nuxtjs/tailwindcss": "^6.10.3",
+    "@nuxthq/studio": "^1.0.13",
+    "@nuxtjs/color-mode": "^3.4.1",
+    "@nuxtjs/tailwindcss": "^6.12.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-prettier": "^5.1.3",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
-    "nuxt": "^3.9.0",
-    "nuxt-icon": "^0.6.8",
+    "nuxt": "^3.11.2",
+    "nuxt-icon": "^0.6.10",
     "nuxt-og-image": "3.0.0-rc.13",
-    "prettier": "^3.1.1",
+    "prettier": "^3.2.5",
     "recommended": "link:plugin:prettier/recommended",
     "yaml-front-matter": "^4.1.1"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.10"
+    "@tailwindcss/typography": "^0.5.13"
   }
 }
