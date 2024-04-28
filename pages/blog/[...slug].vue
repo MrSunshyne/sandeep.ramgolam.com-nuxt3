@@ -83,7 +83,7 @@ const coverImage = computed(() => {
 
 // Table of Contents
 
-// const activeTocId = ref<string | null>(null);
+const activeTocId = ref<string | null>(null);
 
 // const nuxtContent = ref(null);
 
@@ -144,17 +144,19 @@ const coverImage = computed(() => {
 
     <ContentDoc v-slot="{ doc }">
       <div
-        class="contain mx-auto justify-center flex flex-col md:flex-row gap-8"
+        class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col lg:grid lg:grid-cols-10 lg:gap-8"
       >
-        <article>
-          <div class="prose dark:prose-invert mx-auto">
+        <article class="lg:col-span-8">
+          <div
+            class="mt-8 pb-24 dark:text-gray-300 dark:prose-pre:!bg-gray-800/60 prose prose-primary dark:prose-invert max-w-none dark:prose-invert mx-auto"
+          >
             <ContentRenderer :value="doc">
               <ContentRendererMarkdown :value="doc" />
             </ContentRenderer>
           </div>
         </article>
-        <div class="col-span-3 max-w-[250px]">
-          <div class="sticky top-[128px] flex flex-col items-center">
+        <div class="lg:col-span-2 order-first lg:order-last">
+          <div class="sticky top-[128px] flex flex-col md:items-center">
             <ClientOnly>
               <BlogTableOfContent :active-toc-id="activeTocId" :slug="slug" />
             </ClientOnly>

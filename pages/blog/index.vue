@@ -42,7 +42,10 @@ defineOgImageComponent("GenericTemplate");
 
 <template>
   <div class="contain">
-    <div class="blog-posts">
+    <h1 class="page-title">Blog</h1>
+    <p class="page-subtitle">A list of events I was present at</p>
+
+    <div class="blog-posts pt-12">
       <template v-for="post in posts" :key="post.slug">
         <BlogCard :post="post" />
       </template>

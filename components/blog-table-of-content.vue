@@ -31,6 +31,8 @@ const onClick = (id: string) => {
   }
 };
 
+const tocVisibility = ref(true);
+
 watchDebounced(
   () => props.activeTocId,
 
@@ -59,9 +61,19 @@ watchDebounced(
 </script>
 
 <template>
-  <div class="max-h-82 overflow-auto table-of-content">
-    <h4>Table of Contents</h4>
-    <nav class="mt-4 flex">
+  <div class="overflow-auto table-of-content">
+    <button
+      class="flex items-center gap-1.5 lg:cursor-text lg:select-text w-full group border-t border-t-slate-100/30 border-b border-b-slate-100/30 py-2"
+      tabindex="-1"
+      @click="tocVisibility = !tocVisibility"
+    >
+      <span class="font-semibold text-sm/6 truncate">Table of Contents</span
+      ><span
+        class="i-ph-caret-down lg:!hidden ms-auto transform transition-transform duration-200 flex-shrink-0 mr-1.5 w-4 h-4 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200 -rotate-90"
+      ></span>
+    </button>
+
+    <nav class="mt-4 flex" :class="[{ hidden: tocVisibility }]">
       <div class="relative w-2 overflow-hidden rounded bg-secondary">
         <div class="bg-slate-200 w-0.5 h-full">&nbsp;</div>
         <div
@@ -75,7 +87,7 @@ watchDebounced(
           :id="`toc-${id}`"
           :key="id"
           ref="tocLinksH2"
-          class="mb-2 ml-0 cursor-pointer list-none text-sm text-slate-500 last:mb-0"
+          class="mb-2 ml-0 cursor-pointer list-none text-sm dark:text-white text-black last:mb-0"
           :class="{
             'text-slate-900 dark:text-white font-bold': id === activeTocId,
           }"

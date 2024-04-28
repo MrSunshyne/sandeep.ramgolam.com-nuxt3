@@ -221,7 +221,7 @@ useHead({
 defineOgImageComponent("GenericTemplate");
 </script>
 
-<style scoped>
+<style>
 .page-break-before {
   page-break-before: left;
 }

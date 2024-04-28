@@ -30,7 +30,7 @@ import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
   >
     <div class="sticky md:h-[64px] top-0">
       <div
-        class="main-menu container font-bold flex md:flex-row flex-col justify-center md:justify-between items-center"
+        class="main-menu md:container font-bold flex md:flex-row flex-col justify-center md:justify-between items-center"
       >
         <NuxtLink class="hidden text-center md:inline" title="Logo" href="/">
           <SiteLogo class="inline-block w-40 md:w-32 lg:w-48 relative pl-1" />
