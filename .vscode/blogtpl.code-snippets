@@ -1,0 +1,25 @@
+{
+	"New blog template with front matter": {
+		"scope": "markdown",
+		"prefix": "blog",
+		"body": [
+			"---",
+			"title: $1",
+			"slug: $2",
+			"feature_image: $3",
+			"featured: 1",
+			"type: post",
+			"indexable: true",
+			"status: published",
+			"visibility: public",
+			"custom_excerpt: >-",
+			"  $4",
+			"date: $5",
+			"---",
+			"",
+			"$6"
+
+		],
+		"description": "New blog template"
+	},
+}
