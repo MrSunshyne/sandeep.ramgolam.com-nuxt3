@@ -20,6 +20,8 @@ As usual I started the event with a brief introduction about frontend.mu and our
 
 Some people who I had not met in a while were present, and it was great to see them again.
 
+![alt text](/content/images/2024/04/image.png)
+
 ## Talks
 
 *   **Anand Ramrooch** - A journey with microprocessors
@@ -34,23 +36,48 @@ Some people who I had not met in a while were present, and it was great to see t
 
 Anand Ramrooch, first time speaker at frontend.mu shared his journey with the audience and elaborated on the evolution of microprocessors, starting from the very early days ! There was a lot of questions and we learned a lot from him.
 
+![alt text](/content/images/2024/04/image-1.png)
+
 ### Concept AI tool to help manual testing - Ruben Pillay Vurdapen & Farhanaaz Curumthaullee
+
+![alt text](/content/images/2024/04/image-2.png)
 
 Ruben and Farhanaaz from Publicis shared with the audience a concept AI tool that they are working on to help manual testing. They explained how they are using AI to help testers and developers to automate some of the manual testing tasks. It was quite impressive to see how they are using AI to help improve the testing process. The live demo was a success and the audience was very impressed.
 
+![alt text](/content/images/2024/04/image-3.png)
+
 ### Code and Honey - Jordan Bienvenue
+
+![alt text](/content/images/2024/04/image-5.png)
 
 Jordan was up next and as always, he came up with a unique presentation style which was a big hit. It was one of the most interactive sessions we've had at our meetups and he poked the audience about what they think of building products for the local market, and what would work work and why. Everyone was engaged and it was a great session. We're looking forward to his top secret project.
 
+## Lunch Break & Group photo
+
+![alt text](/content/images/2024/04/image-9.png)
+
+We had nice pizza for lunch and we use the opportunity to network and catch up. We also took a group photo with everyone who attended the meetup.   
+
+
+![alt text](/content/images/2024/04/image-4.png)
+
 ### Hacking with Zed, The New Code Editor - Bernard Joseph Jean Bruno
 
-I first noticed that Bernard mentioned using zed and even wrote a plugin for it on his social media posts. Since I had introduced Zed in the previous meetup, this was the perfect follow up. Bernard spoke about LSPs and how to write this weird language in order to make our code editors sprinkle colors in just the right places so that us humans can make sense of the code we are reading. Of course, this is just a metaphore, but it was really cool to see his Blade plugin for syntax highlighting in Zed. He also shared how team members of Zed Industries reached out to him to help him improve his plugin. So cool! 
+I first noticed that Bernard mentioned using zed and even wrote a plugin for it on his social media posts. Since I had introduced Zed in the previous meetup, this was the perfect follow up. Bernard spoke about LSPs and how to write this weird language in order to make our code editors sprinkle colors in just the right places so that us humans can make sense of the code we are reading. 
+
+![alt text](/content/images/2024/04/image-6.png)
+
+Of course, this is just a metaphore, but it was really cool to see his Blade plugin for syntax highlighting in Zed. He also shared how team members of Zed Industries reached out to him to help him improve his plugin. So cool! 
 
 ### Frontend News & Updates - Sandeep Ramgolam
+
+![alt text](/content/images/2024/04/image-8.png)
 
 This time I had a lot of news to share with the audience. I spoke about the latest updates in the frontend world and shared some interesting articles that I had read. I also shared some updates about the upcoming frontend.mu conference and how we are planning to make it a unique, content-focussed event. I also shared some updates about the frontend.mu website and how we are planning to improve it.
 
 ### Q&A session - Cedric Poilly
+
+![alt text](/content/images/2024/04/image-7.png)
 
 Cedric Poilly, our designated quiz master for the day, hosted a Quiz session with the audience. He used the new quiz app that he built on stream and we had a lot of fun. The winners got some cool prizes and everyone had a great time. 
 
@@ -59,3 +86,11 @@ Cedric Poilly, our designated quiz master for the day, hosted a Quiz session wit
 The meetup was a great success and we had a lot of fun. We are looking forward to the next meetup and we hope to see you there. If you would like to speak at one of our meetups, please reach out to us. We are always looking for new speakers and new topics to discuss.
 
 Speacial thanks to Ali Ghanty & his team for the awesome photos !
+
+## Photos
+
+![Oraganizers Posing](/content/images/2024/04/image-10.png)
+
+![Alex winning Prize](/content/images/2024/04/alex-winning-prize.png)
+
+![Saamiyah winning prize](/content/images/2024/04/saamiyah-winning-prize.png)
