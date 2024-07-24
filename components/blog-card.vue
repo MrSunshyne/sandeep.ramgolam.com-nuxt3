@@ -10,7 +10,7 @@ const coverImage = computed(() => {
     return props.post.feature_image;
   }
 
-  return `/__og-image__/image/blog/${props.post.slug}/og.png?component=Wave`;
+  return `/__og-image__/image/blog/${props.post.slug}/og.png`;
 });
 </script>
 

@@ -136,7 +136,7 @@ const activeTocId = ref<string | null>(null);
     <div class="mx-auto w-full">
       <img
         :src="coverImage"
-        class="mx-auto pb-8"
+        class="mx-auto mb-8 shadow-xl rounded-xl"
         :alt="post.title"
         :style="transitionName(post.slug, 'blog-cover')"
       />

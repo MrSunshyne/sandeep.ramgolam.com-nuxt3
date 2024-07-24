@@ -68,7 +68,7 @@ const hasFeaturedImage = props.customImage && props.customImage !== "";
             position: 'absolute',
             left: '0',
             top: '60px',
-            maxWidth: '550px',
+            maxWidth: '768px',
           },
           {
             color: customImage ? 'white' : 'black',
@@ -82,9 +82,10 @@ const hasFeaturedImage = props.customImage && props.customImage !== "";
         >
           <h1
             :style="{
-              fontSize: '50px',
-              left: '118px',
+              fontSize: '64px',
+              left: '110px',
               top: '90px',
+              lineHeight: '1.2em',
             }"
           >
             {{ strippedTitle }}
@@ -96,11 +97,10 @@ const hasFeaturedImage = props.customImage && props.customImage !== "";
               fontSize: '36px',
               left: '118px',
               top: '100px',
-              color: 'white',
+              color: 'black',
               lineHeight: '1.5em',
             }"
           >
-            >
             {{ description }}
           </p>
         </div>

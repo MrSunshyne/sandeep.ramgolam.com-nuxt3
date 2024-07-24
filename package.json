@@ -23,7 +23,7 @@
     "js-yaml": "^4.1.0",
     "nuxt": "^3.11.2",
     "nuxt-icon": "^0.6.10",
-    "nuxt-og-image": "3.0.0-rc.13",
+    "nuxt-og-image": "3.0.0-rc.64",
     "prettier": "^3.2.5",
     "recommended": "link:plugin:prettier/recommended",
     "yaml-front-matter": "^4.1.1"

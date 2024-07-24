@@ -1,7 +1,6 @@
 ---
-title: Google Io Connect Berlin 2024
+title: Google IO Connect Berlin 2024
 slug: google-io-connect-berlin-2024
-feature_image: /content/images/2022/09/september-meetup.jpg
 featured: 1
 type: post
 indexable: true

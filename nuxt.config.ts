@@ -45,6 +45,7 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: "",
   },
+  // register a component
   css: ["@/styles/global.css"],
   tailwindcss: {
     config: {
