@@ -1,6 +1,6 @@
 ---
 title: frontend.mu x ELCA 2024 Meetup
-slug: frontend-coders-meetup-june-2024
+slug: frontend-coders-meetup-june-2024-elca
 featured: 1
 type: post
 indexable: true
@@ -10,5 +10,9 @@ custom_excerpt: The June 2024 Front-end Coders meetup was at ELCA and we discuss
 date: 2024-07-21T05:56:04.000Z
 ---
 
-ELCA welcomed the frontend.mu usergroup in their offices for the June meetup. The meetup was a great success with a good turnout and interesting talks.
+After a few weeks of planning, it was finally time to show up at the ELCA office in Les Fascines, St Pierre for the next frontend.mu meetup.
+I reached a little earlier and setup the laptop with the help of some very ethusiastic people from ELCA.
+
+## Agenda
+
 

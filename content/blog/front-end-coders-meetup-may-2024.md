@@ -2,17 +2,16 @@
 title: Front End Coders Meetup May 2024
 slug: front-end-coders-meetup-may-2024
 feature_image: /content/images/2024/05/may-2024.jpg
-featured: 1     
+featured: 1
 type: post
 indexable: true
 status: published
 visibility: public
-custom_excerpt: >-
-    The May 2024 Front-end Coders meetup was at Dayforce Mauritius. During this event, we discussed Development Environments, Security in frontend, Building in Public, Accesibility and Scroll Driven Animations.
+custom_excerpt: The May 2024 Front-end Coders meetup was at Dayforce Mauritius. During this event, we discussed Development Environments, Security in frontend, Building in Public, Accesibility and Scroll Driven Animations.
 date: 2024-05-28T18:05:57.000Z
 ---
 
-After several weeks of planning it was finally meetup day at Dayforce. Kushul & I had been in contact with our generous sponsors, and Cedric helped our speakers prepare their talks with the practice run on his twitch channel the week before the event. 
+After several weeks of planning it was finally meetup day at Dayforce. Kushul & I had been in contact with our generous sponsors, and Cedric helped our speakers prepare their talks with the practice run on his twitch channel the week before the event.
 
 I arrived on premises quite early and started setting up my laptop and finalizing my slides. I met really nice people there who were very helpful and welcoming. The audio logistics available was quite impressive.
 
@@ -22,9 +21,10 @@ After about 45mins of mingling, the event started with a brief introduction by [
 
 ![alt text](/content/images/2024/05/image-8.png)
 
-There were many first time attendees to the meetup and it was great to see so many new faces. 
+There were many first time attendees to the meetup and it was great to see so many new faces.
 
 ## Talks
+
 - **Chervine Bhiwoo** - Enhancing Frontend Security for Secure evelopment
 - **Michaël Jules** - Personalized Development Environment (PDE)
 - **Khali Lame** - Building your website for everyone
@@ -47,15 +47,15 @@ Mike brought us on his discovery journey of PDEs. He is now a proud daily user o
 
 ![Group Photo](/content/images/2024/05/image.png)
 
-After the talks, I urged everyone to come join us for the group photo before we gatherd for the amazing open buffet that Dayforce put at our disposal. This was probably the best lunch we've had at a meetup. It was a great opportunity to network with the speakers and other attendees. The staff of dayforce also took the crowd for a trip around their office. 
+After the talks, I urged everyone to come join us for the group photo before we gatherd for the amazing open buffet that Dayforce put at our disposal. This was probably the best lunch we've had at a meetup. It was a great opportunity to network with the speakers and other attendees. The staff of dayforce also took the crowd for a trip around their office.
 
 ![alt text](/content/images/2024/05/image-4.png)
 
 ### Building your website for everyone - Khali Lame
 
-Khali Lame shared his experience on how to build a website that is accessible to everyone. He explained the importance of accessibility and how to test your website for accessibility. He also shared some tools that can help developers test their website for accessibility. 
+Khali Lame shared his experience on how to build a website that is accessible to everyone. He explained the importance of accessibility and how to test your website for accessibility. He also shared some tools that can help developers test their website for accessibility.
 
-Accesibility is a topic that is often overlooked by developers and as asked by an audience member, it's difficult to know when a developer should start caring about it. 
+Accesibility is a topic that is often overlooked by developers and as asked by an audience member, it's difficult to know when a developer should start caring about it.
 
 I should seize this opportunity to mention that Kushul & I offer MQA Approved Accessibility training at upcode.mu!
 
@@ -67,10 +67,9 @@ Gaël attended a few other meetups in the past and since he's now a builder hims
 
 I think its amazing that more people are using publicly available data to build cool projects and share their progress online. The more the merrier !
 
-
 ### Scroll Driven Animations - Sandeep Ramgolam
 
-Lastly I was up to present my talk on Scroll Driven Animations. During recently GDE events online, there were a lot of really cool web platform features that were showcased. Scroll driven animations are the ones i'm most excited about and I seized this opportunity to do a small talk on how they work and how you can implement them in your projects in very simple steps. 
+Lastly I was up to present my talk on Scroll Driven Animations. During recently GDE events online, there were a lot of really cool web platform features that were showcased. Scroll driven animations are the ones i'm most excited about and I seized this opportunity to do a small talk on how they work and how you can implement them in your projects in very simple steps.
 
 ![alt text](/content/images/2024/05/image-7.png)
 
@@ -78,7 +77,7 @@ The code itself is very simple, which is why I chose to live demo it for everyon
 
 ## Quiz Time
 
-I must admit we were past our end time and I had to rush through the quiz. We had a technical issue with the AI-generated quiz (first time this happens!), so in order to not waste time, we decided to keep it simple and do a "raise your hands to answer" oral quiz without any devices. 
+I must admit we were past our end time and I had to rush through the quiz. We had a technical issue with the AI-generated quiz (first time this happens!), so in order to not waste time, we decided to keep it simple and do a "raise your hands to answer" oral quiz without any devices.
 
 We might have started with some very hard questions and then moved on to easier ones.
 Congrats to Danshil, Alexandre and Mahima for winning the prizes!
