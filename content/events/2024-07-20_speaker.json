@@ -1,0 +1,17 @@
+{
+  "event_date": "07/20/2024",
+  "event_name": "Developers Conference 2024",
+  "location": "Mauritius",
+  "event_type": ["speaking"],
+  "published": true,
+  "topic": "Lightning Talks 2024",
+  "description": "Host & Speak the lightning talks at DevCon2024",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://2024.mscc.mu/agenda/639942"
+    }    
+  ],
+  "video": null
+}
+

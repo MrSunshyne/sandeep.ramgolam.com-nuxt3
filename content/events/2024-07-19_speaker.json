@@ -1,0 +1,17 @@
+{
+  "event_date": "07/19/2024",
+  "event_name": "Developers Conference 2024",
+  "location": "Mauritius",
+  "event_type": ["speaking"],
+  "published": true,
+  "topic": "The Frontend Developer Career Path",
+  "description": "Speak about the career path of a frontend developer at DevCon2024",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://2024.mscc.mu/agenda/639943"
+    }    
+  ],
+  "video": null
+}
+
