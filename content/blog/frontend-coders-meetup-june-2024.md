@@ -1,6 +1,6 @@
 ---
 title: frontend.mu x ELCA 2024 Meetup
-slug: frontend-coders-meetup-june-2024-elca
+slug: frontend-coders-meetup-june-2024
 featured: 1
 type: post
 indexable: true
