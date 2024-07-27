@@ -77,6 +77,8 @@ I was also responsible for organizing and hosting the Lightning Talks at the con
 
 ### Lightning Talks Highlights
 
+![DSC04845 Large.jpeg](/content/images/2024/07/lightning-talks-2024/DSC04845%20Large.jpeg)![DSC04825 Large.jpeg](/content/images/2024/07/lightning-talks-2024/DSC04825%20Large.jpeg)![DSC04865 Large.jpeg](/content/images/2024/07/lightning-talks-2024/DSC04865%20Large.jpeg)![DSC04881 Large.jpeg](/content/images/2024/07/lightning-talks-2024/DSC04881%20Large.jpeg)![DSC04898 Large.jpeg](/content/images/2024/07/lightning-talks-2024/DSC04898%20Large.jpeg)![DSC04987 Large.jpeg](/content/images/2024/07/lightning-talks-2024/DSC04987%20Large.jpeg)![DSC04990 Large.jpeg](/content/images/2024/07/lightning-talks-2024/DSC04990%20Large.jpeg)![DSC05011 Large.jpeg](/content/images/2024/07/lightning-talks-2024/DSC05011%20Large.jpeg)![DSC05012 Large.jpeg](/content/images/2024/07/lightning-talks-2024/DSC05012%20Large.jpeg)
+
 ## Conference Highlights
 
 ![IMG\_8283 Large.jpeg](/content/images/2024/07/devcon-2024/IMG_8283%20Large.jpeg)![IMG\_8115 Large.jpeg](/content/images/2024/07/devcon-2024/IMG_8115%20Large.jpeg)![469AG7\_6955 Large.jpeg](/content/images/2024/07/devcon-2024/469AG7_6955%20Large.jpeg)![504\_Z626826 Large.jpeg](/content/images/2024/07/devcon-2024/504_Z626826%20Large.jpeg)![C55CD696-297C-4ABF-98FD-2AA1338C0CA8 Large.jpeg](/content/images/2024/07/devcon-2024/C55CD696-297C-4ABF-98FD-2AA1338C0CA8%20Large.jpeg)![IMG\_2484 Large.jpeg](/content/images/2024/07/devcon-2024/IMG_2484%20Large.jpeg)![IMG\_2498 Large.jpeg](/content/images/2024/07/devcon-2024/IMG_2498%20Large.jpeg)
