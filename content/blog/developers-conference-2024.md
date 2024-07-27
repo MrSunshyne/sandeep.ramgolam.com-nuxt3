@@ -37,7 +37,7 @@ I decided against having everyone run npm install locally as it can be a bit of 
 Location: PACMAN ROOM, Caudan Arts Centre
 Time: Friday 09:00 - 10:45
 
-The workshop was a great success and I had a lot of fun running it. I started by explaining what Nuxt 3 is and how it can be used to build web apps. I then showed how to create a new Nuxt 3 project and how to add pages, components and styles to the project using TailwindCSS. 
+The workshop was a great success and I had a lot of fun running it. I started by explaining what Nuxt 3 is and how it can be used to build web apps. I then showed how to create a new Nuxt 3 project and how to add pages, components and styles to the project using TailwindCSS.
 
 It's easy to show off Nuxt 3 because it's truely awesome. I installed tailwindcss from the built-in devtools. So cool.
 
@@ -50,7 +50,11 @@ Time: Friday 11:00 - 11:45
 
 This was a talk that I had been wanting to give for a long time. I have been working as a frontend developer for over 10 years now and I have seen a lot of changes in the industry. I wanted to share my experience and knowledge with other developers who are just starting out or who are looking to advance their careers.
 
+![PXL\_20240719\_064400955 Large.jpeg](/content/images/2024/07/devcon-2024/PXL_20240719_064400955%20Large.jpeg)
+
 I addressed the big elephant in the room: How much moneysss ?!
+
+![room full](/content/images/2024/07/devcon-2024/PXL_20240719_073534537%20Large.jpeg)
 
 I tried to give hints about what to do when you reach a certain level in your career and how to keep learning and growing as a developer. I have seen that the same advice does not apply to everyone and that it's important to find your own path and what works for you.
 
@@ -75,6 +79,8 @@ I was also responsible for organizing and hosting the Lightning Talks at the con
 
 ## Conference Highlights
 
+![IMG\_8283 Large.jpeg](/content/images/2024/07/devcon-2024/IMG_8283%20Large.jpeg)![IMG\_8115 Large.jpeg](/content/images/2024/07/devcon-2024/IMG_8115%20Large.jpeg)![469AG7\_6955 Large.jpeg](/content/images/2024/07/devcon-2024/469AG7_6955%20Large.jpeg)![504\_Z626826 Large.jpeg](/content/images/2024/07/devcon-2024/504_Z626826%20Large.jpeg)![C55CD696-297C-4ABF-98FD-2AA1338C0CA8 Large.jpeg](/content/images/2024/07/devcon-2024/C55CD696-297C-4ABF-98FD-2AA1338C0CA8%20Large.jpeg)![IMG\_2484 Large.jpeg](/content/images/2024/07/devcon-2024/IMG_2484%20Large.jpeg)![IMG\_2498 Large.jpeg](/content/images/2024/07/devcon-2024/IMG_2498%20Large.jpeg)
+
 ## Conclusion
 
-Overall, the Developers Conference 2024 was a really fun event for me because I get to meet friends and make new ones. I also had the opportunity to share my knowledge with the community and learn new things from other developers. I'm looking forward to the next conference and hope to see you all there! 
+Overall, the Developers Conference 2024 was a really fun event for me because I get to meet friends and make new ones. I also had the opportunity to share my knowledge with the community and learn new things from other developers. I'm looking forward to the next conference and hope to see you all there!
