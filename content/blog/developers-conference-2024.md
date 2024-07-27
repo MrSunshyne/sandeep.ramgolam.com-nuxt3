@@ -65,6 +65,8 @@ Time: Saturday 13:00 - 13:45
 
 I was also responsible for organizing and hosting the Lightning Talks at the conference. The Lightning Talks are short talks of 5 minutes each where developers can share their knowledge and experience with the community. I had a great lineup of speakers and the talks were very interesting and very fun. I was very happy to see that the Lightning Talks were a success and that the attendees enjoyed them.
 
+[YouTube video player](https://www.youtube.com/embed/jJOxfdufKlE?si=gFuxod3de9rGspjK)
+
 ### Lightning Talks Lineup
 
 - Chervine Bhiwoo - "Death by SMS"
