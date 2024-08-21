@@ -12,7 +12,7 @@ date: 2024-07-21T05:56:04.000Z
 
 I had the opportunity to speak and run a workshop at the The Developers Conference 2024 in Mauritius. The conference was held at the Caudan Arts Centre in Port Louis and was attended by over 1500 developers from all over the island. The conference was a great opportunity to meet other developers, learn new things and share my knowledge with the community.
 
-## My Talks
+## My Talks. Yo!
 
 - Building a web app to monitor Power Outages in Mauritius using Nuxt & TailwindCSS
 - The frontend developer career path
@@ -65,7 +65,7 @@ Time: Saturday 13:00 - 13:45
 
 I was also responsible for organizing and hosting the Lightning Talks at the conference. The Lightning Talks are short talks of 5 minutes each where developers can share their knowledge and experience with the community. I had a great lineup of speakers and the talks were very interesting and very fun. I was very happy to see that the Lightning Talks were a success and that the attendees enjoyed them.
 
-<iframe width="100%" height="auto" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/jJOxfdufKlE?si=gFuxod3de9rGspjK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[YouTube video player](https://www.youtube.com/embed/jJOxfdufKlE?si=gFuxod3de9rGspjK)
 
 ### Lightning Talks Lineup
 
