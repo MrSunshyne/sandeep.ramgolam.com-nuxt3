@@ -12,7 +12,7 @@ date: 2024-07-21T05:56:04.000Z
 
 I had the opportunity to speak and run a workshop at the The Developers Conference 2024 in Mauritius. The conference was held at the Caudan Arts Centre in Port Louis and was attended by over 1500 developers from all over the island. The conference was a great opportunity to meet other developers, learn new things and share my knowledge with the community.
 
-## My Talks. Yo!
+## My Talks.
 
 - Building a web app to monitor Power Outages in Mauritius using Nuxt & TailwindCSS
 - The frontend developer career path
