@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     description: "thoughts, experiments, experiences",
     defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
   },
+
   app: {
     head: {
       link: [
@@ -24,10 +25,13 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   experimental: {
     viewTransition: true,
   },
+
   devtools: { enabled: true },
+
   modules: [
     "@nuxt/content",
     "@nuxtjs/tailwindcss",
@@ -36,17 +40,21 @@ export default defineNuxtConfig({
     "nuxt-og-image",
     "nuxt-icon",
   ],
+
   nitro: {
     prerender: {
       crawlLinks: true,
       routes: ["/"],
     },
   },
+
   colorMode: {
     classSuffix: "",
   },
+
   // register a component
   css: ["@/styles/global.css"],
+
   tailwindcss: {
     config: {
       darkMode: "class",
@@ -76,4 +84,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: "2024-09-22",
 });

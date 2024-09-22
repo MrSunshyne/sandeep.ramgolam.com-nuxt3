@@ -4,7 +4,7 @@ const props = withDefaults(
     title: string;
     backgroundColor: string;
     description: string;
-    customImage: string;
+    customImage?: string;
   }>(),
   {
     title: "Blog post",
