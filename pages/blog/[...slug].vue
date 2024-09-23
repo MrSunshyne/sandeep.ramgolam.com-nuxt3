@@ -78,7 +78,7 @@ const coverImage = computed(() => {
     return post.value?.feature_image;
   }
 
-  return `/__og-image__/image/blog/${slug}/og.png`;
+  return `/__og-image__/static/blog/${slug}/og.png`;
 });
 </script>
 
