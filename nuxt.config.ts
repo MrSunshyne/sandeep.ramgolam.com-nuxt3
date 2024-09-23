@@ -6,6 +6,8 @@ export default defineNuxtConfig({
   //   url: 'https://sandeep.ramgolam.com',
   //   indexable: false
   // },
+  extends: ['@nuxt/ui-pro'],
+
   site: {
     // production URL
     url: "https://sandeep.ramgolam.com",
@@ -33,13 +35,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    "@nuxt/content",
-    "@nuxtjs/tailwindcss",
-    "@nuxthq/studio",
-    "@nuxtjs/color-mode",
-    "nuxt-og-image",
-    "nuxt-icon",
-  ],
+    "@nuxt/ui", 
+    "@nuxt/content", 
+    "@nuxthq/studio", 
+    "nuxt-og-image", 
+    // "@nuxtjs/tailwindcss",
+    // "@nuxtjs/color-mode",
+    // "nuxt-icon",
+    // "@nuxt/image"
+],
 
   nitro: {
     prerender: {
@@ -54,6 +58,10 @@ export default defineNuxtConfig({
 
   // register a component
   css: ["@/styles/global.css"],
+
+  ui: {
+    global: true
+  },
 
   tailwindcss: {
     config: {

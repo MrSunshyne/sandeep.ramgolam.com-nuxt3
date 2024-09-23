@@ -2,8 +2,8 @@
 const props = withDefaults(
   defineProps<{
     title: string;
-    backgroundColor: string;
-    description: string;
+    backgroundColor?: string;
+    description?: string;
     customImage?: string;
   }>(),
   {

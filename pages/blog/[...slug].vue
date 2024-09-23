@@ -80,57 +80,10 @@ const coverImage = computed(() => {
 
   return `/__og-image__/image/blog/${slug}/og.png`;
 });
-
-// Table of Contents
-
-const activeTocId = ref<string | null>(null);
-
-// const nuxtContent = ref(null);
-
-// const observer: Ref<IntersectionObserver | null | undefined> = ref(null);
-// const router = useRouter();
-
-// const observerOptions = reactive({
-//   root: nuxtContent.value,
-//   threshold: 0.5,
-// });
-
-// onMounted(() => {
-//   observer.value = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//       const id = entry.target.getAttribute("id");
-
-//       if (entry.isIntersecting) {
-//         activeTocId.value = id;
-
-//         router.push({ hash: `#${id}` });
-//       }
-//     });
-//   }, observerOptions);
-
-//   document
-//     .querySelectorAll("article h2[id], article h3[id]")
-//     .forEach((section) => {
-//       observer.value?.observe(section);
-//     });
-// });
-
-// onUnmounted(() => {
-//   observer.value?.disconnect();
-// });
 </script>
 
 <template>
   <article v-if="post" class="">
-    <!-- <OgImageStatic
-      component="OgImageBlog"
-      :description="dateFormat(new Date(post?.created_at || ''))"
-      :customImage="post.feature_image"
-    /> -->
-
-    <!-- <pre>
-            {JSON.stringify(post, null, 2)}
-          </pre> -->
     <BlogHead :post="post" />
 
     <div class="mx-auto w-full">
