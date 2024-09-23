@@ -1,6 +1,7 @@
 {
   "private": true,
   "type": "module",
+  "name": "sandeep.ramgolam.com",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
