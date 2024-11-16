@@ -2,7 +2,6 @@
     <div class="particle-text-container">
         <canvas ref="canvasRef" @click="textGeneration()"></canvas>
         <div ref="authorRef" class="author">
-            {{ textIndex }}
             {{ props.textList[textIndex].author }}
         </div>
     </div>
@@ -41,8 +40,10 @@ let dVertices = [];
 const vertexCount = 10000 * 4;
 const depth = 0;
 const smoothness = 6;
-const fontSize = 14;
+const fontSize = 9;
 const fontName = 'Arial, Helvetica';
+const maxLineWidth = 200; // Maximum width for each line in pixels
+const lineHeight = fontSize * 1.4; // Space between lines
 
 
 const vertexShaderSource = `
@@ -213,38 +214,74 @@ const render = (timeStamp = performance.now()) => {
     requestAnimationFrame(render);
 };
 
+const wrapText = (context, text, maxWidth) => {
+    const words = text.split(' ');
+    const lines = [];
+    let currentLine = words[0];
+
+    for (let i = 1; i < words.length; i++) {
+        const word = words[i];
+        const width = context.measureText(currentLine + ' ' + word).width;
+        
+        if (width < maxWidth) {
+            currentLine += ' ' + word;
+        } else {
+            lines.push(currentLine);
+            currentLine = word;
+        }
+    }
+    lines.push(currentLine);
+    return lines;
+};
+
 const textGeneration = () => {
-    // Create temporary canvas for text measurement
     const refCtx = document.createElement('canvas').getContext('2d');
     vertices = [];
 
     textIndex.value = (textIndex.value + 1) % props.textList.length;
 
-
     refCtx.font = `${fontSize}px ${fontName}`;
     const text = props.textList[textIndex.value].text;
-    refCtx.canvas.width = refCtx.measureText(text).width || 100;
-    refCtx.canvas.height = fontSize;
+    
+    // Wrap text into lines
+    const lines = wrapText(refCtx, text, maxLineWidth);
+    
+    // Calculate total height needed for all lines
+    const totalHeight = lines.length * lineHeight;
+    
+    // Find the widest line to determine canvas width
+    const maxTextWidth = Math.max(...lines.map(line => refCtx.measureText(line).width));
+    const canvasWidth = Math.max(maxTextWidth, maxLineWidth);
+    
+    // Set canvas dimensions
+    refCtx.canvas.width = canvasWidth;
+    refCtx.canvas.height = totalHeight;
+    
+    // Reset font after canvas resize
     refCtx.font = `${fontSize}px ${fontName}`;
     refCtx.textBaseline = "top";
+    refCtx.textAlign = "center";  // Center text alignment
     refCtx.clearRect(0, 0, refCtx.canvas.width, refCtx.canvas.height);
-    refCtx.fillStyle = "#fff";
-    refCtx.fillText(text, 0, 0);
+    refCtx.fillStyle = "#ff0000";
+
+    // Draw each line centered
+    lines.forEach((line, index) => {
+        refCtx.fillText(line, canvasWidth / 2, index * lineHeight);
+    });
 
     const { data } = refCtx.getImageData(0, 0, refCtx.canvas.width, refCtx.canvas.height);
 
-    // Generate vertices from text
+    // Generate vertices from text, adjusting for centered layout
     for (let i = 0; i < vertexCount; i += 4) {
         const j = i % data.length;
         const dI = (j / 4 >> 0);
-        const x = dI % refCtx.canvas.width - refCtx.canvas.width / 2;
-        const y = ((dI / refCtx.canvas.width >> 0) % refCtx.canvas.height) - refCtx.canvas.height / 2;
+        const x = dI % refCtx.canvas.width - canvasWidth / 2; // Center horizontally
+        const y = ((dI / refCtx.canvas.width >> 0) % refCtx.canvas.height) - totalHeight / 2;
         const z = -depth / 2 + Math.random() * depth;
         const v = (data[j] * (data[j + 3] / 255)) / 255;
 
         vertices.push(x, y, z, v);
     }
-
 };
 </script>
 
@@ -266,10 +303,10 @@ canvas {
 
 .author {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 40px;
+    right: 40px;
     color: white;
     font-family: 'Courier New', monospace;
-    font-size: 12px;
+    font-size: 24px;
 }
 </style>
