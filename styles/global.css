@@ -52,3 +52,8 @@ body::-webkit-scrollbar-thumb {
     color-stop(0.86, theme(colors.green.300))
   );
 }
+
+
+html, body, #__nuxt {
+  min-height: 100vh;
+}
