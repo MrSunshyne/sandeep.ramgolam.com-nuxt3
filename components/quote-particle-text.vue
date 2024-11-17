@@ -2,8 +2,7 @@
     <div class="particle-text-container">
         <canvas ref="canvasRef" @click="textGeneration()"></canvas>
         <div ref="authorRef" class="author">
-            {{ textIndex }}
-            {{ props.textList[textIndex].author }}
+            ~ {{ props.textList[textIndex].author }}
         </div>
     </div>
 </template>
@@ -267,9 +266,9 @@ canvas {
 .author {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    right: 20px;
     color: white;
     font-family: 'Courier New', monospace;
-    font-size: 12px;
+    font-size: 24px;
 }
 </style>
