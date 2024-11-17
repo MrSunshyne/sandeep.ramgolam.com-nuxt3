@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { defineComponent } from 'vue';
 import type { Wallpaper } from '@/types/wallpaper';
 import wallpapersData from '@/assets/data/wallpapers.json';
@@ -32,21 +32,16 @@ useHead({
   ]
 })
 
-export default defineComponent({
-  data() {
-    return {
-      wallpapers: wallpapersData as Wallpaper[]
-    };
-  },
-  methods: {
-    downloadWallpaper(path: string) {
-      const link = document.createElement('a');
-      link.href = path;
-      link.download = path.split('/').pop() || 'wallpaper';
-      link.click();
-    }
-  }
-});
+
+const wallpapers = ref(wallpapersData) as Wallpaper[]
+
+function downloadWallpaper(path: string) {
+  const link = document.createElement('a');
+  link.href = path;
+  link.download = path.split('/').pop() || 'wallpaper';
+  link.click();
+}
+
 </script>
 
 <style scoped>
