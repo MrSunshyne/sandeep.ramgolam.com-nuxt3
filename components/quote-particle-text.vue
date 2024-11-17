@@ -1,8 +1,11 @@
 <template>
-    <div class="particle-text-container">
+    <div class="particle-text-container" @mousemove="updateTooltipPosition" @mouseleave="hideTooltip">
         <canvas ref="canvasRef" @click="textGeneration()"></canvas>
         <div ref="authorRef" class="author">
             ~ {{ props.textList[textIndex].author }}
+        </div>
+        <div v-if="showTooltip" :style="{ top: tooltipY + 'px', left: tooltipX + 'px' }" class="tooltip">
+            {{ tooltipText }}
         </div>
     </div>
 </template>
@@ -43,6 +46,20 @@ const smoothness = 6;
 const fontSize = 14;
 const fontName = 'Arial, Helvetica';
 
+const tooltipX = ref(0);
+const tooltipY = ref(0);
+const showTooltip = ref(false);
+const tooltipText = ref(navigator.userAgent.match(/Mobi/) ? 'Tap to show another quote' : 'Click to show another quote');
+
+const updateTooltipPosition = (event) => {
+    tooltipX.value = event.clientX + 10; // Offset for better visibility
+    tooltipY.value = event.clientY + 10;
+    showTooltip.value = true;
+};
+
+const hideTooltip = () => {
+    showTooltip.value = false;
+};
 
 const vertexShaderSource = `
   attribute vec4 a_position;
@@ -219,34 +236,42 @@ const textGeneration = () => {
 
     textIndex.value = (textIndex.value + 1) % props.textList.length;
 
-    refCtx.font = `${fontSize}px ${fontName}`;
+    // Adjust font size and words per line based on screen width
+    const isSmallScreen = window.innerWidth < 1000;
+    const adjustedFontSize = isSmallScreen ? 8 : fontSize;
+    const maxWordsPerLine = isSmallScreen ? 4 : 5;
+
+    // Increase vertex count for smaller screens
+    const adjustedVertexCount = isSmallScreen ? vertexCount*4 : vertexCount;
+
+    refCtx.font = `${adjustedFontSize}px ${fontName}`;
     const text = props.textList[textIndex.value].text;
     
-    // Split text into lines with a maximum of 5 words per line
+    // Split text into lines with a maximum of maxWordsPerLine words per line
     const words = text.split(' ');
     const lines = [];
-    for (let i = 0; i < words.length; i += 5) {
-        lines.push(words.slice(i, i + 5).join(' '));
+    for (let i = 0; i < words.length; i += maxWordsPerLine) {
+        lines.push(words.slice(i, i + maxWordsPerLine).join(' '));
     }
 
     // Calculate canvas width and height based on the longest line
     const maxWidth = Math.max(...lines.map(line => refCtx.measureText(line).width));
     refCtx.canvas.width = maxWidth || 100;
-    refCtx.canvas.height = fontSize * lines.length;
-    refCtx.font = `${fontSize}px ${fontName}`;
+    refCtx.canvas.height = adjustedFontSize * lines.length;
+    refCtx.font = `${adjustedFontSize}px ${fontName}`;
     refCtx.textBaseline = "top";
     refCtx.clearRect(0, 0, refCtx.canvas.width, refCtx.canvas.height);
     refCtx.fillStyle = "#fff";
 
     // Draw each line on the canvas
     lines.forEach((line, index) => {
-        refCtx.fillText(line, 0, index * fontSize);
+        refCtx.fillText(line, 0, index * adjustedFontSize);
     });
 
     const { data } = refCtx.getImageData(0, 0, refCtx.canvas.width, refCtx.canvas.height);
 
     // Generate vertices from text
-    for (let i = 0; i < vertexCount; i += 4) {
+    for (let i = 0; i < adjustedVertexCount; i += 4) {
         const j = i % data.length;
         const dI = (j / 4 >> 0);
         const x = dI % refCtx.canvas.width - refCtx.canvas.width / 2;
@@ -284,5 +309,16 @@ canvas {
     font-size: 24px;
     font-weight: bold;
     user-select: none;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    pointer-events: none;
+    white-space: nowrap;
 }
 </style>
