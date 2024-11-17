@@ -1,0 +1,35 @@
+[
+  {
+    "path": "/wallpapers/wallpaper-drone-shot-notre-dame.jpg",
+    "title": "Drone shot of Notre Dame, Mauritius",
+    "metadata": {
+      "author": "John Doe",
+      "date": "2023-10-01",
+      "description": "Aerial view of Notre Dame, Mauritius."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-vladimir-jiji-frontend-developer.jpeg",
+    "title": "Vladimir Jiji, Frontend Developer",
+    "metadata": {
+      "author": "Jane Smith",
+      "date": "2023-09-15",
+      "description": "A portrait of Vladimir Jiji coding on frontend.mu."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-washed-keyboard.jpg",
+    "title": "Washed Keyboard",
+    "metadata": {
+      "author": "Jane Smith",
+      "date": "2023-09-15",
+      "description": "A washed keyboard."
+    }
+  }
+] 
+
+
+
+
+
+

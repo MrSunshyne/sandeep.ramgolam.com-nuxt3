@@ -34,16 +34,11 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: [
-    "@nuxt/ui", 
-    "@nuxt/content", 
-    "@nuxthq/studio", 
-    "nuxt-og-image", 
-    // "@nuxtjs/tailwindcss",
-    // "@nuxtjs/color-mode",
-    // "nuxt-icon",
-    // "@nuxt/image"
-],
+  modules: ["@nuxt/ui", "@nuxt/content", "@nuxthq/studio", // "@nuxtjs/tailwindcss",
+  // "@nuxtjs/color-mode",
+  // "nuxt-icon",
+  // "@nuxt/image"
+  "nuxt-og-image", "@nuxt/image"],
 
   nitro: {
     prerender: {
