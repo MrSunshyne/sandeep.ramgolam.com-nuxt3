@@ -6,3 +6,10 @@
     </div>
   </div>
 </template>
+
+
+<script lang="ts">
+definePageMeta({
+  layout: 'quote',
+})
+</script>
