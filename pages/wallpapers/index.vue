@@ -20,6 +20,22 @@ import { defineComponent } from 'vue';
 import type { Wallpaper } from '@/types/wallpaper';
 import wallpapersData from '@/assets/data/wallpapers.json';
 
+defineOgImageComponent("GenericTemplate");
+
+useHead({
+  title: 'Wallpapers by Sandeep Ramgolam.',
+  meta: [
+    {
+      name: 'description',
+      content: 'Download my photos and use as your wallpaper. All photos are taken by me. Please do not use them for commercial purposes.'
+    }
+  ]
+})
+
+definePageMeta({
+  
+});
+
 export default defineComponent({
   data() {
     return {
