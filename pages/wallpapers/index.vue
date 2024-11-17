@@ -32,10 +32,6 @@ useHead({
   ]
 })
 
-definePageMeta({
-  
-});
-
 export default defineComponent({
   data() {
     return {

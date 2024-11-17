@@ -14,4 +14,16 @@
 definePageMeta({
   layout: 'quote',
 })
+
+defineOgImageComponent("GenericTemplate");
+
+useHead({
+  title: 'Quotes that inspire me',
+  meta: [
+    {
+      name: 'description',
+      content: 'Quotes that inspire me to keep going.'
+    }
+  ]
+})
 </script>
