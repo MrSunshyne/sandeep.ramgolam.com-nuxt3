@@ -219,16 +219,29 @@ const textGeneration = () => {
 
     textIndex.value = (textIndex.value + 1) % props.textList.length;
 
-
     refCtx.font = `${fontSize}px ${fontName}`;
     const text = props.textList[textIndex.value].text;
-    refCtx.canvas.width = refCtx.measureText(text).width || 100;
-    refCtx.canvas.height = fontSize;
+    
+    // Split text into lines with a maximum of 5 words per line
+    const words = text.split(' ');
+    const lines = [];
+    for (let i = 0; i < words.length; i += 5) {
+        lines.push(words.slice(i, i + 5).join(' '));
+    }
+
+    // Calculate canvas width and height based on the longest line
+    const maxWidth = Math.max(...lines.map(line => refCtx.measureText(line).width));
+    refCtx.canvas.width = maxWidth || 100;
+    refCtx.canvas.height = fontSize * lines.length;
     refCtx.font = `${fontSize}px ${fontName}`;
     refCtx.textBaseline = "top";
     refCtx.clearRect(0, 0, refCtx.canvas.width, refCtx.canvas.height);
     refCtx.fillStyle = "#fff";
-    refCtx.fillText(text, 0, 0);
+
+    // Draw each line on the canvas
+    lines.forEach((line, index) => {
+        refCtx.fillText(line, 0, index * fontSize);
+    });
 
     const { data } = refCtx.getImageData(0, 0, refCtx.canvas.width, refCtx.canvas.height);
 
@@ -243,8 +256,7 @@ const textGeneration = () => {
 
         vertices.push(x, y, z, v);
     }
-
-};
+}
 </script>
 
 <style scoped>
@@ -266,9 +278,11 @@ canvas {
 .author {
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    right: 40px;
     color: white;
     font-family: 'Courier New', monospace;
     font-size: 24px;
+    font-weight: bold;
+    user-select: none;
 }
 </style>
