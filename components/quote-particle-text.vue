@@ -19,7 +19,7 @@ const props = defineProps({
         default: () => [
             { text: 'If he is free i will see him', author: 'Andrea Pirlo', source: 'Source 1' },
             { text: 'If you emit enough photons at the earth, it will eventually emit a Tesla', author: 'Elon Musk', source: 'Source 2' },
-            { text: 'The minimum IQ required to destroy the world drops by one point every 18 months.', author: 'Chomsky', source: 'Source 3' },
+            { text: 'The minimum IQ required to destroy the world drops by one point every 18 months.', author: 'Eliezer Yudkowsky', source: 'Source 3' },
             { text: 'Clear is better than clever', author: 'Go Proverbs', source: 's' },
             { text: "I know it's actually not possible, but because of you we have a chance. So, let's give it a try", author: 'Jurgen Klopp', source: 'Source 5' },
         ]
