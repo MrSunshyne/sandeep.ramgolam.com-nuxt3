@@ -5,7 +5,7 @@ const employment = [
     job_title: "Senior Front-end Developer",
     company: "Livestorm",
     company_website: "https://www.livestorm.co",
-    text: "Ecosystem Team // Enjoying Vue and GraphQL.",
+    text: "Frontend Tribe // Enjoying Vue and GraphQL.",
   },
   {
     date_start: "2019",
@@ -99,6 +99,16 @@ const employment = [
 ];
 
 const education = [
+  {
+    title: "MQA Approved Trainer",
+    institution: "Honoris Educational Networks",
+    year: "2022-present",
+  },
+  {
+    title: "MQA Approved Trainer",
+    institution: "Mauritius Qualifications Authority",
+    year: "2019",
+  },
   {
     title: "MQA Approved Trainer",
     institution: "Mauritius Qualifications Authority",

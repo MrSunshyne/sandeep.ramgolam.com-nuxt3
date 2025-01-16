@@ -20,6 +20,9 @@
           <p class="font-bold">
             Passionate front-end developer based in Mauritius.
           </p>
+          <p class="">
+            <a class="underline print:no-underline hover:opacity-80 font-bold" target="_blank" href="https://developers.google.com/profile/u/sandeepramgolam">Google Developer Expert in Web Technologies.</a> <a class="underline print:no-underline hover:opacity-80 print:hidden" href="https://developers.google.com/community/experts" target="_blank"><span>What is a GDE?</span></a>
+          </p>
           <p>
             In my free time I teach, contribute to open source and write on my
             blog.
@@ -80,7 +83,7 @@
       </div>
     </div>
 
-    <h2 class="page-title">Where I've Worked</h2>
+    <h2 class="page-title">Career</h2>
     <p class="page-subtitle">The places I had the opportunity to contribute</p>
     <div
       class="block md:flex flex-col flex-wrap justify-center sm:justify-start my-4"
