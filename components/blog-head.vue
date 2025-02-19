@@ -51,7 +51,7 @@ const formattedDate =
               {{ formattedDate }}
             </time>
             <span class="byline-reading-time">
-              <span class="bull">•</span>
+              <span class="bull px-2">•</span>
               5 min read
             </span>
           </div>
