@@ -38,7 +38,7 @@ export default defineNuxtConfig({
   // "@nuxtjs/color-mode",
   // "nuxt-icon",
   // "@nuxt/image"
-  "nuxt-og-image", "@nuxt/image"],
+  "nuxt-og-image", "@nuxt/image", 'nuxt-mcp'],
 
   nitro: {
     prerender: {
