@@ -24,6 +24,11 @@ useHead({
   ],
 });
 
+const colorMode = useColorMode();
+const color = computed(() => {
+  return colorMode.value === "light" ? "#000" : "#FFF";
+});
+
 defineOgImageComponent("IndexTemplate", {});
 </script>
 
@@ -37,7 +42,16 @@ defineOgImageComponent("IndexTemplate", {});
         <HomeSelfIntro />
 
         <div class="splash-wrapper hidden md:flex content-center md:w-1/3">
-          <SharedSunBust class="dark:text-gray-500" />
+          <InspiraParticleImageBust
+            image-src="/assets/sun-bust.png"
+            :responsive-width="true"
+            :noise="2"
+            particle-size="2"
+            :grow-duration="10"
+            :initPosition="'bottom'"
+            :initDirection="'bottom'"
+            gravity="0.2"
+          />
         </div>
       </div>
 

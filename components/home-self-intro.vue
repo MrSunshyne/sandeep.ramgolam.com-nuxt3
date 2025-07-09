@@ -1,28 +1,28 @@
 <template>
   <div class="md:w-2/3 flex flex-col gap-4">
-    <h1 class="text-2xl md:text-5xl font-black w-full">Hi, I'm Sandeep</h1>
-    <div class="mb-4 flex flex-col gap-2">
-      <div class="flex flex-col gap-2 text-xl">
-        <div class="flex items-center gap-2">
-          <IconsCodersmuIcon alt="Coders.mu" class="w-8 h-8 dark:text-white text-black" />
+    <h1 class="text-2xl md:text-5xl text-left font-black w-full">Hi, I'm Sandeep</h1>
+    <div class="mb-4 flex flex-col gap-4">
+      <div class="flex flex-col gap-2 md:text-xl">
+        <div class="flex gap-2">
+          <IconsCodersmuIcon alt="Coders.mu" class="w-6 md:w-8 h-6 md:h-8 dark:text-white text-black" />
           <a href="https://coders.mu" target="_blank">Coders.mu</a>
           <span class="text-gray-500">Lead Organizer</span>
         </div>
-        <div class="flex items-center gap-2">
-          <IconsLivestormIcon alt="Livestorm" class="w-8 h-8" />
+        <div class="flex gap-2">
+          <IconsLivestormIcon alt="Livestorm" class="w-6 md:w-8 h-6 md:h-8" />
           <a href="https://livestorm.co"
             target="_blank">Livestorm</a>
-          <span class="text-gray-500">Senior Front-end Engineer</span>
+          <span class="text-gray-500">Sr. Front-end Engineer</span>
         </div>
-        <div class="flex items-center gap-2">
-          <IconsUpcodeIcon alt="Upcode" class="w-8 h-8 text-[#0031B0] dark:text-white" />
+        <div class="flex gap-2">
+          <IconsUpcodeIcon alt="Upcode" class="w-6 md:w-8 h-6 md:h-8 text-[#0031B0] dark:text-white" />
           <a href="https://www.linkedin.com/company/upcodemu"
             target="_blank">Upcode</a>
           <span class="text-gray-500">Co-Founder</span>
         </div>
       </div>
 
-      <p class="inline sm:w-full ">
+      <p class="inline sm:w-full text-left">
         Technologist based in Mauritius, who loves front-end, UX design, Linux, & nature.
         <br />This is where I share my
         <NuxtLink class="underline " :to="{ path: '/blog' }">thoughts</NuxtLink>,
@@ -31,15 +31,11 @@
         </NuxtLink>and
         <NuxtLink class="underline " :to="{ path: '/events' }">experiences</NuxtLink>.
       </p>
-
-
-
     </div>
-
 
     <SharedProfileLinks />
 
-    <div>
+    <div class="hidden md:block">
       <div title="Yes, you can run that in your terminal"
         class="dark:bg-gray-900 bg-gray-200 py-1 px-2 mt-2 rounded cursor-help inline-block">
         $ npx sandeepramgolam
