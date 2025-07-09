@@ -1,16 +1,12 @@
 <template>
   <div class="profile-links flex flex-wrap gap-4 py-4">
-    <a rel="me" href="https://x.com/__Sun__">
+    <a rel="me" href="https://x.com/__Sun__" target="_blank">
       <span class="sr-only">X Profile</span>
-      <IconsTwitter
-        class="svgicon text-black hover:text-blue-500 w-10 h-10 md:w-16 md:h-16 dark:text-white"
-      />
+      <IconsTwitter class="svgicon text-black hover:text-blue-500 w-10 h-10 md:w-16 md:h-16 dark:text-white" />
     </a>
-    <a rel="noopener" target="_blank" href="http://instagram.com/mr_sunshyne/">
+    <a rel="noopener" target="_blank" href="http://instagram.com/mr_sunshyne/" >
       <span class="sr-only">Instagram Page</span>
-      <IconsInstagram
-        class="svgicon text-black hover:text-blue-500 w-10 h-10 md:w-16 md:h-16 dark:text-white"
-      />
+      <IconsInstagram class="svgicon text-black hover:text-blue-500 w-10 h-10 md:w-16 md:h-16 dark:text-white" />
     </a>
     <a rel="noopener" target="_blank" href="mailto:sandeep@ramgolam.com">
       <span class="sr-only">Email Address</span>
@@ -96,7 +92,7 @@
 
 .svgicon:hover {
   cursor: pointer;
-  animation: vibrate-1 1s ease-in infinite;
+  animation: vibrate-1 0.01s ease-in infinite;
   transition: all 0.4s linear;
 }
 </style>
