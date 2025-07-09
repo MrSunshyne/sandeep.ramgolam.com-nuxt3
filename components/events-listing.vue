@@ -74,14 +74,14 @@ function setCurrentEventType(eventType: EventType) {
     <template v-if="count === -1">
       <h1 class="page-title">Events</h1>
       <p class="page-subtitle">
-        A list of events I was present at
+        A list of events I was involved in
         <span :class="currentEventType">{{ presentAs }}</span>
       </p>
     </template>
     <template v-else>
       <h2 class="text-3xl font-black pt-10 text-center">Events</h2>
       <p class="text-md text-gray-700 dark:text-gray-300 text-center">
-        A list of events I was present at
+        A list of events I was involved in
         <span :class="currentEventType">{{ presentAs }}</span>
       </p>
     </template>

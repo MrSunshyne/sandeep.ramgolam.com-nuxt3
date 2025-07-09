@@ -6,7 +6,14 @@ const { data: posts } = await useAsyncData("blogs-summary", () =>
     .where({ visibility: { $eq: "public" } })
     .sort({ date: -1 })
     .limit(5)
-    .find(),
+    .find()
+);
+
+const { data: allPosts } = await useAsyncData("all-blogs-summary", () =>
+  queryContent<BlogPost>("blog")
+    .where({ visibility: { $eq: "public" } })
+    .sort({ date: -1 })
+    .find()
 );
 </script>
 
@@ -21,14 +28,11 @@ const { data: posts } = await useAsyncData("blogs-summary", () =>
       </div>
       <div class="md:w-1/2 py-10">
         <h2 class="text-3xl font-black pt-10">
-          Blog posts
-          <span v-if="posts && posts" class="text-black/10">
-            // {{ posts.length }}</span
-          >
+          Blog posts          
         </h2>
         <p class="text-md text-gray-700 dark:text-gray-300">
           When i'm not writing code, <br class="block md:hidden" />
-          I like to write about code.
+          I like to write about tech.
         </p>
         <div class="py-5">
           <div
@@ -54,7 +58,7 @@ const { data: posts } = await useAsyncData("blogs-summary", () =>
           </div>
         </div>
         <!-- <div v-else>no posts</div> -->
-        <nuxt-link :to="'/blog'" class="button">See all</nuxt-link>
+        <nuxt-link :to="'/blog'" class="button">See all {{ allPosts?.length }} posts</nuxt-link>
       </div>
     </div>
   </div>

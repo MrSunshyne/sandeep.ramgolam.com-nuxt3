@@ -1,5 +1,6 @@
 <template>
   <div class="md:w-2/3">
+    <h2>hi i'm</h2>
     <h1 class="text-2xl md:text-5xl font-black w-full">Sandeep Ramgolam</h1>
     <div class="mb-4">
       <div
