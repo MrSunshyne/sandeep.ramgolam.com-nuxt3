@@ -613,7 +613,7 @@ const events = [
     links: [
       {
         title: "Event Page",
-        url: "https://frontend.mu/meetup/17",
+        url: "https://coders.mu/meetup/17",
       },
       {
         title: "Blog Post",
@@ -633,7 +633,7 @@ const events = [
     links: [
       {
         title: "Event Page",
-        url: "https://frontend.mu/meetup/36",
+        url: "https://coders.mu/meetup/36",
       },
       {
         title: "Blog Post",
@@ -653,7 +653,7 @@ const events = [
     links: [
       {
         title: "Event Page",
-        url: "https://frontend.mu/meetup/37",
+        url: "https://coders.mu/meetup/37",
       },
       {
         title: "Blog Post",
@@ -673,7 +673,7 @@ const events = [
     links: [
       {
         title: "Event Page",
-        url: "https://frontend.mu/meetup/38",
+        url: "https://coders.mu/meetup/38",
       },
       {
         title: "Blog Post",
@@ -693,7 +693,7 @@ const events = [
     links: [
       {
         title: "Event Page",
-        url: "https://frontend.mu/meetup/39",
+        url: "https://coders.mu/meetup/39",
       },
       {
         title: "Blog Post",
@@ -751,7 +751,7 @@ const events = [
     links: [
       {
         title: "Event Page",
-        url: "https://frontend.mu/meetup/40",
+        url: "https://coders.mu/meetup/40",
       },
       {
         title: "Blog Post",
@@ -771,7 +771,7 @@ const events = [
     links: [
       {
         title: "Event Page",
-        url: "https://frontend.mu/meetup/41",
+        url: "https://coders.mu/meetup/41",
       },
       {
         title: "Blog Post",
@@ -791,7 +791,7 @@ const events = [
     links: [
       {
         title: "Event Page",
-        url: "https://frontend.mu/meetup/42",
+        url: "https://coders.mu/meetup/42",
       },
       {
         title: "Blog Post",
@@ -831,7 +831,7 @@ const events = [
     links: [
       {
         title: "Event Page",
-        url: "https://frontend.mu/meetup/43",
+        url: "https://coders.mu/meetup/43",
       },
       {
         title: "Blog Post",
@@ -851,7 +851,7 @@ const events = [
     links: [
       {
         title: "Event Page",
-        url: "https://frontend.mu/meetup/44",
+        url: "https://coders.mu/meetup/44",
       },
       {
         title: "Blog Post",
@@ -891,7 +891,7 @@ const events = [
     links: [
       {
         title: "Event Page",
-        url: "https://frontend.mu/meetup/45",
+        url: "https://coders.mu/meetup/45",
       },
     ],
     video: null,
