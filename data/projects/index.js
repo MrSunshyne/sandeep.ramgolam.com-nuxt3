@@ -1,6 +1,6 @@
 const projects = [
   {
-    name: "frontend.mu",
+    name: "Coders.mu",
     url: "https://coders.mu",
     role: ["Maintainer"],
     tech: ["TailwindCSS", "Astro", "Vite", "Directus"],
