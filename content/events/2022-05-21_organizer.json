@@ -1,0 +1,16 @@
+{
+  "event_date": "05/21/2022",
+  "event_name": "ReactJS - Front-end Coders Meetup",
+  "location": "Les Kocottes - Behind Kendra Mall, Mauritius",
+  "event_type": ["speaking", "organizer"],
+  "published": true,
+  "topic": "Vite for Front-end Development",
+  "description": "Hosted and spoke about Vite as a modern build tool for front-end development at the ReactJS focused meetup",
+  "links": [
+    {
+      "title": "Event Details",
+      "url": "https://frontend.mu/meetup/17"
+    }
+  ],
+  "video": null
+} 

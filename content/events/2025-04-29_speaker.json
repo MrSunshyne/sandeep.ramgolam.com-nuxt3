@@ -1,0 +1,20 @@
+{
+  "event_date": "04/29/2025",
+  "event_name": "The Vibe Coding Meetup [online]",
+  "location": "Online",
+  "event_type": ["speaking"],
+  "published": true,
+  "topic": "Build your own MCP Server",
+  "description": "Speaking about building your own MCP (Model Context Protocol) Server at the online Vibe Coding Meetup",
+  "links": [
+    {
+      "title": "Event Stream",
+      "url": "https://twitch.tv/cedpoilly"
+    },
+    {
+      "title": "Event Details",
+      "url": "https://frontend.mu/meetup/62"
+    }
+  ],
+  "video": null
+} 

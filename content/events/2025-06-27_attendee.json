@@ -1,0 +1,16 @@
+{
+  "event_date": "06/27/2025",
+  "event_name": "Google I/O Berlin",
+  "location": "Berlin, Germany",
+  "event_type": ["attendee"],
+  "published": true,
+  "topic": "Google I/O Extended Event",
+  "description": "Attended Google I/O Connect Berlin, an extended event featuring the latest Google technologies and developer tools",
+  "links": [
+    {
+      "title": "Google I/O",
+      "url": "https://io.google/"
+    }
+  ],
+  "video": null
+} 

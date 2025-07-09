@@ -1,0 +1,16 @@
+{
+  "event_date": "06/28/2025",
+  "event_name": "GDE Summit",
+  "location": "Berlin, Germany",
+  "event_type": ["attendee"],
+  "published": true,
+  "topic": "Google Developer Expert Summit",
+  "description": "Attended the Google Developer Expert Summit, a gathering of GDEs from around the world to share knowledge and connect with the Google developer community",
+  "links": [
+    {
+      "title": "GDE Program",
+      "url": "https://developers.google.com/community/experts"
+    }
+  ],
+  "video": null
+} 

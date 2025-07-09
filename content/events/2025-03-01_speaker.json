@@ -1,0 +1,16 @@
+{
+  "event_date": "03/01/2025",
+  "event_name": "Developer Toolings Meetup",
+  "location": "Spoon Consulting, Vivéa Business Park, St Pierre",
+  "event_type": ["speaking"],
+  "published": true,
+  "topic": "History and Future of Web browsers",
+  "description": "Speaking about the history and future of web browsers at the Developer Toolings Meetup",
+      "links": [
+      {
+        "title": "Event Details",
+        "url": "https://coders.mu/meetup/61"
+      }
+    ],
+  "video": null
+} 
