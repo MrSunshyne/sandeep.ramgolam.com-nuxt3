@@ -14,7 +14,9 @@
     "mcp:tool": "pnpx @agentdeskai/browser-tools-mcp@1.2.0"
   },
   "devDependencies": {
+    "@css-inline/css-inline": "^0.15.0",
     "@css-inline/css-inline-wasm": "^0.14.1",
+    "@iconify-json/solar": "^1.2.2",
     "@nuxt/content": "2.13.2",
     "@nuxt/eslint-config": "^0.5.7",
     "@nuxt/image": "^1.8.1",

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import HomeEventSummary from "~/components/home-event-summary.vue";
-import SharedSunBust from "~/components/shared-sun-bust.vue";
-import HomeBlogSummary from "~/components/home-blog-summary.vue";
 
 useHead({
   title: "Sandeep Ramgolam | thoughts, experiments, experiences",
