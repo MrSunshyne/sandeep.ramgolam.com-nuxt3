@@ -12,6 +12,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "postinstall": "npm rebuild oxc-parser 2>/dev/null || echo 'oxc-parser rebuild skipped'",
     "lint:js": "eslint --ext .js,.ts,.mjs,.vue --fix --ignore-path .gitignore .",
     "lint": "pnpm lint:js",
     "prune": "node ./processing/edit-frontmatter-batch.js",
