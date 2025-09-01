@@ -25,9 +25,6 @@ useHead({
 });
 
 const colorMode = useColorMode();
-const color = computed(() => {
-  return colorMode.value === "light" ? "#000" : "#FFF";
-});
 
 defineOgImageComponent("IndexTemplate", {});
 </script>
@@ -47,6 +44,7 @@ defineOgImageComponent("IndexTemplate", {});
             :responsive-width="true"
             :noise="2"
             particle-size="2"
+            particle-gap="1"
             :grow-duration="10"
             :initPosition="'bottom'"
             :initDirection="'bottom'"
