@@ -1,7 +1,8 @@
 import tailwindTypography from "@tailwindcss/typography";
 
-// Detect if we're building on Cloudflare Pages
+// Detect build environment
 const isCloudflare = process.env.CF_PAGES === '1' || process.env.CLOUDFLARE_BUILD === '1';
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -60,8 +61,8 @@ export default defineNuxtConfig({
     } : {})
   },
   
-  // Enable static site generation as fallback
-  ssr: !isCloudflare,
+  // Enable static site generation for Cloudflare and GitHub Pages
+  ssr: !isCloudflare && !isGitHubPages,
 
   colorMode: {
     classSuffix: "",
@@ -84,10 +85,11 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    // Cloudflare-specific configuration to avoid native modules
-    ...(isCloudflare ? {
+    // Platform-specific configuration
+    ...(isCloudflare || isGitHubPages ? {
       define: {
-        'process.env.CLOUDFLARE': 'true'
+        'process.env.CLOUDFLARE': isCloudflare ? 'true' : 'false',
+        'process.env.GITHUB_PAGES': isGitHubPages ? 'true' : 'false'
       },
       esbuild: {
         target: 'es2022',
