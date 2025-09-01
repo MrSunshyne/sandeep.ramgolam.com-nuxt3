@@ -12,7 +12,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "npm rebuild oxc-parser 2>/dev/null || echo 'oxc-parser rebuild skipped'",
+    "postinstall": "npm install --no-save @oxc-parser/binding-linux-x64-gnu @oxc-parser/binding-darwin-arm64 @oxc-parser/binding-darwin-x64 2>/dev/null || npm rebuild oxc-parser 2>/dev/null || echo 'oxc-parser setup completed'",
     "lint:js": "eslint --ext .js,.ts,.mjs,.vue --fix --ignore-path .gitignore .",
     "lint": "pnpm lint:js",
     "prune": "node ./processing/edit-frontmatter-batch.js",
@@ -51,5 +51,11 @@
     "@vueuse/core": "^13.5.0",
     "motion-v": "^1.5.0",
     "nuxt-mcp": "^0.1.0"
+  },
+  "optionalDependencies": {
+    "@oxc-parser/binding-linux-x64-gnu": "*",
+    "@oxc-parser/binding-darwin-arm64": "*", 
+    "@oxc-parser/binding-darwin-x64": "*",
+    "oxc-parser": "*"
   }
 }

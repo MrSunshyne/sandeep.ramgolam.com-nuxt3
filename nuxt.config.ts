@@ -67,4 +67,14 @@ export default defineNuxtConfig({
   devServer: {
     port: 4242,
   },
+
+  vite: {
+    // Disable oxc parser and use standard esbuild
+    esbuild: {
+      target: 'esnext'
+    },
+    optimizeDeps: {
+      exclude: ['oxc-parser']
+    }
+  },
 });
