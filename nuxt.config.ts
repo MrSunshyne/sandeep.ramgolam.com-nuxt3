@@ -1,5 +1,8 @@
 import tailwindTypography from "@tailwindcss/typography";
 
+// Detect if we're building on Cloudflare Pages
+const isCloudflare = process.env.CF_PAGES === '1' || process.env.CLOUDFLARE_BUILD === '1';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // site: {
@@ -46,7 +49,19 @@ export default defineNuxtConfig({
       routes: ["/"],
       failOnError: false,
     },
+    // Cloudflare-specific nitro configuration
+    ...(isCloudflare ? {
+      preset: 'cloudflare-pages',
+      experimental: {
+        wasm: false
+      },
+      minify: false,
+      sourceMap: false
+    } : {})
   },
+  
+  // Enable static site generation as fallback
+  ssr: !isCloudflare,
 
   colorMode: {
     classSuffix: "",
@@ -69,13 +84,31 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    // Disable oxc parser and use standard esbuild
-    esbuild: {
-      target: 'esnext'
-    },
-    optimizeDeps: {
-      exclude: ['oxc-parser', '@oxc-parser/binding-linux-x64-gnu', '@oxc-parser/binding-darwin-arm64', '@oxc-parser/binding-darwin-x64']
-    }
+    // Cloudflare-specific configuration to avoid native modules
+    ...(isCloudflare ? {
+      define: {
+        'process.env.CLOUDFLARE': 'true'
+      },
+      esbuild: {
+        target: 'es2022',
+        platform: 'neutral'
+      },
+      optimizeDeps: {
+        exclude: ['oxc-parser', '@oxc-parser/binding-linux-x64-gnu', '@oxc-parser/binding-darwin-arm64', '@oxc-parser/binding-darwin-x64'],
+        include: []
+      },
+      ssr: {
+        noExternal: ['oxc-parser']
+      }
+    } : {
+      // Standard configuration for other platforms (Vercel, local, etc.)
+      esbuild: {
+        target: 'esnext'
+      },
+      optimizeDeps: {
+        exclude: ['oxc-parser', '@oxc-parser/binding-linux-x64-gnu', '@oxc-parser/binding-darwin-arm64', '@oxc-parser/binding-darwin-x64']
+      }
+    })
   },
 
   // Force disable oxc in production builds
