@@ -74,7 +74,16 @@ export default defineNuxtConfig({
       target: 'esnext'
     },
     optimizeDeps: {
-      exclude: ['oxc-parser']
+      exclude: ['oxc-parser', '@oxc-parser/binding-linux-x64-gnu', '@oxc-parser/binding-darwin-arm64', '@oxc-parser/binding-darwin-x64']
     }
+  },
+
+  // Force disable oxc in production builds
+  experimental: {
+    viewTransition: true,
+  },
+  
+  build: {
+    transpile: []
   },
 });
