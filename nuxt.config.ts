@@ -53,6 +53,14 @@ export default defineNuxtConfig({
       routes: ["/"],
       failOnError: false,
     },
+    // Optimize build size by excluding large assets from server bundle
+    publicAssets: [
+      {
+        baseURL: '/content/images',
+        dir: 'public/content/images',
+        maxAge: 60 * 60 * 24 * 365 // 1 year cache
+      }
+    ],
     // Cloudflare-specific nitro configuration
     ...(isCloudflare ? {
       preset: 'cloudflare-pages',
@@ -66,6 +74,43 @@ export default defineNuxtConfig({
   
   // Enable static site generation for Cloudflare and GitHub Pages
   ssr: !isCloudflare && !isGitHubPages,
+  
+  // Configure OG Image for static builds
+  ogImage: {
+    enabled: !isGitHubPages // Disable OG Image for GitHub Pages builds
+  },
+
+  // Configure image optimization
+  image: {
+    quality: 80,
+    format: ['webp', 'avif', 'jpg', 'png'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+    // Don't preload all images, only load on demand
+    presets: {
+      avatar: {
+        modifiers: {
+          format: 'webp',
+          width: 150,
+          height: 150,
+          quality: 80
+        }
+      },
+      cover: {
+        modifiers: {
+          format: 'webp',
+          width: 800,
+          quality: 80
+        }
+      }
+    }
+  },
 
   colorMode: {
     classSuffix: "",
@@ -116,11 +161,6 @@ export default defineNuxtConfig({
     })
   },
 
-  // Force disable oxc in production builds
-  experimental: {
-    viewTransition: true,
-  },
-  
   build: {
     transpile: []
   },
