@@ -13,14 +13,16 @@ export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
 
   site: {
-    // production URL
-    url: "https://sandeep.ramgolam.com",
+    // production URL - GitHub Pages gets different URL
+    url: isGitHubPages ? "https://mrsunshyne.github.io/sandeep.ramgolam.com-nuxt3" : "https://sandeep.ramgolam.com",
     name: "Sandeep Ramgolam",
     description: "thoughts, experiments, experiences",
     defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
   },
 
   app: {
+    // Configure base URL for GitHub Pages subdirectory serving
+    baseURL: isGitHubPages ? "/sandeep.ramgolam.com-nuxt3/" : "/",
     head: {
       link: [
         {
@@ -56,6 +58,8 @@ export default defineNuxtConfig({
     },
     // GitHub Pages optimization - exclude large image directory from build
     ...(isGitHubPages ? {
+      // Configure base URL for GitHub Pages subdirectory serving
+      baseURL: "/sandeep.ramgolam.com-nuxt3/",
       // Don't copy large image assets to build output
       // GitHub Pages will serve them directly from public folder
       publicAssets: []
