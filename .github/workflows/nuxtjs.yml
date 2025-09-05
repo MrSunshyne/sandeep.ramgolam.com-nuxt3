@@ -62,9 +62,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            dist
+            .output
             .nuxt
-          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('.output') }}
           restore-keys: |
             ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
@@ -80,25 +80,25 @@ jobs:
           
       - name: Optimize for GitHub Pages deployment
         run: |
-          echo "Original dist size: $(du -sh dist | cut -f1)"
-          echo "Content images size: $(du -sh dist/content/images 2>/dev/null | cut -f1 || echo '0B')"
+          echo "Original output size: $(du -sh .output/public | cut -f1)"
+          echo "Content images size: $(du -sh .output/public/content/images 2>/dev/null | cut -f1 || echo '0B')"
           
           # Remove large image directories to reduce artifact upload size
           # These images exist in the repo and can be served via GitHub's raw URLs
-          if [ -d "dist/content/images" ]; then
-            rm -rf dist/content/images
+          if [ -d ".output/public/content/images" ]; then
+            rm -rf .output/public/content/images
             echo "Removed content images from build artifact"
-            echo "Optimized dist size: $(du -sh dist | cut -f1)"
+            echo "Optimized output size: $(du -sh .output/public | cut -f1)"
             echo "Space saved: ~1.6G (images will be served via GitHub repository)"
           else
-            echo "No content images found in dist"
+            echo "No content images found in output"
           fi
           
       - name: Create image redirect info
         run: |
           # Create a small file explaining where images are served from
-          mkdir -p dist/content
-          cat > dist/content/images-info.txt << 'EOF'
+          mkdir -p .output/public/content
+          cat > .output/public/content/images-info.txt << 'EOF'
           Images for this site are served directly from the GitHub repository
           at: https://raw.githubusercontent.com/${{ github.repository }}/main/public/content/images/
           
@@ -109,7 +109,7 @@ jobs:
       - name: Upload optimized artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./.output/public
 
   # Deployment job
   deploy:
