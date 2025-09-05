@@ -17,14 +17,17 @@ const coverImage = computed(() => {
 <template>
   <NuxtLink
     :href="`/blog/${post.slug}`"
-    class="rounded overflow-hidden shadow-neumorphismlight dark:shadow-neumorphismdark hover:shadow-lg transition-all duration-500 blog-box"
+    class="rounded overflow-hidden shadow-neumorphismlight dark:shadow-neumorphismdark hover:shadow-lg transition-all duration-500 blog-box block"
   >
-    <img
-      :src="coverImage"
-      :alt="post.title"
-      loading="lazy"
-      :style="transitionName(post.slug, 'blog-cover')"
-    />
+    <div class="relative w-full aspect-[16/9] bg-gray-200 dark:bg-gray-800">
+      <img
+        :src="coverImage"
+        :alt="post.title"
+        loading="lazy"
+        class="absolute inset-0 w-full h-full object-cover"
+        :style="transitionName(post.slug, 'blog-cover')"
+      />
+    </div>
     <div class="px-6 py-4">
       <div
         class="font-bold text-xl"
