@@ -16,7 +16,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineComponent } from 'vue';
 import type { Wallpaper } from '@/types/wallpaper';
 import wallpapersData from '@/assets/data/wallpapers.json';
 
@@ -33,7 +32,7 @@ useHead({
 })
 
 
-const wallpapers = ref(wallpapersData) as Wallpaper[]
+const wallpapers: Ref<Wallpaper[]> = ref(wallpapersData)
 
 function downloadWallpaper(path: string) {
   const link = document.createElement('a');
