@@ -9,12 +9,10 @@
   "packageManager": "pnpm@9.12.0",
   "scripts": {
     "build": "nuxt build",
-    "build:cloudflare": "CF_PAGES=1 nuxt generate",
-    "build:github": "GITHUB_PAGES=true nuxt generate",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "node -e \"const os = require('os'); const platform = os.platform(); const arch = os.arch(); const isCloudflare = process.env.CF_PAGES === '1' || process.env.CLOUDFLARE_BUILD === '1'; const isGitHubPages = process.env.GITHUB_PAGES === 'true'; console.log('Platform:', platform, 'Arch:', arch, 'Cloudflare:', isCloudflare, 'GitHub Pages:', isGitHubPages); if (isCloudflare || isGitHubPages) { console.log('Static hosting detected - skipping native binding installation'); process.exit(0); } const pkg = platform === 'linux' ? '@oxc-parser/binding-linux-x64-gnu@0.80.0' : platform === 'darwin' && arch === 'arm64' ? '@oxc-parser/binding-darwin-arm64@0.80.0' : '@oxc-parser/binding-darwin-x64@0.80.0'; require('child_process').exec('npm install --no-save ' + pkg, (err) => { if (err) console.log('Native binding install failed, continuing...'); else console.log('Native binding installed successfully'); });\"",
+    "postinstall": "nuxt prepare",
     "lint:js": "eslint --ext .js,.ts,.mjs,.vue --fix --ignore-path .gitignore .",
     "lint": "pnpm lint:js",
     "prune": "node ./processing/edit-frontmatter-batch.js",
@@ -53,11 +51,5 @@
     "@vueuse/core": "^13.5.0",
     "motion-v": "^1.5.0",
     "nuxt-mcp": "^0.1.0"
-  },
-  "optionalDependencies": {
-    "@oxc-parser/binding-linux-x64-gnu": "0.80.0",
-    "@oxc-parser/binding-darwin-arm64": "0.80.0", 
-    "@oxc-parser/binding-darwin-x64": "0.80.0",
-    "oxc-parser": "0.80.0"
   }
 }
