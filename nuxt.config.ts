@@ -47,20 +47,28 @@ export default defineNuxtConfig({
     'nuxt-mcp'
   ],
 
+
   nitro: {
     prerender: {
       crawlLinks: true,
       routes: ["/"],
       failOnError: false,
     },
-    // Optimize build size by excluding large assets from server bundle
-    publicAssets: [
-      {
-        baseURL: '/content/images',
-        dir: 'public/content/images',
-        maxAge: 60 * 60 * 24 * 365 // 1 year cache
-      }
-    ],
+    // GitHub Pages optimization - exclude large image directory from build
+    ...(isGitHubPages ? {
+      // Don't copy large image assets to build output
+      // GitHub Pages will serve them directly from public folder
+      publicAssets: []
+    } : {
+      // For other platforms, optimize build size by excluding large assets from server bundle  
+      publicAssets: [
+        {
+          baseURL: '/content/images',
+          dir: 'public/content/images',
+          maxAge: 60 * 60 * 24 * 365 // 1 year cache
+        }
+      ]
+    }),
     // Cloudflare-specific nitro configuration
     ...(isCloudflare ? {
       preset: 'cloudflare-pages',
@@ -92,6 +100,13 @@ export default defineNuxtConfig({
       xl: 1280,
       xxl: 1536,
     },
+    // GitHub Pages optimization - serve images from GitHub raw URLs
+    ...(isGitHubPages ? {
+      domains: ['raw.githubusercontent.com'],
+      alias: {
+        github: 'raw.githubusercontent.com'
+      }
+    } : {}),
     // Don't preload all images, only load on demand
     presets: {
       avatar: {
@@ -109,6 +124,20 @@ export default defineNuxtConfig({
           quality: 80
         }
       }
+    }
+  },
+
+  // Runtime config for GitHub Pages optimization
+  runtimeConfig: {
+    public: {
+      // GitHub Pages environment variables for image serving
+      githubRepo: process.env.GITHUB_REPOSITORY || '',
+      githubBranch: process.env.GITHUB_BRANCH || 'main',
+      isGithubPages: isGitHubPages,
+      // Base URL for GitHub raw content
+      githubRawBaseUrl: process.env.GITHUB_REPOSITORY 
+        ? `https://raw.githubusercontent.com/${process.env.GITHUB_REPOSITORY}/main/public`
+        : ''
     }
   },
 
