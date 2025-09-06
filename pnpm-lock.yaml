@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@baseline-banner/vue':
+        specifier: ^1.0.0
+        version: 1.0.0(vue@3.5.20(typescript@5.9.2))
       '@nuxt/content':
         specifier: 2.13.2
         version: 2.13.2(@netlify/blobs@9.1.2)(db0@0.3.2)(ioredis@5.7.0)(magicast@0.3.5)(nuxt@3.18.1(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/node@24.3.0)(@vue/compiler-sfc@3.5.20)(db0@0.3.2)(eslint@9.34.0(jiti@2.5.1))(ioredis@5.7.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.50.0)(terser@5.43.1)(typescript@5.9.2)(vite@7.1.4(@types/node@24.3.0)(jiti@2.5.1)(terser@5.43.1)(yaml@2.8.1))(yaml@2.8.1))(vue@3.5.20(typescript@5.9.2))
@@ -237,6 +240,14 @@ packages:
   '@babel/types@7.28.2':
     resolution: {integrity: sha512-ruv7Ae4J5dUYULmeXw1gmb7rYRz57OWCPM57pHojnLq/3Z1CK2lNSLTCVjxVk1F/TZHwOZZrOWi0ur95BbLxNQ==}
     engines: {node: '>=6.9.0'}
+
+  '@baseline-banner/core@1.0.0':
+    resolution: {integrity: sha512-xwq/fGYCR+5ft+i+cvUkS3Q+roPsBqUiocgOVf+tzpjFs136/iVlfa3Bw3RUMBR0Bj5O25kR9BTWDdgjHTsOvg==}
+
+  '@baseline-banner/vue@1.0.0':
+    resolution: {integrity: sha512-4rB8/GvhPbpcCl7iCKJGApfgKzN7R73xDnc4rVNDS83I3PK0KPpKV0GtjaQycon7zXpQWX4YD/SdJkgp/82lNQ==}
+    peerDependencies:
+      vue: ^3.0.0
 
   '@cloudflare/kv-asset-handler@0.4.0':
     resolution: {integrity: sha512-+tv3z+SPp+gqTIcImN9o0hqE9xyfQjI1XD9pL6NuKjua9B1y7mNYv0S9cP+QEbA4ppVgGZEmKOvHX5G5Ei1CVA==}
@@ -6728,6 +6739,13 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
+
+  '@baseline-banner/core@1.0.0': {}
+
+  '@baseline-banner/vue@1.0.0(vue@3.5.20(typescript@5.9.2))':
+    dependencies:
+      '@baseline-banner/core': 1.0.0
+      vue: 3.5.20(typescript@5.9.2)
 
   '@cloudflare/kv-asset-handler@0.4.0':
     dependencies:
