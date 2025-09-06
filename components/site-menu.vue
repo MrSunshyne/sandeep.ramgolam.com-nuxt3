@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
+import SiteColorPickerPlaceholder from "./site-color-picker-placeholder.vue";
 </script>
 
 <template>
@@ -65,6 +66,9 @@ import SiteMenuSvgMenuBg from "./site-menu-svg-menu-bg.vue";
         </div>
         <ClientOnly>
           <site-color-picker />
+          <template #fallback>
+            <SiteColorPickerPlaceholder />
+          </template>
         </ClientOnly>
       </div>
     </div>

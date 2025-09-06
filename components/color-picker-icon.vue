@@ -1,8 +1,8 @@
 <template>
   <div
-    class="px-2 py-1 border cursor-pointer hover:border-gray-600 rounded-md"
+    class="px-2 py-1 border cursor-pointer hover:border-gray-600 rounded-full flex items-center justify-center aspect-square"
     :class="[
-      !!isActive ? 'border border-gray-600 rounded-md' : 'border-transparent',
+      !!isActive ? 'border border-gray-600 rounded-full' : 'border-transparent',
     ]"
     @click="$colorMode.preference = props.theme"
   >
