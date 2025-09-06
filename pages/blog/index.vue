@@ -15,23 +15,20 @@ useHead({
   title: "Articles by Sandeep Ramgolam",
   meta: [
     {
-      hid: "description",
+     
       name: "description",
       content: "Blog articles by Sandeep Ramgolam",
     },
-    { hid: "og:type", property: "og:type", content: "page" },
+    {  property: "og:type", content: "page" },
     {
-      hid: "og:title",
       property: "og:title",
       content: "Articles | Sandeep Ramgolam",
     },
     {
-      hid: "og:description",
       property: "og:description",
       content: "Articles written by Sandeep Ramgolam",
     },
     {
-      hid: "og:url",
       property: "og:url",
     },
   ],
