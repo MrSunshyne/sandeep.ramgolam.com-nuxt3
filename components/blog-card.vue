@@ -19,7 +19,7 @@ const coverImage = computed(() => {
     :href="`/blog/${post.slug}`"
     class="rounded overflow-hidden shadow-neumorphismlight dark:shadow-neumorphismdark hover:shadow-lg transition-all duration-500 blog-box block"
   >
-    <div class="relative w-full aspect-[16/9] bg-gray-200 dark:bg-gray-800">
+    <div class="relative w-full aspect-[2/1] bg-gray-200 dark:bg-gray-800">
       <img
         :src="coverImage"
         :alt="post.title"

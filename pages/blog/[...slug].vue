@@ -15,49 +15,39 @@ if (post.value) {
     title: post.value?.title ?? "",
     meta: [
       {
-        hid: "description",
         name: "description",
         content: post.value?.custom_excerpt,
       },
-      { hid: "og:type", property: "og:type", content: "article" },
+      { property: "og:type", content: "article" },
       {
-        hid: "og:title",
         property: "og:title",
         content: post.value?.title,
       },
       {
-        hid: "og:description",
         property: "og:description",
         content: post.value?.custom_excerpt,
       },
       {
-        hid: "og:image",
         property: "og:image",
       },
       {
-        hid: "og:url",
         property: "og:url",
       },
       {
-        hid: "twitter:title",
         name: "twitter:title",
         content: post.value?.title,
       },
       {
-        hid: "twitter:description",
         name: "twitter:description",
         content: post.value?.custom_excerpt,
       },
       {
-        hid: "twitter:image",
         name: "twitter:image",
       },
       {
-        hid: "twitter:url",
         name: "twitter:url",
       },
       {
-        hid: "twitter:label1",
         name: "twitter:label1",
         content: "Written by",
       },
@@ -86,12 +76,13 @@ const coverImage = computed(() => {
   <article v-if="post" class="">
     <BlogHead :post="post" />
 
-    <div class="mx-auto w-full">
+    <div class="mx-auto w-full aspect-[2/1] max-w-4xl mb-8">
       <img
         :src="coverImage"
-        class="mx-auto mb-8 shadow-xl rounded-xl"
+        class="w-full h-full object-cover shadow-xl rounded-xl"
         :alt="post.title"
         :style="transitionName(post.slug, 'blog-cover')"
+        sizes="100vw sm:100vw md:100vw lg:1024px xl:1024px"
       />
     </div>
 
@@ -101,7 +92,7 @@ const coverImage = computed(() => {
       >
         <article class="">
           <div
-            class="mt-8 pb-24 dark:text-gray-300 dark:prose-pre:!bg-gray-800/60 prose prose-primary dark:prose-invert max-w-none dark:prose-invert mx-auto"
+            class="mt-8 pb-24 dark:text-gray-300 dark:prose-pre:!bg-gray-800/60 prose prose-primary dark:prose-invert max-w-none mx-auto"
           >
             <ContentRenderer :value="doc">
               <ContentRendererMarkdown :value="doc" />
