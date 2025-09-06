@@ -31,6 +31,18 @@ export default defineNuxtConfig({
     'nuxt-mcp'
   ],
 
+  components: [
+    {
+      path: '~/components',
+      global: false
+    },
+    {
+      path: '~/components/global',
+      global: true
+    }
+  ],
+
+
 
   nitro: {
     prerender: {
