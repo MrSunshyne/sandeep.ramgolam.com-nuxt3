@@ -34,6 +34,15 @@ const presentAsList: {
   organizer: "as an organizer",
 };
 const currentEventType: Ref<EventType> = ref("all");
+const currentYear: Ref<string> = ref("all");
+
+const availableYears = computed(() => {
+  if (!localEvents.value) return [];
+  const years = localEvents.value.map((event) =>
+    new Date(event.event_date).getFullYear().toString()
+  );
+  return [...new Set(years)].sort((a, b) => parseInt(b) - parseInt(a));
+});
 
 const eventsSortedByDate = computed(() => {
   if (localEvents.value && localEvents.value.length === 0) {
@@ -47,13 +56,29 @@ const eventsSortedByDate = computed(() => {
 });
 
 const showCurrentEventType = computed(() => {
-  if (currentEventType.value === "all") {
-    return eventsSortedByDate.value;
-  } else {
-    return eventsSortedByDate.value?.filter((event) =>
-      event.event_type.includes(currentEventType.value),
+  let filtered = eventsSortedByDate.value;
+
+  if (currentEventType.value !== "all") {
+    filtered = filtered?.filter((event) =>
+      event.event_type.includes(currentEventType.value)
     );
   }
+
+  if (currentYear.value !== "all") {
+    filtered = filtered?.filter(
+      (event) =>
+        new Date(event.event_date).getFullYear().toString() === currentYear.value
+    );
+  }
+
+  return filtered;
+  // if (currentEventType.value === "all") {
+  //   return eventsSortedByDate.value;
+  // } else {
+  //   return eventsSortedByDate.value?.filter((event) =>
+  //     event.event_type.includes(currentEventType.value),
+  //   );
+  // }
 });
 
 const presentAs = computed(() => {
@@ -67,6 +92,14 @@ function setCurrentEventType(eventType: EventType) {
   }
   currentEventType.value = eventType;
 }
+
+function setCurrentYear(year: string) {
+  if (currentYear.value === year) {
+    currentYear.value = "all";
+    return;
+  }
+  currentYear.value = year;
+}
 </script>
 
 <template>
@@ -74,17 +107,41 @@ function setCurrentEventType(eventType: EventType) {
     <template v-if="count === -1">
       <h1 class="page-title">Events</h1>
       <p class="page-subtitle">
-        A list of events I was involved in
+        <span class="font-bold text-indigo-500">{{
+          showCurrentEventType?.length || 0
+        }}</span>
+        events I was involved in
         <span :class="currentEventType">{{ presentAs }}</span>
       </p>
     </template>
     <template v-else>
       <h2 class="text-3xl font-black pt-10 text-center">Events</h2>
       <p class="text-md text-gray-700 dark:text-gray-300 text-center">
-        A list of events I was involved in
+        <span class="font-bold text-indigo-500">{{
+          showCurrentEventType?.length || 0
+        }}</span>
+        event(s) I was involved in
         <span :class="currentEventType">{{ presentAs }}</span>
       </p>
     </template>
+    <div class="flex flex-wrap justify-center sm:justify-start my-4">
+      <div
+        :class="currentYear === 'all' ? 'active-year' : ''"
+        class="year-pills"
+        @click="setCurrentYear('all')"
+      >
+        All Years
+      </div>
+      <div
+        v-for="year in availableYears"
+        :key="year"
+        :class="currentYear === year ? 'active-year' : ''"
+        class="year-pills"
+        @click="setCurrentYear(year)"
+      >
+        {{ year }}
+      </div>
+    </div>
     <div class="flex flex-wrap justify-center sm:justify-start my-4">
       <div
         :class="currentEventType === 'all' ? 'active' : ''"
@@ -271,6 +328,17 @@ function setCurrentEventType(eventType: EventType) {
 
   .organizer {
     border-color: var(--organizer-color);
+  }
+
+}
+
+.year-pills {
+  @apply p-2 mr-4 border-4 rounded-full cursor-pointer;
+  transition: all 0.2s linear;
+  border-color: transparent;
+
+  &.active-year {
+    @apply border-indigo-500 text-indigo-500 dark:border-indigo-400 dark:text-indigo-400;
   }
 }
 </style>
