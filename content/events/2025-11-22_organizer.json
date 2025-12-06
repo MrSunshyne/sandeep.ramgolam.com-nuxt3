@@ -1,0 +1,13 @@
+{
+    "event_date": "11/22/2025",
+    "event_name": "Beach Meetup 3.0 2025",
+    "location": "La Cambuse",
+    "event_type": [
+        "organizer"
+    ],
+    "published": true,
+    "topic": "Hosted and organized the Beach Meetup 3.0 2025",
+    "description": "Our annual beach meetup with topics about Kubernetes, LLMs, and more.",
+    "links": [],
+    "video": null
+}

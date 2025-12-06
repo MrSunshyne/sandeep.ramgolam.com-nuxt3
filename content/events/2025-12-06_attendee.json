@@ -1,0 +1,13 @@
+{
+    "event_date": "12/06/2025",
+    "event_name": "CNCF Meetup Mauritius",
+    "location": "Kumba Telfair",
+    "event_type": [
+        "attendee"
+    ],
+    "published": true,
+    "topic": "K8s, ICTA Directive, Open Discussions",
+    "description": "KRaft, A tool to run kubernetes workshops, A discussion bout ICTA Directive 4 in Mauritius",
+    "links": [],
+    "video": null
+}
