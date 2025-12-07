@@ -20,6 +20,12 @@
             target="_blank">Upcode</a>
           <span class="text-gray-500">Co-Founder</span>
         </div>
+        <div class="flex gap-2">
+          <IconsGdeIcon alt="Upcode" class="w-6 md:w-8 h-6 md:h-8 text-[#0031B0] dark:text-white" />
+          <a href="https://developers.google.com/profile/u/112547642487044982413"
+            target="_blank">Google Developer Expert</a>
+          <span class="text-gray-500">Web</span>
+        </div>
       </div>
 
       <p class="inline sm:w-full text-left">
@@ -30,6 +36,16 @@
           href="https://github.com/MrSunshyne?tab=repositories&q=&type=&language=&sort=stargazers">experiments
         </NuxtLink>and
         <NuxtLink class="underline " :to="{ path: '/events' }">experiences</NuxtLink>.
+      </p>
+
+      <p class="inline sm:w-full text-left">
+        <NuxtLink :to="{ path: '/events', query: { type: 'speaking' } }" class="no-underline hover:underline">
+          Spoke at <span class="font-bold text-blue-500">{{ speakingCount }}</span>
+        </NuxtLink>
+        and
+        <NuxtLink :to="{ path: '/events', query: { type: 'organizer' } }" class="no-underline hover:underline">
+          organized <span class="font-bold text-purple-500">{{ organizerCount }}</span> events
+        </NuxtLink>.
       </p>
     </div>
 
@@ -43,6 +59,15 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const { data: events } = await useAsyncData("events-intro", () =>
+  queryContent("events").find()
+);
+
+const speakingCount = computed(() => events.value?.filter(e => e.event_type.includes('speaking')).length || 0);
+const organizerCount = computed(() => events.value?.filter(e => e.event_type.includes('organizer')).length || 0);
+</script>
 
 <style scoped>
 a {
