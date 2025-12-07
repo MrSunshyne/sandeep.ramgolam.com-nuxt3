@@ -1,8 +1,12 @@
 {
   "event_date": "04/29/2025",
-  "event_name": "The Vibe Coding Meetup [online]",
+  "event_name": "Front-end Coders Meetup",
   "location": "Online",
-  "event_type": ["speaking"],
+  "event_type": [
+    "speaking",
+    "attendee",
+    "organizer"
+  ],
   "published": true,
   "topic": "Build your own MCP Server",
   "description": "Speaking about building your own MCP (Model Context Protocol) Server at the online Vibe Coding Meetup",
@@ -17,4 +21,4 @@
     }
   ],
   "video": null
-} 
+}

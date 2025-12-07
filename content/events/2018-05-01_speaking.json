@@ -3,7 +3,8 @@
   "event_name": "Developers Conference 2018",
   "location": "Mauritius",
   "event_type": [
-    "speaking"
+    "speaking",
+    "attendee"
   ],
   "published": true,
   "topic": "Power User moves for developers.",

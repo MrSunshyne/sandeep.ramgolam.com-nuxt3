@@ -2,7 +2,10 @@
   "event_date": "07/19/2024",
   "event_name": "Developers Conference 2024",
   "location": "Mauritius",
-  "event_type": ["speaking"],
+  "event_type": [
+    "speaking",
+    "attendee"
+  ],
   "published": true,
   "topic": "Conduct a TailwindCSS & Nuxt Workshop",
   "description": "Help attendees learn how to use TailwindCSS with Nuxt3 and build a web app to monitor power outages in Mauritius",
@@ -14,8 +17,7 @@
     {
       "title": "Event Page",
       "url": "https://coders.mu/meetup/56"
-    }    
+    }
   ],
   "video": null
 }
-

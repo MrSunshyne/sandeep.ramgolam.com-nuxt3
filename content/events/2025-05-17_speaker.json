@@ -2,7 +2,10 @@
   "event_date": "05/17/2025",
   "event_name": "Mobile Horizon Meetup",
   "location": "Emtel, Mauritius",
-  "event_type": ["speaking"],
+  "event_type": [
+    "speaking",
+    "attendee"
+  ],
   "published": true,
   "topic": "Building your own MCP Server",
   "description": "Delivered the final presentation of the day sharing knowledge about MCP (Model Context Protocol) and demonstrated how to build your own MCP server within minutes, applying it to real-world examples like ordering shampoo with a simple prompt",
@@ -13,4 +16,4 @@
     }
   ],
   "video": null
-} 
+}

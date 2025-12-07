@@ -3,6 +3,7 @@
     "event_name": "BTrust DevDay",
     "location": "Trianon Convention Center",
     "event_type": [
+        "speaking",
         "attendee"
     ],
     "published": true,

@@ -3,7 +3,8 @@
   "event_name": "Anou Participe dans Hacktoberfest",
   "location": "Mauritius",
   "event_type": [
-    "speaking"
+    "speaking",
+    "attendee"
   ],
   "published": true,
   "topic": "Open Source in Mauritius",

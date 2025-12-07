@@ -3,7 +3,8 @@
   "event_name": "Code Saturday by MSCC",
   "location": "Digital Factory, Mauritius",
   "event_type": [
-    "speaking"
+    "speaking",
+    "attendee"
   ],
   "published": true,
   "topic": "Modern front end development ",

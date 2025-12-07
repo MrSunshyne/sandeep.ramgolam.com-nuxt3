@@ -1,20 +1,23 @@
 {
-    "event_date": "11/18/2023",
-    "event_name": "Front-end Coders Meetup",
-    "location": "Mauritius",
-    "event_type": ["organizer"],
-    "published": true,
-    "topic": "Monorepos, Kubernetes, Go & AI",
-    "description": "Host, Organize & Speak at this meetup",
-    "links": [
-      {
-        "title": "Event Page",
-        "url": "https://coders.mu/meetup/49"
-      },
-      {
-        "title": "Blogpost",
-        "url": "https://sandeep.ramgolam.com/blog/meetup-at-the-beach-by-frontend-mu-nov-2023"
-      }
-    ],
-    "video": null
-  }
+  "event_date": "11/18/2023",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Mauritius",
+  "event_type": [
+    "organizer",
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Monorepos, Kubernetes, Go & AI",
+  "description": "Host, Organize & Speak at this meetup",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://coders.mu/meetup/49"
+    },
+    {
+      "title": "Blogpost",
+      "url": "https://sandeep.ramgolam.com/blog/meetup-at-the-beach-by-frontend-mu-nov-2023"
+    }
+  ],
+  "video": null
+}

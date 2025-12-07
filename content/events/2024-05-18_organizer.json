@@ -2,16 +2,19 @@
   "event_date": "05/18/2024",
   "event_name": "Front-end Coders Meetup",
   "location": "Mauritius",
-  "event_type": ["organizer","speaking"],
+  "event_type": [
+    "organizer",
+    "speaking",
+    "attendee"
+  ],
   "published": true,
-  "topic": "Development Environments, Accessibility, Building in Public & Frontend News", 
+  "topic": "Development Environments, Accessibility, Building in Public & Frontend News",
   "description": "Host, Organize & Speak at this meetup",
   "links": [
     {
       "title": "Event Page",
       "url": "https://coders.mu/meetup/54"
-    }    
+    }
   ],
   "video": null
 }
-

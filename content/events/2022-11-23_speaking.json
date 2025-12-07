@@ -3,7 +3,8 @@
   "event_name": "Developers Conference 2022",
   "location": "Mauritius",
   "event_type": [
-    "speaking"
+    "speaking",
+    "attendee"
   ],
   "published": true,
   "topic": "Modern Front-End Development With Vitejs",

@@ -2,7 +2,11 @@
   "event_date": "04/27/2024",
   "event_name": "Front-end Coders Meetup",
   "location": "Mauritius",
-  "event_type": ["organizer","speaking"],
+  "event_type": [
+    "organizer",
+    "speaking",
+    "attendee"
+  ],
   "published": true,
   "topic": "Microprocessors, AI in Testing, Zed Code Editor, Business Case Studies, Frontend News",
   "description": "Host, Organize & Speak at this meetup",
@@ -10,8 +14,7 @@
     {
       "title": "Event Page",
       "url": "https://coders.mu/meetup/52"
-    }    
+    }
   ],
   "video": null
 }
-

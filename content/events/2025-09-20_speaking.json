@@ -1,14 +1,15 @@
 {
-    "event_date": "09/20/2025",
-    "event_name": "September Meetup 2025",
-    "location": "Novity Mauritius",
-    "event_type": [
-        "organizer",
-        "speaking"
-    ],
-    "published": true,
-    "topic": "CSS is more fun than AI",
-    "description": "",
-    "links": [],
-    "video": null
+  "event_date": "09/20/2025",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Novity Mauritius",
+  "event_type": [
+    "organizer",
+    "speaking",
+    "attendee"
+  ],
+  "published": true,
+  "topic": "CSS is more fun than AI",
+  "description": "",
+  "links": [],
+  "video": null
 }

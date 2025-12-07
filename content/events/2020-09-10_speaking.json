@@ -3,7 +3,8 @@
   "event_name": "Virtual Developers Conference",
   "location": "Mauritius",
   "event_type": [
-    "speaking"
+    "speaking",
+    "attendee"
   ],
   "published": true,
   "topic": "Vue 3.0 - a glimpse of the Composition API",

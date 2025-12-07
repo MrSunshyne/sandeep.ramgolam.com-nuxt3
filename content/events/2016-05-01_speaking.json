@@ -3,7 +3,8 @@
   "event_name": "Developers Conference 2016",
   "location": "Mauritius",
   "event_type": [
-    "speaking"
+    "speaking",
+    "attendee"
   ],
   "published": true,
   "topic": "lexpress.mu - the story of decks and card",

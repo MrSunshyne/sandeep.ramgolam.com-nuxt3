@@ -3,7 +3,8 @@
   "event_name": "Front-end Coders Meetup",
   "location": "Mauritius",
   "event_type": [
-    "organizer"
+    "organizer",
+    "attendee"
   ],
   "published": true,
   "topic": "React, Zustand, FP & Marketing",

@@ -17,11 +17,11 @@ const localEvents = ref(events);
 
 type EventType =
   | "all"
-  | "competition"
   | "speaking"
-  | "jury"
+  | "organizer"
   | "attendee"
-  | "organizer";
+  | "competition"
+  | "jury"
 
 const presentAsList: {
   [key in EventType]: string;
@@ -33,8 +33,14 @@ const presentAsList: {
   attendee: "as an attendee",
   organizer: "as an organizer",
 };
-const currentEventType: Ref<EventType> = ref("all");
-const currentYear: Ref<string> = ref("all");
+
+const route = useRoute();
+const router = useRouter();
+
+const currentEventType: Ref<EventType> = ref(
+  (route.query.type as EventType) || "all"
+);
+const currentYear: Ref<string> = ref((route.query.year as string) || "all");
 
 const availableYears = computed(() => {
   if (!localEvents.value) return [];
@@ -86,19 +92,25 @@ const presentAs = computed(() => {
 });
 
 function setCurrentEventType(eventType: EventType) {
-  if (currentEventType.value === eventType) {
-    currentEventType.value = "all";
-    return;
-  }
-  currentEventType.value = eventType;
+  const newType = currentEventType.value === eventType ? "all" : eventType;
+  currentEventType.value = newType;
+  updateQuery();
 }
 
 function setCurrentYear(year: string) {
-  if (currentYear.value === year) {
-    currentYear.value = "all";
-    return;
-  }
-  currentYear.value = year;
+  const newYear = currentYear.value === year ? "all" : year;
+  currentYear.value = newYear;
+  updateQuery();
+}
+
+function updateQuery() {
+  router.push({
+    query: {
+      ...route.query,
+      type: currentEventType.value === "all" ? undefined : currentEventType.value,
+      year: currentYear.value === "all" ? undefined : currentYear.value,
+    },
+  });
 }
 </script>
 
@@ -151,25 +163,11 @@ function setCurrentYear(year: string) {
         Show All
       </div>
       <div
-        :class="currentEventType === 'competition' ? 'active' : ''"
-        class="pills competition"
-        @click="setCurrentEventType('competition')"
-      >
-        Competition
-      </div>
-      <div
         :class="currentEventType === 'speaking' ? 'active' : ''"
         class="pills speaking"
         @click="setCurrentEventType('speaking')"
       >
         Speaking
-      </div>
-      <div
-        :class="currentEventType === 'jury' ? 'active' : ''"
-        class="pills jury"
-        @click="setCurrentEventType('jury')"
-      >
-        Jury
       </div>
 
       <div
@@ -180,6 +178,7 @@ function setCurrentYear(year: string) {
         Attendee
       </div>
 
+
       <div
         :class="currentEventType === 'organizer' ? 'active' : ''"
         class="pills organizer"
@@ -187,6 +186,23 @@ function setCurrentYear(year: string) {
       >
         Organizer
       </div>
+      
+      <div
+        :class="currentEventType === 'competition' ? 'active' : ''"
+        class="pills competition"
+        @click="setCurrentEventType('competition')"
+      >
+        Competition
+      </div>
+      <div
+        :class="currentEventType === 'jury' ? 'active' : ''"
+        class="pills jury"
+        @click="setCurrentEventType('jury')"
+      >
+        Jury
+      </div>
+
+
     </div>
 
     <!-- {{ showCurrentEventType }} -->

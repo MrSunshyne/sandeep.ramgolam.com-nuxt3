@@ -2,7 +2,11 @@
   "event_date": "06/22/2024",
   "event_name": "Front-end Coders Meetup",
   "location": "Mauritius",
-  "event_type": ["organizer","speaking"],
+  "event_type": [
+    "organizer",
+    "speaking",
+    "attendee"
+  ],
   "published": true,
   "topic": "Container Queries, iOS Development, Jotai & Frontend Framworks",
   "description": "Host, Organize & Speak at this meetup",
@@ -10,8 +14,7 @@
     {
       "title": "Event Page",
       "url": "https://coders.mu/meetup/55"
-    }    
+    }
   ],
   "video": null
 }
-
