@@ -3,6 +3,9 @@ import tailwindTypography from "@tailwindcss/typography";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
+  future: {
+    compatibilityVersion: 4,
+  },
 
   app: {
     head: {
@@ -23,11 +26,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    "@nuxt/ui", 
-    "@nuxt/content", 
+    "@nuxt/ui",
+    "@nuxt/content",
     "@nuxthq/studio",
     "@nuxt/image",
-    "nuxt-og-image", 
+    "nuxt-og-image",
     'nuxt-mcp'
   ],
 
