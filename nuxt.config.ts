@@ -4,7 +4,7 @@ import tailwindTypography from "@tailwindcss/typography";
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
   future: {
-    compatibilityVersion: 4,
+    compatibilityVersion: 5,
   },
 
   app: {
@@ -101,7 +101,6 @@ export default defineNuxtConfig({
     configPath: "./tailwind.config.js",
   },
 
-  compatibilityDate: "2024-09-22",
   devServer: {
     port: 4242,
   },
