@@ -17,7 +17,9 @@
     "lint": "pnpm lint:js",
     "prune": "node ./processing/edit-frontmatter-batch.js",
     "mcp:server": "pnpx @agentdeskai/browser-tools-server@1.2.0",
-    "mcp:tool": "pnpx @agentdeskai/browser-tools-mcp@1.2.0"
+    "mcp:tool": "pnpx @agentdeskai/browser-tools-mcp@1.2.0",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed"
   },
   "devDependencies": {
     "@css-inline/css-inline": "^0.15.0",
@@ -25,10 +27,12 @@
     "@iconify-json/solar": "^1.2.2",
     "@inspira-ui/plugins": "^0.0.1",
     "@nuxt/eslint-config": "^0.5.7",
+    "@nuxt/test-utils": "^3.21.0",
     "@nuxt/ui-pro": "^1.4.2",
     "@nuxthq/studio": "^2.1.1",
     "@nuxtjs/color-mode": "^3.5.1",
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@playwright/test": "^1.57.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "eslint-config-prettier": "^9.1.0",
