@@ -3,15 +3,22 @@ import { test, expect } from '@playwright/test';
 test('has title', async ({ page }) => {
     await page.goto('/');
     await expect(page).toHaveTitle(/Sandeep/);
-    await expect(page.locator('h2', { hasText: 'Gallery' })).toBeVisible();
+    await expect(page.locator('h2', { hasText: /^Projects$/ })).toBeVisible();
+
+    // Check for new section heading
+    await expect(page.locator('h2', { hasText: 'Featured Projects' })).toBeVisible();
+
+    // Check for alternating layout grid
+    await expect(page.locator('.group.grid')).not.toHaveCount(0);
 
     // Test wallpaper modal
     const viewButton = page.locator('text=View').first();
     await viewButton.click({ force: true });
 
     // Wait for modal to open and check for image
-    const image = page.locator('.bg-black\\/90 img');
-    await expect(image).toBeVisible();
+    // Wait for modal to open and check for image
+    const image = page.locator('div[role="dialog"] img');
+    await expect(image).toBeVisible({ timeout: 10000 });
 
     // Get initial image source
     const initialSrc = await image.getAttribute('src');

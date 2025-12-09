@@ -78,6 +78,7 @@ const { top } = useElementBounding(containerRef);
 const { height: windowHeight } = useWindowSize();
 
 const parallaxOffset = computed(() => {
+    if (!windowHeight.value) return 0;
     // Calculate progress of element through viewport (0 to 1 approx)
     // We want the movement to happen when it's visible
     const progress = 1 - (top.value / windowHeight.value);

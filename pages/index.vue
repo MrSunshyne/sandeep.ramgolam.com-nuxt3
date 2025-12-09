@@ -37,9 +37,9 @@ defineOgImageComponent("IndexTemplate", {});
 
       <HomeWallpaperSection />
 
-      <!-- <GalleryInsert /> -->
+      <!-- <HomeProjectsFeatured /> -->
 
-      <HomeProjectsFeatured />
+      <HomeProjectsNeobrutalism />
     </div>
   </section>
 </template>
