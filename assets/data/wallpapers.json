@@ -3,7 +3,7 @@
     "path": "/wallpapers/wallpaper-drone-shot-notre-dame.jpg",
     "title": "Drone shot of Notre Dame, Mauritius",
     "metadata": {
-      "author": "John Doe",
+      "author": "Sandeep Ramgolam",
       "date": "2023-10-01",
       "description": "Aerial view of Notre Dame, Mauritius."
     }
@@ -12,7 +12,7 @@
     "path": "/wallpapers/wallpaper-vladimir-jiji-frontend-developer.jpeg",
     "title": "Vladimir Jiji, Frontend Developer",
     "metadata": {
-      "author": "Jane Smith",
+      "author": "Sandeep Ramgolam",
       "date": "2023-09-15",
       "description": "A portrait of Vladimir Jiji coding on frontend.mu."
     }
@@ -21,15 +21,108 @@
     "path": "/wallpapers/wallpaper-washed-keyboard.jpg",
     "title": "Washed Keyboard",
     "metadata": {
-      "author": "Jane Smith",
+      "author": "Sandeep Ramgolam",
       "date": "2023-09-15",
       "description": "A washed keyboard."
     }
+  },
+  {
+    "path": "/wallpapers/wallpaper-goodies-from-cube.jpg",
+    "title": "Goodies from Cube",
+    "metadata": {
+      "author": "Sandeep Ramgolam",
+      "date": "2025-12-09",
+      "description": "Goodies from Cube."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-retro-camera.jpg",
+    "title": "Retro Camera",
+    "metadata": {
+      "author": "Sandeep Ramgolam",
+      "date": "2025-12-09",
+      "description": "A retro camera shot."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-scenic-view.jpg",
+    "title": "Scenic View",
+    "metadata": {
+      "author": "Sandeep Ramgolam",
+      "date": "2025-12-09",
+      "description": "A scenic view."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-abstract-edit.jpg",
+    "title": "Abstract Edit",
+    "metadata": {
+      "author": "Sandeep Ramgolam",
+      "date": "2025-12-09",
+      "description": "An abstract edit."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-dark-edit.jpg",
+    "title": "Dark Edit",
+    "metadata": {
+      "author": "Sandeep Ramgolam",
+      "date": "2025-12-09",
+      "description": "A dark theme edit."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-nature-shot.jpg",
+    "title": "Nature Shot",
+    "metadata": {
+      "author": "Sandeep Ramgolam",
+      "date": "2025-12-09",
+      "description": "A beautiful nature shot."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-minimalist.jpg",
+    "title": "Minimalist",
+    "metadata": {
+      "author": "Sandeep Ramgolam",
+      "date": "2025-12-09",
+      "description": "A minimalist composition."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-textures.jpg",
+    "title": "Textures",
+    "metadata": {
+      "author": "Sandeep Ramgolam",
+      "date": "2025-12-09",
+      "description": "Interesting textures."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-landscape.jpg",
+    "title": "Landscape",
+    "metadata": {
+      "author": "Sandeep Ramgolam",
+      "date": "2025-12-09",
+      "description": "A landscape view."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-urban-life.jpg",
+    "title": "Urban Life",
+    "metadata": {
+      "author": "Sandeep Ramgolam",
+      "date": "2025-12-09",
+      "description": "Urban life photography."
+    }
+  },
+  {
+    "path": "/wallpapers/wallpaper-drone-view.jpg",
+    "title": "Drone View",
+    "metadata": {
+      "author": "Sandeep Ramgolam",
+      "date": "2025-12-09",
+      "description": "A drone shot."
+    }
   }
-] 
-
-
-
-
-
-
+]

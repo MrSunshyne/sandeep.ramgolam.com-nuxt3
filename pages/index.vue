@@ -35,6 +35,8 @@ defineOgImageComponent("IndexTemplate", {});
 
       <HomeEventSummary />
 
+      <HomeWallpaperSection />
+
       <!-- <GalleryInsert /> -->
 
       <HomeProjectsFeatured />

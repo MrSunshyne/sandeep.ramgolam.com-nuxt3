@@ -1,0 +1,425 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - img [ref=e5]
+    - generic [ref=e10]:
+      - link "Sandeep Ramgolam Logo" [ref=e11] [cursor=pointer]:
+        - /url: /
+        - img [ref=e13]
+        - generic [ref=e15]: Sandeep Ramgolam Logo
+      - list [ref=e17] [cursor=pointer]:
+        - listitem [ref=e18]:
+          - link "About" [ref=e19]:
+            - /url: /about
+          - img [ref=e21]
+        - listitem [ref=e23]:
+          - link "Blog" [ref=e24]:
+            - /url: /blog/
+          - img [ref=e26]
+        - listitem [ref=e28]:
+          - link "Events" [ref=e29]:
+            - /url: /events/
+          - img [ref=e31]
+        - listitem [ref=e33]:
+          - link "Projects" [ref=e34]:
+            - /url: /projects/
+          - img [ref=e36]
+    - generic [ref=e46]:
+      - alert [ref=e47]: Sandeep Ramgolam | thoughts, experiments, experiences
+      - generic [ref=e49]:
+        - generic [ref=e51]:
+          - heading "Hi, I'm Sandeep" [level=1] [ref=e52]
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - generic [ref=e55]:
+                - img [ref=e56]
+                - link "Coders.mu" [ref=e60] [cursor=pointer]:
+                  - /url: https://coders.mu
+                - generic [ref=e61]: Lead Organizer
+              - generic [ref=e62]:
+                - img [ref=e64]
+                - link "Livestorm" [ref=e73] [cursor=pointer]:
+                  - /url: https://livestorm.co
+                - generic [ref=e74]: Sr. Front-end Engineer
+              - generic [ref=e75]:
+                - img [ref=e76]
+                - link "Upcode" [ref=e81] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/upcodemu
+                - generic [ref=e82]: Co-Founder
+              - generic [ref=e83]:
+                - img [ref=e84]
+                - link "Google Developer Expert" [ref=e90] [cursor=pointer]:
+                  - /url: https://developers.google.com/profile/u/112547642487044982413
+                - generic [ref=e91]: Web
+            - paragraph [ref=e92]:
+              - text: Technologist based in Mauritius, who loves front-end, UX design, Linux, & nature.
+              - text: This is where I share my
+              - link "thoughts" [ref=e93] [cursor=pointer]:
+                - /url: /blog
+              - text: ","
+              - link "experiments" [ref=e94] [cursor=pointer]:
+                - /url: https://github.com/MrSunshyne?tab=repositories&q=&type=&language=&sort=stargazers
+              - text: and
+              - link "experiences" [ref=e95] [cursor=pointer]:
+                - /url: /events
+              - text: .
+            - paragraph [ref=e96]:
+              - link "Spoke at 52" [ref=e97] [cursor=pointer]:
+                - /url: /events?type=speaking
+              - text: and
+              - link "organized 36 events" [ref=e98] [cursor=pointer]:
+                - /url: /events?type=organizer
+              - text: .
+          - generic [ref=e99]:
+            - link "X Profile" [ref=e100] [cursor=pointer]:
+              - /url: https://x.com/__Sun__
+              - generic [ref=e101]: X Profile
+              - img [ref=e102]
+            - link "Instagram Page" [ref=e104] [cursor=pointer]:
+              - /url: http://instagram.com/mr_sunshyne/
+              - generic [ref=e105]: Instagram Page
+              - img [ref=e106]
+            - link "Email Address" [ref=e108] [cursor=pointer]:
+              - /url: mailto:sandeep@ramgolam.com
+              - generic [ref=e109]: Email Address
+              - img [ref=e110]
+            - link "LinkedIN Profile" [ref=e112] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/sandeep-ramgolam-bb18b526/
+              - generic [ref=e113]: LinkedIN Profile
+              - img [ref=e114]
+          - generic "Yes, you can run that in your terminal" [ref=e117]: $ npx sandeepramgolam
+        - generic [ref=e123]:
+          - heading "Blog posts" [level=2] [ref=e124]
+          - paragraph [ref=e125]: When i'm not writing code, I like to write about tech.
+          - generic [ref=e126]:
+            - link "Introducing BaselineBanner" [ref=e128] [cursor=pointer]:
+              - /url: /blog/introducing-baseline-banner
+            - link "The CSS if() function" [ref=e130] [cursor=pointer]:
+              - /url: /blog/css-if-function-guide
+            - link "The CSS random() function" [ref=e132] [cursor=pointer]:
+              - /url: /blog/css-random-function-guide
+            - link "The Beach Meetup 2.0" [ref=e134] [cursor=pointer]:
+              - /url: /blog/beach-meetup-2024
+            - link "frontend.mu x ELCA 2024 Meetup" [ref=e136] [cursor=pointer]:
+              - /url: /blog/frontend-coders-meetup-june-2024
+          - link "See all 61 posts" [ref=e137] [cursor=pointer]:
+            - /url: /blog
+        - generic [ref=e138]:
+          - generic [ref=e139]:
+            - heading "Events" [level=2] [ref=e140]
+            - paragraph [ref=e141]: 77 event(s) I was involved in
+            - generic [ref=e142]:
+              - generic [ref=e143] [cursor=pointer]: All Years
+              - generic [ref=e144] [cursor=pointer]: "2025"
+              - generic [ref=e145] [cursor=pointer]: "2024"
+              - generic [ref=e146] [cursor=pointer]: "2023"
+              - generic [ref=e147] [cursor=pointer]: "2022"
+              - generic [ref=e148] [cursor=pointer]: "2020"
+              - generic [ref=e149] [cursor=pointer]: "2019"
+              - generic [ref=e150] [cursor=pointer]: "2018"
+              - generic [ref=e151] [cursor=pointer]: "2017"
+              - generic [ref=e152] [cursor=pointer]: "2016"
+              - generic [ref=e153] [cursor=pointer]: "2015"
+              - generic [ref=e154] [cursor=pointer]: "2013"
+            - generic [ref=e155]:
+              - generic [ref=e156] [cursor=pointer]: Show All
+              - generic [ref=e157] [cursor=pointer]: Speaking
+              - generic [ref=e158] [cursor=pointer]: Attendee
+              - generic [ref=e159] [cursor=pointer]: Organizer
+              - generic [ref=e160] [cursor=pointer]: Competition
+              - generic [ref=e161] [cursor=pointer]: Jury
+            - generic [ref=e162]:
+              - generic [ref=e163]:
+                - generic [ref=e164]:
+                  - img [ref=e165]
+                  - generic [ref=e167]: 6 December 2025
+                - heading "K8s, ICTA Directive, Open Discussions" [level=2] [ref=e168]
+                - paragraph [ref=e170]: KRaft, A tool to run kubernetes workshops, A discussion bout ICTA Directive 4 in Mauritius
+                - generic [ref=e171]:
+                  - generic [ref=e172]: CNCF Meetup Mauritius
+                  - generic [ref=e173]: Kumba Telfair
+              - generic [ref=e174]:
+                - generic [ref=e175]:
+                  - img [ref=e176]
+                  - generic [ref=e178]: 2 December 2025
+                - heading "Use of Generative AI in Open Source" [level=2] [ref=e179]
+                - generic:
+                  - paragraph
+                - generic [ref=e180]:
+                  - generic [ref=e181]: BTrust DevDay
+                  - generic [ref=e182]: Trianon Convention Center
+              - generic [ref=e183]:
+                - generic [ref=e184]:
+                  - img [ref=e185]
+                  - generic [ref=e187]: 29 November 2025
+                - heading "New features in CSS for Web Developers" [level=2] [ref=e188]
+                - generic:
+                  - paragraph
+                - generic [ref=e189]:
+                  - generic [ref=e190]: Laravel Meetup Mauritius
+                  - generic [ref=e191]: Black Pirates Pizza Pub
+          - link "See all events" [ref=e193] [cursor=pointer]:
+            - /url: /events
+        - generic [ref=e194]:
+          - generic [ref=e195]:
+            - heading "Gallery" [level=2] [ref=e196]
+            - paragraph [ref=e197]: Some of my photos
+          - generic [ref=e198]:
+            - generic [ref=e200]:
+              - img "Drone shot of Notre Dame, Mauritius" [ref=e201]
+              - generic [ref=e202] [cursor=pointer]:
+                - heading "Drone shot of Notre Dame, Mauritius" [level=3] [ref=e203]
+                - button "View" [active] [ref=e204]
+            - generic [ref=e206]:
+              - img "Vladimir Jiji, Frontend Developer" [ref=e207]
+              - generic [ref=e208] [cursor=pointer]:
+                - heading "Vladimir Jiji, Frontend Developer" [level=3] [ref=e209]
+                - button "View" [ref=e210]
+            - generic [ref=e212]:
+              - img "Washed Keyboard" [ref=e213]
+              - generic [ref=e214] [cursor=pointer]:
+                - heading "Washed Keyboard" [level=3] [ref=e215]
+                - button "View" [ref=e216]
+            - generic [ref=e218]:
+              - img "Goodies from Cube" [ref=e219]
+              - generic [ref=e220] [cursor=pointer]:
+                - heading "Goodies from Cube" [level=3] [ref=e221]
+                - button "View" [ref=e222]
+            - generic [ref=e224]:
+              - img "Retro Camera" [ref=e225]
+              - generic [ref=e226] [cursor=pointer]:
+                - heading "Retro Camera" [level=3] [ref=e227]
+                - button "View" [ref=e228]
+            - generic [ref=e230]:
+              - img "Scenic View" [ref=e231]
+              - generic [ref=e232] [cursor=pointer]:
+                - heading "Scenic View" [level=3] [ref=e233]
+                - button "View" [ref=e234]
+            - generic [ref=e236]:
+              - img "Abstract Edit" [ref=e237]
+              - generic [ref=e238] [cursor=pointer]:
+                - heading "Abstract Edit" [level=3] [ref=e239]
+                - button "View" [ref=e240]
+            - generic [ref=e242]:
+              - img "Dark Edit" [ref=e243]
+              - generic [ref=e244] [cursor=pointer]:
+                - heading "Dark Edit" [level=3] [ref=e245]
+                - button "View" [ref=e246]
+            - generic [ref=e248]:
+              - img "Nature Shot" [ref=e249]
+              - generic [ref=e250] [cursor=pointer]:
+                - heading "Nature Shot" [level=3] [ref=e251]
+                - button "View" [ref=e252]
+            - generic [ref=e254]:
+              - img "Minimalist" [ref=e255]
+              - generic [ref=e256] [cursor=pointer]:
+                - heading "Minimalist" [level=3] [ref=e257]
+                - button "View" [ref=e258]
+            - generic [ref=e260]:
+              - img "Textures" [ref=e261]
+              - generic [ref=e262] [cursor=pointer]:
+                - heading "Textures" [level=3] [ref=e263]
+                - button "View" [ref=e264]
+            - generic [ref=e266]:
+              - img "Landscape" [ref=e267]
+              - generic [ref=e268] [cursor=pointer]:
+                - heading "Landscape" [level=3] [ref=e269]
+                - button "View" [ref=e270]
+            - generic [ref=e272]:
+              - img "Urban Life" [ref=e273]
+              - generic [ref=e274] [cursor=pointer]:
+                - heading "Urban Life" [level=3] [ref=e275]
+                - button "View" [ref=e276]
+            - generic [ref=e278]:
+              - img "Drone View" [ref=e279]
+              - generic [ref=e280] [cursor=pointer]:
+                - heading "Drone View" [level=3] [ref=e281]
+                - button "View" [ref=e282]
+          - link "View all wallpapers" [ref=e284] [cursor=pointer]:
+            - /url: /wallpapers
+            - text: View all wallpapers
+        - generic [ref=e287]:
+          - heading "Projects" [level=2] [ref=e288]
+          - paragraph [ref=e289]: Some projects I helped build
+          - generic [ref=e290]:
+            - generic [ref=e291]:
+              - img "Coders.mu" [ref=e293]
+              - generic [ref=e294]:
+                - heading "Coders.mu" [level=2] [ref=e295]
+                - paragraph [ref=e296]: The home of frontend coders mauritius on the web
+                - generic [ref=e297]:
+                  - generic [ref=e298]: Maintainer | Open Source
+                  - generic [ref=e299]: TailwindCSS / Astro / Vite / Directus /
+                - link "View" [ref=e301] [cursor=pointer]:
+                  - /url: https://coders.mu
+            - generic [ref=e302]:
+              - img "Mauritius Power Outages" [ref=e304]
+              - generic [ref=e305]:
+                - heading "Mauritius Power Outages" [level=2] [ref=e306]
+                - paragraph [ref=e307]: A web app to display power outages in Mauritius
+                - generic [ref=e308]:
+                  - generic [ref=e309]: Maintainer | Open Source
+                  - generic [ref=e310]: TailwindCSS / Vue3 / Vite /
+                - link "View" [ref=e312] [cursor=pointer]:
+                  - /url: https://courant.ramgolam.com/
+            - generic [ref=e313]:
+              - img "Mauritius Electricity Dataset" [ref=e315]
+              - generic [ref=e316]:
+                - heading "Mauritius Electricity Dataset" [level=2] [ref=e317]
+                - paragraph [ref=e318]: A repository to store and share datasets of power outages in Mauritius
+                - generic [ref=e319]:
+                  - generic [ref=e320]: Maintainer | Open Source
+                  - generic [ref=e321]: TailwindCSS / Vue3 / Vite /
+                - link "View" [ref=e323] [cursor=pointer]:
+                  - /url: https://github.com/MrSunshyne/mauritius-dataset-electricity/
+            - generic [ref=e324]:
+              - img "Mauritius Meteo Dataset" [ref=e326]
+              - generic [ref=e327]:
+                - heading "Mauritius Meteo Dataset" [level=2] [ref=e328]
+                - paragraph [ref=e329]: A repository to store and share datasets of weather in Mauritius
+                - generic [ref=e330]:
+                  - generic [ref=e331]: Maintainer | Open Source
+                  - generic [ref=e332]: TailwindCSS / Vue3 / Vite /
+                - link "View" [ref=e334] [cursor=pointer]:
+                  - /url: https://github.com/MrSunshyne/mauritius-dataset-meteo/
+            - generic [ref=e335]:
+              - img "Mauritius Internet Prices" [ref=e337]
+              - generic [ref=e338]:
+                - heading "Mauritius Internet Prices" [level=2] [ref=e339]
+                - paragraph [ref=e340]: A simple interactive web app to show Mauritius Internet Prices.
+                - generic [ref=e341]:
+                  - generic [ref=e342]: Maintainer | Open Source
+                  - generic [ref=e343]: TailwindCSS / Vue3 / Vite /
+                - link "View" [ref=e345] [cursor=pointer]:
+                  - /url: https://mauritius-internet-prices.netlify.app/
+            - generic [ref=e346]:
+              - img "ti-vitesse" [ref=e348]
+              - generic [ref=e349]:
+                - heading "ti-vitesse" [level=2] [ref=e350]
+                - paragraph [ref=e351]: An alternate version of antfu/vitesse with stuff that I use
+                - generic [ref=e352]:
+                  - generic [ref=e353]: Maintainer | Open Source
+                  - generic [ref=e354]: TailwindCSS / Vue3 / Vite /
+                - link "View" [ref=e356] [cursor=pointer]:
+                  - /url: https://github.com/MrSunshyne/ti-vitesse
+            - generic [ref=e357]:
+              - img "CSS Clock" [ref=e359]
+              - generic [ref=e360]:
+                - heading "CSS Clock" [level=2] [ref=e361]
+                - paragraph [ref=e362]: A css experiment inspired by a real-like weird clock
+                - generic [ref=e363]:
+                  - generic [ref=e364]: Maintainer | Open Source
+                  - generic [ref=e365]: TailwindCSS / VueJS / Netlify /
+                - link "View" [ref=e367] [cursor=pointer]:
+                  - /url: https://clock-css.netlify.app/
+            - generic [ref=e368]:
+              - img "Stoic Calendar" [ref=e370]
+              - generic [ref=e371]:
+                - heading "Stoic Calendar" [level=2] [ref=e372]
+                - paragraph [ref=e373]: An interactive stoic calendar
+                - generic [ref=e374]:
+                  - generic [ref=e375]: Maintainer | Open Source
+                  - generic [ref=e376]: TailwindCSS / VueJS / Netlify /
+                - link "View" [ref=e378] [cursor=pointer]:
+                  - /url: https://stoic-calendar.netlify.app/
+            - generic [ref=e379]:
+              - img "COVID-19 Mauritius" [ref=e381]
+              - generic [ref=e382]:
+                - heading "COVID-19 Mauritius" [level=2] [ref=e383]
+                - paragraph [ref=e384]: A page focussed on the statistics of COVID-19 in Mauritius
+                - generic [ref=e385]:
+                  - generic [ref=e386]: Maintainer | Open Source
+                  - generic [ref=e387]: TailwindCSS / VueJS / Github Actions /
+                - link "View" [ref=e389] [cursor=pointer]:
+                  - /url: https://covid19.ramgolam.com
+            - generic [ref=e390]:
+              - img "Mauritius Fuel Prices" [ref=e392]
+              - generic [ref=e393]:
+                - heading "Mauritius Fuel Prices" [level=2] [ref=e394]
+                - paragraph [ref=e395]: Progression of fuel prices in Mauritius (2002 - Present)
+                - generic [ref=e396]:
+                  - generic [ref=e397]: Maintainer | Open Source
+                  - generic [ref=e398]: TailwindCSS / VueJS / Google Sheet API /
+                - link "View" [ref=e400] [cursor=pointer]:
+                  - /url: https://mauritius-fuel-prices.ramgolam.com/
+            - generic [ref=e401]:
+              - img "Mauritius Sea Cables" [ref=e403]
+              - generic [ref=e404]:
+                - heading "Mauritius Sea Cables" [level=2] [ref=e405]
+                - paragraph [ref=e406]: A GUI to show the Health Status of submarine cables connected to Mauritius.
+                - generic [ref=e407]:
+                  - generic [ref=e408]: Maintainer | Open Source
+                  - generic [ref=e409]: TailwindCSS / VueJS / Speedtest CLI / git /
+                - link "View" [ref=e411] [cursor=pointer]:
+                  - /url: https://mrsunshyne.github.io/mauritius-sea-cable/
+            - generic [ref=e412]:
+              - img "boo" [ref=e414]
+              - generic [ref=e415]:
+                - heading "boo" [level=2] [ref=e416]
+                - paragraph [ref=e417]: A free and open source starter theme for headless Ghost CMS built on NuxtJS
+                - generic [ref=e418]:
+                  - generic [ref=e419]: Maintainer | Open Source
+                  - generic [ref=e420]: TailwindCSS / VueJS / NuxtJS / Ghost /
+                - link "View" [ref=e422] [cursor=pointer]:
+                  - /url: https://boo.ramgolam.com
+            - generic [ref=e423]:
+              - img "Developers Conference 2019 Website" [ref=e425]
+              - generic [ref=e426]:
+                - heading "Developers Conference 2019 Website" [level=2] [ref=e427]
+                - paragraph [ref=e428]: Official website of the devcon 2019
+                - generic [ref=e429]:
+                  - generic [ref=e430]: Front-end Developer | Voluntary
+                  - generic [ref=e431]: VueJS / CSS / NuxtJS /
+                - link "View" [ref=e433] [cursor=pointer]:
+                  - /url: https://2019.mscc.mu
+            - generic [ref=e434]:
+              - img "Mauritius Elections 2019 - lexpress" [ref=e436]
+              - generic [ref=e437]:
+                - heading "Mauritius Elections 2019 - lexpress" [level=2] [ref=e438]
+                - paragraph [ref=e439]: A website built for the general elections of Mauritius at L'express Maurice
+                - generic [ref=e440]:
+                  - generic [ref=e441]: Front-end Developer | LSL Digital
+                  - generic [ref=e442]: CSS / GraphQL / VueJS / golang / Svelte /
+                - link "View" [ref=e444] [cursor=pointer]:
+                  - /url: https://elections.mu
+            - generic [ref=e445]:
+              - img "Previous version lexpress.mu (2015-2023)" [ref=e447]
+              - generic [ref=e448]:
+                - heading "Previous version lexpress.mu (2015-2023)" [level=2] [ref=e449]
+                - paragraph [ref=e450]: Most popular news website of Mauritius
+                - generic [ref=e451]:
+                  - generic [ref=e452]: Front-end | LSL Digital
+                  - generic [ref=e453]: CSS / Drupal /
+                - link "View" [ref=e455] [cursor=pointer]:
+                  - /url: https://www.lexpress.mu
+            - link "View all projects" [ref=e456] [cursor=pointer]:
+              - /url: /projects
+    - generic [ref=e457]:
+      - list [ref=e458]:
+        - listitem [ref=e459]: © 2025 | Sandeep Ramgolam
+      - list [ref=e460]:
+        - listitem [ref=e461]:
+          - link "About" [ref=e462] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e463]:
+          - link "Projects" [ref=e464] [cursor=pointer]:
+            - /url: /projects
+  - generic:
+    - img
+  - generic:
+    - generic:
+      - generic:
+        - button "Go to parent" [disabled]
+        - button "Open in editor"
+        - button "Close"
+  - generic [ref=e465]:
+    - button "Toggle Nuxt DevTools" [ref=e466] [cursor=pointer]:
+      - img [ref=e467]
+    - generic "Page load time" [ref=e470]:
+      - generic [ref=e471]: "91"
+      - generic [ref=e472]: ms
+    - button "Toggle Component Inspector" [ref=e474] [cursor=pointer]:
+      - img [ref=e475]
+```
