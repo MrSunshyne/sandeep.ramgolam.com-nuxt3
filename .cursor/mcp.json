@@ -1,7 +1,0 @@
-{
-  "mcpServers": {
-    "nuxt": {
-      "url": "http://localhost:4242/__mcp/sse"
-    }
-  }
-}

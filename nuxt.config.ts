@@ -7,6 +7,12 @@ export default defineNuxtConfig({
     compatibilityVersion: 5,
   },
 
+  content: {
+    highlight: {
+      preload: ['scss'],
+    },
+  },
+
   app: {
     head: {
       link: [
@@ -54,6 +60,8 @@ export default defineNuxtConfig({
       failOnError: false,
     }
   },
+
+  compatibilityDate: "2025-12-09",
 
   // Configure image optimization
   image: {
@@ -106,6 +114,9 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    optimizeDeps: {
+      include: ['vue3-smooth-dnd']
+    },
     esbuild: {
       target: 'esnext'
     }
