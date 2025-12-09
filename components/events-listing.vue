@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import EventCard from "~/components/event-card.vue";
-// import events from "~/data/events.js";
 
 const { data: events } = await useAsyncData("events", () =>
   queryContent("events").sort({ event_date: -1 }).find(),
