@@ -25,15 +25,16 @@
       />
     </svg>
     <div class="card-content flex flex-col">
-      <div class="text text-sm flex align-center gap-1 uppercase tracking-wider">
+      <!-- Date -->
+      <div class="event-date flex items-center gap-2 text-gray-500 dark:text-gray-400">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
+          width="14"
+          height="14"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="1.5"
+          stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
         >
@@ -42,52 +43,57 @@
           <line x1="8" y1="2" x2="8" y2="6"></line>
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
-        <div>
+        <span class="text-xs font-medium uppercase tracking-widest">
           {{ dateFormat(new Date(event.event_date)) }}
-        </div>
+        </span>
       </div>
-      <h2 class="text-xl lg:text-2xl font-bold pb-4 tracking-tight">
+
+      <!-- Title -->
+      <h2 class="event-title text-xl lg:text-2xl font-black leading-tight mt-3 mb-2">
         {{ event.topic }}
       </h2>
 
-      <div class="rounded my-4">
-        <p>{{ event.description }}</p>
-      </div>
+      <!-- Description -->
+      <p class="event-description text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+        {{ event.description }}
+      </p>
 
-      <div>
+      <!-- Links -->
+      <div class="event-links space-y-1">
         <a
           v-for="link in event.links"
           :key="link.id"
           :href="link.url"
           rel="noopener"
-          class="text-sm underline flex hover:text-green-500 text-gray-700 dark:text-gray-400"
+          class="inline-flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
           target="_blank"
         >
           {{ link.title }}
-          <div class="mt-1 border dark:border-gray-800 ml-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M7 17l9.2-9.2M17 17V7H7" />
-            </svg>
-          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M7 17l9.2-9.2M17 17V7H7" />
+          </svg>
         </a>
       </div>
       <div v-if="event.video">{{ event.video }}</div>
 
-      <div class="flex text-sm justify-between font-medium mt-auto pt-4">
-        <div class="flex">
+      <!-- Footer -->
+      <div class="event-footer flex justify-between items-center mt-auto pt-4 border-t border-gray-100 dark:border-gray-700">
+        <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">
           {{ event.event_name }}
-        </div>
-        <div class="">{{ event.location }}</div>
+        </span>
+        <span class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+          {{ event.location }}
+        </span>
       </div>
     </div>
   </div>
@@ -113,8 +119,9 @@ defineProps({
   position: relative;
   z-index: 1;
   background: white;
-  padding: 15px 20px;
+  padding: 20px 24px;
   border-radius: 6px;
+  min-height: 200px;
 }
 
 :deep(.dark) .card-content,
@@ -145,24 +152,57 @@ defineProps({
   d: path("M8 2 Q3 1 1 5 Q-2 10 1 18 L2 30 Q-1 70 3 115 T-1 175 Q4 220 1 260 T5 290 Q2 296 6 298 Q10 300 18 298 L30 297 Q90 300 160 296 T280 300 Q340 296 385 299 T395 297 Q400 296 401 291 Q403 285 400 275 L401 260 Q403 210 398 155 T403 95 Q398 55 400 25 T397 8 Q398 3 392 1 Q386 -1 378 2 L355 3 Q280 6 210 2 T90 6 Q40 2 15 3 Z");
 }
 
-/* Event type colors for border on hover */
-.event-card.speaking:hover .border-path {
+/* Event type colors - default state */
+.event-card.speaking .border-path {
   color: var(--speaking-color, #3b82f6);
 }
 
-.event-card.jury:hover .border-path {
+.event-card.jury .border-path {
   color: var(--jury-color, #eab308);
 }
 
-.event-card.competition:hover .border-path {
+.event-card.competition .border-path {
   color: var(--competition-color, #ef4444);
 }
 
-.event-card.attendee:hover .border-path {
+.event-card.attendee .border-path {
   color: var(--attendee-color, #22c55e);
 }
 
-.event-card.organizer:hover .border-path {
+.event-card.organizer .border-path {
   color: var(--organizer-color, #a855f7);
+}
+
+/* Category indicator dot */
+.event-card.speaking .event-date::before,
+.event-card.jury .event-date::before,
+.event-card.competition .event-date::before,
+.event-card.attendee .event-date::before,
+.event-card.organizer .event-date::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.event-card.speaking .event-date::before {
+  background: var(--speaking-color, #3b82f6);
+}
+
+.event-card.jury .event-date::before {
+  background: var(--jury-color, #eab308);
+}
+
+.event-card.competition .event-date::before {
+  background: var(--competition-color, #ef4444);
+}
+
+.event-card.attendee .event-date::before {
+  background: var(--attendee-color, #22c55e);
+}
+
+.event-card.organizer .event-date::before {
+  background: var(--organizer-color, #a855f7);
 }
 </style>
