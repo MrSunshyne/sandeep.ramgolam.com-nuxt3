@@ -11,12 +11,12 @@
 import EventsListing from "./events-listing.vue";
 </script>
 
-<style lang="postcss">
+<style >
 .event-page {
-  --competition-color: theme(colors.red.500);
-  --speaking-color: theme(colors.blue.500);
-  --jury-color: theme(colors.yellow.500);
-  --attendee-color: theme(colors.green.500);
-  --organizer-color: theme(colors.purple.500);
+  --competition-color: var(--color-red-500);
+  --speaking-color: var(--color-blue-500);
+  --jury-color: var(--color-yellow-500);
+  --attendee-color: var(--color-green-500);
+  --organizer-color: var(--color-purple-500);
 }
 </style>

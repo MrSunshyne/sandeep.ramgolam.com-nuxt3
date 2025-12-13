@@ -70,7 +70,7 @@ const organizerCount = computed(() => events.value?.filter(e => e.event_type?.in
 </script>
 
 <style scoped>
-a {
+/*a {
   @apply font-medium underline underline-offset-4 decoration-green-200 hover:decoration-green-500 dark:decoration-slate-500 dark:hover:decoration-slate-200;
-}
+}*/
 </style>

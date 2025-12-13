@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { WebFeatureId } from '@baseline-banner/vue'
+import { BaselineBannerWebDev } from '@baseline-banner/vue'
 import '@baseline-banner/vue/style.css'
 
 interface Props {
@@ -12,7 +13,7 @@ defineProps<Props>()
 
 <template>
   <ClientOnly>
-    <BaselineChecker :feature-name="featureName" />
+    <BaselineBannerWebDev theme="default" :feature-name="featureName" />
     <template #fallback>
       <div class="baseline-checker-loading">
         <p>Loading browser compatibility data...</p>

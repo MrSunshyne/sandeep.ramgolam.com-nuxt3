@@ -48,7 +48,7 @@ defineOgImageComponent("GenericTemplate");
   </div>
 </template>
 
-<style scoped lang="postcss">
+<style scoped >
 .blog-posts {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));

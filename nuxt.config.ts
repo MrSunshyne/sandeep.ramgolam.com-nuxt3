@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
   future: {
     compatibilityVersion: 5,
   },
@@ -34,7 +33,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/image",
     "nuxt-og-image",
-    'nuxt-mcp'
+    'nuxt-mcp-dev'
   ],
 
   components: [
@@ -91,29 +90,19 @@ export default defineNuxtConfig({
     }
   },
 
-  colorMode: {
-    classSuffix: "",
-  },
-
   // register a component
-  css: ["@/styles/global.css"],
+  css: ["~/assets/css/main.css", "~/styles/global.css"],
 
   ui: {
-    global: true
+    fonts: false
   },
 
-  tailwindcss: {
-    configPath: "./tailwind.config.js",
-  },
 
   devServer: {
     port: 4242,
   },
 
   vite: {
-    optimizeDeps: {
-      include: ['vue3-smooth-dnd']
-    },
     esbuild: {
       target: 'esnext'
     }

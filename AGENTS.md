@@ -27,13 +27,15 @@ pnpm test:e2e:headed  # Run Playwright tests in headed mode
 ## Architecture
 
 ### Tech Stack
+
 - **Framework**: Nuxt 3 with compatibility version 5
-- **UI**: @nuxt/ui-pro, Tailwind CSS with custom neumorphism shadows
+- **UI**: @nuxt/ui, Tailwind CSS with custom neumorphism shadows
 - **Content**: @nuxt/content for markdown blog posts
 - **Styling**: Tailwind CSS with tailwindcss-animate and @inspira-ui/plugins
 - **OG Images**: nuxt-og-image for dynamic social images
 
 ### Key Directories
+
 - `content/blog/` - Blog posts as numbered markdown files (e.g., `1.google-devfest-2019-mauritius.md`)
 - `components/global/` - Auto-imported global components for use in markdown
 - `components/OgImage/` - Templates for dynamic OG image generation
@@ -41,7 +43,8 @@ pnpm test:e2e:headed  # Run Playwright tests in headed mode
 - `public/content/images/` - Blog images organized by date
 
 ### Nuxt Modules
-- @nuxt/ui and @nuxt/ui-pro (extends ui-pro)
+
+- @nuxt/ui and @nuxt/ui
 - @nuxt/content for markdown processing
 - @nuxthq/studio for visual editing
 - @nuxt/image for image optimization
@@ -49,6 +52,7 @@ pnpm test:e2e:headed  # Run Playwright tests in headed mode
 - nuxt-mcp for MCP integration
 
 ### Configuration Notes
+
 - Dev server runs on port 4242
 - Dark mode uses class-based switching
 - View transitions enabled experimentally
@@ -56,6 +60,7 @@ pnpm test:e2e:headed  # Run Playwright tests in headed mode
 - Image presets: `avatar` (150x150) and `cover` (800w)
 
 ### Tailwind Customization
+
 - Custom neumorphism shadows: `neumorphismdark` and `neumorphismlight`
 - HSL-based color system with CSS custom properties
 - Typography plugin enabled for prose styling
@@ -63,7 +68,6 @@ pnpm test:e2e:headed  # Run Playwright tests in headed mode
 ## Package Manager
 
 This project uses **pnpm** exclusively. Never use npm or yarn commands.
-
 
 ### Tests
 
@@ -81,4 +85,3 @@ This project uses **pnpm** exclusively. Never use npm or yarn commands.
 - When you are done with a task, mark it as done by adding the `done` label to it
 - When i request you to do a task, first check if it is already in the TODO.md file
 - If it is not in the TODO.md file, add it to the TODO.md file
-

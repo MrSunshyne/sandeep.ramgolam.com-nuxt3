@@ -1,3 +1,5 @@
+@reference "tailwindcss";
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1s ease;
@@ -43,17 +45,16 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.44, theme(colors.green.600)),
-    color-stop(0.72, theme(colors.green.400)),
-    color-stop(0.86, theme(colors.green.300))
+  background: linear-gradient(
+    to top,
+    var(--color-green-600) 44%,
+    var(--color-green-400) 72%,
+    var(--color-green-300) 86%
   );
 }
 
-
-html, body, #__nuxt {
+html,
+body,
+#__nuxt {
   min-height: 100vh;
 }

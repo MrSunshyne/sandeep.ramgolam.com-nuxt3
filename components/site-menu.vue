@@ -31,7 +31,7 @@ import SiteColorPickerPlaceholder from "./site-color-picker-placeholder.vue";
   >
     <div class="sticky md:h-[64px] top-0">
       <div
-        class="main-menu md:container font-bold flex md:flex-row flex-col justify-center md:justify-between items-center"
+        class="main-menu md:container mx-auto font-bold flex md:flex-row flex-col justify-center md:justify-between items-center"
       >
         <NuxtLink class="hidden text-center md:inline" title="Logo" href="/">
           <SiteLogo class="inline-block w-40 md:w-32 lg:w-48 relative pl-1" />
@@ -75,7 +75,9 @@ import SiteColorPickerPlaceholder from "./site-color-picker-placeholder.vue";
   </div>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "tailwindcss";
+
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.3s;
@@ -144,7 +146,7 @@ html.dark .menu-outer-wrapper {
   }
 }
 
-@screen sm {
+@media (min-width: 640px) {
   .main-menu {
     ul {
       li {
