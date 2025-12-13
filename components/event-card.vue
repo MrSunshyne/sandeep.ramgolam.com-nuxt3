@@ -1,75 +1,82 @@
 <template>
-  <div
-    class="flex flex-col border-b-4 pb-2 mb-4 event-card shadow-neumorphismlight dark:shadow-neumorphismdark relative"
-  >
-    <div class="text text-sm flex align-center gap-1 uppercase tracking-wider">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-        <line x1="16" y1="2" x2="16" y2="6"></line>
-        <line x1="8" y1="2" x2="8" y2="6"></line>
-        <line x1="3" y1="10" x2="21" y2="10"></line>
-      </svg>
-
-      <div>
-        {{ dateFormat(new Date(event.event_date)) }}
+  <div class="event-card relative">
+    <HandDrawnShape
+      variant="rectangle"
+      :color="categoryColor"
+      :hover-morph="true"
+    />
+    
+    <div class="card-content flex flex-col">
+      <!-- Date -->
+      <div class="event-date flex items-center gap-2 text-gray-500 dark:text-gray-400">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span class="text-xs font-medium uppercase tracking-widest">
+          {{ dateFormat(new Date(event.event_date)) }}
+        </span>
       </div>
-    </div>
-    <h2 class="text-xl lg:text-2xl font-bold pb-4 tracking-tight">
-      {{ event.topic }}
-    </h2>
 
-    <div class="rounded my-4">
-      <p>{{ event.description }}</p>
-    </div>
+      <!-- Title -->
+      <h2 class="event-title text-xl lg:text-2xl font-black leading-tight mt-3 mb-2">
+        {{ event.topic }}
+      </h2>
 
-    <div>
-      <a
-        v-for="link in event.links"
-        :key="link.id"
-        :href="link.url"
-        rel="noopener"
-        class="text-sm underline flex hover:text-green-500 text-gray-700 dark:text-gray-400"
-        target="_blank"
-      >
-        {{ link.title }}
-        <div class="mt-1 border dark:border-gray-800 ml-1">
+      <!-- Description -->
+      <p class="event-description text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+        {{ event.description }}
+      </p>
+
+      <!-- Links -->
+      <div class="event-links space-y-1">
+        <a
+          v-for="link in event.links"
+          :key="link.id"
+          :href="link.url"
+          rel="noopener"
+          class="inline-flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+          target="_blank"
+        >
+          {{ link.title }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
+            width="12"
+            height="12"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="1.5"
+            stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
           >
             <path d="M7 17l9.2-9.2M17 17V7H7" />
           </svg>
-        </div>
-      </a>
-    </div>
-    <div v-if="event.video">{{ event.video }}</div>
-    <!-- {{ event }} -->
-
-    <div class="flex text-sm justify-between font-medium mt-auto pt-4">
-      <div class="flex">
-        <!-- <div class="mr-2 relative" style="top:6px;">
-             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/></svg>
-            </div> -->
-        {{ event.event_name }}
+        </a>
       </div>
-      <div class="">{{ event.location }}</div>
+      <div v-if="event.video">{{ event.video }}</div>
+
+      <!-- Footer -->
+      <div class="event-footer flex justify-between items-center mt-auto pt-4 border-t border-gray-100 dark:border-gray-700">
+        <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">
+          {{ event.event_name }}
+        </span>
+        <span class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+          {{ event.location }}
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -77,26 +84,53 @@
 <script lang="ts" setup>
 import { dateFormat } from "~/utils/date-utils";
 
-defineProps({
+const props = defineProps({
   event: {
     type: Object,
     required: true,
   },
 });
+
+const categoryColors: Record<string, string> = {
+  speaking: '#3b82f6',
+  jury: '#eab308',
+  competition: '#ef4444',
+  attendee: '#22c55e',
+  organizer: '#a855f7',
+};
+
+const categoryColor = computed(() => {
+  const type = props.event.event_type?.[0];
+  return categoryColors[type] || '#9ca3af';
+});
 </script>
 
 <style scoped>
-.event-card:hover .descriptionReveal {
-  opacity: 1;
-}
-
 .event-card {
-  --shadowSize: 9px;
-  padding: 15px 20px;
-  border-radius: 9px;
+  padding: 6px;
 }
 
-.mode-dark .event-card {
-  background: transparent;
+.card-content {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 20px 24px;
+  border-radius: 6px;
+  min-height: 200px;
+}
+
+:deep(.dark) .card-content,
+.dark .card-content {
+  background: #1f2937;
+}
+
+/* Category indicator dot */
+.event-date::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: v-bind(categoryColor);
 }
 </style>

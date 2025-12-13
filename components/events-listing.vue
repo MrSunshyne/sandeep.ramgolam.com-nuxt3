@@ -135,73 +135,67 @@ function updateQuery() {
         <span :class="currentEventType">{{ presentAs }}</span>
       </p>
     </template>
-    <div class="flex flex-wrap justify-center sm:justify-start my-4">
-      <div
-        :class="currentYear === 'all' ? 'active-year' : ''"
-        class="year-pills"
+    <div class="flex flex-wrap justify-center sm:justify-start my-4 gap-2">
+      <button
+        class="pill-hand-drawn"
         @click="setCurrentYear('all')"
       >
-        All Years
-      </div>
-      <div
+        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentYear === 'all'" />
+        <span class="pill-text">All Years</span>
+      </button>
+      <button
         v-for="year in availableYears"
         :key="year"
-        :class="currentYear === year ? 'active-year' : ''"
-        class="year-pills"
+        class="pill-hand-drawn"
         @click="setCurrentYear(year)"
       >
-        {{ year }}
-      </div>
+        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentYear === year" />
+        <span class="pill-text">{{ year }}</span>
+      </button>
     </div>
-    <div class="flex flex-wrap justify-center sm:justify-start my-4">
-      <div
-        :class="currentEventType === 'all' ? 'active' : ''"
-        class="pills"
+    <div class="flex flex-wrap justify-center sm:justify-start my-4 gap-2">
+      <button
+        class="pill-hand-drawn"
         @click="setCurrentEventType('all')"
       >
-        Show All
-      </div>
-      <div
-        :class="currentEventType === 'speaking' ? 'active' : ''"
-        class="pills speaking"
+        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'all'" />
+        <span class="pill-text">Show All</span>
+      </button>
+      <button
+        class="pill-hand-drawn"
         @click="setCurrentEventType('speaking')"
       >
-        Speaking
-      </div>
-
-      <div
-        :class="currentEventType === 'attendee' ? 'active' : ''"
-        class="pills attendee"
+        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'speaking'" color="#3b82f6" />
+        <span class="pill-text" :class="{ 'text-blue-500': true }">Speaking</span>
+      </button>
+      <button
+        class="pill-hand-drawn"
         @click="setCurrentEventType('attendee')"
       >
-        Attendee
-      </div>
-
-
-      <div
-        :class="currentEventType === 'organizer' ? 'active' : ''"
-        class="pills organizer"
+        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'attendee'" color="#22c55e" />
+        <span class="pill-text" :class="{ 'text-green-500': true }">Attendee</span>
+      </button>
+      <button
+        class="pill-hand-drawn"
         @click="setCurrentEventType('organizer')"
       >
-        Organizer
-      </div>
-      
-      <div
-        :class="currentEventType === 'competition' ? 'active' : ''"
-        class="pills competition"
+        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'organizer'" color="#a855f7" />
+        <span class="pill-text" :class="{ 'text-purple-500': true }">Organizer</span>
+      </button>
+      <button
+        class="pill-hand-drawn"
         @click="setCurrentEventType('competition')"
       >
-        Competition
-      </div>
-      <div
-        :class="currentEventType === 'jury' ? 'active' : ''"
-        class="pills jury"
+        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'competition'" color="#ef4444" />
+        <span class="pill-text" :class="{ 'text-red-500': true }">Competition</span>
+      </button>
+      <button
+        class="pill-hand-drawn"
         @click="setCurrentEventType('jury')"
       >
-        Jury
-      </div>
-
-
+        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'jury'" color="#eab308" />
+        <span class="pill-text" :class="{ 'text-yellow-500': true }">Jury</span>
+      </button>
     </div>
 
     <!-- {{ showCurrentEventType }} -->
@@ -269,93 +263,22 @@ function updateQuery() {
   }
 }
 
-.pills {
-  @apply p-2 mr-4 border-4 rounded-full cursor-pointer;
-  transition: all 0.2s linear;
-  border-color: transparent;
-
-  /* background: rgba(0, 0, 0, 0.1); */
-  &.active {
-    transition: all 0.2s linear;
-
-    /* @apply border-4 font-bold; */
-    &.speaking {
-      color: var(--speaking-color);
-      border-color: var(--speaking-color);
-    }
-
-    &.jury {
-      color: var(--jury-color);
-      border-color: var(--jury-color);
-    }
-
-    &.competition {
-      color: var(--competition-color);
-      border-color: var(--competition-color);
-    }
-
-    &.attendee {
-      color: var(--attendee-color);
-      border-color: var(--attendee-color);
-    }
-
-    &.organizer {
-      color: var(--organizer-color);
-      border-color: var(--organizer-color);
-    }
-  }
-
-  &.speaking {
-    color: var(--speaking-color);
-  }
-
-  &.jury {
-    color: var(--jury-color);
-  }
-
-  &.competition {
-    color: var(--competition-color);
-  }
-
-  &.attendee {
-    color: var(--attendee-color);
-  }
-
-  &.organizer {
-    color: var(--organizer-color);
-  }
+/* Hand-drawn pill styles */
+.pill-hand-drawn {
+  position: relative;
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  min-width: 80px;
 }
 
-.event-wrapper {
-  .speaking {
-    border-color: var(--speaking-color);
-  }
-
-  .jury {
-    border-color: var(--jury-color);
-  }
-
-  .competition {
-    border-color: var(--competition-color);
-  }
-
-  .attendee {
-    border-color: var(--attendee-color);
-  }
-
-  .organizer {
-    border-color: var(--organizer-color);
-  }
-
+.pill-text {
+  position: relative;
+  z-index: 1;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease-out;
 }
 
-.year-pills {
-  @apply p-2 mr-4 border-4 rounded-full cursor-pointer;
-  transition: all 0.2s linear;
-  border-color: transparent;
-
-  &.active-year {
-    @apply border-indigo-500 text-indigo-500 dark:border-indigo-400 dark:text-indigo-400;
-  }
-}
 </style>
