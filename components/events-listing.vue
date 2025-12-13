@@ -65,7 +65,7 @@ const showCurrentEventType = computed(() => {
 
   if (currentEventType.value !== "all") {
     filtered = filtered?.filter((event) =>
-      event.event_type.includes(currentEventType.value)
+      event.event_type?.includes(currentEventType.value)
     );
   }
 
@@ -217,7 +217,7 @@ function updateQuery() {
         <EventCard
           v-if="event?.published"
           :event="event"
-          :class="event.event_type[0]"
+          :class="event.event_type?.[0]"
           class="event-box"
           :style="'--delay:' + index + 's'"
         />

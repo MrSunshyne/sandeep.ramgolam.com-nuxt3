@@ -65,8 +65,8 @@ const { data: events } = await useAsyncData("events-intro", () =>
   queryCollection("events").all()
 );
 
-const speakingCount = computed(() => events.value?.filter(e => e.event_type.includes('speaking')).length || 0);
-const organizerCount = computed(() => events.value?.filter(e => e.event_type.includes('organizer')).length || 0);
+const speakingCount = computed(() => events.value?.filter(e => e.event_type?.includes('speaking')).length || 0);
+const organizerCount = computed(() => events.value?.filter(e => e.event_type?.includes('organizer')).length || 0);
 </script>
 
 <style scoped>
