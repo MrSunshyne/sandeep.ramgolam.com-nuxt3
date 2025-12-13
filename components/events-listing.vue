@@ -135,73 +135,91 @@ function updateQuery() {
         <span :class="currentEventType">{{ presentAs }}</span>
       </p>
     </template>
-    <div class="flex flex-wrap justify-center sm:justify-start my-4">
-      <div
+    <div class="flex flex-wrap justify-center sm:justify-start my-4 gap-2">
+      <button
         :class="currentYear === 'all' ? 'active-year' : ''"
-        class="year-pills"
+        class="pill-hand-drawn"
         @click="setCurrentYear('all')"
       >
-        All Years
-      </div>
-      <div
+        <svg class="pill-border" viewBox="0 0 120 50" fill="none" preserveAspectRatio="none">
+          <path class="pill-path" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 4 Q3 3 2 8 Q1 12 2 20 T2 38 Q2 45 8 46 L15 46 Q35 47 60 46 T105 47 L112 46 Q117 45 118 40 Q119 35 118 25 T118 10 Q118 5 112 4 L100 4 Q75 3 50 4 T15 3 Z"/>
+        </svg>
+        <span class="pill-text">All Years</span>
+      </button>
+      <button
         v-for="year in availableYears"
         :key="year"
         :class="currentYear === year ? 'active-year' : ''"
-        class="year-pills"
+        class="pill-hand-drawn"
         @click="setCurrentYear(year)"
       >
-        {{ year }}
-      </div>
+        <svg class="pill-border" viewBox="0 0 120 50" fill="none" preserveAspectRatio="none">
+          <path class="pill-path" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 4 Q3 3 2 8 Q1 12 2 20 T2 38 Q2 45 8 46 L15 46 Q35 47 60 46 T105 47 L112 46 Q117 45 118 40 Q119 35 118 25 T118 10 Q118 5 112 4 L100 4 Q75 3 50 4 T15 3 Z"/>
+        </svg>
+        <span class="pill-text">{{ year }}</span>
+      </button>
     </div>
-    <div class="flex flex-wrap justify-center sm:justify-start my-4">
-      <div
+    <div class="flex flex-wrap justify-center sm:justify-start my-4 gap-2">
+      <button
         :class="currentEventType === 'all' ? 'active' : ''"
-        class="pills"
+        class="pill-hand-drawn"
         @click="setCurrentEventType('all')"
       >
-        Show All
-      </div>
-      <div
+        <svg class="pill-border" viewBox="0 0 120 50" fill="none" preserveAspectRatio="none">
+          <path class="pill-path" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 4 Q3 3 2 8 Q1 12 2 20 T2 38 Q2 45 8 46 L15 46 Q35 47 60 46 T105 47 L112 46 Q117 45 118 40 Q119 35 118 25 T118 10 Q118 5 112 4 L100 4 Q75 3 50 4 T15 3 Z"/>
+        </svg>
+        <span class="pill-text">Show All</span>
+      </button>
+      <button
         :class="currentEventType === 'speaking' ? 'active' : ''"
-        class="pills speaking"
+        class="pill-hand-drawn speaking"
         @click="setCurrentEventType('speaking')"
       >
-        Speaking
-      </div>
-
-      <div
+        <svg class="pill-border" viewBox="0 0 120 50" fill="none" preserveAspectRatio="none">
+          <path class="pill-path" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 4 Q3 3 2 8 Q1 12 2 20 T2 38 Q2 45 8 46 L15 46 Q35 47 60 46 T105 47 L112 46 Q117 45 118 40 Q119 35 118 25 T118 10 Q118 5 112 4 L100 4 Q75 3 50 4 T15 3 Z"/>
+        </svg>
+        <span class="pill-text">Speaking</span>
+      </button>
+      <button
         :class="currentEventType === 'attendee' ? 'active' : ''"
-        class="pills attendee"
+        class="pill-hand-drawn attendee"
         @click="setCurrentEventType('attendee')"
       >
-        Attendee
-      </div>
-
-
-      <div
+        <svg class="pill-border" viewBox="0 0 120 50" fill="none" preserveAspectRatio="none">
+          <path class="pill-path" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 4 Q3 3 2 8 Q1 12 2 20 T2 38 Q2 45 8 46 L15 46 Q35 47 60 46 T105 47 L112 46 Q117 45 118 40 Q119 35 118 25 T118 10 Q118 5 112 4 L100 4 Q75 3 50 4 T15 3 Z"/>
+        </svg>
+        <span class="pill-text">Attendee</span>
+      </button>
+      <button
         :class="currentEventType === 'organizer' ? 'active' : ''"
-        class="pills organizer"
+        class="pill-hand-drawn organizer"
         @click="setCurrentEventType('organizer')"
       >
-        Organizer
-      </div>
-      
-      <div
+        <svg class="pill-border" viewBox="0 0 120 50" fill="none" preserveAspectRatio="none">
+          <path class="pill-path" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 4 Q3 3 2 8 Q1 12 2 20 T2 38 Q2 45 8 46 L15 46 Q35 47 60 46 T105 47 L112 46 Q117 45 118 40 Q119 35 118 25 T118 10 Q118 5 112 4 L100 4 Q75 3 50 4 T15 3 Z"/>
+        </svg>
+        <span class="pill-text">Organizer</span>
+      </button>
+      <button
         :class="currentEventType === 'competition' ? 'active' : ''"
-        class="pills competition"
+        class="pill-hand-drawn competition"
         @click="setCurrentEventType('competition')"
       >
-        Competition
-      </div>
-      <div
+        <svg class="pill-border" viewBox="0 0 120 50" fill="none" preserveAspectRatio="none">
+          <path class="pill-path" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 4 Q3 3 2 8 Q1 12 2 20 T2 38 Q2 45 8 46 L15 46 Q35 47 60 46 T105 47 L112 46 Q117 45 118 40 Q119 35 118 25 T118 10 Q118 5 112 4 L100 4 Q75 3 50 4 T15 3 Z"/>
+        </svg>
+        <span class="pill-text">Competition</span>
+      </button>
+      <button
         :class="currentEventType === 'jury' ? 'active' : ''"
-        class="pills jury"
+        class="pill-hand-drawn jury"
         @click="setCurrentEventType('jury')"
       >
-        Jury
-      </div>
-
-
+        <svg class="pill-border" viewBox="0 0 120 50" fill="none" preserveAspectRatio="none">
+          <path class="pill-path" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 4 Q3 3 2 8 Q1 12 2 20 T2 38 Q2 45 8 46 L15 46 Q35 47 60 46 T105 47 L112 46 Q117 45 118 40 Q119 35 118 25 T118 10 Q118 5 112 4 L100 4 Q75 3 50 4 T15 3 Z"/>
+        </svg>
+        <span class="pill-text">Jury</span>
+      </button>
     </div>
 
     <!-- {{ showCurrentEventType }} -->
@@ -269,93 +287,90 @@ function updateQuery() {
   }
 }
 
-.pills {
-  @apply p-2 mr-4 border-4 rounded-full cursor-pointer;
-  transition: all 0.2s linear;
-  border-color: transparent;
-
-  /* background: rgba(0, 0, 0, 0.1); */
-  &.active {
-    transition: all 0.2s linear;
-
-    /* @apply border-4 font-bold; */
-    &.speaking {
-      color: var(--speaking-color);
-      border-color: var(--speaking-color);
-    }
-
-    &.jury {
-      color: var(--jury-color);
-      border-color: var(--jury-color);
-    }
-
-    &.competition {
-      color: var(--competition-color);
-      border-color: var(--competition-color);
-    }
-
-    &.attendee {
-      color: var(--attendee-color);
-      border-color: var(--attendee-color);
-    }
-
-    &.organizer {
-      color: var(--organizer-color);
-      border-color: var(--organizer-color);
-    }
-  }
-
-  &.speaking {
-    color: var(--speaking-color);
-  }
-
-  &.jury {
-    color: var(--jury-color);
-  }
-
-  &.competition {
-    color: var(--competition-color);
-  }
-
-  &.attendee {
-    color: var(--attendee-color);
-  }
-
-  &.organizer {
-    color: var(--organizer-color);
-  }
+/* Hand-drawn pill styles */
+.pill-hand-drawn {
+  position: relative;
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  min-width: 80px;
 }
 
-.event-wrapper {
-  .speaking {
-    border-color: var(--speaking-color);
-  }
-
-  .jury {
-    border-color: var(--jury-color);
-  }
-
-  .competition {
-    border-color: var(--competition-color);
-  }
-
-  .attendee {
-    border-color: var(--attendee-color);
-  }
-
-  .organizer {
-    border-color: var(--organizer-color);
-  }
-
+.pill-border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
-.year-pills {
-  @apply p-2 mr-4 border-4 rounded-full cursor-pointer;
-  transition: all 0.2s linear;
-  border-color: transparent;
-
-  &.active-year {
-    @apply border-indigo-500 text-indigo-500 dark:border-indigo-400 dark:text-indigo-400;
-  }
+.pill-path {
+  color: #d1d5db;
+  transition: color 0.3s ease-out, d 0.3s ease-out;
 }
+
+:deep(.dark) .pill-path,
+.dark .pill-path {
+  color: #4b5563;
+}
+
+.pill-text {
+  position: relative;
+  z-index: 1;
+  font-size: 0.875rem;
+}
+
+.pill-hand-drawn:hover .pill-path {
+  d: path("M6 3 Q2 2 1 7 Q0 13 1 22 T1 40 Q1 47 7 48 L18 47 Q40 49 62 47 T108 49 L114 48 Q119 47 120 42 Q121 36 120 26 T120 9 Q120 4 114 3 L95 4 Q70 2 45 4 T12 2 Z");
+}
+
+/* Active and type-specific colors */
+.pill-hand-drawn.active-year .pill-path {
+  color: var(--color-indigo-500);
+}
+
+.pill-hand-drawn.active-year .pill-text {
+  color: var(--color-indigo-500);
+}
+
+.pill-hand-drawn.active .pill-path {
+  color: #6b7280;
+}
+
+.pill-hand-drawn.speaking .pill-path {
+  color: var(--speaking-color);
+}
+.pill-hand-drawn.speaking .pill-text {
+  color: var(--speaking-color);
+}
+
+.pill-hand-drawn.jury .pill-path {
+  color: var(--jury-color);
+}
+.pill-hand-drawn.jury .pill-text {
+  color: var(--jury-color);
+}
+
+.pill-hand-drawn.competition .pill-path {
+  color: var(--competition-color);
+}
+.pill-hand-drawn.competition .pill-text {
+  color: var(--competition-color);
+}
+
+.pill-hand-drawn.attendee .pill-path {
+  color: var(--attendee-color);
+}
+.pill-hand-drawn.attendee .pill-text {
+  color: var(--attendee-color);
+}
+
+.pill-hand-drawn.organizer .pill-path {
+  color: var(--organizer-color);
+}
+.pill-hand-drawn.organizer .pill-text {
+  color: var(--organizer-color);
+}
+
 </style>
