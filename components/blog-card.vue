@@ -21,30 +21,7 @@ const coverImage = computed(() => {
     :href="`/blog/${post.slug}`"
     class="blog-card relative rounded overflow-visible transition-all duration-300 blog-box block"
   >
-    <!-- Hand-drawn border SVG -->
-    <svg
-      class="hand-drawn-border"
-      viewBox="0 0 400 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      preserveAspectRatio="none"
-    >
-      <path
-        class="border-path"
-        stroke="currentColor"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M12 6 Q8 5 5 8 Q3 11 4 16
-           L4 18 Q2 50 5 80 T3 140 Q5 180 4 220 T5 270 Q3 285 5 290
-           Q6 294 10 295
-           L20 294 Q70 296 120 294 T220 296 Q280 294 340 296 T390 294
-           Q394 294 396 290 Q398 286 396 280
-           L397 270 Q395 230 397 190 T395 130 Q397 90 396 50 T397 16
-           Q398 10 394 7 Q390 4 385 5
-           L370 6 Q310 4 250 6 T130 4 Q70 6 20 5 Z"
-      />
-    </svg>
+    <HandDrawnShape variant="card" :hover-morph="true" />
     <div class="card-content rounded overflow-hidden">
       <!-- SVG clip path definition for organic image shape -->
       <svg class="absolute w-0 h-0" aria-hidden="true">
@@ -100,38 +77,19 @@ const coverImage = computed(() => {
   background: #1f2937;
 }
 
-.hand-drawn-border {
-  position: absolute;
-  inset: -2px;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  z-index: 0;
-  pointer-events: none;
-}
-
 .image-container {
   margin: 8px;
   margin-bottom: 0;
   width: calc(100% - 16px);
 }
 
-.border-path {
-  color: #9ca3af;
-  transition: color 0.4s ease-out, d 0.4s ease-out;
+/* Hover color change */
+.blog-card:hover :deep(.shape-path) {
+  stroke: #3b82f6;
 }
 
-:deep(.dark) .border-path,
-.dark .border-path {
-  color: #6b7280;
-}
-
-.blog-card:hover .border-path {
-  color: #3b82f6;
-  d: path("M15 3 Q6 2 3 6 Q-1 12 2 20 L3 25 Q-2 60 4 95 T-1 160 Q6 200 2 240 T6 280 Q2 290 6 294 Q10 298 18 296 L30 297 Q80 292 140 298 T260 291 Q320 298 370 293 T392 297 Q398 296 399 290 Q402 284 398 275 L399 265 Q402 220 395 175 T402 115 Q394 75 399 40 T395 12 Q396 5 390 3 Q384 0 375 3 L360 4 Q290 8 220 2 T100 7 Q50 2 25 4 Z");
-}
-
-:deep(.dark) .blog-card:hover .border-path,
-.dark .blog-card:hover .border-path {
-  color: #60a5fa;
+:deep(.dark) .blog-card:hover :deep(.shape-path),
+.dark .blog-card:hover :deep(.shape-path) {
+  stroke: #60a5fa;
 }
 </style>

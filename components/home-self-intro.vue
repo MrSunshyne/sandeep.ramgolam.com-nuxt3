@@ -2,7 +2,7 @@
   <div class="md:w-2/3 flex flex-col gap-4">
     <h1 class="text-2xl md:text-5xl text-left font-black w-full">Hi, I'm Sandeep</h1>
     <div class="mb-4 flex flex-col gap-4">
-      <div class="flex flex-col gap-2 md:text-xl">
+      <div class="flex flex-col gap-4 md:text-xl">
         <div class="flex gap-2">
           <IconsCodersmuIcon alt="Coders.mu" class="w-6 md:w-8 h-6 md:h-8 dark:text-white text-black" />
           <a href="https://coders.mu" target="_blank">Coders.mu</a>

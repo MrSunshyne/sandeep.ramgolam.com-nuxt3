@@ -58,23 +58,45 @@ const { data: allPosts } = await useAsyncData("all-blogs-summary", () =>
           </div>
         </div>
         <!-- <div v-else>no posts</div> -->
-        <nuxt-link :to="'/blog'" class="button">See all {{ allPosts?.length }} posts</nuxt-link>
+        <nuxt-link :to="'/blog'" class="view-button">
+          <HandDrawnShape variant="pill" :hover-morph="true" color="#3b82f6" />
+          <span class="view-button-text">See all {{ allPosts?.length }} posts</span>
+        </nuxt-link>
       </div>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
 @reference "tailwindcss";
 
 .blog-summary {
   background: #ebfff585;
 }
 
-html.dark {
-  .blog-summary {
-    @apply bg-gray-900;
-  }
+:deep(html.dark) .blog-summary,
+.dark .blog-summary {
+  @apply bg-gray-900;
+}
+
+.view-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 32px;
+}
+
+.view-button-text {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #1d4ed8;
+}
+
+:deep(.dark) .view-button-text,
+.dark .view-button-text {
+  color: #93c5fd;
 }
 
 @media (min-width: 768px) {
