@@ -306,8 +306,10 @@ function updateQuery() {
 }
 
 .pill-path {
+  stroke: currentColor;
+  fill: transparent;
   color: #d1d5db;
-  transition: color 0.3s ease-out, d 0.3s ease-out;
+  transition: color 0.3s ease-out, fill 0.3s ease-out, d 0.3s ease-out;
 }
 
 :deep(.dark) .pill-path,
@@ -319,30 +321,50 @@ function updateQuery() {
   position: relative;
   z-index: 1;
   font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease-out;
 }
 
 .pill-hand-drawn:hover .pill-path {
   d: path("M6 3 Q2 2 1 7 Q0 13 1 22 T1 40 Q1 47 7 48 L18 47 Q40 49 62 47 T108 49 L114 48 Q119 47 120 42 Q121 36 120 26 T120 9 Q120 4 114 3 L95 4 Q70 2 45 4 T12 2 Z");
 }
 
-/* Active and type-specific colors */
+/* Active year pills - filled */
 .pill-hand-drawn.active-year .pill-path {
   color: var(--color-indigo-500);
+  fill: var(--color-indigo-100);
 }
-
+:deep(.dark) .pill-hand-drawn.active-year .pill-path,
+.dark .pill-hand-drawn.active-year .pill-path {
+  fill: rgba(99, 102, 241, 0.2);
+}
 .pill-hand-drawn.active-year .pill-text {
-  color: var(--color-indigo-500);
+  color: var(--color-indigo-600);
+  font-weight: 600;
 }
 
+/* Active "Show All" pill */
 .pill-hand-drawn.active .pill-path {
   color: #6b7280;
+  fill: #f3f4f6;
+}
+:deep(.dark) .pill-hand-drawn.active .pill-path,
+.dark .pill-hand-drawn.active .pill-path {
+  fill: rgba(107, 114, 128, 0.2);
+}
+.pill-hand-drawn.active .pill-text {
+  font-weight: 600;
 }
 
+/* Event type pills with colors */
 .pill-hand-drawn.speaking .pill-path {
   color: var(--speaking-color);
 }
 .pill-hand-drawn.speaking .pill-text {
   color: var(--speaking-color);
+}
+.pill-hand-drawn.speaking.active .pill-path {
+  fill: rgba(59, 130, 246, 0.15);
 }
 
 .pill-hand-drawn.jury .pill-path {
@@ -351,12 +373,18 @@ function updateQuery() {
 .pill-hand-drawn.jury .pill-text {
   color: var(--jury-color);
 }
+.pill-hand-drawn.jury.active .pill-path {
+  fill: rgba(234, 179, 8, 0.15);
+}
 
 .pill-hand-drawn.competition .pill-path {
   color: var(--competition-color);
 }
 .pill-hand-drawn.competition .pill-text {
   color: var(--competition-color);
+}
+.pill-hand-drawn.competition.active .pill-path {
+  fill: rgba(239, 68, 68, 0.15);
 }
 
 .pill-hand-drawn.attendee .pill-path {
@@ -365,12 +393,18 @@ function updateQuery() {
 .pill-hand-drawn.attendee .pill-text {
   color: var(--attendee-color);
 }
+.pill-hand-drawn.attendee.active .pill-path {
+  fill: rgba(34, 197, 94, 0.15);
+}
 
 .pill-hand-drawn.organizer .pill-path {
   color: var(--organizer-color);
 }
 .pill-hand-drawn.organizer .pill-text {
   color: var(--organizer-color);
+}
+.pill-hand-drawn.organizer.active .pill-path {
+  fill: rgba(168, 85, 247, 0.15);
 }
 
 </style>
