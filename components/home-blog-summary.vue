@@ -64,7 +64,9 @@ const { data: allPosts } = await useAsyncData("all-blogs-summary", () =>
   </div>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "tailwindcss";
+
 .blog-summary {
   background: #ebfff585;
 }
@@ -75,7 +77,7 @@ html.dark {
   }
 }
 
-@screen md {
+@media (min-width: 768px) {
   .blog-summary {
     padding: 0 0 10vh 0;
 

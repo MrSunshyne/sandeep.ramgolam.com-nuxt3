@@ -20,7 +20,9 @@ const year = new Date().getFullYear();
   </div>
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
+@reference "tailwindcss";
+
 .menu {
   display: flex;
 

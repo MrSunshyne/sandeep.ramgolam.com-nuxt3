@@ -89,14 +89,16 @@ useHead({
 defineOgImageComponent("GenericTemplate");
 </script>
 
-<style scoped lang="postcss">
+<style scoped>
+@reference "tailwindcss";
+
 .projects-wrapper {
   display: grid;
   grid-gap: 50px;
   /*@apply px-10;*/
 }
 
-@screen sm {
+@media (min-width: 640px) {
   .project {
     .details-container {
       padding: 0 15px;
@@ -104,7 +106,7 @@ defineOgImageComponent("GenericTemplate");
   }
 }
 
-@screen lg {
+@media (min-width: 1024px) {
   .project {
     display: grid;
     grid-gap: 30px;

@@ -27,32 +27,8 @@
   </div>
 </template> 
 
-<style lang="postcss" scoped>
-.social-media {
-  @apply pt-5 text-center flex w-full;
-
-  a {
-    @apply block underline font-bold text-sm w-1/2;
-
-    &:hover {
-      @apply text-blue-500;
-    }
-  }
-}
-
-@screen sm {
-  .social-media {
-    @apply pt-10 text-left;
-
-    a {
-      @apply font-bold no-underline tracking-widest pr-10 text-xl w-auto;
-
-      &:hover {
-        @apply underline text-blue-500;
-      }
-    }
-  }
-}
+<style scoped>
+@reference "tailwindcss";
 
 @keyframes vibrate-1 {
   0% {

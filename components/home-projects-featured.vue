@@ -76,7 +76,9 @@ export default {
 };
 </script>
 
-<style scoped lang="postcss">
+<style scoped>
+@reference "tailwindcss";
+
 .darkest-bg {
   background: #111;
 }
@@ -91,7 +93,7 @@ export default {
   @apply my-10;
 }
 
-@screen sm {
+@media (min-width: 640px) {
   .project {
     display: grid;
     grid-gap: 30px;

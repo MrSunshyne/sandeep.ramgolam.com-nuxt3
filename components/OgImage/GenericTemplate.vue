@@ -19,7 +19,7 @@ const strippedTitle =
   </div>
 </template>
 
-<style lang="postcss" scoped>
+<style  scoped>
 .og-image-wrapper {
   background-color: #000;
   background-image: url("/og-image-assets/generic.png");

@@ -229,7 +229,9 @@ function updateQuery() {
   </div>
 </template>
 
-<style scoped lang="postcss">
+<style scoped>
+@reference "tailwindcss";
+
 .event-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -238,11 +240,11 @@ function updateQuery() {
 }
 
 .event-page {
-  --competition-color: theme(colors.red.500);
-  --speaking-color: theme(colors.blue.500);
-  --jury-color: theme(colors.yellow.500);
-  --attendee-color: theme(colors.green.500);
-  --organizer-color: theme(colors.purple.500);
+  --competition-color: var(--color-red-500);
+  --speaking-color: var(--color-blue-500);
+  --jury-color: var(--color-yellow-500);
+  --attendee-color: var(--color-green-500);
+  --organizer-color: var(--color-purple-500);
 }
 
 .event-box {
@@ -261,7 +263,7 @@ function updateQuery() {
   }
 }
 
-@screen sm {
+@media (min-width: 640px) {
   .event-wrapper {
     grid-gap: 40px;
   }
