@@ -5,9 +5,9 @@ const route = useRoute();
 const slug = route.params.slug[0];
 
 const { data: post } = await useAsyncData("blogpost" + slug, () =>
-  queryContent<BlogPost>("blog")
-    .where({ slug: { $eq: slug } })
-    .findOne(),
+  queryCollection<BlogPost>("blog")
+    .where("slug", "=", slug)
+    .first(),
 );
 
 if (post.value) {
@@ -86,20 +86,16 @@ const coverImage = computed(() => {
       />
     </div>
 
-    <ContentDoc v-slot="{ doc }">
-      <div
-        class="mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl flex flex-col lg:gap-8"
-      >
-        <article class="">
-          <div
-            class="mt-8 pb-24 dark:text-gray-300 dark:prose-pre:!bg-gray-800/60 prose prose-primary dark:prose-invert max-w-none mx-auto"
-          >
-            <ContentRenderer :value="doc">
-              <ContentRendererMarkdown :value="doc" />
-            </ContentRenderer>
-          </div>
-        </article>
-      </div>
-    </ContentDoc>
+    <div
+      class="mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl flex flex-col lg:gap-8"
+    >
+      <article class="">
+        <div
+          class="mt-8 pb-24 dark:text-gray-300 dark:prose-pre:!bg-gray-800/60 prose prose-primary dark:prose-invert max-w-none mx-auto"
+        >
+          <ContentRenderer :value="post" />
+        </div>
+      </article>
+    </div>
   </article>
 </template>

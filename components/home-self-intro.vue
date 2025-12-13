@@ -62,7 +62,7 @@
 
 <script setup lang="ts">
 const { data: events } = await useAsyncData("events-intro", () =>
-  queryContent("events").find()
+  queryCollection("events").all()
 );
 
 const speakingCount = computed(() => events.value?.filter(e => e.event_type.includes('speaking')).length || 0);

@@ -2,13 +2,11 @@
 import type { BlogPost } from "@/types";
 
 const { data: posts } = await useAsyncData("blogs", () =>
-  queryContent<BlogPost>("blog")
-    .where({
-      visibility: { $eq: "public" },
-      status: { $eq: "published" },
-    })
-    .sort({ date: -1 })
-    .find(),
+  queryCollection<BlogPost>("blog")
+    .where("visibility", "=", "public")
+    .where("status", "=", "published")
+    .order("date", "DESC")
+    .all(),
 );
 
 useHead({

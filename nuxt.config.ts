@@ -32,7 +32,6 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/ui",
     "@nuxt/content",
-    "@nuxthq/studio",
     "@nuxt/image",
     "nuxt-og-image",
     'nuxt-mcp'

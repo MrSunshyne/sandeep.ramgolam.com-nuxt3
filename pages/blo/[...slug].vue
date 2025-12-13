@@ -12,9 +12,9 @@ const slug = route.params.slug[0];
 const { toc, seo } = useAppConfig()
 
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryContent("blog")
-    .where({ slug: { $eq: slug } })
-    .findOne();
+  return queryCollection("blog")
+    .where("slug", "=", slug)
+    .first();
 });
 
 if (!page?.value) {
@@ -23,10 +23,7 @@ if (!page?.value) {
 
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-  queryContent()
-    .where({ _extension: "md", navigation: { $ne: false } })
-    .only(["title", "description", "_path"])
-    .findSurround(withoutTrailingSlash(route.path)),
+  queryCollectionItemSurroundings("blog", withoutTrailingSlash(route.path)),
 );
 
 useSeoMeta({

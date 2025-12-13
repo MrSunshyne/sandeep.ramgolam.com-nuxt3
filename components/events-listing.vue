@@ -2,7 +2,7 @@
 import EventCard from "~/components/event-card.vue";
 
 const { data: events } = await useAsyncData("events", () =>
-  queryContent("events").sort({ event_date: -1 }).find(),
+  queryCollection("events").order("event_date", "DESC").all(),
 );
 
 defineProps({

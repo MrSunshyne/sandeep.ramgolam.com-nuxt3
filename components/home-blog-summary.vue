@@ -2,18 +2,18 @@
 import type { BlogPost } from "@/types";
 
 const { data: posts } = await useAsyncData("blogs-summary", () =>
-  queryContent<BlogPost>("blog")
-    .where({ visibility: { $eq: "public" } })
-    .sort({ date: -1 })
+  queryCollection<BlogPost>("blog")
+    .where("visibility", "=", "public")
+    .order("date", "DESC")
     .limit(5)
-    .find()
+    .all()
 );
 
 const { data: allPosts } = await useAsyncData("all-blogs-summary", () =>
-  queryContent<BlogPost>("blog")
-    .where({ visibility: { $eq: "public" } })
-    .sort({ date: -1 })
-    .find()
+  queryCollection<BlogPost>("blog")
+    .where("visibility", "=", "public")
+    .order("date", "DESC")
+    .all()
 );
 </script>
 
