@@ -53,6 +53,7 @@ const currentShape = computed(() => shapes[props.variant]);
       `variant-${variant}`,
       { selected, 'hover-morph': hoverMorph, animated }
     ]"
+    :style="{ '--shape-stroke-color': color || 'currentColor' }"
     :viewBox="currentShape.viewBox"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +89,7 @@ const currentShape = computed(() => shapes[props.variant]);
 
 /* Selected state - filled background */
 .selected .shape-path {
-  fill: currentColor;
+  /*fill: var(--shape-stroke-color, currentColor);*/
   fill-opacity: 0.12;
 }
 

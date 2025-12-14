@@ -140,7 +140,13 @@ function updateQuery() {
         class="pill-hand-drawn"
         @click="setCurrentYear('all')"
       >
-        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentYear === 'all'" />
+        <HandDrawnShape
+          variant="pill"
+          :hover-morph="true"
+          :selected="currentYear === 'all'"
+          :color="currentYear === 'all' ? undefined : '#d1d5db'"
+          :stroke-width="currentYear === 'all' ? 2.5 : 1.5"
+        />
         <span class="pill-text">All Years</span>
       </button>
       <button
@@ -149,7 +155,13 @@ function updateQuery() {
         class="pill-hand-drawn"
         @click="setCurrentYear(year)"
       >
-        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentYear === year" />
+        <HandDrawnShape
+          variant="pill"
+          :hover-morph="true"
+          :selected="currentYear === year"
+          :color="currentYear === year ? undefined : '#d1d5db'"
+          :stroke-width="currentYear === year ? 2.5 : 1.5"
+        />
         <span class="pill-text">{{ year }}</span>
       </button>
     </div>
@@ -158,43 +170,79 @@ function updateQuery() {
         class="pill-hand-drawn"
         @click="setCurrentEventType('all')"
       >
-        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'all'" />
+        <HandDrawnShape
+          variant="pill"
+          :hover-morph="true"
+          :selected="currentEventType === 'all'"
+          :color="currentEventType === 'all' ? undefined : '#d1d5db'"
+          :stroke-width="currentEventType === 'all' ? 2.5 : 1.5"
+        />
         <span class="pill-text">Show All</span>
       </button>
       <button
         class="pill-hand-drawn"
         @click="setCurrentEventType('speaking')"
       >
-        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'speaking'" color="#3b82f6" />
-        <span class="pill-text" :class="{ 'text-blue-500': true }">Speaking</span>
+        <HandDrawnShape
+          variant="pill"
+          :hover-morph="true"
+          :selected="currentEventType === 'speaking'"
+          :color="currentEventType === 'speaking' ? '#3b82f6' : '#d1d5db'"
+          :stroke-width="currentEventType === 'speaking' ? 2.5 : 1.5"
+        />
+        <span class="pill-text" :class="{ 'text-blue-500': currentEventType === 'speaking' }">Speaking</span>
       </button>
       <button
         class="pill-hand-drawn"
         @click="setCurrentEventType('attendee')"
       >
-        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'attendee'" color="#22c55e" />
-        <span class="pill-text" :class="{ 'text-green-500': true }">Attendee</span>
+        <HandDrawnShape
+          variant="pill"
+          :hover-morph="true"
+          :selected="currentEventType === 'attendee'"
+          :color="currentEventType === 'attendee' ? '#22c55e' : '#d1d5db'"
+          :stroke-width="currentEventType === 'attendee' ? 2.5 : 1.5"
+        />
+        <span class="pill-text" :class="{ 'text-green-500': currentEventType === 'attendee' }">Attendee</span>
       </button>
       <button
         class="pill-hand-drawn"
         @click="setCurrentEventType('organizer')"
       >
-        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'organizer'" color="#a855f7" />
-        <span class="pill-text" :class="{ 'text-purple-500': true }">Organizer</span>
+        <HandDrawnShape
+          variant="pill"
+          :hover-morph="true"
+          :selected="currentEventType === 'organizer'"
+          :color="currentEventType === 'organizer' ? '#a855f7' : '#d1d5db'"
+          :stroke-width="currentEventType === 'organizer' ? 2.5 : 1.5"
+        />
+        <span class="pill-text" :class="{ 'text-purple-500': currentEventType === 'organizer' }">Organizer</span>
       </button>
       <button
         class="pill-hand-drawn"
         @click="setCurrentEventType('competition')"
       >
-        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'competition'" color="#ef4444" />
-        <span class="pill-text" :class="{ 'text-red-500': true }">Competition</span>
+        <HandDrawnShape
+          variant="pill"
+          :hover-morph="true"
+          :selected="currentEventType === 'competition'"
+          :color="currentEventType === 'competition' ? '#ef4444' : '#d1d5db'"
+          :stroke-width="currentEventType === 'competition' ? 2.5 : 1.5"
+        />
+        <span class="pill-text" :class="{ 'text-red-500': currentEventType === 'competition' }">Competition</span>
       </button>
       <button
         class="pill-hand-drawn"
         @click="setCurrentEventType('jury')"
       >
-        <HandDrawnShape variant="pill" :hover-morph="true" :selected="currentEventType === 'jury'" color="#eab308" />
-        <span class="pill-text" :class="{ 'text-yellow-500': true }">Jury</span>
+        <HandDrawnShape
+          variant="pill"
+          :hover-morph="true"
+          :selected="currentEventType === 'jury'"
+          :color="currentEventType === 'jury' ? '#eab308' : '#d1d5db'"
+          :stroke-width="currentEventType === 'jury' ? 2.5 : 1.5"
+        />
+        <span class="pill-text" :class="{ 'text-yellow-500': currentEventType === 'jury' }">Jury</span>
       </button>
     </div>
 
@@ -279,6 +327,12 @@ function updateQuery() {
   font-size: 0.875rem;
   font-weight: 500;
   transition: color 0.3s ease-out;
+  color: #6b7280;
+}
+
+:deep(.dark) .pill-text,
+.dark .pill-text {
+  color: #9ca3af;
 }
 
 </style>
