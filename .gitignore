@@ -12,3 +12,4 @@ dist
 .netlify
 playwright-report/*
 TODO.md
+GEMINI.md
