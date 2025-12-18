@@ -1,12 +1,17 @@
 <template>
   <div
-    class="px-2 py-1 border cursor-pointer hover:border-gray-600 rounded-full flex items-center justify-center aspect-square"
-    :class="[
-      !!isActive ? 'border border-gray-600 rounded-full' : 'border-transparent',
-    ]"
+    class="relative px-2 py-1 cursor-pointer flex items-center justify-center aspect-square"
     @click="$colorMode.preference = props.theme"
   >
-    <slot />
+    <HandDrawnShape
+      v-if="isActive"
+      variant="pill"
+      :selected="true"
+      :hover-morph="false"
+    />
+    <div class="relative z-10">
+      <slot />
+    </div>
   </div>
 </template>
 
