@@ -29,7 +29,7 @@ defineOgImageComponent("IndexTemplate", {});
 </script>
 
 <template>
-  <section class="page-home flex flex-wrap content-center py-16 md:py-0">
+  <section class="page-home flex flex-wrap content-center">
     <!-- <OgImageStatic component="OgImageIndex" /> -->
     <div class="w-full flex flex-col">
       <HomeHero />

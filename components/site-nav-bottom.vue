@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const links = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog/" },
   { label: "Events", href: "/events/" },
@@ -29,13 +30,13 @@ const links = [
           <span class="sr-only">Sandeep Ramgolam Logo</span>
         </NuxtLink>
         <ul class="nav-links">
-          <li v-for="link in links" :key="link.href">
+          <li v-for="link in links" :key="link.href" :class="{ 'sm:hidden': link.label === 'Home' }">
             <NuxtLink :href="link.href" class="nav-link">
               {{ link.label }}
             </NuxtLink>
           </li>
         </ul>
-        <div class="nav-theme">
+        <div class="nav-theme hidden sm:flex">
           <ClientOnly>
             <site-color-picker />
           </ClientOnly>
@@ -49,49 +50,81 @@ const links = [
 @reference "tailwindcss";
 
 .site-nav-bottom {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
   display: flex;
   justify-content: center;
-  padding: var(--dock-padding-top) 16px var(--dock-padding) 16px;
-  /* Enable scroll-state container queries */
-  container-type: scroll-state;
+  padding: 12px;
+  background: transparent;
 
-  /* Direct child styling with scroll-state query */
+  /* Direct child styling */
   > .nav-dock {
     --dock-bg: #ffffff;
     position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    /* Start bigger when unstuck */
-    transform: scale(var(--dock-scale));
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-    /* Shrink when stuck at top */
-    @container scroll-state(stuck: top) {
-      transform: scale(1);
-
-      .dock-path {
-        /* Stuck state: compact pill shape */
-        d: path("M25 35C25 18 40 12 70 13C100 11 140 14 185 12C235 14 285 11 335 13C385 11 425 14 460 12C485 11 495 18 490 35C495 52 485 59 460 58C425 60 385 57 335 58C285 57 235 60 185 58C140 57 100 60 70 58C40 59 25 52 25 35Z");
-      }
-    }
+    border: 2px solid #e5e7eb;
+    border-radius: 9999px;
+    background: var(--dock-bg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: calc(100vw - 24px);
   }
 }
 
 html.dark .site-nav-bottom > .nav-dock {
   --dock-bg: rgb(30 41 59);
+  border-color: rgb(71 85 105);
 }
 
 .site-nav-bottom .dock-border {
+  display: none;
   position: absolute;
-  inset: -12px -32px;
+  inset: -12px -16px;
   width: calc(100% + 32px);
   height: calc(100% + 24px);
   pointer-events: none;
   color: #374151; /* gray-700 */
+}
+
+@media (min-width: 640px) {
+  .site-nav-bottom {
+    position: sticky;
+    top: 0;
+    bottom: auto;
+    padding: var(--dock-padding-top) 16px var(--dock-padding) 16px;
+    container-type: scroll-state;
+  }
+
+  .site-nav-bottom > .nav-dock {
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: scale(var(--dock-scale));
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    width: auto;
+    max-width: none;
+  }
+
+  .site-nav-bottom .dock-border {
+    display: block;
+    inset: -12px -32px;
+  }
+
+  @container scroll-state(stuck: top) {
+    .site-nav-bottom > .nav-dock {
+      transform: scale(1);
+    }
+
+    .site-nav-bottom .dock-path {
+      d: path("M25 35C25 18 40 12 70 13C100 11 140 14 185 12C235 14 285 11 335 13C385 11 425 14 460 12C485 11 495 18 490 35C495 52 485 59 460 58C425 60 385 57 335 58C285 57 235 60 185 58C140 57 100 60 70 58C40 59 25 52 25 35Z");
+    }
+  }
 }
 
 .site-nav-bottom .dock-path {
@@ -104,10 +137,11 @@ html.dark .site-nav-bottom .dock-border {
 }
 
 .site-nav-bottom .nav-inner {
-  @apply px-4 py-3 sm:px-6;
+  @apply px-3 py-2.5 sm:px-6 sm:py-3;
   @apply flex items-center justify-center;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .site-nav-bottom .nav-logo {
@@ -131,19 +165,19 @@ html.dark .site-nav-bottom .dock-border {
 }
 
 .site-nav-bottom .nav-links {
-  @apply flex items-center justify-center gap-1 sm:gap-2;
+  @apply flex items-center justify-between sm:justify-center gap-1 sm:gap-2;
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .site-nav-bottom .nav-link {
-  @apply px-3 py-2 sm:px-4;
+  @apply px-2.5 py-2 sm:px-4;
   @apply font-bold text-sm sm:text-base;
   @apply transition-all duration-300;
   text-decoration: none;
   position: relative;
-  padding-bottom: 4px;
   display: block;
   color: #111827; /* gray-900 */
 }
@@ -156,8 +190,8 @@ html.dark .site-nav-bottom .nav-link {
 .site-nav-bottom .nav-link::after {
   content: '';
   position: absolute;
-  left: 0.75rem;
-  right: 0.75rem;
+  left: 0.625rem;
+  right: 0.625rem;
   bottom: 0;
   height: 10px;
   background: currentColor;
@@ -194,6 +228,14 @@ html.dark .site-nav-bottom .nav-link {
 }
 
 @media (min-width: 640px) {
+  .site-nav-bottom .nav-inner {
+    width: auto;
+  }
+
+  .site-nav-bottom .nav-links {
+    width: auto;
+  }
+
   .site-nav-bottom .nav-link::after {
     left: 1rem;
     right: 1rem;
