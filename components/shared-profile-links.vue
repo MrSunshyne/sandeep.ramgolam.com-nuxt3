@@ -40,31 +40,16 @@
 <style scoped>
 @reference "tailwindcss";
 
-@keyframes float-bounce {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-8px) scale(1.08);
-  }
-}
-
-@keyframes glow {
-  0%, 100% {
-    filter: drop-shadow(0 0 0px currentColor);
-  }
-  50% {
-    filter: drop-shadow(0 0 8px currentColor);
-  }
-}
-
 .svgicon {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
   transform-origin: center;
+  transform: scale(1) rotate(0deg);
 }
 
 .svgicon:hover {
+  transition: all 0.4s ease;
+  transform: scale(0.8) rotate(-5deg);
   cursor: pointer;
-  animation: float-bounce 0.6s ease-in-out, glow 0.6s ease-in-out;
+             
 }
 </style>
