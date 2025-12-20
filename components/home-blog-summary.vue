@@ -1,13 +1,15 @@
 <script setup lang="ts">
-// Only fetch the 5 posts we display + count for "See all X posts" button
-const { data: postsData } = await useAsyncData("blogs-summary", async () => {
+// Homepage: Only fetch the 5 posts we display with minimal fields
+const { data: postsData } = await useAsyncData("home-blogs", async () => {
   const [posts, countResult] = await Promise.all([
+    // Only select fields needed for display
     queryCollection("blog")
       .where("visibility", "=", "public")
+      .select("slug", "title")
       .order("date", "DESC")
       .limit(5)
       .all(),
-    // Only fetch minimal data for count
+    // Only fetch slug for count
     queryCollection("blog")
       .where("visibility", "=", "public")
       .select("slug")

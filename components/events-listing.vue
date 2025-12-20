@@ -1,16 +1,35 @@
 <script setup lang="ts">
 import EventCard from "~/components/event-card.vue";
 
-const { data: events } = await useAsyncData("events", () =>
-  queryCollection("events").order("event_date", "DESC").all(),
-);
-
-defineProps({
+const props = defineProps({
   count: {
     type: Number,
     default: -1,
   },
 });
+
+// Use different cache keys and queries based on context
+// Homepage (count > 0): lightweight query with limit
+// Events page (count === -1): full query for filtering
+const isHomepage = props.count > 0;
+
+const { data: events } = await useAsyncData(
+  isHomepage ? "home-events" : "events",
+  () => {
+    const query = queryCollection("events").order("event_date", "DESC");
+
+    if (isHomepage) {
+      // Homepage: only fetch published events, limited count
+      return query
+        .where("published", "=", true)
+        .limit(props.count)
+        .all();
+    }
+
+    // Events page: fetch all for filtering
+    return query.all();
+  }
+);
 
 const localEvents = ref(events);
 
@@ -286,11 +305,11 @@ function updateQuery() {
       class="event-wrapper"
     >
       <template
-        v-for="(event, index) in count === -1 ? showCurrentEventType : showCurrentEventType.slice(0, count)"
+        v-for="(event, index) in showCurrentEventType"
         :key="event.topic + event.event_date"
       >
         <EventCard
-          v-if="event?.published"
+          v-if="isHomepage || event?.published"
           :event="event"
           :class="event.event_type?.[0]"
           class="event-box"

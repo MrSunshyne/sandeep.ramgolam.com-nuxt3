@@ -61,12 +61,19 @@
 </template>
 
 <script setup lang="ts">
-// Reuse the same cache key as events-listing to avoid duplicate payload data
-const { data: events } = await useAsyncData("events", () =>
-  queryCollection("events").order("event_date", "DESC").all()
-);
+// Homepage: Only fetch event_type for counting - minimal payload
+const { data: eventCounts } = await useAsyncData("home-event-counts", async () => {
+  const events = await queryCollection("events")
+    .select("event_type")
+    .all();
 
-const speakingCount = computed(() => events.value?.filter(e => e.event_type?.includes('speaking')).length || 0);
-const organizerCount = computed(() => events.value?.filter(e => e.event_type?.includes('organizer')).length || 0);
+  return {
+    speaking: events.filter(e => e.event_type?.includes('speaking')).length,
+    organizer: events.filter(e => e.event_type?.includes('organizer')).length
+  };
+});
+
+const speakingCount = computed(() => eventCounts.value?.speaking ?? 0);
+const organizerCount = computed(() => eventCounts.value?.organizer ?? 0);
 </script>
 
