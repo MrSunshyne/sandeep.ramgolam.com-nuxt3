@@ -23,11 +23,11 @@
                 />
               </div>
               <div
-                class="details-container text-center sm:text-left flex flex-col justify-center"
+                class="details-container text-center sm:text-left flex flex-col justify-center pt-6 sm:pt-0"
               >
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">{{ project.name }}</h2>
-                <p v-if="project.text" class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 sm:mb-5">{{ project.text }}</p>
-                <div class="space-y-3 sm:space-y-4 mb-5 sm:mb-6">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">{{ project.name }}</h2>
+                <p v-if="project.text" class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-5 sm:mb-5">{{ project.text }}</p>
+                <div class="space-y-4 sm:space-y-4 mb-6 sm:mb-6">
                   <div class="text-base sm:text-lg font-medium text-gray-800 dark:text-gray-200">
                     <span v-for="role in project.role" :key="role">{{
                       role
@@ -42,7 +42,7 @@
                     >{{ tech }}</span>
                   </div>
                 </div>
-                <div>
+                <div class="mt-2">
                   <a
                     :href="project.url"
                     target="_blank"
@@ -158,7 +158,7 @@ defineOgImageComponent("GenericTemplate");
   position: relative;
   z-index: 1;
   background: white;
-  padding: 24px;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.3s ease-out;
@@ -192,8 +192,8 @@ defineOgImageComponent("GenericTemplate");
 }
 
 .image-container {
-  margin: 12px;
-  margin-bottom: 0;
+  margin: 8px;
+  margin-bottom: 8px;
   background: #e5e7eb;
   transition: background 0.3s ease-out;
 }
@@ -202,6 +202,12 @@ defineOgImageComponent("GenericTemplate");
   .image-container {
     margin: 16px;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-container {
+    margin-bottom: 16px;
   }
 }
 
@@ -224,6 +230,7 @@ defineOgImageComponent("GenericTemplate");
     gap: 40px;
     grid-template-columns: 3fr 2fr;
     grid-template-areas: "left right";
+    align-items: center;
 
     .image-container {
       grid-area: left;
