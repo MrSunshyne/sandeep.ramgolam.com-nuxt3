@@ -48,7 +48,6 @@ const totalCount = computed(() => postsData.value?.totalCount ?? 0);
             <nuxt-link
               :to="'/blog/' + post.slug"
               class="hover:text-green-500"
-              :style="transitionName(post.slug, 'blog-title')"
             >
               {{ post.title }}
             </nuxt-link>
