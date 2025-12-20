@@ -1,5 +1,5 @@
 <template>
-  <div class="contain event-page pb-10">
+  <div class="contain event-page pb-16 sm:pb-20">
     <EventsListing />
   </div>
 </template>

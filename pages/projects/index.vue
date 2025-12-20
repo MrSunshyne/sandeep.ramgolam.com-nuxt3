@@ -1,7 +1,7 @@
 <template>
-  <div class="contain">
-    <h1 class="page-title">Projects</h1>
-    <p class="page-subtitle">Some projects I help built</p>
+  <div class="contain pb-16 sm:pb-20">
+    <h1 class="page-title mb-3 sm:mb-4">Projects</h1>
+    <p class="page-subtitle mb-10 sm:mb-12">Some projects I help built</p>
     <div v-if="projects" class="projects-wrapper">
       <TransitionGroup name="fade">
         <template v-for="(project, index) in projects" :key="project.name">
@@ -25,19 +25,21 @@
               <div
                 class="details-container text-center sm:text-left flex flex-col justify-center"
               >
-                <h2 class="text-2xl sm:text-3xl font-black">{{ project.name }}</h2>
-                <p v-if="project.text" class="text-gray-600 dark:text-gray-300 mt-2">{{ project.text }}</p>
-                <div class="pt-2 pb-5">
-                  <div class="text-md sm:text-xl font-medium">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">{{ project.name }}</h2>
+                <p v-if="project.text" class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 sm:mb-5">{{ project.text }}</p>
+                <div class="space-y-3 sm:space-y-4 mb-5 sm:mb-6">
+                  <div class="text-base sm:text-lg font-medium text-gray-800 dark:text-gray-200">
                     <span v-for="role in project.role" :key="role">{{
                       role
                     }}</span>
                     @ {{ project.company }}
                   </div>
-                  <div class="uppercase text-xs py-2 text-gray-500 dark:text-gray-400">
-                    <span v-for="tech in project.tech" :key="tech"
-                      >{{ tech }} / &nbsp;</span
-                    >
+                  <div class="flex flex-wrap gap-2 justify-center sm:justify-start">
+                    <span
+                      v-for="tech in project.tech"
+                      :key="tech"
+                      class="px-3 py-1.5 text-xs sm:text-sm rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium"
+                    >{{ tech }}</span>
                   </div>
                 </div>
                 <div>
@@ -102,7 +104,19 @@ defineOgImageComponent("GenericTemplate");
 
 .projects-wrapper {
   display: grid;
-  grid-gap: 50px;
+  gap: 40px;
+}
+
+@media (min-width: 640px) {
+  .projects-wrapper {
+    gap: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-wrapper {
+    gap: 60px;
+  }
 }
 
 .project-card {
@@ -113,6 +127,11 @@ defineOgImageComponent("GenericTemplate");
   position: relative;
   display: inline-block;
   padding: 12px 32px;
+  transition: transform 0.3s ease-out;
+}
+
+.view-button:hover {
+  transform: translateY(-2px);
 }
 
 .view-button-text {
@@ -124,6 +143,12 @@ defineOgImageComponent("GenericTemplate");
   color: #166534;
 }
 
+@media (min-width: 640px) {
+  .view-button-text {
+    font-size: 1rem;
+  }
+}
+
 :deep(.dark) .view-button-text,
 .dark .view-button-text {
   color: #86efac;
@@ -133,19 +158,51 @@ defineOgImageComponent("GenericTemplate");
   position: relative;
   z-index: 1;
   background: white;
-  padding: 20px;
-  border-radius: 6px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease-out;
+}
+
+.project-content:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 640px) {
+  .project-content {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-content {
+    padding: 40px;
+  }
 }
 
 :deep(.dark) .project-content,
 .dark .project-content {
   background: #1f2937;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+:deep(.dark) .project-content:hover,
+.dark .project-content:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .image-container {
-  margin: 8px;
+  margin: 12px;
   margin-bottom: 0;
   background: #e5e7eb;
+  transition: background 0.3s ease-out;
+}
+
+@media (min-width: 640px) {
+  .image-container {
+    margin: 16px;
+    margin-bottom: 0;
+  }
 }
 
 :deep(.dark) .image-container,
@@ -156,7 +213,7 @@ defineOgImageComponent("GenericTemplate");
 @media (min-width: 640px) {
   .project-content {
     .details-container {
-      padding: 0 15px;
+      padding: 0 20px;
     }
   }
 }
@@ -164,7 +221,7 @@ defineOgImageComponent("GenericTemplate");
 @media (min-width: 1024px) {
   .project-content {
     display: grid;
-    grid-gap: 30px;
+    gap: 40px;
     grid-template-columns: 3fr 2fr;
     grid-template-areas: "left right";
 

@@ -135,28 +135,28 @@ function updateQuery() {
 <template>
   <div class="" :class="{ 'has-filter-dock': count === -1 }">
     <template v-if="count === -1">
-      <h1 class="page-title">Events</h1>
-      <p class="page-subtitle mb-8 sm:mb-4">
+      <h1 class="page-title mb-3 sm:mb-4">Events</h1>
+      <p class="page-subtitle mb-10 sm:mb-12 text-base sm:text-lg leading-relaxed">
         <template v-if="currentYear !== 'all' && currentEventType !== 'all'">
-          <span class="font-bold text-indigo-500">{{
+          <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
             showCurrentEventType?.length || 0
           }}</span>
           {{ currentEventType }} event{{ showCurrentEventType?.length === 1 ? '' : 's' }} in {{ currentYear }}
         </template>
         <template v-else-if="currentYear !== 'all'">
-          <span class="font-bold text-indigo-500">{{
+          <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
             showCurrentEventType?.length || 0
           }}</span>
           event{{ showCurrentEventType?.length === 1 ? '' : 's' }} in {{ currentYear }}
         </template>
         <template v-else-if="currentEventType !== 'all'">
-          <span class="font-bold text-indigo-500">{{
+          <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
             showCurrentEventType?.length || 0
           }}</span>
           {{ currentEventType }} event{{ showCurrentEventType?.length === 1 ? '' : 's' }}
         </template>
         <template v-else>
-          <span class="font-bold text-indigo-500">{{
+          <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
             showCurrentEventType?.length || 0
           }}</span>
           event{{ showCurrentEventType?.length === 1 ? '' : 's' }} I was involved in
@@ -164,9 +164,9 @@ function updateQuery() {
       </p>
     </template>
     <template v-else>
-      <h2 class="text-3xl font-black pt-10 text-center">Events</h2>
-      <p class="text-md text-gray-700 dark:text-gray-300 text-center mb-8 sm:mb-4">
-        <span class="font-bold text-indigo-500">{{
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold pt-8 sm:pt-10 text-center mb-3 sm:mb-4">Events</h2>
+      <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-center mb-8 sm:mb-12 leading-relaxed">
+        <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
           showCurrentEventType?.length || 0
         }}</span>
         event{{ showCurrentEventType?.length === 1 ? '' : 's' }} I was involved in
@@ -317,8 +317,10 @@ function updateQuery() {
         />
       </template>
     </div>
-    <div v-else class="event-wrapper pt-10 text-3xl text-center">
-      No events in the {{ currentEventType }} category
+    <div v-else class="pt-10 sm:pt-16 text-center">
+      <p class="text-xl sm:text-2xl text-gray-500 dark:text-gray-400">
+        No events in the {{ currentEventType }} category
+      </p>
     </div>
   </div>
 </template>
@@ -328,19 +330,30 @@ function updateQuery() {
 
 .event-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 40px;
-  /* background: #16181e; */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .event-wrapper {
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .event-wrapper {
+    gap: 40px;
+  }
 }
 
 /* Only add bottom padding when filters are visible */
 .has-filter-dock .event-wrapper {
-  padding-bottom: 120px;
+  padding-bottom: 140px;
 }
 
 @media (min-width: 640px) {
   .has-filter-dock .event-wrapper {
-    padding-bottom: 100px;
+    padding-bottom: 120px;
   }
 }
 
