@@ -13,8 +13,7 @@ Personal website for Sandeep Ramgolam, built with Nuxt 3 and Nuxt Content v2. Fe
 pnpm dev              # Start dev server on port 4242
 
 # Build
-pnpm build            # Build for production
-pnpm generate         # Generate static site
+pnpm generate         # Production build is generated statically
 
 # Linting
 pnpm lint             # Run ESLint with auto-fix
@@ -23,6 +22,8 @@ pnpm lint             # Run ESLint with auto-fix
 pnpm test:e2e         # Run Playwright tests
 pnpm test:e2e:headed  # Run Playwright tests in headed mode
 ```
+
+we avoid running pnpm run build because this website is meant to be statically generated and hosted using pnpm generate.
 
 ## Architecture
 
