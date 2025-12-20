@@ -1,7 +1,6 @@
 <template>
   <span
-    class="logo inline-block w-40 md:w-32 lg:w-48 relative pl-1 text-black dark:text-white"
-    style="top: 5px"
+    class="logo block w-40 md:w-32 lg:w-48 relative pl-1 text-black dark:text-white"
     data-v-266847f6=""
     data-v-c1b418d8=""
     ><svg
