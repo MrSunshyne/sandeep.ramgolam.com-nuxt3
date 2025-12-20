@@ -24,51 +24,47 @@
         class="svgicon text-black hover:text-blue-500 w-10 h-10 md:w-16 md:h-16 dark:text-white"
       />
     </a>
+    <a
+      target="_blank"
+      rel="noopener"
+      href="https://github.com/MrSunshyne"
+    >
+      <span class="sr-only">GitHub Profile</span>
+      <IconsGithub
+        class="svgicon text-black hover:text-blue-500 w-10 h-10 md:w-16 md:h-16 dark:text-white"
+      />
+    </a>
   </div>
 </template> 
 
 <style scoped>
 @reference "tailwindcss";
 
-@keyframes vibrate-1 {
-  0% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
+@keyframes float-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
   }
-
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
+  50% {
+    transform: translateY(-8px) scale(1.08);
   }
+}
 
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-    transform: translate(-2px, -2px);
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 0px currentColor);
   }
-
-  60% {
-    -webkit-transform: translate(2px, 2px);
-    transform: translate(2px, 2px);
-  }
-
-  80% {
-    -webkit-transform: translate(2px, -2px);
-    transform: translate(2px, -2px);
-  }
-
-  100% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
+  50% {
+    filter: drop-shadow(0 0 8px currentColor);
   }
 }
 
 .svgicon {
-  transition: all 0.2s linear;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
 }
 
 .svgicon:hover {
   cursor: pointer;
-  animation: vibrate-1 0.01s ease-in infinite;
-  transition: all 0.4s linear;
+  animation: float-bounce 0.6s ease-in-out, glow 0.6s ease-in-out;
 }
 </style>
