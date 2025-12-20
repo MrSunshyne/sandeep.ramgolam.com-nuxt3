@@ -1,6 +1,18 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+:root {
+  /* Navigation dock dimensions */
+  --dock-height: 60px;
+  --dock-padding: 12px;
+  --dock-padding-top: 24px;
+  --dock-scale: 1.15;
+  /* Total height when unstuck (scaled) - includes top padding */
+  --dock-height-unstuck: calc((var(--dock-height) + var(--dock-padding-top) + var(--dock-padding)) * var(--dock-scale));
+  /* Total height when stuck (not scaled) */
+  --dock-height-stuck: calc(var(--dock-height) + var(--dock-padding-top) + var(--dock-padding));
+}
+
 @theme {
   /* Custom box shadows */
   --shadow-neumorphismdark: inset 1px 1px 3px #1f2327, 9px 9px 20px rgb(11 11 11 / 0.8), -0px -0px 20px #1f2327;

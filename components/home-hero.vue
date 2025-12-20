@@ -1,6 +1,6 @@
 <template>
     <div
-        class="container mx-auto md:min-h-[80vh] text-center sm:text-left flex flex-wrap items-center w-full"
+        class="home-hero container mx-auto text-center sm:text-left flex flex-wrap items-center w-full"
       >
         <HomeSelfIntro />
 
@@ -27,3 +27,11 @@ import InspiraParticleImageBust from './inspira/ParticleImage/Bust.vue';
 
 const { isDesktop } = useBreakpoints();
 </script>
+
+<style scoped>
+.home-hero {
+  /* Use global dock height variable to ensure dock is fully visible */
+  min-height: calc(100vh - var(--dock-height-unstuck));
+  min-height: calc(100dvh - var(--dock-height-unstuck));
+}
+</style>
