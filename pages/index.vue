@@ -1,4 +1,7 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: "home",
+});
 
 useHead({
   title: "Sandeep Ramgolam | thoughts, experiments, experiences",
@@ -30,6 +33,8 @@ defineOgImageComponent("IndexTemplate", {});
     <!-- <OgImageStatic component="OgImageIndex" /> -->
     <div class="w-full flex flex-col">
       <HomeHero />
+
+      <SiteNavBottom />
 
       <HomeBlogSummary />
 

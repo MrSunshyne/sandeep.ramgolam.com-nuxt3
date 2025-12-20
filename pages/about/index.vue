@@ -232,7 +232,7 @@ defineOgImageComponent("GenericTemplate");
 .page-title {
   font-size: 3rem;
   font-weight: 700;
-  margin-top: 2em;
+  /* margin-top: 2em; */
 }
 
 .page-subtitle {
