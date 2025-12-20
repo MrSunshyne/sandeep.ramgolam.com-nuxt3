@@ -1,5 +1,5 @@
 <template>
-  <div class="md:w-2/3 flex flex-col gap-4">
+  <div class="md:w-2/3 flex flex-col gap-8">
     <h1 class="text-2xl md:text-5xl text-left font-black w-full">Hi, I'm Sandeep</h1>
     <div class="mb-4 flex flex-col gap-4">
       <div class="flex flex-col gap-4 md:text-xl">
