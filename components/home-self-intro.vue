@@ -61,8 +61,9 @@
 </template>
 
 <script setup lang="ts">
-const { data: events } = await useAsyncData("events-intro", () =>
-  queryCollection("events").all()
+// Reuse the same cache key as events-listing to avoid duplicate payload data
+const { data: events } = await useAsyncData("events", () =>
+  queryCollection("events").order("event_date", "DESC").all()
 );
 
 const speakingCount = computed(() => events.value?.filter(e => e.event_type?.includes('speaking')).length || 0);

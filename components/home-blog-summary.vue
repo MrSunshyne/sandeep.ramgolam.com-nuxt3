@@ -1,20 +1,23 @@
 <script setup lang="ts">
-import type { BlogPost } from "@/types";
+// Only fetch the 5 posts we display + count for "See all X posts" button
+const { data: postsData } = await useAsyncData("blogs-summary", async () => {
+  const [posts, countResult] = await Promise.all([
+    queryCollection("blog")
+      .where("visibility", "=", "public")
+      .order("date", "DESC")
+      .limit(5)
+      .all(),
+    // Only fetch minimal data for count
+    queryCollection("blog")
+      .where("visibility", "=", "public")
+      .select("slug")
+      .all()
+  ]);
+  return { posts, totalCount: countResult.length };
+});
 
-const { data: posts } = await useAsyncData("blogs-summary", () =>
-  queryCollection<BlogPost>("blog")
-    .where("visibility", "=", "public")
-    .order("date", "DESC")
-    .limit(5)
-    .all()
-);
-
-const { data: allPosts } = await useAsyncData("all-blogs-summary", () =>
-  queryCollection<BlogPost>("blog")
-    .where("visibility", "=", "public")
-    .order("date", "DESC")
-    .all()
-);
+const posts = computed(() => postsData.value?.posts);
+const totalCount = computed(() => postsData.value?.totalCount ?? 0);
 </script>
 
 <template>
@@ -60,7 +63,7 @@ const { data: allPosts } = await useAsyncData("all-blogs-summary", () =>
         <!-- <div v-else>no posts</div> -->
         <nuxt-link :to="'/blog'" class="view-button">
           <HandDrawnShape variant="pill" :hover-morph="true" color="#3b82f6" />
-          <span class="view-button-text">See all {{ allPosts?.length }} posts</span>
+          <span class="view-button-text">See all {{ totalCount }} posts</span>
         </nuxt-link>
       </div>
     </div>
