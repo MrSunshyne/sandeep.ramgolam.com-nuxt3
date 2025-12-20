@@ -114,7 +114,7 @@ function updateQuery() {
 </script>
 
 <template>
-  <div class="">
+  <div class="" :class="{ 'has-filter-dock': count === -1 }">
     <template v-if="count === -1">
       <h1 class="page-title">Events</h1>
       <p class="page-subtitle mb-8 sm:mb-4">
@@ -154,8 +154,8 @@ function updateQuery() {
         <span :class="currentEventType">{{ presentAs }}</span>
       </p>
     </template>
-    <!-- Sticky bottom filters -->
-    <div class="mobile-filter-dock">
+    <!-- Sticky bottom filters - only show on full events page -->
+    <div v-if="count === -1" class="mobile-filter-dock">
       <!-- Hand-drawn top border -->
       <svg class="filter-dock-border" viewBox="0 0 1500 12" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path
@@ -312,12 +312,16 @@ function updateQuery() {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 40px;
   /* background: #16181e; */
-  padding-bottom: 120px; /* Add space for sticky filter dock */
+}
+
+/* Only add bottom padding when filters are visible */
+.has-filter-dock .event-wrapper {
+  padding-bottom: 120px;
 }
 
 @media (min-width: 640px) {
-  .event-wrapper {
-    padding-bottom: 100px; /* Adjust for desktop */
+  .has-filter-dock .event-wrapper {
+    padding-bottom: 100px;
   }
 }
 
