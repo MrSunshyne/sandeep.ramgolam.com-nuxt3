@@ -116,15 +116,6 @@ html.dark .site-nav-bottom > .nav-dock {
     inset: -12px -32px;
   }
 
-  @container scroll-state(stuck: top) {
-    .site-nav-bottom > .nav-dock {
-      transform: scale(1);
-    }
-
-    .site-nav-bottom .dock-path {
-      d: path("M25 35C25 18 40 12 70 13C100 11 140 14 185 12C235 14 285 11 335 13C385 11 425 14 460 12C485 11 495 18 490 35C495 52 485 59 460 58C425 60 385 57 335 58C285 57 235 60 185 58C140 57 100 60 70 58C40 59 25 52 25 35Z");
-    }
-  }
 }
 
 .site-nav-bottom .dock-path {
@@ -239,6 +230,20 @@ html.dark .site-nav-bottom .nav-link {
   .site-nav-bottom .nav-link::after {
     left: 1rem;
     right: 1rem;
+  }
+}
+</style>
+
+<style>
+@media (min-width: 640px) {
+  @container scroll-state(stuck: top) {
+    .site-nav-bottom > .nav-dock {
+      transform: scale(1);
+    }
+
+    .site-nav-bottom .dock-path {
+      d: path("M25 35C25 18 40 12 70 13C100 11 140 14 185 12C235 14 285 11 335 13C385 11 425 14 460 12C485 11 495 18 490 35C495 52 485 59 460 58C425 60 385 57 335 58C285 57 235 60 185 58C140 57 100 60 70 58C40 59 25 52 25 35Z");
+    }
   }
 }
 </style>
