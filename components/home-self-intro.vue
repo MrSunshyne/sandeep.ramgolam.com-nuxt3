@@ -34,7 +34,7 @@
                 <NuxtLink class="hand-drawn-underline pr-1" target="_blank"
                     href="https://github.com/MrSunshyne?tab=repositories&q=&type=&language=&sort=stargazers">projects
                 </NuxtLink>and
-                <NuxtLink class="hand-drawn-underline" :to="{ path: '/events' }">events</NuxtLink> participations.
+                <NuxtLink class="hand-drawn-underline" :to="{ path: '/events' }">event</NuxtLink> participations.
             </p>
 
             <p class="inline sm:w-full text-left">
