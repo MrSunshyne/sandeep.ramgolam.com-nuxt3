@@ -1,0 +1,24 @@
+{
+  "event_date": "02/28/2026",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Spoon Consulting, Vivéa Business Park, Moka",
+  "event_type": [
+    "organizer",
+    "speaking",
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Ansible, AI for All, Web MCP, Laravel & Cost of AI for Developers",
+  "description": "Host, Organize & Speak at the February 2026 meetup. Collaboration between Frontend Coders Mauritius, Laravel Moris and Cloud Native Foundation Mauritius.",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://coders.mu/meetup/68"
+    },
+    {
+      "title": "Blog Post",
+      "url": "/blog/frontend-coders-meetup-february-2026"
+    }
+  ],
+  "video": null
+}
