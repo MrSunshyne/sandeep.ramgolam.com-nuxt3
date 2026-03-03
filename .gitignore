@@ -13,3 +13,4 @@ dist
 playwright-report/*
 TODO.md
 GEMINI.md
+.claude/skills/
