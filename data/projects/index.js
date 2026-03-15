@@ -45,7 +45,7 @@ const projects = [
   },
   {
     name: "Mauritius Internet Prices",
-    url: "https://mauritius-internet-prices.netlify.app/",
+    url: "https://mobile-data.ramgolam.com/",
     role: ["Maintainer"],
     tech: ["TailwindCSS", "Vue3", "Vite"],
     text: "A simple interactive web app to show Mauritius Internet Prices.",
@@ -111,7 +111,7 @@ const projects = [
   },
   {
     name: "Mauritius Fuel Prices",
-    url: "https://mauritius-fuel-prices.ramgolam.com/",
+    url: "https://fuel.ramgolam.com/",
     role: ["Maintainer"],
     tech: ["TailwindCSS", "VueJS", "Google Sheet API"],
     text: "Progression of fuel prices in Mauritius (2002 - Present)",
