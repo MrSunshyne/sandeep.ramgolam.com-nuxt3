@@ -1,5 +1,27 @@
 const projects = [
   {
+    name: "Mauritius Gold Prices",
+    url: "https://gold.ramgolam.com/",
+    role: ["Maintainer"],
+    tech: ["Nuxt", "Vue3", "TailwindCSS"],
+    text: "Mauritius gold price index with historical data from the Bank of Mauritius",
+    featured: true,
+    thumbnail: "mauritius-gold-prices.png",
+    year: "2026",
+    company: "Open Source",
+  },
+  {
+    name: "Mauritius Gold Dataset",
+    url: "https://github.com/MrSunshyne/mauritius-dataset-gold",
+    role: ["Maintainer"],
+    tech: ["Node.js", "GitHub Actions"],
+    text: "Daily automated collection of Mauritius gold prices from the Bank of Mauritius since 2004",
+    featured: true,
+    thumbnail: "mauritius-gold-dataset.png",
+    year: "2026",
+    company: "Open Source",
+  },
+  {
     name: "Coders.mu",
     url: "https://coders.mu",
     role: ["Maintainer"],
