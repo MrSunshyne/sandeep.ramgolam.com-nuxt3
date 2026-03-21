@@ -12,7 +12,7 @@ const coverImage = computed(() => {
     return props.post.feature_image;
   }
 
-  return `/__og-image__/static/blog/${props.post.slug}/og.png`;
+  return `/_og/d/image?path=/blog/${props.post.slug}`;
 });
 </script>
 

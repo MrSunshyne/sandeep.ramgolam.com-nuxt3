@@ -45,7 +45,7 @@ const coverImage = computed(() => {
     return page.value?.feature_image;
   }
 
-  return `/__og-image__/static/blog/${slug}/og.png`;
+  return `/_og/d/image?path=/blog/${slug}`;
 });
 
 const headline = computed(() => page.value ? findPageHeadline(page.value) : null)
