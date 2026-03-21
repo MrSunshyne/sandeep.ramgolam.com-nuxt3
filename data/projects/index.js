@@ -133,7 +133,7 @@ const projects = [
   },
   {
     name: "Mauritius Fuel Prices",
-    url: "https://fuel.ramgolam.com/",
+    url: "https://fuel-prices.ramgolam.com/",
     role: ["Maintainer"],
     tech: ["TailwindCSS", "VueJS", "Google Sheet API"],
     text: "Progression of fuel prices in Mauritius (2002 - Present)",
