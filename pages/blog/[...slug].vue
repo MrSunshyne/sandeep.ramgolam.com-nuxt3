@@ -56,7 +56,7 @@ if (post.value) {
 }
 
 // OG Images
-defineOgImageComponent("BlogTemplate", {
+defineOgImage("BlogTemplate", {
   title: post.value?.title,
   description: dateFormat(new Date(post.value?.date || "")),
   customImage: post.value?.feature_image,

@@ -33,7 +33,7 @@ useSeoMeta({
   ogDescription: page?.value.description
 })
 
-defineOgImageComponent("BlogTemplate", {
+defineOgImage("BlogTemplate", {
   title: page.value?.title,
   description: dateFormat(new Date(page.value?.date || "")),
   customImage: page.value?.feature_image,

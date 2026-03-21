@@ -96,7 +96,7 @@ useHead({
   ],
 });
 
-defineOgImageComponent("GenericTemplate");
+defineOgImage("GenericTemplate");
 </script>
 
 <style scoped>
