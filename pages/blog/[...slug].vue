@@ -68,7 +68,7 @@ const coverImage = computed(() => {
     return post.value?.feature_image;
   }
 
-  return `/_og/d/image?path=/blog/${slug}`;
+  return `/_og/d/image?path=/blog/${slug}&title=${encodeURIComponent(post.value?.title || '')}`;
 });
 </script>
 

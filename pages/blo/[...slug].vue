@@ -45,7 +45,7 @@ const coverImage = computed(() => {
     return page.value?.feature_image;
   }
 
-  return `/_og/d/image?path=/blog/${slug}`;
+  return `/_og/d/image?path=/blog/${slug}&title=${encodeURIComponent(page.value?.title || '')}`;
 });
 
 const headline = computed(() => page.value ? findPageHeadline(page.value) : null)

@@ -12,7 +12,7 @@ const coverImage = computed(() => {
     return props.post.feature_image;
   }
 
-  return `/_og/d/image?path=/blog/${props.post.slug}`;
+  return `/_og/d/image?path=/blog/${props.post.slug}&title=${encodeURIComponent(props.post.title)}`;
 });
 </script>
 
