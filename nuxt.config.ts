@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/image",
     "nuxt-og-image",
-    'nuxt-mcp-dev'
+    'nuxt-mcp-dev',
   ],
 
   components: [
