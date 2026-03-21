@@ -32,7 +32,7 @@ useHead({
   ],
 });
 
-defineOgImageComponent("GenericTemplate");
+defineOgImage("GenericTemplate");
 </script>
 
 <template>

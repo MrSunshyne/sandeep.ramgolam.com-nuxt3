@@ -19,7 +19,7 @@
 import type { Wallpaper } from '@/types/wallpaper';
 import wallpapersData from '@/assets/data/wallpapers.json';
 
-defineOgImageComponent("GenericTemplate");
+defineOgImage("GenericTemplate");
 
 useHead({
   title: 'Wallpapers by Sandeep Ramgolam.',

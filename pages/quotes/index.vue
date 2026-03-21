@@ -15,7 +15,7 @@ definePageMeta({
   layout: 'quote',
 })
 
-defineOgImageComponent("GenericTemplate");
+defineOgImage("GenericTemplate");
 
 useHead({
   title: 'Quotes that inspire me',

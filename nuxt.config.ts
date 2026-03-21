@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/image",
     "nuxt-og-image",
-    'nuxt-mcp-dev'
+    'nuxt-mcp-dev',
   ],
 
   components: [
@@ -105,6 +105,14 @@ export default defineNuxtConfig({
   vite: {
     esbuild: {
       target: 'esnext'
+    },
+    optimizeDeps: {
+      include: [
+        '@baseline-banner/vue',
+        '@vueuse/core',
+        'clsx',
+        'tailwind-merge',
+      ]
     }
   },
 

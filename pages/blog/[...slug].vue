@@ -56,7 +56,7 @@ if (post.value) {
 }
 
 // OG Images
-defineOgImageComponent("BlogTemplate", {
+defineOgImage("BlogTemplate", {
   title: post.value?.title,
   description: dateFormat(new Date(post.value?.date || "")),
   customImage: post.value?.feature_image,
@@ -68,7 +68,7 @@ const coverImage = computed(() => {
     return post.value?.feature_image;
   }
 
-  return `/__og-image__/static/blog/${slug}/og.png`;
+  return `/_og/d/image?path=/blog/${slug}&title=${encodeURIComponent(post.value?.title || '')}`;
 });
 </script>
 

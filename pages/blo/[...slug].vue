@@ -33,7 +33,7 @@ useSeoMeta({
   ogDescription: page?.value.description
 })
 
-defineOgImageComponent("BlogTemplate", {
+defineOgImage("BlogTemplate", {
   title: page.value?.title,
   description: dateFormat(new Date(page.value?.date || "")),
   customImage: page.value?.feature_image,
@@ -45,7 +45,7 @@ const coverImage = computed(() => {
     return page.value?.feature_image;
   }
 
-  return `/__og-image__/static/blog/${slug}/og.png`;
+  return `/_og/d/image?path=/blog/${slug}&title=${encodeURIComponent(page.value?.title || '')}`;
 });
 
 const headline = computed(() => page.value ? findPageHeadline(page.value) : null)

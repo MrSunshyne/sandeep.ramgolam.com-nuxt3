@@ -25,7 +25,7 @@ useHead({
 
 const colorMode = useColorMode();
 
-defineOgImageComponent("IndexTemplate", {});
+defineOgImage("IndexTemplate");
 </script>
 
 <template>
