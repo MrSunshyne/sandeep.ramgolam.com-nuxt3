@@ -1,5 +1,16 @@
 const projects = [
   {
+    name: "Parcel Tracker",
+    url: "https://tracking.ramgolam.com/",
+    role: ["Maintainer"],
+    tech: ["TypeScript", "Hono", "Cloudflare Workers"],
+    text: "A web app to track Mauritius Post parcels in real time",
+    featured: true,
+    thumbnail: "parcel-tracker.png",
+    year: "2026",
+    company: "Open Source",
+  },
+  {
     name: "Mauritius Gold Prices",
     url: "https://gold.ramgolam.com/",
     role: ["Maintainer"],
