@@ -36,13 +36,13 @@ Approved comments for a post, oldest first. Unknown slugs return an empty list, 
   "slug": "my-post",
   "count": 2,
   "comments": [
-    { "id": 12, "author_name": "Anonymous", "body": "Great post!", "created_at": "2026-07-07T10:00:00Z" },
-    { "id": 15, "author_name": "Riya", "body": "+1", "created_at": "2026-07-07T11:30:00Z" }
+    { "id": 12, "author_name": "Anonymous", "body": "Great post!", "parent_id": null, "created_at": "2026-07-07T10:00:00Z" },
+    { "id": 15, "author_name": "Riya", "body": "+1", "parent_id": 12, "created_at": "2026-07-07T11:30:00Z" }
   ]
 }
 ```
 
-`author_name` is coalesced to `"Anonymous"` server-side. Never exposes `ip_hash`, `status`, or `user_agent`.
+`author_name` is coalesced to `"Anonymous"` server-side. Never exposes `ip_hash`, `status`, or `user_agent`. `parent_id` supports one level of threading — replies reference a top-level comment.
 
 #### `POST /api/comments`
 
@@ -60,6 +60,7 @@ Approved comments for a post, oldest first. Unknown slugs return an empty list, 
 - `author_name` optional (≤50 chars); `body` required (2–4000 chars); `slug` must match `^[a-z0-9][a-z0-9-]{0,199}$`
 - `website` is the honeypot — humans never see the field; it must be `""`
 - `form_started_at` is epoch ms of the user's first interaction with the form
+- `parent_id` optional — makes the comment a reply; must reference an **approved, top-level** comment on the same slug (one level of threading only), otherwise `400 validation_failed`
 
 Responses:
 
@@ -83,7 +84,7 @@ curl -H "$AUTH" "$API/api/admin/comments?status=pending&limit=50&offset=0"
 
 curl -X POST   -H "$AUTH" "$API/api/admin/comments/17/approve"   # → {"id":17,"status":"approved"}
 curl -X POST   -H "$AUTH" "$API/api/admin/comments/17/spam"      # → {"id":17,"status":"spam"}
-curl -X DELETE -H "$AUTH" "$API/api/admin/comments/17"           # → {"id":17,"deleted":true}
+curl -X DELETE -H "$AUTH" "$API/api/admin/comments/17"           # → {"id":17,"deleted":true} (replies go with it)
 
 curl -H "$AUTH" "$API/api/admin/bans"
 curl -X POST -H "$AUTH" -H 'Content-Type: application/json' \
@@ -92,6 +93,19 @@ curl -X DELETE -H "$AUTH" "$API/api/admin/bans/<ip_hash>"
 ```
 
 The admin comment list exposes `ip_hash` precisely so a moderator can chain "mark spam → ban ip_hash" without extra lookups. Unknown comment ids return `404 {"error":"not_found"}`; a missing/wrong token returns `401 {"error":"unauthorized"}`.
+
+## Moderating from the browser
+
+- **Admin dashboard**: `https://comments.ramgolam.com/admin` — paste the admin token once (kept in that browser's localStorage under `comments_admin_token`). Tabs for pending/approved/spam/bans with approve/spam/delete/ban buttons. The page itself contains no data; every request goes through the bearer-auth API.
+- **Pending comments inline on the blog**: the `<BlogComments>` component also shows the pending queue for that post — with a "pending" badge — when the same token is present in localStorage **on the blog's origin** (localStorage does not cross origins). Set it once in the devtools console on sandeep.ramgolam.com:
+
+  ```js
+  localStorage.setItem("comments_admin_token", "<token>")
+  ```
+
+  Without a token, the blog makes no admin request at all. A stale/wrong token fails silently (public comments still render).
+
+Commenters also keep seeing **their own** pending comments on the blog: after a successful submission the component remembers the comment in localStorage (`comments_mine`, per slug, 60-day cap) and shows it with the "pending" badge until it appears in the approved list. This is purely client-side — other visitors see nothing, and shadow-banned submitters conveniently keep believing their comment is queued.
 
 ## Moderation policy
 

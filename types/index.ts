@@ -3,6 +3,7 @@ export type PublicComment = {
   id: number;
   author_name: string; // already coalesced to 'Anonymous' by the API
   body: string;
+  parent_id: number | null; // one level of threading
   created_at: string; // ISO-8601
 };
 
@@ -19,6 +20,7 @@ export type CommentSubmission = {
   turnstile_token: string;
   website: string; // honeypot — always ''
   form_started_at: number; // epoch ms of first form interaction
+  parent_id?: number; // reply target (approved top-level comment)
 };
 
 export type BlogPost = {

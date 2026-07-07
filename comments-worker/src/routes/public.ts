@@ -13,7 +13,7 @@ export const publicRoutes = new Hono<{ Bindings: Env }>();
 publicRoutes.get("/comments/:slug", async (c) => {
   const slug = c.req.param("slug");
   const { results } = await c.env.DB.prepare(
-    `SELECT id, COALESCE(author_name, 'Anonymous') AS author_name, body, created_at
+    `SELECT id, COALESCE(author_name, 'Anonymous') AS author_name, body, parent_id, created_at
      FROM comments
      WHERE slug = ?1 AND status = 'approved'
      ORDER BY created_at ASC, id ASC`,
@@ -63,6 +63,23 @@ publicRoutes.post("/comments", async (c) => {
     .first();
   if (banned) return fakeAccept(c);
 
+  // One level of threading: a reply must target an approved, top-level
+  // comment on the same post.
+  if (data.parent_id !== null) {
+    const parent = await c.env.DB.prepare(
+      `SELECT 1 FROM comments
+       WHERE id = ?1 AND slug = ?2 AND status = 'approved' AND parent_id IS NULL`,
+    )
+      .bind(data.parent_id, data.slug)
+      .first();
+    if (!parent) {
+      return c.json(
+        { error: "validation_failed", message: "Invalid parent comment" },
+        400,
+      );
+    }
+  }
+
   const human = await verifyTurnstile(c.env.TURNSTILE_SECRET, data.turnstile_token, ip);
   if (!human) {
     return c.json(
@@ -72,11 +89,11 @@ publicRoutes.post("/comments", async (c) => {
   }
 
   const row = await c.env.DB.prepare(
-    `INSERT INTO comments (slug, author_name, body, ip_hash, user_agent)
-     VALUES (?1, ?2, ?3, ?4, ?5)
+    `INSERT INTO comments (slug, author_name, body, parent_id, ip_hash, user_agent)
+     VALUES (?1, ?2, ?3, ?4, ?5, ?6)
      RETURNING id`,
   )
-    .bind(data.slug, data.author_name, data.body, ipHash, c.req.header("User-Agent") ?? null)
+    .bind(data.slug, data.author_name, data.body, data.parent_id, ipHash, c.req.header("User-Agent") ?? null)
     .first<{ id: number }>();
 
   const id = row!.id;

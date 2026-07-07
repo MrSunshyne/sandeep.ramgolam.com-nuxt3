@@ -32,5 +32,6 @@ export type PublicComment = {
   id: number;
   author_name: string;
   body: string;
+  parent_id: number | null;
   created_at: string;
 };
