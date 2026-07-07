@@ -96,6 +96,8 @@ const coverImage = computed(() => {
           <ContentRenderer :value="post" />
         </div>
       </article>
+
+      <BlogComments :slug="slug" />
     </div>
   </article>
 </template>

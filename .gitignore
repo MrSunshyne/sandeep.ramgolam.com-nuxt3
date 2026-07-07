@@ -10,6 +10,9 @@ dist/
 dist
 # Local Netlify folder
 .netlify
+# Cloudflare worker local state (comments-worker)
+.wrangler/
+.dev.vars
 playwright-report/*
 TODO.md
 GEMINI.md
