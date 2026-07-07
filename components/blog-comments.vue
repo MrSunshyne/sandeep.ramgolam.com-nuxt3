@@ -34,6 +34,7 @@ async function loadPendingAsAdmin(): Promise<DisplayComment[]> {
       author_name: c.author_name ?? "Anonymous",
       body: c.body,
       parent_id: c.parent_id,
+      is_author: !!c.is_author,
       created_at: c.created_at,
       pending: true,
     }));
@@ -169,7 +170,8 @@ const { preload, getToken, reset } = useTurnstile(turnstileEl);
 
 function onFormInteraction() {
   if (!formStartedAt.value) formStartedAt.value = Date.now();
-  preload();
+  // The author path never runs Turnstile — don't load its script for nothing.
+  if (!localStorage.getItem(ADMIN_TOKEN_KEY)) preload();
 }
 
 function friendlyError(error: unknown): string {
@@ -188,12 +190,17 @@ function friendlyError(error: unknown): string {
   }
 }
 
+const submittedApproved = ref(false);
+
 async function submit() {
   if (submitting.value) return;
   submitting.value = true;
   submitError.value = "";
   try {
-    const token = await getToken();
+    // The site author's comments are vouched for by the admin token instead
+    // of Turnstile, and get published immediately.
+    const adminToken = localStorage.getItem(ADMIN_TOKEN_KEY);
+    const token = adminToken ? "" : await getToken();
     const submission: CommentSubmission = {
       slug: props.slug,
       author_name: authorName.value.trim() || undefined,
@@ -203,20 +210,27 @@ async function submit() {
       form_started_at: formStartedAt.value,
       parent_id: replyTo.value?.id,
     };
-    const created = await $fetch<{ id: number }>(`${apiBase}/api/comments`, {
-      method: "POST",
-      body: submission,
-    });
+    const created = await $fetch<{ id: number; status: "pending" | "approved" }>(
+      `${apiBase}/api/comments`,
+      {
+        method: "POST",
+        body: submission,
+        headers: adminToken ? { Authorization: `Bearer ${adminToken}` } : undefined,
+      },
+    );
+    const approved = created.status === "approved";
     const mineComment: DisplayComment = {
       id: created.id,
       author_name: authorName.value.trim() || "Anonymous",
       body: body.value.trim(),
       parent_id: replyTo.value?.id ?? null,
+      is_author: approved,
       created_at: new Date().toISOString(),
-      pending: true,
+      pending: !approved,
     };
-    writeMine([...readMine(), mineComment]);
+    if (!approved) writeMine([...readMine(), mineComment]);
     comments.value = sortByDate([...comments.value, mineComment]);
+    submittedApproved.value = approved;
     submitted.value = true;
   } catch (error) {
     reset();
@@ -273,6 +287,12 @@ async function submit() {
                 >
                   pending
                 </span>
+                <span
+                  v-if="thread.comment.is_author"
+                  class="text-xs uppercase tracking-wide rounded-full border border-green-500 text-green-600 dark:text-green-400 px-2 py-0.5"
+                >
+                  author
+                </span>
               </div>
               <p class="whitespace-pre-line dark:text-gray-300 m-0">
                 {{ thread.comment.body }}
@@ -314,6 +334,12 @@ async function submit() {
                     >
                       pending
                     </span>
+                    <span
+                      v-if="reply.is_author"
+                      class="text-xs uppercase tracking-wide rounded-full border border-green-500 text-green-600 dark:text-green-400 px-2 py-0.5"
+                    >
+                      author
+                    </span>
                   </div>
                   <p class="whitespace-pre-line dark:text-gray-300 m-0">{{ reply.body }}</p>
                 </article>
@@ -328,7 +354,7 @@ async function submit() {
           v-if="submitted"
           class="rounded-xl border border-green-300 dark:border-green-800 bg-green-50 dark:bg-green-950/40 p-4 text-green-800 dark:text-green-300"
         >
-          Thanks! Your comment is awaiting moderation.
+          {{ submittedApproved ? "Posted!" : "Thanks! Your comment is awaiting moderation." }}
         </p>
 
         <form

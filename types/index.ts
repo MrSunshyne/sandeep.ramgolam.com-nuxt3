@@ -4,6 +4,7 @@ export type PublicComment = {
   author_name: string; // already coalesced to 'Anonymous' by the API
   body: string;
   parent_id: number | null; // one level of threading
+  is_author: boolean; // posted with the admin token — site author's badge
   created_at: string; // ISO-8601
 };
 
