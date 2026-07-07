@@ -29,6 +29,7 @@
     "@nuxt/test-utils": "^3.21.0",
     "@nuxtjs/color-mode": "^4.0.0",
     "@playwright/test": "^1.58.2",
+    "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.19",
     "better-sqlite3": "^12.8.0",
     "class-variance-authority": "^0.7.1",
@@ -42,6 +43,7 @@
     "nuxt-icon": "^0.6.10",
     "nuxt-og-image": "6.1.0",
     "prettier": "^3.8.1",
+    "satori": "^0.26.0",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.2",
     "yaml-front-matter": "^4.1.1"
