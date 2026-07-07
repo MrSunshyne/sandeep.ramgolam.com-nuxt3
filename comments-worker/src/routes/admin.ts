@@ -51,13 +51,16 @@ adminRoutes.post("/comments/:id/spam", (c) => setStatus(c, "spam"));
 
 adminRoutes.delete("/comments/:id", async (c) => {
   const id = c.req.param("id");
-  const row = await c.env.DB.prepare("DELETE FROM comments WHERE id = ?1 RETURNING id")
+  // Deleting a top-level comment takes its replies with it.
+  const res = await c.env.DB.prepare(
+    "DELETE FROM comments WHERE id = ?1 OR parent_id = ?1",
+  )
     .bind(id)
-    .first<{ id: number }>();
-  if (!row) {
+    .run();
+  if (res.meta.changes === 0) {
     return c.json({ error: "not_found", message: `No comment with id ${id}` }, 404);
   }
-  return c.json({ id: row.id, deleted: true });
+  return c.json({ id: Number(id), deleted: true });
 });
 
 adminRoutes.get("/bans", async (c) => {

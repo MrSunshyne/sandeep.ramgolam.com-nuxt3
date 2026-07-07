@@ -7,6 +7,7 @@ export type ValidSubmission = {
   turnstile_token: string;
   website: string;
   form_started_at: number;
+  parent_id: number | null;
 };
 
 export type ValidationResult =
@@ -40,6 +41,14 @@ export function validateSubmission(input: unknown): ValidationResult {
     return { ok: false, message: "Missing Turnstile token" };
   }
 
+  let parentId: number | null = null;
+  if (raw.parent_id !== undefined && raw.parent_id !== null) {
+    if (typeof raw.parent_id !== "number" || !Number.isInteger(raw.parent_id) || raw.parent_id < 1) {
+      return { ok: false, message: "Invalid parent_id" };
+    }
+    parentId = raw.parent_id;
+  }
+
   return {
     ok: true,
     data: {
@@ -50,6 +59,7 @@ export function validateSubmission(input: unknown): ValidationResult {
       website: typeof raw.website === "string" ? raw.website : "",
       form_started_at:
         typeof raw.form_started_at === "number" ? raw.form_started_at : 0,
+      parent_id: parentId,
     },
   };
 }
