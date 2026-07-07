@@ -1,7 +1,0 @@
-# Copy to .dev.vars for local development. Never commit .dev.vars.
-ADMIN_TOKEN=dev-admin-token
-# Turnstile "always passes" test secret — pairs with the test sitekey 1x00000000000000000000AA
-TURNSTILE_SECRET=1x0000000000000000000000000000000AA
-IP_HASH_SALT=dev-salt-not-for-production
-# Optional: leave empty to skip Discord notifications locally
-DISCORD_WEBHOOK_URL=
