@@ -57,6 +57,16 @@ export default defineNuxtConfig({
     }
   },
 
+  // Baked into the static build at `pnpm generate` time — defaults must be the
+  // production values. Local overrides via NUXT_PUBLIC_* env vars in .env.
+  runtimeConfig: {
+    public: {
+      commentsApiUrl: "https://comments.ramgolam.com",
+      // Turnstile sitekeys are public — safe to commit (see comments-worker/README.md)
+      turnstileSiteKey: "0x4AAAAAADxcem8PeL7oRLW6",
+    },
+  },
+
   compatibilityDate: "2025-12-09",
 
   // Configure image optimization
