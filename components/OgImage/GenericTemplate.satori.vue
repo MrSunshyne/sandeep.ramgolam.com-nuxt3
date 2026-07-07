@@ -12,6 +12,16 @@ const strippedTitle =
   <div
     class="w-full h-full flex text-black items-center relative justify-center og-image-wrapper"
   >
+    <img
+      :style="{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '100%',
+      }"
+      src="/assets/images/og-image-assets/generic.png"
+    />
     <h1 class="og-text-title">{{ strippedTitle }}</h1>
     <p v-if="description" class="og-text-description">
       {{ description }}
@@ -22,10 +32,6 @@ const strippedTitle =
 <style  scoped>
 .og-image-wrapper {
   background-color: #000;
-  background-image: url("/og-image-assets/generic.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .og-text-title {

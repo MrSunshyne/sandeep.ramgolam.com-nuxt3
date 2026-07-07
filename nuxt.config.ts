@@ -61,6 +61,7 @@ export default defineNuxtConfig({
 
   // Configure image optimization
   image: {
+    provider: process.env.NODE_ENV === 'production' ? 'cloudflare' : 'ipx',
     quality: 80,
     format: ['webp', 'avif', 'jpg', 'png'],
     screens: {
