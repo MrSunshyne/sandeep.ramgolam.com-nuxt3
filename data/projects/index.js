@@ -100,7 +100,7 @@ const projects = [
   },
   {
     name: "CSS Clock",
-    url: "https://clock-css.netlify.app/",
+    url: "https://clock.ramgolam.com/",
     role: ["Maintainer"],
     tech: ["TailwindCSS", "VueJS", "Netlify"],
     text: "A css experiment inspired by a real-like weird clock",
