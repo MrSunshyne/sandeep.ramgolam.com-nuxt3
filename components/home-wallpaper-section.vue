@@ -53,35 +53,17 @@
         </NuxtLink>
     </div>
 
-    <UModal v-model="isOpen" :ui="{ width: 'w-full sm:max-w-[95vw]', height: 'h-full' }">
-      <div v-if="selectedWallpaper" class="relative flex items-center justify-center p-4 bg-black/90 h-[90vh] outline-none" tabindex="0" @keydown.left="prevWallpaper" @keydown.right="nextWallpaper">
-        <img :src="selectedWallpaper.path" :alt="selectedWallpaper.title" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" />
-        
-        <!-- Close Button -->
-        <button @click="isOpen = false" class="absolute top-4 right-4 bg-white/20 hover:bg-white/40 text-white rounded-full w-12 h-12 flex items-center justify-center transition-colors z-50">
-            <Icon name="solar:close-circle-bold" class="w-8 h-8" />
-        </button>
-
-        <!-- Navigation Buttons -->
-        <button @click.stop="prevWallpaper" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/30 text-white rounded-full w-12 h-12 flex items-center justify-center transition-colors">
-            <Icon name="solar:alt-arrow-left-linear" class="w-8 h-8" />
-        </button>
-        <button @click.stop="nextWallpaper" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/30 text-white rounded-full w-12 h-12 flex items-center justify-center transition-colors">
-            <Icon name="solar:alt-arrow-right-linear" class="w-8 h-8" />
-        </button>
-      </div>
-    </UModal>
+    <WallpaperLightbox ref="lightbox" :wallpapers="wallpapers" />
   </div>
 </template>
 
 <script setup lang="ts">
 import wallpapersData from "@/assets/data/wallpapers.json";
-import { onKeyStroke, useElementBounding, useWindowSize } from '@vueuse/core'
+import { useElementBounding, useWindowSize } from '@vueuse/core'
 
 const wallpapers = ref(wallpapersData);
-const isOpen = ref(false);
-const selectedWallpaper = ref(null);
 const containerRef = ref<HTMLElement | null>(null);
+const lightbox = ref<{ open: (wallpaper: any) => void } | null>(null);
 
 // Parallax logic
 const { top } = useElementBounding(containerRef);
@@ -105,38 +87,8 @@ onMounted(() => {
   }
 });
 
-// Keyboard navigation
-onKeyStroke('ArrowLeft', (e) => {
-  if (isOpen.value) {
-    e.preventDefault()
-    prevWallpaper()
-  }
-})
-
-onKeyStroke('ArrowRight', (e) => {
-  if (isOpen.value) {
-    e.preventDefault()
-    nextWallpaper()
-  }
-})
-
 function openWallpaper(wallpaper) {
-    selectedWallpaper.value = wallpaper;
-    isOpen.value = true;
-}
-
-function nextWallpaper() {
-    if (!selectedWallpaper.value) return;
-    const currentIndex = wallpapers.value.findIndex(w => w.path === selectedWallpaper.value.path);
-    const nextIndex = (currentIndex + 1) % wallpapers.value.length;
-    selectedWallpaper.value = wallpapers.value[nextIndex];
-}
-
-function prevWallpaper() {
-    if (!selectedWallpaper.value) return;
-    const currentIndex = wallpapers.value.findIndex(w => w.path === selectedWallpaper.value.path);
-    const prevIndex = (currentIndex - 1 + wallpapers.value.length) % wallpapers.value.length;
-    selectedWallpaper.value = wallpapers.value[prevIndex];
+    lightbox.value?.open(wallpaper);
 }
 </script>
 

@@ -14,6 +14,15 @@
   --dock-height-stuck: calc(var(--dock-height) + var(--dock-padding-top) + var(--dock-padding));
 }
 
+/* While a modal dialog is open, drop the dock out of view-transition
+   snapshots. Named elements get their own ::view-transition group that
+   paints above the flattened root snapshot, so during in-dialog view
+   transitions (e.g. the wallpaper lightbox prev/next cross-fade) the dock
+   would flash on top of the dialog's backdrop. */
+body:has(dialog:modal) .site-nav-bottom {
+  view-transition-name: none !important;
+}
+
 @theme {
   /* Custom box shadows */
   --shadow-neumorphismdark: inset 1px 1px 3px #1f2327, 9px 9px 20px rgb(11 11 11 / 0.8), -0px -0px 20px #1f2327;
