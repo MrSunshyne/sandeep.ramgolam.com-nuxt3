@@ -5,7 +5,7 @@ const { data: postsData } = await useAsyncData("home-blogs", async () => {
     // Only select fields needed for display
     queryCollection("blog")
       .where("visibility", "=", "public")
-      .select("slug", "title")
+      .select("slug", "title", "date")
       .order("date", "DESC")
       .limit(5)
       .all(),
@@ -24,44 +24,37 @@ const totalCount = computed(() => postsData.value?.totalCount ?? 0);
 
 <template>
   <div
-    class="blog-summary py-10 px-10 md:px-0"
+    class="blog-summary"
     style="clip-path: polygon(0% 0, 100% 50px, 100% 100%, 0% calc(100% - 50px))"
   >
-    <div class="block md:flex text-center md:text-left">
-      <div class="md:w-1/2 bg-container">
-        <!-- <img src="/data/blog-summary/blogger.svg" alt="" /> -->
-      </div>
-      <div class="md:w-1/2 py-10">
-        <h2 class="text-3xl font-black pt-10">
-          Blog posts          
+    <div class="container mx-auto py-16 md:py-24 block md:flex text-center md:text-left">
+      <div class="md:w-1/2 bg-container"></div>
+      <div class="md:w-1/2 flex flex-col items-center md:items-start gap-3">
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight">
+          Blog posts
         </h2>
-        <p class="text-md text-gray-700 dark:text-gray-300">
+        <p class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
           When i'm not writing code, <br class="block md:hidden" />
           I like to write about tech.
         </p>
-        <div class="py-5">
-          <div
+        <ul class="w-full min-w-0 py-6 flex flex-col items-center md:items-start gap-3 md:gap-4">
+          <li
             v-for="post in posts"
             :key="post.slug"
-            class="text-sm lg:text-xl flex gap-2 my-3"
+            class="w-full max-w-full text-base md:text-lg lg:text-xl flex items-baseline justify-center md:justify-start gap-2"
           >
             <nuxt-link
               :to="'/blog/' + post.slug"
-              class="hover:text-green-500"
+              :title="post.title"
+              class="truncate font-medium hand-drawn-underline-hover hover:text-green-600 dark:hover:text-green-400"
             >
               {{ post.title }}
             </nuxt-link>
-            <div>
-              <!-- <span
-                class="bg-blue-200 inline text-xs p-1 uppercase rounded dark:text-black"
-                v-if="post.tags"
-              >
-                {{ post.tags[0].name }}
-              </span> -->
-            </div>
-          </div>
-        </div>
-        <!-- <div v-else>no posts</div> -->
+            <span class="shrink-0 text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+              {{ dateFormat(new Date(post.date), "monthAndYear") }}
+            </span>
+          </li>
+        </ul>
         <nuxt-link :to="'/blog'" class="view-button">
           <HandDrawnShape variant="pill" :hover-morph="true" color="#3b82f6" />
           <span class="view-button-text">See all {{ totalCount }} posts</span>
@@ -104,13 +97,9 @@ const totalCount = computed(() => postsData.value?.totalCount ?? 0);
 }
 
 @media (min-width: 768px) {
-  .blog-summary {
-    padding: 0 0 10vh 0;
-
-    .bg-container {
-      background: no-repeat url("/data/blog-summary/blogger.svg") right center /
-        contain;
-    }
+  .bg-container {
+    background: no-repeat url("/data/blog-summary/blogger.svg") right center /
+      contain;
   }
 }
 </style>
