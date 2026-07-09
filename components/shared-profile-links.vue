@@ -1,5 +1,5 @@
 <template>
-  <div class="profile-links flex flex-wrap gap-4 py-4">
+  <div class="profile-links flex flex-wrap gap-4 md:gap-6">
     <a rel="me" href="https://x.com/__Sun__" target="_blank">
       <span class="sr-only">X Profile</span>
       <IconsTwitter class="svgicon text-black hover:text-blue-500 w-10 h-10 md:w-16 md:h-16 dark:text-white" />

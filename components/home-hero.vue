@@ -1,6 +1,6 @@
 <template>
     <div
-        class="home-hero container mx-auto text-center sm:text-left flex flex-wrap items-center w-full"
+        class="home-hero container mx-auto py-8 text-center sm:text-left flex flex-wrap items-center justify-between w-full"
       >
         <HomeSelfIntro />
 
