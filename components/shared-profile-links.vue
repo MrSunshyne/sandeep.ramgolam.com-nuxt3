@@ -41,15 +41,19 @@
 @reference "tailwindcss";
 
 .svgicon {
-  transition: all 0.2s ease;
-  transform-origin: center;
-  transform: scale(1) rotate(0deg);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
+  transform-origin: center bottom;
 }
 
 .svgicon:hover {
-  transition: all 0.4s ease;
-  transform: scale(0.8) rotate(-5deg);
-  cursor: pointer;
-             
+  transform: translateY(-6px) scale(1.1) rotate(-6deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .svgicon,
+  .svgicon:hover {
+    transition-duration: 0s;
+    transform: none;
+  }
 }
 </style>
