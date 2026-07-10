@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import EventCard from "~/components/event-card.vue";
+import EventRow from "~/components/event-row.vue";
 
 const props = defineProps({
   count: {
@@ -58,15 +59,6 @@ const router = useRouter();
 const currentEventType: Ref<EventType> = ref(
   (route.query.type as EventType) || "all"
 );
-const currentYear: Ref<string> = ref((route.query.year as string) || "all");
-
-const availableYears = computed(() => {
-  if (!localEvents.value) return [];
-  const years = localEvents.value.map((event) =>
-    new Date(event.event_date).getFullYear().toString()
-  );
-  return [...new Set(years)].sort((a, b) => parseInt(b) - parseInt(a));
-});
 
 const eventsSortedByDate = computed(() => {
   if (localEvents.value && localEvents.value.length === 0) {
@@ -82,86 +74,93 @@ const eventsSortedByDate = computed(() => {
 const showCurrentEventType = computed(() => {
   let filtered = eventsSortedByDate.value;
 
+  if (!isHomepage) {
+    filtered = filtered?.filter((event) => event?.published);
+  }
+
   if (currentEventType.value !== "all") {
     filtered = filtered?.filter((event) =>
       event.event_type?.includes(currentEventType.value)
     );
   }
 
-  if (currentYear.value !== "all") {
-    filtered = filtered?.filter(
-      (event) =>
-        new Date(event.event_date).getFullYear().toString() === currentYear.value
-    );
-  }
-
   return filtered;
-  // if (currentEventType.value === "all") {
-  //   return eventsSortedByDate.value;
-  // } else {
-  //   return eventsSortedByDate.value?.filter((event) =>
-  //     event.event_type.includes(currentEventType.value),
-  //   );
-  // }
+});
+
+// Events page: group the (sorted, filtered) events by year, newest first
+const eventsByYear = computed(() => {
+  const groups: { year: number; events: NonNullable<typeof showCurrentEventType.value> }[] = [];
+  for (const event of showCurrentEventType.value ?? []) {
+    const year = new Date(event.event_date).getFullYear();
+    const last = groups[groups.length - 1];
+    if (last?.year === year) last.events.push(event);
+    else groups.push({ year, events: [event] });
+  }
+  return groups;
 });
 
 const presentAs = computed(() => {
   return presentAsList[currentEventType.value];
 });
 
+const filterOptions: { type: EventType; label: string; color?: string; textClass?: string }[] = [
+  { type: "all", label: "Show All" },
+  { type: "speaking", label: "Speaking", color: "#3b82f6", textClass: "text-blue-500" },
+  { type: "attendee", label: "Attendee", color: "#22c55e", textClass: "text-green-500" },
+  { type: "organizer", label: "Organizer", color: "#a855f7", textClass: "text-purple-500" },
+  { type: "competition", label: "Competition", color: "#ef4444", textClass: "text-red-500" },
+  { type: "jury", label: "Jury", color: "#eab308", textClass: "text-yellow-500" },
+];
+
 function setCurrentEventType(eventType: EventType) {
   const newType = currentEventType.value === eventType ? "all" : eventType;
   currentEventType.value = newType;
-  updateQuery();
-}
-
-function setCurrentYear(year: string) {
-  const newYear = currentYear.value === year ? "all" : year;
-  currentYear.value = newYear;
-  updateQuery();
-}
-
-function updateQuery() {
   router.push({
     query: {
       ...route.query,
       type: currentEventType.value === "all" ? undefined : currentEventType.value,
-      year: currentYear.value === "all" ? undefined : currentYear.value,
     },
   });
 }
 </script>
 
 <template>
-  <div class="" :class="{ 'has-filter-dock': count === -1 }">
+  <div>
     <template v-if="count === -1">
-      <h1 class="page-title mb-3 sm:mb-4">Events</h1>
-      <p class="page-subtitle mb-10 sm:mb-12 text-base sm:text-lg leading-relaxed">
-        <template v-if="currentYear !== 'all' && currentEventType !== 'all'">
-          <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
-            showCurrentEventType?.length || 0
-          }}</span>
-          {{ currentEventType }} event{{ showCurrentEventType?.length === 1 ? '' : 's' }} in {{ currentYear }}
-        </template>
-        <template v-else-if="currentYear !== 'all'">
-          <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
-            showCurrentEventType?.length || 0
-          }}</span>
-          event{{ showCurrentEventType?.length === 1 ? '' : 's' }} in {{ currentYear }}
-        </template>
-        <template v-else-if="currentEventType !== 'all'">
-          <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
-            showCurrentEventType?.length || 0
-          }}</span>
+      <h1 class="font-bold tracking-tight text-3xl sm:text-4xl mb-2">Events</h1>
+      <p class="page-subtitle mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
+        <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
+          showCurrentEventType?.length || 0
+        }}</span>
+        <template v-if="currentEventType !== 'all'">
           {{ currentEventType }} event{{ showCurrentEventType?.length === 1 ? '' : 's' }}
         </template>
         <template v-else>
-          <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
-            showCurrentEventType?.length || 0
-          }}</span>
           event{{ showCurrentEventType?.length === 1 ? '' : 's' }} I was involved in
         </template>
       </p>
+
+      <!-- Event type filters -->
+      <div class="flex flex-wrap gap-1 sm:gap-2 mb-10 sm:mb-12 -mx-4 px-1 sm:mx-0 sm:px-0">
+        <button
+          v-for="option in filterOptions"
+          :key="option.type"
+          class="pill-hand-drawn"
+          @click="setCurrentEventType(option.type)"
+        >
+          <HandDrawnShape
+            variant="pill"
+            :hover-morph="true"
+            :selected="currentEventType === option.type"
+            :color="currentEventType === option.type ? option.color : '#d1d5db'"
+            :stroke-width="currentEventType === option.type ? 2.5 : 1.5"
+          />
+          <span
+            class="pill-text"
+            :class="currentEventType === option.type && option.textClass ? option.textClass : ''"
+          >{{ option.label }}</span>
+        </button>
+      </div>
     </template>
     <template v-else>
       <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold pt-8 sm:pt-10 text-center mb-3 sm:mb-4">Events</h2>
@@ -173,150 +172,44 @@ function updateQuery() {
         <span :class="currentEventType">{{ presentAs }}</span>
       </p>
     </template>
-    <!-- Sticky bottom filters - only show on full events page -->
-    <div v-if="count === -1" class="mobile-filter-dock">
-      <!-- Hand-drawn top border -->
-      <svg class="filter-dock-border" viewBox="0 0 1500 12" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path
-          d="M1491.35 5.34422C1195.69 0.634599 895.038 3.23955 598.639 2.39158C402.645 1.82423 206.636 0.457678 10.7838 0.000136838C4.91182 -0.0120643 0.0825118 0.793184 0.000956842 1.80587C-0.0770522 2.81856 5.63159 1.4878 11.5 1.5C207.331 1.95754 402.312 5.48455 598.285 6.0519C894.152 6.89988 1194.24 4.28881 1489.36 8.99233C1495.21 9.08384 1500.39 8.3457 1500.96 7.33911C1501.49 6.33252 1497.16 5.44183 1491.35 5.34422Z"
-          stroke="currentColor"
-          stroke-width="1.5"
-          fill="none"
-        />
-      </svg>
-      <!-- Year filters -->
-      <div class="mobile-filter-scroll">
-        <button
-          class="pill-hand-drawn"
-          @click="setCurrentYear('all')"
-        >
-          <HandDrawnShape
-            variant="pill"
-            :hover-morph="true"
-            :selected="currentYear === 'all'"
-            :color="currentYear === 'all' ? undefined : '#d1d5db'"
-            :stroke-width="currentYear === 'all' ? 2.5 : 1.5"
-          />
-          <span class="pill-text">All Years</span>
-        </button>
-        <button
-          v-for="year in availableYears"
-          :key="year"
-          class="pill-hand-drawn"
-          @click="setCurrentYear(year)"
-        >
-          <HandDrawnShape
-            variant="pill"
-            :hover-morph="true"
-            :selected="currentYear === year"
-            :color="currentYear === year ? undefined : '#d1d5db'"
-            :stroke-width="currentYear === year ? 2.5 : 1.5"
-          />
-          <span class="pill-text">{{ year }}</span>
-        </button>
-      </div>
-      <!-- Event type filters -->
-      <div class="mobile-filter-scroll">
-        <button
-          class="pill-hand-drawn"
-          @click="setCurrentEventType('all')"
-        >
-          <HandDrawnShape
-            variant="pill"
-            :hover-morph="true"
-            :selected="currentEventType === 'all'"
-            :color="currentEventType === 'all' ? undefined : '#d1d5db'"
-            :stroke-width="currentEventType === 'all' ? 2.5 : 1.5"
-          />
-          <span class="pill-text">Show All</span>
-        </button>
-        <button
-          class="pill-hand-drawn"
-          @click="setCurrentEventType('speaking')"
-        >
-          <HandDrawnShape
-            variant="pill"
-            :hover-morph="true"
-            :selected="currentEventType === 'speaking'"
-            :color="currentEventType === 'speaking' ? '#3b82f6' : '#d1d5db'"
-            :stroke-width="currentEventType === 'speaking' ? 2.5 : 1.5"
-          />
-          <span class="pill-text" :class="{ 'text-blue-500': currentEventType === 'speaking' }">Speaking</span>
-        </button>
-        <button
-          class="pill-hand-drawn"
-          @click="setCurrentEventType('attendee')"
-        >
-          <HandDrawnShape
-            variant="pill"
-            :hover-morph="true"
-            :selected="currentEventType === 'attendee'"
-            :color="currentEventType === 'attendee' ? '#22c55e' : '#d1d5db'"
-            :stroke-width="currentEventType === 'attendee' ? 2.5 : 1.5"
-          />
-          <span class="pill-text" :class="{ 'text-green-500': currentEventType === 'attendee' }">Attendee</span>
-        </button>
-        <button
-          class="pill-hand-drawn"
-          @click="setCurrentEventType('organizer')"
-        >
-          <HandDrawnShape
-            variant="pill"
-            :hover-morph="true"
-            :selected="currentEventType === 'organizer'"
-            :color="currentEventType === 'organizer' ? '#a855f7' : '#d1d5db'"
-            :stroke-width="currentEventType === 'organizer' ? 2.5 : 1.5"
-          />
-          <span class="pill-text" :class="{ 'text-purple-500': currentEventType === 'organizer' }">Organizer</span>
-        </button>
-        <button
-          class="pill-hand-drawn"
-          @click="setCurrentEventType('competition')"
-        >
-          <HandDrawnShape
-            variant="pill"
-            :hover-morph="true"
-            :selected="currentEventType === 'competition'"
-            :color="currentEventType === 'competition' ? '#ef4444' : '#d1d5db'"
-            :stroke-width="currentEventType === 'competition' ? 2.5 : 1.5"
-          />
-          <span class="pill-text" :class="{ 'text-red-500': currentEventType === 'competition' }">Competition</span>
-        </button>
-        <button
-          class="pill-hand-drawn"
-          @click="setCurrentEventType('jury')"
-        >
-          <HandDrawnShape
-            variant="pill"
-            :hover-morph="true"
-            :selected="currentEventType === 'jury'"
-            :color="currentEventType === 'jury' ? '#eab308' : '#d1d5db'"
-            :stroke-width="currentEventType === 'jury' ? 2.5 : 1.5"
-          />
-          <span class="pill-text" :class="{ 'text-yellow-500': currentEventType === 'jury' }">Jury</span>
-        </button>
-      </div>
-    </div>
 
-    <!-- {{ showCurrentEventType }} -->
-
+    <!-- Homepage: card grid -->
     <div
-      v-if="showCurrentEventType && showCurrentEventType.length > 0"
-      class="event-wrapper"
+      v-if="isHomepage && showCurrentEventType && showCurrentEventType.length > 0"
+      class="event-wrapper--grid"
     >
-      <template
+      <EventCard
         v-for="(event, index) in showCurrentEventType"
         :key="event.topic + event.event_date"
-      >
-        <EventCard
-          v-if="isHomepage || event?.published"
-          :event="event"
-          :class="event.event_type?.[0]"
-          class="event-box"
-          :style="'--delay:' + index + 's'"
-        />
-      </template>
+        :event="event"
+        :class="event.event_type?.[0]"
+        class="event-box"
+        :style="'--delay:' + index + 's'"
+      />
     </div>
+
+    <!-- Events page: rows grouped by year -->
+    <div
+      v-else-if="!isHomepage && eventsByYear.length > 0"
+      class="space-y-10 sm:space-y-12"
+    >
+      <section v-for="group in eventsByYear" :key="group.year">
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight mb-3 sm:mb-4">
+          {{ group.year }}
+        </h2>
+        <div class="flex flex-col gap-1">
+          <EventRow
+            v-for="(event, index) in group.events"
+            :key="event.topic + event.event_date"
+            :event="event"
+            :class="event.event_type?.[0]"
+            class="event-box"
+            :style="'--delay:' + index + 's'"
+          />
+        </div>
+      </section>
+    </div>
+
     <div v-else class="pt-10 sm:pt-16 text-center">
       <p class="text-xl sm:text-2xl text-gray-500 dark:text-gray-400">
         No events in the {{ currentEventType }} category
@@ -328,32 +221,21 @@ function updateQuery() {
 <style scoped>
 @reference "tailwindcss";
 
-.event-wrapper {
+.event-wrapper--grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 
 @media (min-width: 640px) {
-  .event-wrapper {
+  .event-wrapper--grid {
     gap: 32px;
   }
 }
 
 @media (min-width: 1024px) {
-  .event-wrapper {
+  .event-wrapper--grid {
     gap: 40px;
-  }
-}
-
-/* Only add bottom padding when filters are visible */
-.has-filter-dock .event-wrapper {
-  padding-bottom: 140px;
-}
-
-@media (min-width: 640px) {
-  .has-filter-dock .event-wrapper {
-    padding-bottom: 120px;
   }
 }
 
@@ -381,12 +263,6 @@ function updateQuery() {
   }
 }
 
-@media (min-width: 640px) {
-  .event-wrapper {
-    grid-gap: 40px;
-  }
-}
-
 /* Hand-drawn pill styles */
 .pill-hand-drawn {
   position: relative;
@@ -410,145 +286,4 @@ function updateQuery() {
 .dark .pill-text {
   color: #9ca3af;
 }
-
-/* Filter dock styles */
-.mobile-filter-dock {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.98) 85%, rgba(255, 255, 255, 0) 100%);
-  backdrop-filter: blur(12px);
-  padding: 20px 0 24px 0;
-  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-:deep(.dark) .mobile-filter-dock,
-.dark .mobile-filter-dock {
-  background: linear-gradient(to top, rgba(30, 41, 59, 0.98) 85%, rgba(30, 41, 59, 0) 100%);
-  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.4);
-}
-
-.filter-dock-border {
-  position: absolute;
-  top: -1px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 14px;
-  color: #9ca3af;
-  pointer-events: none;
-  opacity: 0.8;
-}
-
-:deep(.dark) .filter-dock-border,
-.dark .filter-dock-border {
-  color: #6b7280;
-  opacity: 0.9;
-}
-
-/* Desktop improvements - minimal and subtle */
-@media (min-width: 640px) {
-  .mobile-filter-dock {
-    padding: 10px 0 14px 0;
-    gap: 6px;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.75) 90%, rgba(255, 255, 255, 0) 100%);
-    backdrop-filter: blur(4px);
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.02);
-    transition: all 0.3s ease-out;
-  }
-
-  :deep(.dark) .mobile-filter-dock,
-  .dark .mobile-filter-dock {
-    background: linear-gradient(to top, rgba(30, 41, 59, 0.75) 90%, rgba(30, 41, 59, 0) 100%);
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  .mobile-filter-dock:hover {
-    padding: 16px 0 20px 0;
-    gap: 10px;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 85%, rgba(255, 255, 255, 0) 100%);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.06);
-  }
-
-  :deep(.dark) .mobile-filter-dock:hover,
-  .dark .mobile-filter-dock:hover {
-    background: linear-gradient(to top, rgba(30, 41, 59, 0.95) 85%, rgba(30, 41, 59, 0) 100%);
-    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  .mobile-filter-scroll {
-    justify-content: center;
-    max-width: 1280px;
-    margin: 0 auto;
-    opacity: 0.5;
-    transition: opacity 0.3s ease-out;
-  }
-
-  .mobile-filter-dock:hover .mobile-filter-scroll {
-    opacity: 1;
-  }
-
-  .filter-dock-border {
-    height: 16px;
-    opacity: 0.3;
-    transition: opacity 0.3s ease-out;
-  }
-
-  .mobile-filter-dock:hover .filter-dock-border {
-    opacity: 0.7;
-  }
-
-  :deep(.dark) .filter-dock-border,
-  .dark .filter-dock-border {
-    opacity: 0.4;
-  }
-
-  :deep(.dark) .mobile-filter-dock:hover .filter-dock-border,
-  .dark .mobile-filter-dock:hover .filter-dock-border {
-    opacity: 0.8;
-  }
-
-  /* Make pill buttons smaller on desktop when not hovering */
-  .pill-hand-drawn {
-    transition: all 0.3s ease-out;
-  }
-}
-
-.mobile-filter-scroll {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 4px 20px;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
-.mobile-filter-scroll::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
-}
-
-.mobile-filter-scroll .pill-hand-drawn {
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-/* Desktop - allow wrapping when centered */
-@media (min-width: 1024px) {
-  .mobile-filter-scroll {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 4px 40px;
-    gap: 12px;
-  }
-}
-
 </style>
