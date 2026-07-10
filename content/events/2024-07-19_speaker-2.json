@@ -8,6 +8,7 @@
   ],
   "published": true,
   "topic": "Conduct a TailwindCSS & Nuxt Workshop",
+  "talk_title": "Nuxt 3 Workshop : Let's build an app to monitor power outages!",
   "description": "Help attendees learn how to use TailwindCSS with Nuxt3 and build a web app to monitor power outages in Mauritius",
   "links": [
     {

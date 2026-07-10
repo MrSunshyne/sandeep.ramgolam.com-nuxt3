@@ -1,0 +1,21 @@
+{
+    "event_date": "11/30/2024",
+    "event_name": "Front-end Coders Meetup",
+    "location": "The Beach, La Cambuse",
+    "event_type": [
+        "organizer",
+        "speaking",
+        "attendee"
+    ],
+    "published": true,
+    "topic": "The Beach Meetup 2.0",
+    "talk_title": "Frontend News & Updates",
+    "description": "",
+    "links": [
+        {
+            "title": "Event Page",
+            "url": "https://coders.mu/meetup/2024-november"
+        }
+    ],
+    "video": null
+}

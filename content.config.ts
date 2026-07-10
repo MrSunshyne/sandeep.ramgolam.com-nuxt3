@@ -26,7 +26,9 @@ export default defineContentConfig({
         event_type: z.array(z.string()),
         published: z.boolean().optional(),
         topic: z.string().optional(),
+        talk_title: z.string().optional(),
         description: z.string().optional(),
+        links: z.array(z.object({ title: z.string(), url: z.string() })).optional(),
       }),
     }),
   }

@@ -10,6 +10,11 @@
   "published": true,
   "topic": "CSS is more fun than AI",
   "description": "",
-  "links": [],
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://coders.mu/meetup/2025-september"
+    }
+  ],
   "video": null
 }

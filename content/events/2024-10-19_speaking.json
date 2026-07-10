@@ -1,0 +1,20 @@
+{
+  "event_date": "10/19/2024",
+  "event_name": "Google Devfest Mauritius 2024",
+  "location": "African Leadership College",
+  "event_type": [
+    "speaking",
+    "attendee"
+  ],
+  "published": true,
+  "topic": "What's new in the Web Platform?",
+  "talk_title": "What's new in the Web Platform?",
+  "description": "",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://gdg.community.dev/events/details/google-gdg-mauritius-presents-devfest-mauritius-2024/"
+    }
+  ],
+  "video": null
+}

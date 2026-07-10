@@ -1,0 +1,21 @@
+{
+    "event_date": "02/24/2024",
+    "event_name": "Front-end Coders Meetup",
+    "location": "SD Worx, NEX Tower, 11th Floor, Ebene",
+    "event_type": [
+        "organizer",
+        "speaking",
+        "attendee"
+    ],
+    "published": true,
+    "topic": "February Meetup",
+    "talk_title": "Frontend News & Updates",
+    "description": "",
+    "links": [
+        {
+            "title": "Event Page",
+            "url": "https://coders.mu/meetup/2024-february"
+        }
+    ],
+    "video": null
+}

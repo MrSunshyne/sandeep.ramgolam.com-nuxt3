@@ -1,0 +1,21 @@
+{
+    "event_date": "09/28/2024",
+    "event_name": "Front-end Coders Meetup",
+    "location": "Swan Head Office, Swan Center, 10 Intendance St, Port Louis",
+    "event_type": [
+        "organizer",
+        "speaking",
+        "attendee"
+    ],
+    "published": true,
+    "topic": "The September Meetup",
+    "talk_title": "The importance of side projects",
+    "description": "",
+    "links": [
+        {
+            "title": "Event Page",
+            "url": "https://coders.mu/meetup/2024-september"
+        }
+    ],
+    "video": null
+}
