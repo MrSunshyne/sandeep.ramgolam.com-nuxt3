@@ -149,14 +149,18 @@
       <h2 class="page-title page-break-before">Projects</h2>
       <p class="page-subtitle">Some projects I helped build</p>
 
-      <div class="mt-6 sm:mt-8">
-        <div class="space-y-3 sm:space-y-4">
+      <div class="mt-6 sm:mt-8 space-y-8 sm:space-y-10">
+        <div v-for="group in projectGroups" :key="group.label">
+          <h3 class="uppercase text-xs font-bold tracking-wider text-gray-500 dark:text-gray-400 mb-3 sm:mb-4">
+            {{ group.label }}
+          </h3>
+          <div class="space-y-3 sm:space-y-4">
           <div
-            v-for="project in projects"
+            v-for="project in group.projects"
             :key="project.name"
             class="flex items-baseline gap-3 min-w-0"
           >
-            <h3 class="shrink-0 text-base sm:text-lg font-bold">
+            <h4 class="shrink-0 text-base sm:text-lg font-bold">
               <span
                 class="inline-block w-2 h-2 rounded-full mr-1.5 align-middle"
                 :class="project.status === 'active' ? 'bg-green-500' : 'bg-gray-300 dark:bg-gray-600'"
@@ -171,10 +175,11 @@
                 {{ project.name }}
                 <Icon name="solar:link-bold" class="text-sm text-gray-400 print:hidden" />
               </a>
-            </h3>
+            </h4>
             <p class="truncate text-sm sm:text-base text-gray-600 dark:text-gray-400">
               {{ project.text }}
             </p>
+          </div>
           </div>
         </div>
       </div>
@@ -195,6 +200,11 @@
 <script setup lang="ts">
 import { employment, education, stack } from "@/data/experience";
 import { projects } from "@/data/projects/";
+
+const projectGroups = [
+  { label: "Actively maintained", projects: projects.filter(p => p.status === "active") },
+  { label: "Archived", projects: projects.filter(p => p.status !== "active") },
+].filter(group => group.projects.length > 0);
 
 function print() {
   window.print();

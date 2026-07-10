@@ -125,7 +125,7 @@ function setCurrentEventType(eventType: EventType) {
 </script>
 
 <template>
-  <div>
+  <div :class="count === -1 ? 'max-w-3xl mx-auto' : ''">
     <template v-if="count === -1">
       <h1 class="font-bold tracking-tight text-3xl sm:text-4xl mb-2">Events</h1>
       <p class="page-subtitle mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">

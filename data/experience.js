@@ -137,16 +137,20 @@ const stack = [
     tech: "Vue 3, Nuxt, Astro, React, TailwindCSS, TypeScript, GraphQL",
   },
   {
+    title: "Agentic Eng",
+    tech: "Claude code, Opencode, Antigravity, OpenAI Codex",
+  },
+  {
     title: "UX/Design",
     tech: "Figma, Sketch, Photopea",
   },
   {
     title: "Tooling",
-    tech: "git, Vite, GitHub, SCSS, PostCSS, docker, Vercel, Netlify",
+    tech: "git, Vite, GitHub, docker, Cloudflare Workers, Grafana, Prometheus, Loki, Postgres, Podman",
   },
   {
     title: "CMS",
-    tech: "Directus, Nuxt Content, Ghost, Notion, Google Sheets",
+    tech: "AdonisJS, Directus, Nuxt Content, Ghost, Notion, Google Sheets",
   },
   {
     title: "OS",

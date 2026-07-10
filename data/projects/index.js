@@ -48,6 +48,18 @@ const projects = [
     status: "active",
   },
   {
+    name: "Data Projects",
+    url: "https://data.ramgolam.com/",
+    role: ["Maintainer"],
+    tech: ["Nuxt", "Vue3"],
+    text: "Personal data visualization and open data projects",
+    featured: false,
+    thumbnail: "",
+    year: "2026",
+    company: "Open Source",
+    status: "active",
+  },
+  {
     name: "Mauritius Power Outages",
     url: "https://courant.ramgolam.com/",
     role: ["Maintainer"],
