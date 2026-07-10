@@ -1,7 +1,7 @@
 <template>
   <div class="contain pb-16 sm:pb-20">
-    <h1 class="page-title mb-3 sm:mb-4">Projects</h1>
-    <p class="page-subtitle mb-10 sm:mb-12">Some projects I help built</p>
+    <h1 class="font-bold tracking-tight text-3xl sm:text-4xl mb-2">Projects</h1>
+    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-10 sm:mb-12">Some projects I helped build</p>
     <div v-if="projects" class="projects-wrapper">
       <TransitionGroup name="fade">
         <template v-for="(project, index) in projects" :key="project.name">

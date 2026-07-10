@@ -37,8 +37,8 @@ defineOgImage("GenericTemplate");
 
 <template>
   <div class="contain">
-    <h1 class="page-title">Sandeep Ramgolam's Blog</h1>
-    <p class="page-subtitle">Writings and thoughts</p>
+    <h1 class="font-bold tracking-tight text-3xl sm:text-4xl mb-2">Sandeep Ramgolam's Blog</h1>
+    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400">Writings and thoughts</p>
 
     <div class="blog-posts pt-12">
       <template v-for="post in posts" :key="post.slug">
