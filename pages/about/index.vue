@@ -10,7 +10,7 @@
       <p class="uppercase text-xs text-gray-600 dark:text-gray-400">This page is also my printable CV</p>
     </div>
     <div class="print:block">
-      <h1 class="font-bold text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4">Sandeep Ramgolam</h1>
+      <h1 class="font-bold tracking-tight text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4">Sandeep Ramgolam</h1>
       <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-8 sm:mb-12">
         Technologist, Mauritian, who loves programming, UX design, Linux, &amp;
         nature.
@@ -69,7 +69,7 @@
               {{ item.title }}
             </div>
             <div
-              class="text-xl sm:text-2xl lg:text-3xl font-bold dark:text-white text-black"
+              class="text-lg sm:text-xl lg:text-2xl font-bold dark:text-white text-black"
             >
               {{ item.tech }}
             </div>
@@ -96,7 +96,7 @@
               <component
                 :is="job.company_website ? 'a' : 'div'"
                 :href="job.company_website ? job.company_website : ''"
-                class="text-xl sm:text-2xl lg:text-3xl font-bold dark:text-white text-black"
+                class="text-lg sm:text-xl lg:text-2xl font-bold dark:text-white text-black"
                 :class="job.company_website ? 'hover:underline' : ''"
               >
                 {{ job.company }}
@@ -107,7 +107,7 @@
                 />
               </component>
               <div
-                class="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-400"
+                class="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-400"
               >
                 // {{ job.job_title }}
               </div>
@@ -130,12 +130,12 @@
             <div class="font-bold tracking-wide text-sm sm:text-base text-gray-600 dark:text-gray-400 sm:pr-6 sm:w-24 flex-shrink-0">{{ item.year }}</div>
             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
               <div
-                class="text-xl sm:text-2xl lg:text-3xl font-bold dark:text-white text-black"
+                class="text-lg sm:text-xl lg:text-2xl font-bold dark:text-white text-black"
               >
                 {{ item.title }}
               </div>
               <div
-                class="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-400"
+                class="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-400"
               >
                 // {{ item.institution }}
               </div>
@@ -147,36 +147,34 @@
 
     <section class="mb-12 sm:mb-16">
       <h2 class="page-title page-break-before">Projects</h2>
-      <p class="page-subtitle">Some projects I help built</p>
+      <p class="page-subtitle">Some projects I helped build</p>
 
       <div class="mt-6 sm:mt-8">
-        <div class="space-y-8 sm:space-y-10">
-          <div v-for="project in projects" :key="project.name">
-            <div class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 mb-3">
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold">
-                {{ project.name }}
-              </h3>
+        <div class="space-y-3 sm:space-y-4">
+          <div
+            v-for="project in projects"
+            :key="project.name"
+            class="flex items-baseline gap-3 min-w-0"
+          >
+            <h3 class="shrink-0 text-base sm:text-lg font-bold">
+              <span
+                class="inline-block w-2 h-2 rounded-full mr-1.5 align-middle"
+                :class="project.status === 'active' ? 'bg-green-500' : 'bg-gray-300 dark:bg-gray-600'"
+                :title="project.status === 'active' ? 'Actively maintained' : 'Archived'"
+              ></span>
               <a
-                class="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 uppercase tracking-wider text-xs sm:text-sm font-bold print:hidden transition-colors"
                 :href="project.url"
                 target="_blank"
-                >View Project →</a
+                rel="noopener"
+                class="hover:underline print:no-underline"
               >
-            </div>
-
-            <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">{{ project.text }}</p>
-            <div class="flex flex-wrap gap-2 items-center">
-              <div class="hidden print:inline uppercase text-xs text-gray-500 dark:text-gray-400 mr-1">
-                Tech Stack:
-              </div>
-              <div
-                v-for="(tech, index) in project.tech"
-                :key="index"
-                class="bg-blue-100 dark:bg-gray-800 px-3 py-1.5 text-xs sm:text-sm rounded-full dark:text-gray-300 font-medium"
-              >
-                {{ tech }}
-              </div>
-            </div>
+                {{ project.name }}
+                <Icon name="solar:link-bold" class="text-sm text-gray-400 print:hidden" />
+              </a>
+            </h3>
+            <p class="truncate text-sm sm:text-base text-gray-600 dark:text-gray-400">
+              {{ project.text }}
+            </p>
           </div>
         </div>
       </div>
@@ -238,27 +236,28 @@ defineOgImage("GenericTemplate");
 }
 
 .page-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.375rem;
   line-height: 1.2;
 }
 
 @media (min-width: 640px) {
   .page-title {
-    font-size: 2.5rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.875rem;
+    margin-bottom: 0.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .page-title {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
 
 .page-subtitle {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #6b7280;
   margin-bottom: 0;
@@ -266,13 +265,7 @@ defineOgImage("GenericTemplate");
 
 @media (min-width: 640px) {
   .page-subtitle {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .page-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   }
 }
 

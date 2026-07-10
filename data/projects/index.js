@@ -9,6 +9,7 @@ const projects = [
     thumbnail: "parcel-tracker.png",
     year: "2026",
     company: "Open Source",
+    status: "active",
   },
   {
     name: "Mauritius Gold Prices",
@@ -20,6 +21,7 @@ const projects = [
     thumbnail: "mauritius-gold-prices.png",
     year: "2026",
     company: "Open Source",
+    status: "active",
   },
   {
     name: "Mauritius Gold Dataset",
@@ -31,6 +33,7 @@ const projects = [
     thumbnail: "mauritius-gold-dataset.png",
     year: "2026",
     company: "Open Source",
+    status: "active",
   },
   {
     name: "Coders.mu",
@@ -42,6 +45,7 @@ const projects = [
     thumbnail: "frontendmu.png",
     year: "2022",
     company: "Open Source",
+    status: "active",
   },
   {
     name: "Mauritius Power Outages",
@@ -53,6 +57,7 @@ const projects = [
     thumbnail: "mauritius-power-outages.png",
     year: "2022",
     company: "Open Source",
+    status: "active",
   },
   {
     name: "Mauritius Electricity Dataset",
@@ -64,6 +69,7 @@ const projects = [
     thumbnail: "electricity.png",
     year: "2022",
     company: "Open Source",
+    status: "active",
   },
   {
     name: "Mauritius Meteo Dataset",
@@ -75,6 +81,7 @@ const projects = [
     thumbnail: "meteo.png",
     year: "2022",
     company: "Open Source",
+    status: "active",
   },
   {
     name: "Mauritius Internet Prices",
@@ -86,6 +93,7 @@ const projects = [
     thumbnail: "mauritius-internet-prices.png",
     year: "2022",
     company: "Open Source",
+    status: "active",
   },
   {
     name: "ti-vitesse",
@@ -97,6 +105,7 @@ const projects = [
     thumbnail: "ti-vitesse.png",
     year: "2021",
     company: "Open Source",
+    status: "archived",
   },
   {
     name: "CSS Clock",
@@ -108,6 +117,7 @@ const projects = [
     thumbnail: "css-clock.jpg",
     year: "2020",
     company: "Open Source",
+    status: "active",
   },
   {
     name: "Stoic Calendar",
@@ -119,6 +129,7 @@ const projects = [
     thumbnail: "stoic-calendar.jpg",
     year: "2020",
     company: "Open Source",
+    status: "archived",
   },
   {
     name: "COVID-19 Mauritius",
@@ -130,6 +141,7 @@ const projects = [
     thumbnail: "covid19-mauritius.png",
     year: "2020",
     company: "Open Source",
+    status: "archived",
   },
   {
     name: "COVID-19 Status",
@@ -141,6 +153,7 @@ const projects = [
     thumbnail: "covid19-status.png",
     year: "2020",
     company: "Open Source",
+    status: "archived",
   },
   {
     name: "Mauritius Fuel Prices",
@@ -152,6 +165,7 @@ const projects = [
     thumbnail: "mauritius-fuel-prices.png",
     year: "2019",
     company: "Open Source",
+    status: "active",
   },
   {
     name: "Mauritius Sea Cables",
@@ -163,6 +177,7 @@ const projects = [
     thumbnail: "mauritius-sea-cables.png",
     year: "2019",
     company: "Open Source",
+    status: "archived",
   },
 
   {
@@ -175,6 +190,7 @@ const projects = [
     thumbnail: "boo.png",
     year: "2019",
     company: "Open Source",
+    status: "archived",
   },
   {
     name: "Developers Conference 2019 Website",
@@ -186,6 +202,7 @@ const projects = [
     thumbnail: "devcon2019.png",
     year: "2019",
     company: "Voluntary",
+    status: "archived",
   },
   {
     name: "Mauritius Elections 2019 - lexpress",
@@ -197,6 +214,7 @@ const projects = [
     thumbnail: "elections2019.png",
     year: "2015",
     company: "LSL Digital",
+    status: "archived",
   },
   // {
   //   name: 'Sai Mauritius',
@@ -219,6 +237,7 @@ const projects = [
     thumbnail: "devcon2018.png",
     year: "2018",
     company: "Voluntary",
+    status: "archived",
   },
   {
     name: "Previous version lexpress.mu (2015-2023)",
@@ -230,6 +249,7 @@ const projects = [
     thumbnail: "lexpressmu.png",
     year: "2015",
     company: "LSL Digital",
+    status: "archived",
   },
 ];
 
