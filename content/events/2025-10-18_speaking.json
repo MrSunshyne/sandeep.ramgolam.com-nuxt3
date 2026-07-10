@@ -1,15 +1,20 @@
 {
-    "event_date": "10/18/2025",
-    "event_name": "Front-end Coders Meetup",
-    "location": "PGD Mauritius",
-    "event_type": [
-        "organizer",
-        "speaking",
-        "attendee"
-    ],
-    "published": true,
-    "topic": "Vibe Coding - Lessons and Experiences Learned",
-    "description": "",
-    "links": [],
-    "video": null
+  "event_date": "10/18/2025",
+  "event_name": "Front-end Coders Meetup",
+  "location": "PGD Mauritius",
+  "event_type": [
+    "organizer",
+    "speaking",
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Vibe Coding - Lessons and Experiences Learned",
+  "description": "",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://coders.mu/meetup/2025-october"
+    }
+  ],
+  "video": null
 }

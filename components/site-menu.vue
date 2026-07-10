@@ -55,6 +55,10 @@ import SiteColorPickerPlaceholder from "./site-color-picker-placeholder.vue";
               <SiteMenuSvgMenuBg />
             </li>
             <li>
+              <NuxtLink href="/talks/">Talks</NuxtLink>
+              <SiteMenuSvgMenuBg />
+            </li>
+            <li>
               <NuxtLink href="/events/">Events</NuxtLink>
               <SiteMenuSvgMenuBg />
             </li>

@@ -3,6 +3,7 @@ const links = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog/" },
+  { label: "Talks", href: "/talks/" },
   { label: "Events", href: "/events/" },
   { label: "Projects", href: "/projects/" },
 ];
@@ -36,11 +37,6 @@ const links = [
             </NuxtLink>
           </li>
         </ul>
-        <div class="nav-theme hidden sm:flex">
-          <ClientOnly>
-            <site-color-picker />
-          </ClientOnly>
-        </div>
       </div>
     </div>
   </nav>
@@ -210,12 +206,6 @@ html.dark .site-nav-bottom .nav-link {
   opacity: 1;
   -webkit-mask-size: auto 10px;
   mask-size: auto 10px;
-}
-
-.site-nav-bottom .nav-theme {
-  @apply ml-2 sm:ml-3;
-  @apply pl-4 sm:pl-5;
-  @apply border-l border-gray-300 dark:border-slate-600;
 }
 
 @media (min-width: 640px) {

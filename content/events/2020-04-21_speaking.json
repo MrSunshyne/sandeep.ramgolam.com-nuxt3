@@ -9,6 +9,7 @@
   ],
   "published": true,
   "topic": "Vue 3 Composition API & Lobotomized Owl CSS Selector",
+  "talk_title": "Exploring Vue Composition API",
   "description": "A short overview of the new Composition API was given as well as a sneak peek of Portals/Teleport and Suspense",
   "links": [
     {

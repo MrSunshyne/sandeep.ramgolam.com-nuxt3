@@ -1,0 +1,21 @@
+{
+    "event_date": "05/23/2026",
+    "event_name": "Front-end Coders Meetup",
+    "location": "Astek Mauritius, Ebene",
+    "event_type": [
+        "organizer",
+        "speaking",
+        "attendee"
+    ],
+    "published": true,
+    "topic": "The May Meetup",
+    "talk_title": "Latest AI Tech, Modern Web Guidance",
+    "description": "",
+    "links": [
+        {
+            "title": "Event Page",
+            "url": "https://coders.mu/meetup/2026-may"
+        }
+    ],
+    "video": null
+}

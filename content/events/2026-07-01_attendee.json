@@ -1,0 +1,18 @@
+{
+  "event_date": "07/01/2026",
+  "event_name": "Google Cloud Summit",
+  "location": "Johannesburg, South Africa",
+  "event_type": [
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Google Cloud Summit",
+  "description": "Attended the Google Cloud Summit in Johannesburg",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://cloud.google.com/events/leaders-connect-google-cloud-summit-johannesburg-26"
+    }
+  ],
+  "video": null
+}

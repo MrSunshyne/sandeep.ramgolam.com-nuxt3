@@ -1,0 +1,21 @@
+{
+    "event_date": "10/26/2024",
+    "event_name": "Front-end Coders Meetup",
+    "location": "Digital Factory, Harbor Front, Port Louis",
+    "event_type": [
+        "organizer",
+        "speaking",
+        "attendee"
+    ],
+    "published": true,
+    "topic": "The October Meetup",
+    "talk_title": "Frontend News & Updates",
+    "description": "",
+    "links": [
+        {
+            "title": "Event Page",
+            "url": "https://coders.mu/meetup/2024-october"
+        }
+    ],
+    "video": null
+}

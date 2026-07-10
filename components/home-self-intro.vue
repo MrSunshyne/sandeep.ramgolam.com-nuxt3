@@ -1,33 +1,34 @@
 <template>
-    <div class="md:w-2/3 flex flex-col gap-8">
+    <div class="md:w-3/5 flex flex-col gap-6 md:gap-8">
         <h1 class="text-2xl md:text-5xl text-left font-black w-full">Hi, I'm Sandeep</h1>
-        <div class="mb-4 flex flex-col gap-4">
-            <div class="flex flex-col gap-4 md:text-xl">
-                <div class="flex gap-2">
-                    <IconsCodersmuIcon alt="Coders.mu" class="w-6 md:w-8 h-6 md:h-8 dark:text-white text-black" />
-                    <a href="https://coders.mu" target="_blank" class="hand-drawn-underline-hover">Coders.mu</a>
-                    <span class="text-gray-500">Lead Organizer</span>
-                </div>
-                <div class="flex gap-2">
-                    <IconsLivestormIcon alt="Livestorm" class="w-6 md:w-8 h-6 md:h-8" />
-                    <a href="https://livestorm.co" target="_blank" class="hand-drawn-underline-hover">Livestorm</a>
-                    <span class="text-gray-500">Sr. Front-end Engineer</span>
-                </div>
-                <div class="flex gap-2">
-                    <IconsUpcodeIcon alt="Upcode" class="w-6 md:w-8 h-6 md:h-8 text-[#0031B0] dark:text-white" />
-                    <a href="https://www.linkedin.com/company/upcodemu" target="_blank"
-                        class="hand-drawn-underline-hover">Upcode</a>
-                    <span class="text-gray-500">Co-Founder</span>
-                </div>
-                <div class="flex gap-2">
-                    <IconsGdeIcon alt="Upcode" class="w-6 md:w-8 h-6 md:h-8 text-[#0031B0] dark:text-white" />
-                    <a href="https://developers.google.com/profile/u/112547642487044982413" target="_blank"
-                        class="hand-drawn-underline-hover">Google Developer Expert</a>
-                    <span class="text-gray-500">Web</span>
-                </div>
-            </div>
 
-            <p class="inline sm:w-full text-left">
+        <div class="flex flex-col gap-4 md:gap-5 md:text-xl">
+            <div class="flex items-center gap-3">
+                <IconsCodersmuIcon alt="Coders.mu" class="w-6 md:w-8 h-6 md:h-8 dark:text-white text-black" />
+                <a href="https://coders.mu" target="_blank" class="hand-drawn-underline-hover">Coders.mu</a>
+                <span class="text-gray-500">Lead Organizer</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <IconsLivestormIcon alt="Livestorm" class="w-6 md:w-8 h-6 md:h-8" />
+                <a href="https://livestorm.co" target="_blank" class="hand-drawn-underline-hover">Livestorm</a>
+                <span class="text-gray-500">Sr. Front-end Engineer</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <IconsUpcodeIcon alt="Upcode" class="w-6 md:w-8 h-6 md:h-8 text-[#0031B0] dark:text-white" />
+                <a href="https://www.linkedin.com/company/upcodemu" target="_blank"
+                    class="hand-drawn-underline-hover">Upcode</a>
+                <span class="text-gray-500">Co-Founder</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <IconsGdeIcon alt="Upcode" class="w-6 md:w-8 h-6 md:h-8 text-[#0031B0] dark:text-white" />
+                <a href="https://developers.google.com/profile/u/112547642487044982413" target="_blank"
+                    class="hand-drawn-underline-hover">Google Developer Expert</a>
+                <span class="text-gray-500">Web</span>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-4 max-w-prose leading-relaxed">
+            <p class="text-left">
                 Technologist based in Mauritius, who loves front-end, UX design, Linux and nature.
                 <br />This is where I share my
                 <NuxtLink class="hand-drawn-underline" :to="{ path: '/blog' }">thoughts</NuxtLink>,
@@ -37,7 +38,7 @@
                 <NuxtLink class="hand-drawn-underline" :to="{ path: '/events' }">event</NuxtLink> participations.
             </p>
 
-            <p class="inline sm:w-full text-left">
+            <p class="text-left">
                 <NuxtLink :to="{ path: '/events', query: { type: 'speaking' } }" class="hand-drawn-underline-hover">
                     Spoke at <span class="font-bold text-blue-500">{{ speakingCount }}</span>
                 </NuxtLink>
@@ -52,7 +53,7 @@
 
         <div class="hidden md:block">
             <div title="Yes, you can run that in your terminal"
-                class="dark:bg-gray-900 bg-gray-200 py-1 px-2 mt-2 rounded cursor-help inline-block">
+                class="dark:bg-gray-900 bg-gray-200 py-1 px-2 rounded cursor-help inline-block">
                 $ npx sandeepramgolam
             </div>
         </div>

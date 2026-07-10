@@ -1,5 +1,5 @@
 <template>
-  <div class="profile-links flex flex-wrap gap-4 py-4">
+  <div class="profile-links flex flex-wrap gap-4 md:gap-6">
     <a rel="me" href="https://x.com/__Sun__" target="_blank">
       <span class="sr-only">X Profile</span>
       <IconsTwitter class="svgicon text-black hover:text-blue-500 w-10 h-10 md:w-16 md:h-16 dark:text-white" />
@@ -41,15 +41,19 @@
 @reference "tailwindcss";
 
 .svgicon {
-  transition: all 0.2s ease;
-  transform-origin: center;
-  transform: scale(1) rotate(0deg);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
+  transform-origin: center bottom;
 }
 
 .svgicon:hover {
-  transition: all 0.4s ease;
-  transform: scale(0.8) rotate(-5deg);
-  cursor: pointer;
-             
+  transform: translateY(-6px) scale(1.1) rotate(-6deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .svgicon,
+  .svgicon:hover {
+    transition-duration: 0s;
+    transform: none;
+  }
 }
 </style>

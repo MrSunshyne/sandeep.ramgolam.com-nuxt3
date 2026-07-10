@@ -9,6 +9,7 @@
   ],
   "published": true,
   "topic": "Building a keylogger using CSS",
+  "talk_title": "A keylogger using CSS only",
   "description": "How to use abuse a css functionality to create a keylogger that can track clients from the serve using CSS!",
   "links": [
     {

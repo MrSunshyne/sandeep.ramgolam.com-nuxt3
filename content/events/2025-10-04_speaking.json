@@ -9,6 +9,11 @@
   "published": true,
   "topic": "New CSS Features in 2025",
   "description": "",
-  "links": [],
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://gdg.community.dev/events/details/google-gdg-mauritius-presents-devfest-mauritius-2025/cohost-gdg-mauritius/"
+    }
+  ],
   "video": null
 }

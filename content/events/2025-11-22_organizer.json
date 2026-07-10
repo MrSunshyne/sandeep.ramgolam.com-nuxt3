@@ -9,6 +9,11 @@
   "published": true,
   "topic": "Hosted and organized the Beach Meetup 3.0 2025",
   "description": "Our annual beach meetup with topics about Kubernetes, LLMs, and more.",
-  "links": [],
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://coders.mu/meetup/2025-november"
+    }
+  ],
   "video": null
 }
