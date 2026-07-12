@@ -262,7 +262,7 @@ function openEvents(type: string) {
 }
 
 /* dark surface gets its own validated steps, not an automatic flip */
-:global(.dark) .events-timeline {
+:global(.dark .events-timeline) {
   --c-speaking: #3b82f6;
   --c-organizer: #9333ea;
   --c-attendee: #15803d;
@@ -344,7 +344,7 @@ function openEvents(type: string) {
   z-index: 10;
 }
 
-:global(.dark) .tooltip {
+:global(.dark .events-timeline .tooltip) {
   background: #f9fafb;
   color: #111827;
 }
