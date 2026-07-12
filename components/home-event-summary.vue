@@ -1,6 +1,6 @@
 <template>
   <div class="container event-page pb-10 grid gap-4">
-    <EventsListing :count="3" />
+    <HomeEventsTimeline />
     <div class="flex justify-center">
       <NuxtLink href="/events" class="view-button">
         <HandDrawnShape variant="pill" :hover-morph="true" color="#6366f1" />
@@ -9,10 +9,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import EventsListing from "./events-listing.vue";
-</script>
 
 <style scoped>
 .event-page {
