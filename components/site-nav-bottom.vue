@@ -31,7 +31,7 @@ const links = [
           <span class="sr-only">Sandeep Ramgolam Logo</span>
         </NuxtLink>
         <ul class="nav-links">
-          <li v-for="link in links" :key="link.href" :class="{ 'sm:hidden': link.label === 'Home' }">
+          <li v-for="link in links" :key="link.href" :class="{ 'sm:hidden': link.label === 'Home', 'hidden sm:block': link.label === 'About' }">
             <NuxtLink :href="link.href" class="nav-link">
               {{ link.label }}
             </NuxtLink>
