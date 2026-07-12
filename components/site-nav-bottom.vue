@@ -227,11 +227,31 @@ html.dark .site-nav-bottom .nav-link {
   mask-size: auto 10px;
 }
 
-/* Active state - always show underline */
+/* Active state - always show underline. Named for the View Transitions API:
+   on route change the browser morphs it from the old item to the new one
+   instead of fading. transition: none so the snapshot is never mid-fade. */
 .site-nav-bottom .nav-link.router-link-exact-active::after {
   opacity: 1;
   -webkit-mask-size: auto 10px;
   mask-size: auto 10px;
+  transition: none;
+  view-transition-name: nav-underline;
+}
+
+/* The flying underline: quick, with a springy overshoot */
+::view-transition-group(nav-underline) {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Keep the underline crisp while it travels — no cross-fade blend */
+::view-transition-old(nav-underline) {
+  display: none;
+}
+
+::view-transition-new(nav-underline) {
+  animation: none;
+  opacity: 1;
 }
 
 @media (min-width: 640px) {
