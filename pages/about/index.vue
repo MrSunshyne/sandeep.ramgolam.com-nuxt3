@@ -158,7 +158,7 @@
           <div
             v-for="project in group.projects"
             :key="project.name"
-            class="flex items-baseline gap-3 min-w-0"
+            class="sm:flex items-baseline gap-3 min-w-0"
           >
             <h4 class="shrink-0 text-base sm:text-lg font-bold">
               <span
@@ -176,7 +176,7 @@
                 <Icon name="solar:link-bold" class="text-sm text-gray-400 print:hidden" />
               </a>
             </h4>
-            <p class="truncate text-sm sm:text-base text-gray-600 dark:text-gray-400">
+            <p class="sm:truncate text-sm sm:text-base text-gray-600 dark:text-gray-400">
               {{ project.text }}
             </p>
           </div>
