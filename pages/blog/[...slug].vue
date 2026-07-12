@@ -76,7 +76,7 @@ const coverImage = computed(() => {
   <article v-if="post" class="">
     <BlogHead :post="post" />
 
-    <div v-if="post.feature_image" class="mx-auto w-full aspect-[2/1] max-w-4xl mb-8">
+    <div v-if="post.feature_image" class="mx-auto w-full aspect-[2/1] max-w-4xl px-4 sm:px-6 lg:px-0">
       <img
         :src="coverImage"
         class="w-full h-full object-cover shadow-xl rounded-xl"
