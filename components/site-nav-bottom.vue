@@ -1,4 +1,13 @@
 <script setup lang="ts">
+// sticky: desktop-only behavior — the homepage dock follows the scroll and
+// compacts; other pages let it scroll away with the content.
+const props = defineProps({
+  sticky: {
+    type: Boolean,
+    default: true,
+  },
+});
+
 const links = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -10,7 +19,7 @@ const links = [
 </script>
 
 <template>
-  <nav class="site-nav-bottom" style="view-transition-name: dock;">
+  <nav class="site-nav-bottom" :class="{ 'nav-not-sticky': !sticky }" style="view-transition-name: dock;">
     <div class="nav-dock">
       <!-- Hand-drawn border SVG with morphing paths -->
       <svg class="dock-border" viewBox="0 0 500 70" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,6 +103,11 @@ html.dark .site-nav-bottom > .nav-dock {
     bottom: auto;
     padding: var(--dock-padding-top) 16px var(--dock-padding) 16px;
     container-type: scroll-state;
+  }
+
+  /* Non-homepage: the dock scrolls away with the page */
+  .site-nav-bottom.nav-not-sticky {
+    position: static;
   }
 
   .site-nav-bottom > .nav-dock {
