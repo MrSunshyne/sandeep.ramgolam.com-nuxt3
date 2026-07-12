@@ -2,15 +2,20 @@
   <div
     class="event-row rounded-lg px-3 -mx-3 py-1.5 transition-colors hover:bg-gray-100 dark:hover:bg-white/5"
   >
-    <div class="flex items-baseline gap-3 min-w-0">
-      <span
-        class="self-center shrink-0 w-2 h-2 rounded-full"
-        :style="{ background: categoryColor }"
-        :title="event.event_type?.join(', ')"
-      ></span>
-      <div class="shrink-0 w-24 sm:w-28 whitespace-nowrap text-xs font-bold tracking-wide text-gray-500 dark:text-gray-400 uppercase">
-        {{ shortDate }}
+    <!-- meta line: event name + a label per role, each in its category color -->
+    <div class="flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5 min-w-0">
+      <div class="min-w-0 truncate text-xs font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase">
+        {{ event.event_name }}
       </div>
+      <span
+        v-for="type in event.event_type"
+        :key="type"
+        class="text-[11px] font-medium uppercase tracking-wide"
+        :style="{ color: categoryColors[type] ?? '#9ca3af' }"
+      >
+        {{ type }}
+      </span>
+    </div>
       <h2
         class="min-w-0 text-base sm:text-lg font-bold"
         :title="event.description || event.topic"
@@ -21,9 +26,9 @@
           :href="event.links[0].url"
           target="_blank"
           rel="noopener"
-          class="title-link flex items-center gap-1 min-w-0 transition-colors hover:text-blue-500 dark:hover:text-blue-400"
+          class="title-link sm:flex sm:items-center sm:gap-1 min-w-0 transition-colors hover:text-blue-500 dark:hover:text-blue-400"
         >
-          <span class="truncate">{{ event.topic ?? event.event_name }}</span>
+          <span class="sm:truncate">{{ event.topic ?? event.event_name }}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="12"
@@ -34,23 +39,23 @@
             stroke-width="2.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="external-icon shrink-0 text-gray-400 dark:text-gray-500 transition-colors"
+            class="external-icon inline-block ml-1 sm:ml-0 sm:shrink-0 text-gray-400 dark:text-gray-500 transition-colors"
             aria-hidden="true"
           >
             <path d="M7 17l9.2-9.2M17 17V7H7" />
           </svg>
         </a>
-        <span v-else class="block truncate">{{ event.topic ?? event.event_name }}</span>
+        <span v-else class="block sm:truncate">{{ event.topic ?? event.event_name }}</span>
       </h2>
-      <div class="min-w-0 truncate text-sm sm:text-base text-gray-600 dark:text-gray-400 hidden sm:block">
-        {{ event.event_name }}<span v-if="event.location"> · {{ event.location }}</span>
+      <!-- logistics line: date + location, as subtle as the meta line -->
+      <div class="min-w-0 sm:truncate text-sm text-gray-400 dark:text-gray-500">
+        {{ shortDate }}<span v-if="event.location"> · {{ event.location }}</span>
       </div>
-    </div>
 
     <!-- Links drawer: expands under the row on hover / keyboard focus -->
     <div v-if="event.links?.length > 1" class="links-reveal hidden sm:grid">
       <div class="links-clip">
-        <div class="links-row flex flex-wrap gap-x-4 gap-y-1 sm:pl-36 pt-1 pb-0.5">
+        <div class="links-row flex flex-wrap gap-x-4 gap-y-1 pt-1 pb-0.5">
           <a
             v-for="link in event.links"
             :key="link.url"
@@ -89,11 +94,11 @@ const categoryColor = computed(() => {
   return categoryColors[type] || '#9ca3af';
 });
 
+// no year — the list is already grouped under year headings
 const shortDate = computed(() =>
   new Date(props.event.event_date).toLocaleDateString("en-GB", {
     day: "numeric",
     month: "short",
-    year: "numeric",
   })
 );
 </script>
