@@ -19,9 +19,10 @@
               :style="'--delay:' + index + 's'"
             >
               <div class="flex items-baseline gap-3 min-w-0">
-                <div class="shrink-0 w-10 sm:w-12 text-xs sm:text-sm font-bold tracking-wide text-gray-500 dark:text-gray-400 uppercase">
+                <div class="shrink-0 w-10 sm:w-12 text-xs sm:text-sm font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase">
                   {{ new Date(talk.event_date).toLocaleDateString("en", { month: "short" }) }}
                 </div>
+                <div class="min-w-0 flex-1">
                 <h3
                   class="min-w-0 text-base sm:text-lg font-bold"
                   :title="talk.talk_title ?? talk.topic ?? talk.event_name"
@@ -32,9 +33,9 @@
                     :href="talk.links[0].url"
                     target="_blank"
                     rel="noopener"
-                    class="title-link flex items-center gap-1 min-w-0 transition-colors hover:text-blue-500 dark:hover:text-blue-400"
+                    class="title-link sm:flex sm:items-center sm:gap-1 min-w-0 transition-colors hover:text-blue-500 dark:hover:text-blue-400"
                   >
-                    <span class="truncate">{{ talk.talk_title ?? talk.topic ?? talk.event_name }}</span>
+                    <span class="sm:truncate">{{ talk.talk_title ?? talk.topic ?? talk.event_name }}</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="12"
@@ -45,33 +46,40 @@
                       stroke-width="2.5"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="external-icon shrink-0 text-gray-400 dark:text-gray-500 transition-colors"
+                      class="external-icon inline-block ml-1 sm:ml-0 sm:shrink-0 text-gray-400 dark:text-gray-500 transition-colors"
                       aria-hidden="true"
                     >
                       <path d="M7 17l9.2-9.2M17 17V7H7" />
                     </svg>
                   </a>
-                  <span v-else class="block truncate">{{ talk.talk_title ?? talk.topic ?? talk.event_name }}</span>
+                  <span v-else class="block sm:truncate">{{ talk.talk_title ?? talk.topic ?? talk.event_name }}</span>
                 </h3>
-                <div class="min-w-0 truncate text-sm sm:text-base text-gray-600 dark:text-gray-400 hidden sm:block">
-                  {{ talk.event_name }}<span v-if="talk.location"> · {{ talk.location }}</span>
+                <!-- event details below the title, small and very subtle -->
+                <div class="min-w-0 sm:truncate text-xs sm:text-sm text-gray-400 dark:text-gray-500">
+                  {{ [talk.event_name, talk.location].filter(Boolean).join(" · ") }}
+                </div>
                 </div>
               </div>
 
-              <!-- Links drawer: expands under the row on hover / keyboard focus -->
-              <div v-if="talk.links?.length > 1" class="links-reveal hidden sm:grid">
+              <!-- Drawer: description + links, expands on hover / keyboard focus -->
+              <div v-if="talk.description || talk.links?.length > 1" class="links-reveal hidden sm:grid">
                 <div class="links-clip">
-                  <div class="links-row flex flex-wrap gap-x-4 gap-y-1 sm:pl-[60px] pt-1 pb-0.5">
-                    <a
-                      v-for="link in talk.links"
-                      :key="link.url"
-                      :href="link.url"
-                      target="_blank"
-                      rel="noopener"
-                      class="text-xs font-bold uppercase tracking-wider text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors whitespace-nowrap"
-                    >
-                      {{ link.title }}
-                    </a>
+                  <div class="links-row flex flex-col gap-1 sm:pl-[60px] pt-1 pb-0.5">
+                    <p v-if="talk.description" class="text-xs text-gray-500 dark:text-gray-400 max-w-prose">
+                      {{ talk.description }}
+                    </p>
+                    <div v-if="talk.links?.length > 1" class="flex flex-wrap gap-x-4 gap-y-1">
+                      <a
+                        v-for="link in talk.links"
+                        :key="link.url"
+                        :href="link.url"
+                        target="_blank"
+                        rel="noopener"
+                        class="text-xs font-bold uppercase tracking-wider text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-colors whitespace-nowrap"
+                      >
+                        {{ link.title }}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -86,7 +94,7 @@
 <script setup lang="ts">
 const { data: talks } = await useAsyncData("talks-list", async () => {
   const events = await queryCollection("events")
-    .select("event_date", "event_name", "event_type", "topic", "talk_title", "location", "published", "links")
+    .select("event_date", "event_name", "event_type", "topic", "talk_title", "location", "description", "published", "links")
     .all();
 
   return events
