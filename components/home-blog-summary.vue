@@ -80,20 +80,20 @@ const spin = (name: string) => {
           When i'm not writing code, <br class="block md:hidden" />
           I like to write about tech.
         </p>
-        <ul class="w-full min-w-0 py-6 flex flex-col items-center md:items-start gap-3 md:gap-4">
+        <ul class="w-full min-w-0 py-4 md:py-6 text-left flex flex-col items-start divide-y divide-gray-900/10 dark:divide-white/10 md:divide-y-0 md:gap-4">
           <li
             v-for="post in posts"
             :key="post.slug"
-            class="w-full max-w-full text-base md:text-lg lg:text-xl flex items-baseline justify-center md:justify-start gap-2"
+            class="w-full max-w-full py-3 md:py-0 text-base md:text-lg lg:text-xl md:flex items-baseline justify-center md:justify-start gap-2"
           >
             <nuxt-link
               :to="'/blog/' + post.slug"
               :title="post.title"
-              class="truncate font-medium hand-drawn-underline-hover hover:text-green-600 dark:hover:text-green-400"
+              class="md:truncate font-medium hand-drawn-underline-hover hover:text-green-600 dark:hover:text-green-400"
             >
               {{ post.title }}
             </nuxt-link>
-            <span class="shrink-0 text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+            <span class="hidden md:inline shrink-0 whitespace-nowrap text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
               {{ dateFormat(new Date(post.date), "monthAndYear") }}
             </span>
           </li>
