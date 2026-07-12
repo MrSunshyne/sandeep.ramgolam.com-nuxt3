@@ -7,11 +7,11 @@
           <p>{{ wallpaper.metadata.description }}</p>
           <button class="border p-2 rounded-lg" @click="downloadWallpaper(wallpaper.path)">Download</button>
         </div>
-        <div class="md:h-[50vh] bg-white aspect-video w-auto col-span-2 grid place-items-center">
+        <div class="md:h-[50vh] bg-white aspect-video w-full col-span-2 grid place-items-center">
           <NuxtImg
             :src="wallpaper.path"
             :alt="wallpaper.title"
-            class="border-8 border-transparent object-contain max-h-[50vh] h-full w-auto cursor-zoom-in"
+            class="border-8 border-transparent object-contain max-h-[50vh] max-w-full h-full w-auto cursor-zoom-in"
             @click="lightbox?.open(wallpaper)"
           />
         </div>
