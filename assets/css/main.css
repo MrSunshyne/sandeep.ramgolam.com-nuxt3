@@ -92,6 +92,50 @@ body:has(dialog:modal) .site-nav-bottom {
   }
 }
 
+/* Article typography: the prose components ship fixed heading sizes, so give
+   them a responsive scale — calmer on phones, full size from sm up. */
+.prose h1 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+
+.prose h2 {
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+}
+
+.prose h3 {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+}
+
+.prose h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .prose h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .prose h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .prose h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .prose h4 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
 /* Hand-drawn underline styles */
 .hand-drawn-underline {
   position: relative;
