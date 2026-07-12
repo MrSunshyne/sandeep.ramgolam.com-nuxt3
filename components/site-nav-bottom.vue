@@ -1,4 +1,13 @@
 <script setup lang="ts">
+// sticky: desktop-only behavior — the homepage dock follows the scroll and
+// compacts; other pages let it scroll away with the content.
+const props = defineProps({
+  sticky: {
+    type: Boolean,
+    default: true,
+  },
+});
+
 const links = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -10,7 +19,7 @@ const links = [
 </script>
 
 <template>
-  <nav class="site-nav-bottom" style="view-transition-name: dock;">
+  <nav class="site-nav-bottom" :class="{ 'nav-not-sticky': !sticky }" style="view-transition-name: dock;">
     <div class="nav-dock">
       <!-- Hand-drawn border SVG with morphing paths -->
       <svg class="dock-border" viewBox="0 0 500 70" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +40,7 @@ const links = [
           <span class="sr-only">Sandeep Ramgolam Logo</span>
         </NuxtLink>
         <ul class="nav-links">
-          <li v-for="link in links" :key="link.href" :class="{ 'sm:hidden': link.label === 'Home' }">
+          <li v-for="link in links" :key="link.href" :class="{ 'sm:hidden': link.label === 'Home', 'hidden sm:block': link.label === 'About' }">
             <NuxtLink :href="link.href" class="nav-link">
               {{ link.label }}
             </NuxtLink>
@@ -67,7 +76,7 @@ const links = [
     border-radius: 9999px;
     background: var(--dock-bg);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: auto;
     max-width: calc(100vw - 24px);
   }
 }
@@ -94,6 +103,11 @@ html.dark .site-nav-bottom > .nav-dock {
     bottom: auto;
     padding: var(--dock-padding-top) 16px var(--dock-padding) 16px;
     container-type: scroll-state;
+  }
+
+  /* Non-homepage: the dock scrolls away with the page */
+  .site-nav-bottom.nav-not-sticky {
+    position: static;
   }
 
   .site-nav-bottom > .nav-dock {
@@ -152,16 +166,28 @@ html.dark .site-nav-bottom .dock-border {
 }
 
 .site-nav-bottom .nav-links {
-  @apply flex items-center justify-between sm:justify-center gap-1 sm:gap-2;
+  @apply flex items-center justify-center gap-1 sm:gap-2;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
+  min-width: 0;
+}
+
+/* Very narrow phones: squeeze further so all six links stay in the pill */
+@media (max-width: 379px) {
+  .site-nav-bottom .nav-inner {
+    @apply px-2;
+  }
+
+  .site-nav-bottom .nav-link {
+    padding-inline: 6px !important;
+  }
 }
 
 .site-nav-bottom .nav-link {
-  @apply px-2.5 py-2 sm:px-4;
-  @apply font-bold text-sm sm:text-base;
+  @apply px-2 py-2 sm:px-4;
+  @apply font-bold text-xs sm:text-base;
   @apply transition-all duration-300;
   text-decoration: none;
   position: relative;
@@ -201,11 +227,31 @@ html.dark .site-nav-bottom .nav-link {
   mask-size: auto 10px;
 }
 
-/* Active state - always show underline */
+/* Active state - always show underline. Named for the View Transitions API:
+   on route change the browser morphs it from the old item to the new one
+   instead of fading. transition: none so the snapshot is never mid-fade. */
 .site-nav-bottom .nav-link.router-link-exact-active::after {
   opacity: 1;
   -webkit-mask-size: auto 10px;
   mask-size: auto 10px;
+  transition: none;
+  view-transition-name: nav-underline;
+}
+
+/* The flying underline: quick, with a springy overshoot */
+::view-transition-group(nav-underline) {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Keep the underline crisp while it travels — no cross-fade blend */
+::view-transition-old(nav-underline) {
+  display: none;
+}
+
+::view-transition-new(nav-underline) {
+  animation: none;
+  opacity: 1;
 }
 
 @media (min-width: 640px) {

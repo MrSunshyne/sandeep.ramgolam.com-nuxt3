@@ -2,6 +2,28 @@
     <div class="md:w-3/5 flex flex-col gap-6 md:gap-8">
         <h1 class="text-2xl md:text-5xl text-left font-black w-full">Hi, I'm Sandeep</h1>
 
+        <div class="flex flex-col gap-4 max-w-prose leading-relaxed">
+            <p class="text-left">
+                Technologist based in Mauritius, who loves front-end, UX design, Linux and nature.
+                <br />This is where I share my
+                <NuxtLink class="hand-drawn-underline" :to="{ path: '/blog' }">thoughts</NuxtLink>,
+                <NuxtLink class="hand-drawn-underline pr-1" target="_blank"
+                    href="https://github.com/MrSunshyne?tab=repositories&q=&type=&language=&sort=stargazers">projects
+                </NuxtLink>and
+                <NuxtLink class="hand-drawn-underline" :to="{ path: '/events' }">event</NuxtLink> participations.
+            </p>
+
+            <p class="text-left">
+                <NuxtLink :to="{ path: '/events', query: { type: 'speaking' } }" class="hand-drawn-underline-hover">
+                    Spoke at <span class="font-bold text-blue-500">{{ speakingCount }}</span>
+                </NuxtLink>
+                and
+                <NuxtLink :to="{ path: '/events', query: { type: 'organizer' } }" class="hand-drawn-underline-hover">
+                    organized <span class="font-bold text-purple-500">{{ organizerCount }}</span> events
+                </NuxtLink>.
+            </p>
+        </div>
+
         <div class="flex flex-col gap-4 md:gap-5 md:text-xl">
             <div class="flex items-center gap-3">
                 <IconsCodersmuIcon alt="Coders.mu" class="w-6 md:w-8 h-6 md:h-8 dark:text-white text-black" />
@@ -25,28 +47,6 @@
                     class="hand-drawn-underline-hover">Google Developer Expert</a>
                 <span class="text-gray-500">Web</span>
             </div>
-        </div>
-
-        <div class="flex flex-col gap-4 max-w-prose leading-relaxed">
-            <p class="text-left">
-                Technologist based in Mauritius, who loves front-end, UX design, Linux and nature.
-                <br />This is where I share my
-                <NuxtLink class="hand-drawn-underline" :to="{ path: '/blog' }">thoughts</NuxtLink>,
-                <NuxtLink class="hand-drawn-underline pr-1" target="_blank"
-                    href="https://github.com/MrSunshyne?tab=repositories&q=&type=&language=&sort=stargazers">projects
-                </NuxtLink>and
-                <NuxtLink class="hand-drawn-underline" :to="{ path: '/events' }">event</NuxtLink> participations.
-            </p>
-
-            <p class="text-left">
-                <NuxtLink :to="{ path: '/events', query: { type: 'speaking' } }" class="hand-drawn-underline-hover">
-                    Spoke at <span class="font-bold text-blue-500">{{ speakingCount }}</span>
-                </NuxtLink>
-                and
-                <NuxtLink :to="{ path: '/events', query: { type: 'organizer' } }" class="hand-drawn-underline-hover">
-                    organized <span class="font-bold text-purple-500">{{ organizerCount }}</span> events
-                </NuxtLink>.
-            </p>
         </div>
 
         <SharedProfileLinks />

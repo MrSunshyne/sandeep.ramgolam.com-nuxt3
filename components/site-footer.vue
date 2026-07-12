@@ -3,8 +3,9 @@ const year = new Date().getFullYear();
 </script>
 
 <template>
+  <!-- extra bottom padding on mobile clears the fixed bottom dock -->
   <div
-    class="contain text-sm uppercase tracking-wide py-10 flex items-center justify-center md:justify-between"
+    class="contain text-sm uppercase tracking-wide pt-10 pb-28 sm:py-10 flex items-center justify-center md:justify-between"
   >
     <ul class="hidden md:block">
       <li>&copy; {{ year }} | Sandeep Ramgolam</li>

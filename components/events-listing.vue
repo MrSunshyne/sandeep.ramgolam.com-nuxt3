@@ -141,7 +141,7 @@ function setCurrentEventType(eventType: EventType) {
       </p>
 
       <!-- Event type filters -->
-      <div class="flex flex-wrap gap-1 sm:gap-2 mb-10 sm:mb-12 -mx-4 px-1 sm:mx-0 sm:px-0">
+      <div class="flex flex-wrap gap-x-1.5 gap-y-2 sm:gap-2 mt-6 sm:mt-8 mb-10 sm:mb-12">
         <button
           v-for="option in filterOptions"
           :key="option.type"
@@ -263,23 +263,33 @@ function setCurrentEventType(eventType: EventType) {
   }
 }
 
-/* Hand-drawn pill styles */
+/* Hand-drawn pill styles — compact on mobile, roomier from sm up */
 .pill-hand-drawn {
   position: relative;
-  padding: 8px 16px;
+  padding: 6px 12px;
   background: transparent;
   border: none;
   cursor: pointer;
-  min-width: 80px;
 }
 
 .pill-text {
   position: relative;
   z-index: 1;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   transition: color 0.3s ease-out;
   color: #6b7280;
+}
+
+@media (min-width: 640px) {
+  .pill-hand-drawn {
+    padding: 8px 16px;
+    min-width: 80px;
+  }
+
+  .pill-text {
+    font-size: 0.875rem;
+  }
 }
 
 :deep(.dark) .pill-text,
