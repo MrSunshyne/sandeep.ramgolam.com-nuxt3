@@ -67,7 +67,7 @@ const links = [
     border-radius: 9999px;
     background: var(--dock-bg);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: auto;
     max-width: calc(100vw - 24px);
   }
 }
@@ -152,16 +152,28 @@ html.dark .site-nav-bottom .dock-border {
 }
 
 .site-nav-bottom .nav-links {
-  @apply flex items-center justify-between sm:justify-center gap-1 sm:gap-2;
+  @apply flex items-center justify-center gap-1 sm:gap-2;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
+  min-width: 0;
+}
+
+/* Very narrow phones: squeeze further so all six links stay in the pill */
+@media (max-width: 379px) {
+  .site-nav-bottom .nav-inner {
+    @apply px-2;
+  }
+
+  .site-nav-bottom .nav-link {
+    padding-inline: 6px !important;
+  }
 }
 
 .site-nav-bottom .nav-link {
-  @apply px-2.5 py-2 sm:px-4;
-  @apply font-bold text-sm sm:text-base;
+  @apply px-2 py-2 sm:px-4;
+  @apply font-bold text-xs sm:text-base;
   @apply transition-all duration-300;
   text-decoration: none;
   position: relative;
