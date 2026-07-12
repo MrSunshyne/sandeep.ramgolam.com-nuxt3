@@ -56,9 +56,13 @@ const presentAsList: {
 const route = useRoute();
 const router = useRouter();
 
-const currentEventType: Ref<EventType> = ref(
-  (route.query.type as EventType) || "all"
-);
+// The URL is the source of truth so direct links and back/forward work
+const currentEventType = computed<EventType>(() => {
+  const type = route.query.type;
+  return typeof type === "string" && type in presentAsList
+    ? (type as EventType)
+    : "all";
+});
 
 const eventsSortedByDate = computed(() => {
   if (localEvents.value && localEvents.value.length === 0) {
@@ -114,11 +118,14 @@ const filterOptions: { type: EventType; label: string; color?: string; textClass
 
 function setCurrentEventType(eventType: EventType) {
   const newType = currentEventType.value === eventType ? "all" : eventType;
-  currentEventType.value = newType;
+  // Keep the current path: letting the router re-resolve it drops the
+  // trailing slash the static host serves, and that fake "page change"
+  // starts a view transition that freezes rendering for seconds.
   router.push({
+    path: route.path,
     query: {
       ...route.query,
-      type: currentEventType.value === "all" ? undefined : currentEventType.value,
+      type: newType === "all" ? undefined : newType,
     },
   });
 }

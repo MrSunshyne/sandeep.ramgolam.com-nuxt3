@@ -6,6 +6,7 @@ const props = withDefaults(
   {},
 );
 const router = useRouter();
+const route = useRoute();
 
 const sliderHeight = useState("sliderHeight", () => 0);
 const sliderTop = useState("sliderTop", () => 0);
@@ -23,7 +24,10 @@ const tocLinks = computed(() => blogPost?.value?.body?.toc?.links ?? []);
 const onClick = (id: string) => {
   const el = document.getElementById(id);
   if (el) {
-    router.push({ hash: `#${id}` });
+    // Keep the current path and query: re-resolving the path drops the
+    // trailing slash and the fake "page change" starts a view transition
+    // that freezes rendering (see events-listing.vue).
+    router.push({ path: route.path, query: route.query, hash: `#${id}` });
     el.scrollIntoView({
       behavior: "smooth",
       block: "center",
