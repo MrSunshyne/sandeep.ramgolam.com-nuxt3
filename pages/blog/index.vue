@@ -69,11 +69,11 @@ defineOgImage("GenericTemplate");
                 :href="`/blog/${post.slug}`"
                 class="rounded-lg px-3 -mx-3 py-1.5 transition-colors hover:bg-gray-100 dark:hover:bg-white/5 flex items-baseline gap-3 min-w-0 group"
               >
-                <div class="shrink-0 w-12 sm:w-16 text-xs sm:text-sm font-bold tracking-wide text-gray-500 dark:text-gray-400 uppercase">
+                <div class="shrink-0 w-14 sm:w-16 whitespace-nowrap text-xs sm:text-sm font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase">
                   {{ new Date(post.date).toLocaleDateString("en", { month: "short", day: "2-digit" }) }}
                 </div>
                 <h3
-                  class="min-w-0 text-base sm:text-lg font-bold transition-colors group-hover:text-blue-500 dark:group-hover:text-blue-400 truncate"
+                  class="min-w-0 text-base sm:text-lg font-bold transition-colors group-hover:text-blue-500 dark:group-hover:text-blue-400 sm:truncate"
                   :title="post.title"
                 >
                   <span :style="transitionName(post.slug, 'blog-title')">{{ post.title }}</span>
