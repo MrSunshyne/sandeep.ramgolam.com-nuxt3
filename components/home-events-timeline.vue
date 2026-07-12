@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import EventRow from "~/components/event-row.vue";
+
 type TimelineEvent = {
   event_date: string;
   event_name: string;
@@ -116,6 +118,8 @@ const baselinePath = computed(() => {
   return d;
 });
 
+const recentEvents = computed(() => published.value.slice(-4).reverse());
+
 const roleOrder = [
   { type: "speaking", label: "Speaking" },
   { type: "organizer", label: "Organizer" },
@@ -151,7 +155,9 @@ function openEvents(type: string) {
 </script>
 
 <template>
-  <div class="events-timeline">
+  <!-- min-w-0 lets this grid item shrink below the svg's min-width so the
+       ribbon scrolls inside its own wrapper instead of the whole page -->
+  <div class="events-timeline min-w-0">
     <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold pt-8 sm:pt-10 text-center mb-3 sm:mb-4">
       Events
     </h2>
@@ -227,6 +233,20 @@ function openEvents(type: string) {
         {{ role.label }}
       </li>
     </ul>
+
+    <!-- px absorbs EventRow's -mx-3 hover bleed so rows never poke past the viewport -->
+    <div class="max-w-3xl mx-auto mt-8 sm:mt-10 px-4 sm:px-6">
+      <h3 class="text-xs sm:text-sm font-medium tracking-wide uppercase text-gray-400 dark:text-gray-500 mb-2">
+        Latest
+      </h3>
+      <div class="flex flex-col gap-1">
+        <EventRow
+          v-for="event in recentEvents"
+          :key="event.event_name + event.event_date"
+          :event="event"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
