@@ -1,0 +1,22 @@
+{
+  "event_date": "07/30/2026",
+  "event_name": "Build with Gemma: Blue Mauritius & Beyond",
+  "location": "Middlesex University Mauritius",
+  "event_type": [
+    "jury"
+  ],
+  "published": true,
+  "topic": "Build with Gemma Hackathon",
+  "description": "I was a jury member at Google's Build with Gemma hackathon, where students built AI solutions using the Gemma open model family.",
+  "links": [
+    {
+      "title": "Event Recap",
+      "url": "https://www.middlesex.mu/news/2026/july/middlesex-university-mauritius-hosts-googles-build-with-gemma-hackathon-to-inspire-the-next-generation-of-ai-innovators/"
+    },
+    {
+      "title": "Kaggle Competition",
+      "url": "https://www.kaggle.com/competitions/Build-with-Gemma-Blue-Mauritius-and-Beyond"
+    }
+  ],
+  "video": null
+}
