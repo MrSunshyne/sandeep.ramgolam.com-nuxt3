@@ -1,0 +1,24 @@
+{
+  "event_date": "07/23/2026",
+  "event_name": "Developers Conference 2026",
+  "location": "Mauritius",
+  "event_type": [
+    "speaking",
+    "attendee"
+  ],
+  "published": true,
+  "topic": "WebAI - Exploring agentic capabilities within the browser",
+  "talk_title": "WebAI - Exploring agentic capabilities within the browser",
+  "description": "Speak about WebAI and agentic capabilities in the browser at DevCon2026, with live demos of the built-in AI APIs",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://2026.mscc.mu/agenda/1169715"
+    },
+    {
+      "title": "Slides",
+      "url": "https://mrsunshyne.github.io/presentation-devcon-2026/1"
+    }
+  ],
+  "video": null
+}
