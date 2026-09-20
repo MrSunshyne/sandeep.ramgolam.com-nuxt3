@@ -1,5 +1,17 @@
 const projects = [
   {
+    name: "Pentaforce Movers",
+    url: "https://pentaforcemu.biro.mu/",
+    role: ["Design Engineer"],
+    tech: ["HTML", "CSS", "JavaScript", "Cloudflare"],
+    text: "Backhoe loader hire in the north of Mauritius, with an animated emblem and a quote form that opens a pre-filled WhatsApp chat",
+    featured: true,
+    thumbnail: "pentaforce-movers.png",
+    company: "Biro",
+    year: "2026",
+    status: "active",
+  },
+  {
     name: "Biro.mu",
     url: "https://biro.mu/",
     role: ["Design Engineer"],
