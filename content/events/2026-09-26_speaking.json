@@ -1,0 +1,20 @@
+{
+  "event_date": "09/26/2026",
+  "event_name": "Cloud Native Mauritius September Meetup",
+  "location": "Quatre Bornes",
+  "event_type": [
+    "speaking",
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Claude: MCP",
+  "talk_title": "Claude: MCP",
+  "description": "Speak about Claude and MCP at the Cloud Native Mauritius meetup, on a homelab theme.",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://ocgroups.dev/cncf/group/58jha3y/event/9rp3agw"
+    }
+  ],
+  "video": null
+}
