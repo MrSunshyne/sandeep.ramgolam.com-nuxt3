@@ -1,0 +1,20 @@
+{
+  "event_date": "10/03/2026",
+  "event_name": "Google Devfest Mauritius 2026",
+  "location": "African Leadership College, Pamplemousses",
+  "event_type": [
+    "speaking",
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Practical WebAI",
+  "talk_title": "Practical WebAI",
+  "description": "",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://gdg.community.dev/events/details/google-gdg-mauritius-presents-devfest-mauritius-2026/cohost-gdg-mauritius/"
+    }
+  ],
+  "video": null
+}

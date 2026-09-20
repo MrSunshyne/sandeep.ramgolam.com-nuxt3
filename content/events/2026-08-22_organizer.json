@@ -1,0 +1,19 @@
+{
+  "event_date": "08/22/2026",
+  "event_name": "Front-end Coders Meetup",
+  "location": "SD Worx, NEX Tower, Ebene",
+  "event_type": [
+    "organizer",
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Open Source, Computer Vision, Tooling & Monitoring for Production",
+  "description": "Host and organize the August 2026 meetup, sponsored by SD Worx.",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://coders.mu/meetup/2026-august"
+    }
+  ],
+  "video": null
+}
