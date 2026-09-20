@@ -1,0 +1,19 @@
+{
+  "event_date": "09/19/2026",
+  "event_name": "Front-end Coders Meetup",
+  "location": "Novity, 12th Floor, Nexteracom Tower 1",
+  "event_type": [
+    "organizer",
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Building a voice with AI, Ricing Linux, Design Tools & Homelab Malware",
+  "description": "Host and organize the September 2026 meetup at Novity.",
+  "links": [
+    {
+      "title": "Event Page",
+      "url": "https://coders.mu/meetup/2026-september"
+    }
+  ],
+  "video": null
+}
