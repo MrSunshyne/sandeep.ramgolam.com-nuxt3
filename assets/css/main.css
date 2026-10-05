@@ -4,10 +4,15 @@
 
 :root {
   /* Navigation dock dimensions */
-  --dock-height: 60px;
-  --dock-padding: 12px;
+  /* Height of the pill itself: the nav links' line box plus the inner padding. */
+  --dock-height: 64px;
+  /* Room under the pill for the hand-drawn outline, which overhangs it by
+     12px, plus a little air so it does not sit flush on the fold. */
+  --dock-padding: 20px;
   --dock-padding-top: 24px;
-  --dock-scale: 1.15;
+  /* The dock rests at the size it collapses to once stuck; only its hand-drawn
+     outline morphs on the way up. */
+  --dock-scale: 1;
   /* Total height when unstuck (scaled) - includes top padding */
   --dock-height-unstuck: calc((var(--dock-height) + var(--dock-padding-top) + var(--dock-padding)) * var(--dock-scale));
   /* Total height when stuck (not scaled) */
