@@ -1,0 +1,15 @@
+{
+  "event_date": "09/25/2026",
+  "event_name": "Programmers Day",
+  "location": "Charles Telfair Institute",
+  "event_type": [
+    "speaking",
+    "attendee"
+  ],
+  "published": true,
+  "topic": "Tasks APIs & WebMCP",
+  "talk_title": "Tasks APIs & WebMCP",
+  "description": "",
+  "links": [],
+  "video": null
+}
