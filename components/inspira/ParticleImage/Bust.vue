@@ -27,7 +27,7 @@
     inspiraImageParticles,
     type InspiraImageParticle as ImageParticle,
   } from "./inspiraImageParticles.js";
-  import { ref, onMounted } from "vue";
+  import { ref, onMounted, onBeforeUnmount } from "vue";
   
   type ParticleImageProps = {
     imageSrc: string;
@@ -51,11 +51,44 @@
   
   defineProps<ParticleImageProps>();
   
-  let particles: ImageParticle;
+  let particles: ImageParticle | undefined;
   const imageParticleRef = ref<HTMLImageElement>();
   
   onMounted(() => {
     const { InspiraImageParticle } = inspiraImageParticles();
     particles = new InspiraImageParticle(imageParticleRef.value);
   });
+
+  onBeforeUnmount(() => {
+    if (!particles) return;
+    // Its own listeners go first: with responsive-width it restarts itself on
+    // "stopped", which would keep the animation frame loop running after the
+    // component is gone.
+    particles.events = {};
+    particles.stop();
+    // The canvas is appended to the wrapper by the library, so Vue does not
+    // take it down with the component. It goes once Vue has finished patching:
+    // until then it is still the sibling Vue inserts the replacement against.
+    const { canvas } = particles;
+    queueMicrotask(() => canvas?.remove());
+    particles = undefined;
+  });
+
+  // The canvas is sized from the dataset when the particle system is built, so
+  // a viewport that changed since then has to be handed over by hand. The
+  // width comes from the wrapper as it does on start: start() writes both onto
+  // the canvas, and a responsive width picked up later would otherwise leave
+  // the canvas element itself a step behind.
+  const resizeCanvas = (height: number) => {
+    if (!particles) return;
+
+    const width = particles.wrapperElement?.clientWidth || particles.width;
+    if (particles.height === height && particles.width === width) return;
+
+    particles.height = height;
+    particles.width = width;
+    particles.start();
+  };
+
+  defineExpose({ resizeCanvas });
   </script>
