@@ -1,8 +1,8 @@
 <template>
-    <div class="md:w-3/5 flex flex-col gap-6 md:gap-8">
+    <div class="home-self-intro md:w-3/5 flex flex-col gap-6 md:gap-8">
         <h1 class="text-2xl md:text-5xl text-left font-black w-full">Hi, I'm Sandeep</h1>
 
-        <div class="flex flex-col gap-4 max-w-prose leading-relaxed">
+        <div class="flex flex-col gap-4 max-w-prose leading-relaxed md:text-lg">
             <p class="text-left">
                 Technologist based in Mauritius, who loves front-end, UX design, Linux and nature.
                 <br />This is where I share my
@@ -24,28 +24,43 @@
             </p>
         </div>
 
-        <div class="flex flex-col gap-4 md:gap-5 md:text-xl">
+        <div class="intro-roles grid grid-cols-[repeat(auto-fit,minmax(15rem,max-content))] gap-4 md:text-base">
             <div class="flex items-center gap-3">
-                <IconsCodersmuIcon alt="Coders.mu" class="w-6 md:w-8 h-6 md:h-8 dark:text-white text-black" />
-                <a href="https://coders.mu" target="_blank" class="hand-drawn-underline-hover">Coders.mu</a>
-                <span class="text-gray-500">Lead Organizer</span>
+                <IconsCodersmuIcon alt="Coders.mu" class="w-10 h-10 dark:text-white text-black" />
+                <div class="flex flex-col text-left leading-snug">
+                    <a href="https://coders.mu" target="_blank" class="hand-drawn-underline-hover">Coders.mu</a>
+                    <span class="text-gray-500 text-sm">Lead Organizer</span>
+                </div>
             </div>
             <div class="flex items-center gap-3">
-                <IconsLivestormIcon alt="Livestorm" class="w-6 md:w-8 h-6 md:h-8" />
-                <a href="https://livestorm.co" target="_blank" class="hand-drawn-underline-hover">Livestorm</a>
-                <span class="text-gray-500">Sr. Front-end Engineer</span>
+                <IconsLivestormIcon alt="Livestorm" class="w-10 h-10" />
+                <div class="flex flex-col text-left leading-snug">
+                    <a href="https://livestorm.co" target="_blank" class="hand-drawn-underline-hover">Livestorm</a>
+                    <span class="text-gray-500 text-sm">Sr. Front-end Engineer</span>
+                </div>
             </div>
             <div class="flex items-center gap-3">
-                <IconsUpcodeIcon alt="Upcode" class="w-6 md:w-8 h-6 md:h-8 text-[#0031B0] dark:text-white" />
-                <a href="https://www.linkedin.com/company/upcodemu" target="_blank"
-                    class="hand-drawn-underline-hover">Upcode</a>
-                <span class="text-gray-500">Co-Founder</span>
+                <IconsBiroIcon alt="Biro.mu" class="w-10 h-10 text-[#1b2a3c] dark:text-white" />
+                <div class="flex flex-col text-left leading-snug">
+                    <a href="https://biro.mu/" target="_blank" class="hand-drawn-underline-hover">Biro.mu</a>
+                    <span class="text-gray-500 text-sm">Co-Founder</span>
+                </div>
             </div>
             <div class="flex items-center gap-3">
-                <IconsGdeIcon alt="Upcode" class="w-6 md:w-8 h-6 md:h-8 text-[#0031B0] dark:text-white" />
-                <a href="https://developers.google.com/profile/u/112547642487044982413" target="_blank"
-                    class="hand-drawn-underline-hover">Google Developer Expert</a>
-                <span class="text-gray-500">Web</span>
+                <IconsUpcodeIcon alt="Upcode" class="w-10 h-10 text-[#0031B0] dark:text-white" />
+                <div class="flex flex-col text-left leading-snug">
+                    <a href="https://www.linkedin.com/company/upcodemu" target="_blank"
+                        class="hand-drawn-underline-hover">Upcode</a>
+                    <span class="text-gray-500 text-sm">Co-Founder</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <IconsGdeIcon alt="Google Developer Expert" class="w-10 h-10 text-[#0031B0] dark:text-white" />
+                <div class="flex flex-col text-left leading-snug">
+                    <a href="https://developers.google.com/profile/u/112547642487044982413" target="_blank"
+                        class="hand-drawn-underline-hover">Google Developer Expert</a>
+                    <span class="text-gray-500 text-sm">Web</span>
+                </div>
             </div>
         </div>
 
@@ -76,3 +91,34 @@ const { data: eventCounts } = await useAsyncData("home-event-counts", async () =
 const speakingCount = computed(() => eventCounts.value?.speaking ?? 0);
 const organizerCount = computed(() => eventCounts.value?.organizer ?? 0);
 </script>
+
+<style scoped>
+/* Laptops leave between 630px (a 1366x768 screen) and 660px (1280x800) of
+   viewport once the browser chrome is accounted for, which the full spacing
+   overshoots. The column gap holds at full size from 780px of viewport upwards
+   and ramps down at 630px, so the intro, the bust and the dock share the first
+   screen. The hero's own padding ramps over the same range.
+   vh rather than dvh: a mobile toolbar sliding away must not make the spacing
+   breathe mid-scroll. */
+@media (min-width: 768px) {
+  .home-self-intro {
+    /* One rhythm unit. Everything else in the column is a multiple of it, so
+       the whole block tightens together rather than piecemeal. */
+    --rhythm: clamp(1rem, calc(1rem + (100vh - 630px) / 9.375), 2rem);
+    gap: var(--rhythm);
+  }
+
+  /* The roles are one group, not five loose lines: more air around the group
+     than inside it, and a gutter wide enough to read as two columns. */
+  .intro-roles {
+    row-gap: calc(var(--rhythm) * 0.75);
+    column-gap: calc(var(--rhythm) * 2);
+    margin-block: calc(var(--rhythm) * 0.5);
+  }
+
+  /* The headline carries more weight than a rhythm unit gives it. */
+  .home-self-intro > h1 {
+    margin-bottom: calc(var(--rhythm) * 0.25);
+  }
+}
+</style>
