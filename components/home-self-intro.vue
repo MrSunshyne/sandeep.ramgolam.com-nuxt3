@@ -27,28 +27,28 @@
         <div class="intro-roles grid grid-cols-[repeat(auto-fit,minmax(15rem,max-content))] gap-4 md:text-base">
             <div class="flex items-center gap-3">
                 <IconsCodersmuIcon alt="Coders.mu" class="w-10 h-10 dark:text-white text-black" />
-                <div class="flex flex-col text-left leading-snug">
+                <div class="flex flex-col items-start text-left leading-snug">
                     <a href="https://coders.mu" target="_blank" class="hand-drawn-underline-hover">Coders.mu</a>
                     <span class="text-gray-500 text-sm">Lead Organizer</span>
                 </div>
             </div>
             <div class="flex items-center gap-3">
                 <IconsLivestormIcon alt="Livestorm" class="w-10 h-10" />
-                <div class="flex flex-col text-left leading-snug">
+                <div class="flex flex-col items-start text-left leading-snug">
                     <a href="https://livestorm.co" target="_blank" class="hand-drawn-underline-hover">Livestorm</a>
                     <span class="text-gray-500 text-sm">Sr. Front-end Engineer</span>
                 </div>
             </div>
             <div class="flex items-center gap-3">
                 <IconsBiroIcon alt="Biro.mu" class="w-10 h-10 text-[#1b2a3c] dark:text-white" />
-                <div class="flex flex-col text-left leading-snug">
+                <div class="flex flex-col items-start text-left leading-snug">
                     <a href="https://biro.mu/" target="_blank" class="hand-drawn-underline-hover">Biro.mu</a>
                     <span class="text-gray-500 text-sm">Co-Founder</span>
                 </div>
             </div>
             <div class="flex items-center gap-3">
                 <IconsUpcodeIcon alt="Upcode" class="w-10 h-10 text-[#0031B0] dark:text-white" />
-                <div class="flex flex-col text-left leading-snug">
+                <div class="flex flex-col items-start text-left leading-snug">
                     <a href="https://www.linkedin.com/company/upcodemu" target="_blank"
                         class="hand-drawn-underline-hover">Upcode</a>
                     <span class="text-gray-500 text-sm">Co-Founder</span>
@@ -56,7 +56,7 @@
             </div>
             <div class="flex items-center gap-3">
                 <IconsGdeIcon alt="Google Developer Expert" class="w-10 h-10 text-[#0031B0] dark:text-white" />
-                <div class="flex flex-col text-left leading-snug">
+                <div class="flex flex-col items-start text-left leading-snug">
                     <a href="https://developers.google.com/profile/u/112547642487044982413" target="_blank"
                         class="hand-drawn-underline-hover">Google Developer Expert</a>
                     <span class="text-gray-500 text-sm">Web</span>
