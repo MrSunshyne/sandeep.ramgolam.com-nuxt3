@@ -56,17 +56,18 @@
       </div>
     </div>
 
-    <!-- photos: small thumbnails that open a larger copy, credit linked to where each was found -->
+    <!-- photos: small thumbnails that open in a lightbox, credit linked to where each was found -->
     <figure v-if="event.photos?.length" class="shrink-0">
       <div class="flex gap-2">
         <a
-          v-for="photo in event.photos"
+          v-for="(photo, i) in event.photos"
           :key="photo.src"
           :href="largePhoto(photo.src)"
           target="_blank"
           rel="noopener"
           :title="photo.alt"
           class="photo-thumb block overflow-hidden rounded-md bg-gray-100 dark:bg-white/5"
+          @click="openPhoto($event, i)"
         >
           <NuxtImg
             :src="photo.src"
@@ -98,6 +99,11 @@
           <span v-else>{{ c.credit }}</span>
         </template>
       </figcaption>
+      <EventPhotoLightbox
+        ref="lightbox"
+        :photos="event.photos"
+        :title="event.topic ?? event.event_name"
+      />
     </figure>
     </div>
 
@@ -146,6 +152,15 @@ const categoryColor = computed(() => {
 // some photos are multi-MB originals from blog posts, so even the "large" copy goes through the image provider
 const img = useImage();
 const largePhoto = (src: string) => img(src, { width: 1600, format: "webp" });
+
+const lightbox = ref<{ open: (index: number) => void } | null>(null);
+
+// plain clicks open the lightbox; modified/middle clicks keep the link's open-in-new-tab behaviour
+function openPhoto(e: MouseEvent, index: number) {
+  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+  e.preventDefault();
+  lightbox.value?.open(index);
+}
 
 // one credit per photographer/organiser, linked to the first photo's source
 const photoCredits = computed(() => {
