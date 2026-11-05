@@ -29,6 +29,12 @@ export default defineContentConfig({
         talk_title: z.string().optional(),
         description: z.string().optional(),
         links: z.array(z.object({ title: z.string(), url: z.string() })).optional(),
+        photos: z.array(z.object({
+          src: z.string(),
+          alt: z.string(),
+          credit: z.string().optional(),
+          source: z.string().optional(),
+        })).optional(),
       }),
     }),
   }
