@@ -21,5 +21,19 @@
       "url": "https://sandeep.ramgolam.com/blog/front-end-coders-meetup-september"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2022-08-20_speaking-1.webp",
+      "alt": "Sandeep presenting Bun at the August 2022 Front-end Coders meetup at Acensi",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2022-august"
+    },
+    {
+      "src": "/content/images/events/2022-08-20_speaking-2.webp",
+      "alt": "Sandeep speaking to the audience at the August 2022 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2022-august"
+    }
+  ]
 }

@@ -16,5 +16,19 @@
       "url": "https://coders.mu/meetup/61"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2025-03-01_speaker-1.webp",
+      "alt": "Sandeep presenting The Second Browser War at Spoon Consulting",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2025-march"
+    },
+    {
+      "src": "/content/images/events/2025-03-01_speaker-2.webp",
+      "alt": "Group photo of the March 2025 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2025-march"
+    }
+  ]
 }

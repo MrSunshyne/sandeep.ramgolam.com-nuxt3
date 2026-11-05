@@ -21,5 +21,17 @@
       "url": "https://sandeep.ramgolam.com/blog/front-end-coders-meetup-april-2022"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2022-04-09_speaking-1.webp",
+      "alt": "Sandeep talking about open data in Mauritius at the April 2022 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2022-april"
+    },
+    {
+      "src": "/content/images/2022/04/fec-april-group-photo.jpg",
+      "alt": "Group photo of the April 2022 Front-end Coders meetup"
+    }
+  ]
 }

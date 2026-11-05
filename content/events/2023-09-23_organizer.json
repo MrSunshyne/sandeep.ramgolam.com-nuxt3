@@ -21,5 +21,19 @@
       "url": "https://sandeep.ramgolam.com/blog/frontend-meetup-zendo-hikvision-september-2023"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2023-09-23_organizer-1.webp",
+      "alt": "Sandeep presenting at the September 2023 meetup at the Hikvision Command Center",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2023-september"
+    },
+    {
+      "src": "/content/images/events/2023-09-23_organizer-2.webp",
+      "alt": "Sandeep speaking to the audience at the September 2023 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2023-september"
+    }
+  ]
 }

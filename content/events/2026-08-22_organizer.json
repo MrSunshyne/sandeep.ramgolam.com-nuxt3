@@ -15,5 +15,19 @@
       "url": "https://coders.mu/meetup/2026-august"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2026-08-22_organizer-1.webp",
+      "alt": "Sandeep presenting at the August 2026 Front-end Coders meetup at SD Worx",
+      "credit": "SD Worx Mauritius",
+      "source": "https://www.linkedin.com/posts/sd-worx-mauritius_wemakeitworx-sdworx-codersmu-activity-7497959665755148289-qs20"
+    },
+    {
+      "src": "/content/images/events/2026-08-22_organizer-2.webp",
+      "alt": "Group photo of the August 2026 Front-end Coders meetup at SD Worx",
+      "credit": "SD Worx Mauritius",
+      "source": "https://www.linkedin.com/posts/sd-worx-mauritius_wemakeitworx-sdworx-codersmu-activity-7497959665755148289-qs20"
+    }
+  ]
 }

@@ -21,5 +21,19 @@
       "url": "https://sandeep.ramgolam.com/blog/mdx-frontend-coders-may-2023/"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2023-05-20_organizer-1.webp",
+      "alt": "Sandeep presenting Getting started with Frontend Development at MDX",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2023-may"
+    },
+    {
+      "src": "/content/images/events/2023-05-20_organizer-2.webp",
+      "alt": "Sandeep talking about old vs modern frontend development at the May 2023 meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2023-may"
+    }
+  ]
 }

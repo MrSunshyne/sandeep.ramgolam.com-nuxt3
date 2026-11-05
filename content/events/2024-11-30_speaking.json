@@ -17,5 +17,15 @@
             "url": "https://coders.mu/meetup/2024-november"
         }
     ],
-    "video": null
+    "video": null,
+    "photos": [
+        {
+            "src": "/content/images/2024/12/sandeep-frontendmu.jpg",
+            "alt": "Sandeep speaking at the Beach Meetup 2.0 at La Cambuse"
+        },
+        {
+            "src": "/content/images/2024/12/november-2024.jpg",
+            "alt": "Collage of the November 2024 beach meetup"
+        }
+    ]
 }

@@ -17,5 +17,15 @@
             "url": "https://coders.mu/meetup/2026-may"
         }
     ],
-    "video": null
+    "video": null,
+    "photos": [
+        {
+            "src": "/content/images/2026/05/sandeep-news-may-2026.jpg",
+            "alt": "Sandeep presenting frontend news at the May 2026 meetup at Astek"
+        },
+        {
+            "src": "/content/images/2026/05/may-2026.jpg",
+            "alt": "Group photo of the May 2026 Front-end Coders meetup"
+        }
+    ]
 }

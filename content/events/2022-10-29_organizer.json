@@ -19,5 +19,17 @@
       "url": "https://sandeep.ramgolam.com/blog/front-end-coders-meetup-october-2022"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/2022/10/image-5.png",
+      "alt": "Sandeep speaking at the October 2022 Front-end Coders meetup at ELCA"
+    },
+    {
+      "src": "/content/images/events/2022-10-29_organizer-2.webp",
+      "alt": "Sandeep with the frontend.mu crew at the October 2022 meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2022-october"
+    }
+  ]
 }

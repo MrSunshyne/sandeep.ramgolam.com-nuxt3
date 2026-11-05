@@ -21,5 +21,19 @@
       "url": "https://sandeep.ramgolam.com/blog/front-end-coders-meetup-september"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2022-09-24_speaking-1.webp",
+      "alt": "Sandeep pointing at the slides during the September 2022 CSS meetup at Objectivity",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2022-september"
+    },
+    {
+      "src": "/content/images/events/2022-09-24_speaking-2.webp",
+      "alt": "Sandeep presenting the (near) future of frontend development",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2022-september"
+    }
+  ]
 }

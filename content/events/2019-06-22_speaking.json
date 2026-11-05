@@ -21,5 +21,19 @@
       "url": "https://www.meetup.com/frontendcodersmauritius/photos/30097275/482456959/"
     }
   ],
-  "video": ""
+  "video": "",
+  "photos": [
+    {
+      "src": "/content/images/events/2019-06-22_speaking-1.webp",
+      "alt": "Sandeep presenting the MSCC Jobs design at the June 2019 Front-end Coders meetup",
+      "credit": "Front-End Coders Mauritius",
+      "source": "https://www.meetup.com/frontendcodersmauritius/photos/30097275/482456959/"
+    },
+    {
+      "src": "/content/images/events/2019-06-22_speaking-2.webp",
+      "alt": "Group photo of the June 2019 Front-end Coders meetup",
+      "credit": "Front-End Coders Mauritius",
+      "source": "https://www.meetup.com/frontendcodersmauritius/photos/30097275/482456947/"
+    }
+  ]
 }

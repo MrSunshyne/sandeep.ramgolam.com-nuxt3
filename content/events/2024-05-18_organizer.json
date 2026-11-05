@@ -17,5 +17,19 @@
       "url": "https://coders.mu/meetup/54"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2024-05-18_organizer-1.webp",
+      "alt": "Sandeep presenting at the May 2024 meetup at Dayforce",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2024-may"
+    },
+    {
+      "src": "/content/images/events/2024-05-18_organizer-2.webp",
+      "alt": "Sandeep with attendees at the May 2024 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2024-may"
+    }
+  ]
 }

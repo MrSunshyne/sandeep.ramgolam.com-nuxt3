@@ -15,5 +15,19 @@
       "url": "https://github.com/MrSunshyne/frontend-meetup-demo"
     }
   ],
-  "video": ""
+  "video": "",
+  "photos": [
+    {
+      "src": "/content/images/events/2016-10-09_speaking-1.webp",
+      "alt": "Sandeep presenting AureliaJS and GulpJS at the Front-End Mauritius meetup",
+      "credit": "Front-End Coders Mauritius",
+      "source": "https://github.com/frontendmu/meetupFEC/tree/main/public/gallery/2016/sept-30"
+    },
+    {
+      "src": "/content/images/events/2016-10-09_speaking-2.webp",
+      "alt": "Sandeep live-demoing at the 2016 Front-End Mauritius meetup",
+      "credit": "Front-End Coders Mauritius",
+      "source": "https://github.com/frontendmu/meetupFEC/tree/main/public/gallery/2016/sept-30"
+    }
+  ]
 }

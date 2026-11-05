@@ -20,5 +20,19 @@
       "url": "https://twitter.com/i/events/1152597473522642944"
     }
   ],
-  "video": ""
+  "video": "",
+  "photos": [
+    {
+      "src": "/content/images/events/2019-07-20_speaking-1.webp",
+      "alt": "Sandeep (left, black polo) at the July 2019 Front-end Coders meetup",
+      "credit": "Front-End Coders Mauritius",
+      "source": "https://github.com/frontendmu/meetupFEC/tree/main/public/gallery/2019/jul-20"
+    },
+    {
+      "src": "/content/images/events/2019-07-20_speaking-2.webp",
+      "alt": "Sandeep in the audience at the July 2019 Front-end Coders meetup",
+      "credit": "Front-End Coders Mauritius",
+      "source": "https://github.com/frontendmu/meetupFEC/tree/main/public/gallery/2019/jul-20"
+    }
+  ]
 }

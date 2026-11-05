@@ -20,5 +20,19 @@
       "url": "https://www.twitch.tv/cedpoilly"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2024-03-28_speaker-1.webp",
+      "alt": "Sandeep answering questions live on Twitch after his data fetching talk (stream still)",
+      "credit": "Cedric Poilly",
+      "source": "https://www.youtube.com/watch?v=xRfXicN9gOQ"
+    },
+    {
+      "src": "/content/images/events/2024-03-28_speaker-2.webp",
+      "alt": "Sandeep demoing data fetching strategies on the Twitch stream",
+      "credit": "Cedric Poilly",
+      "source": "https://www.youtube.com/watch?v=xRfXicN9gOQ"
+    }
+  ]
 }

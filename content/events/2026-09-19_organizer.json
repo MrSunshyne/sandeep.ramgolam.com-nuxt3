@@ -15,5 +15,19 @@
       "url": "https://coders.mu/meetup/2026-september"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2026-09-19_organizer-1.webp",
+      "alt": "Sandeep opening the September 2026 meetup at Novity (video still)",
+      "credit": "Novity Mauritius",
+      "source": "https://www.linkedin.com/posts/novitymauritius_tech-gets-better-when-knowledge-gets-shared-activity-7508066076602257408-Ivqf"
+    },
+    {
+      "src": "/content/images/events/2026-09-19_organizer-2.webp",
+      "alt": "Group photo of the September 2026 Front-end Coders meetup at Novity",
+      "credit": "Novity Mauritius",
+      "source": "https://www.linkedin.com/posts/novitymauritius_tech-gets-better-when-knowledge-gets-shared-activity-7508066076602257408-Ivqf"
+    }
+  ]
 }

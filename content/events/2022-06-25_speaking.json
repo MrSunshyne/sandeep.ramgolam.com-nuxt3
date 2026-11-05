@@ -21,5 +21,19 @@
       "url": "https://sandeep.ramgolam.com/blog/front-end-coders-meetup-june-2022"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2022-06-25_speaking-1.webp",
+      "alt": "Sandeep presenting Infinite themes with CSS Variables at Outremer Telecom",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2022-june"
+    },
+    {
+      "src": "/content/images/events/2022-06-25_speaking-2.webp",
+      "alt": "Sandeep speaking at the June 2022 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2022-june"
+    }
+  ]
 }

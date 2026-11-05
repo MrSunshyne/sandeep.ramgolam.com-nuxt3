@@ -19,5 +19,15 @@
       "url": "https://sandeep.ramgolam.com/blog/meetup-at-the-beach-by-frontend-mu-nov-2023"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/2023/11/image-12.png",
+      "alt": "Sandeep with attendees at the November 2023 beach meetup"
+    },
+    {
+      "src": "/content/images/2023/11/image-9.png",
+      "alt": "Group photo of the November 2023 beach meetup"
+    }
+  ]
 }
