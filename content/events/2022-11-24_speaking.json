@@ -20,5 +20,15 @@
       "url": "https://sandeep.ramgolam.com/blog/lightning-talks-at-devcon-2022"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/2023/02/image-8.png",
+      "alt": "Sandeep hosting Lightning Talks 2022 at the Developers Conference"
+    },
+    {
+      "src": "/content/images/2023/02/Screenshot-from-2023-02-15-20-34-11.png",
+      "alt": "Sandeep at the lectern in front of the Lightning Talks 2022 speaker lineup"
+    }
+  ]
 }

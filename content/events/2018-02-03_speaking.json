@@ -21,5 +21,19 @@
       "url": "https://www.meetup.com/frontendcodersmauritius/photos/all_photos/?photoAlbumId=28549290"
     }
   ],
-  "video": ""
+  "video": "",
+  "photos": [
+    {
+      "src": "/content/images/events/2018-02-03_speaking-1.webp",
+      "alt": "Group photo of the February 2018 Front-End Coders meetup",
+      "credit": "Front-End Coders Mauritius",
+      "source": "https://github.com/frontendmu/meetupFEC/tree/main/public/gallery/2018/feb-03"
+    },
+    {
+      "src": "/content/images/events/2018-02-03_speaking-2.webp",
+      "alt": "Sandeep presenting Building a keylogger using CSS",
+      "credit": "Front-End Coders Mauritius",
+      "source": "https://github.com/frontendmu/meetupFEC/tree/main/public/gallery/2018/feb-03"
+    }
+  ]
 }

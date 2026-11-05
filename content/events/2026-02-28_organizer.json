@@ -21,5 +21,15 @@
       "url": "/blog/frontend-coders-meetup-february-2026"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/2026/02/sandeep-ai-costs-february-2026.png",
+      "alt": "Sandeep talking about the cost of AI for developers at Spoon Consulting"
+    },
+    {
+      "src": "/content/images/2026/02/group-photo-february-2026.png",
+      "alt": "Group photo of the February 2026 Front-end Coders meetup"
+    }
+  ]
 }

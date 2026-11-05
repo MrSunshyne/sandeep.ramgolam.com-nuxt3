@@ -16,5 +16,19 @@
       "url": "https://coders.mu/meetup/2025-september"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2025-09-20_speaking-1.webp",
+      "alt": "Sandeep presenting CSS is more fun than AI at Novity",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2025-september"
+    },
+    {
+      "src": "/content/images/events/2025-09-20_speaking-2.webp",
+      "alt": "Sandeep speaking at the September 2025 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2025-september"
+    }
+  ]
 }

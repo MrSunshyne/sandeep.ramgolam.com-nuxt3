@@ -16,5 +16,19 @@
       "url": "https://coders.mu/meetup/2025-october"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2025-10-18_speaking-1.webp",
+      "alt": "Sandeep presenting at the October 2025 meetup at PGD Mauritius",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2025-october"
+    },
+    {
+      "src": "/content/images/events/2025-10-18_speaking-2.webp",
+      "alt": "Group photo of the October 2025 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2025-october"
+    }
+  ]
 }

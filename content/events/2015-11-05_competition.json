@@ -14,5 +14,19 @@
       "url": "https://www.webcup.fr/finale-webcup-2015/mayotte-remporte-la-finale-internationale-de-la-webcup-2015-2026.html"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2015-11-05_competition-1.webp",
+      "alt": "Sandeep interviewed at the WebCup Inter-Island 2015 finals in Mayotte (video still)",
+      "credit": "Association WebCup",
+      "source": "https://www.youtube.com/watch?v=8Ce9wrY2BAs"
+    },
+    {
+      "src": "/content/images/events/2015-11-05_competition-2.webp",
+      "alt": "Team Mauritius at the WebCup Inter-Island 2015 prize giving (video still)",
+      "credit": "Association WebCup",
+      "source": "https://www.youtube.com/watch?v=sWUpl5wZZGI"
+    }
+  ]
 }

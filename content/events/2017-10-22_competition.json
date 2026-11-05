@@ -18,5 +18,13 @@
       "url": "https://www.lexpress.mu/photos/319077/krakathon-force-coders-remportent-2e-edition#lg=1&slide=10"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2017-10-22_competition-1.webp",
+      "alt": "Sandeep with team Undefined at Krakathon 2017",
+      "credit": "l'express",
+      "source": "https://www.lexpress.mu/photos/319077/krakathon-force-coders-remportent-2e-edition"
+    }
+  ]
 }

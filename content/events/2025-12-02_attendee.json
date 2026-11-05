@@ -10,5 +10,19 @@
     "topic": "Use of Generative AI in Open Source",
     "description": "",
     "links": [],
-    "video": null
+    "video": null,
+    "photos": [
+        {
+            "src": "/content/images/events/2025-12-02_attendee-1.webp",
+            "alt": "Sandeep speaking on the main stage at BTrust DevDay 2025 (livestream still)",
+            "credit": "BTrust",
+            "source": "https://www.youtube.com/watch?v=bDxhY5p1yKQ"
+        },
+        {
+            "src": "/content/images/events/2025-12-02_attendee-2.webp",
+            "alt": "Sandeep on the BTrust DevDay 2025 stage with his Vibe Coding title slide",
+            "credit": "BTrust",
+            "source": "https://www.youtube.com/watch?v=bDxhY5p1yKQ"
+        }
+    ]
 }

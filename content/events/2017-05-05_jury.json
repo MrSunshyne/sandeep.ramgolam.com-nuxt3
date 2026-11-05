@@ -9,5 +9,13 @@
   "topic": "Web Cup 2017 Mauritius",
   "description": "",
   "links": [],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2017-05-05_jury-1.webp",
+      "alt": "Sandeep (left, grey hoodie) visiting a team's table as a WebCup 2017 jury member (video still)",
+      "credit": "LSL Digital",
+      "source": "https://www.youtube.com/watch?v=6g3E6ENS-8U"
+    }
+  ]
 }

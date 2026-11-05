@@ -16,5 +16,19 @@
       "url": "https://gdg.community.dev/events/details/google-gdg-mauritius-presents-devfest-mauritius-2026/cohost-gdg-mauritius/"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2026-10-03_speaking-1.webp",
+      "alt": "Sandeep presenting Practical WebAI with a WebMCP dholl puri stand demo at DevFest Mauritius 2026",
+      "credit": "GDG Mauritius",
+      "source": "https://photos.app.goo.gl/7b9YnMEbeed4RwGk7"
+    },
+    {
+      "src": "/content/images/events/2026-10-03_speaking-2.webp",
+      "alt": "DevFest Mauritius 2026 speakers group photo",
+      "credit": "GDG Mauritius",
+      "source": "https://photos.app.goo.gl/7b9YnMEbeed4RwGk7"
+    }
+  ]
 }

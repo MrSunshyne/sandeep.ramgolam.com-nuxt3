@@ -21,5 +21,19 @@
       "url": "https://sandeep.ramgolam.com/blog/frontend-coders-meetup-march-2023/"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2023-03-25_speaking-1.webp",
+      "alt": "Sandeep presenting WebContainers at the March 2023 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2023-march"
+    },
+    {
+      "src": "/content/images/events/2023-03-25_speaking-2.webp",
+      "alt": "Group photo of the March 2023 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2023-march"
+    }
+  ]
 }

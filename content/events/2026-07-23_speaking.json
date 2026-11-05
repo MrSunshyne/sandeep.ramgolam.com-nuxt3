@@ -20,5 +20,19 @@
       "url": "https://mrsunshyne.github.io/presentation-devcon-2026/1"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2026-07-23_speaking-1.webp",
+      "alt": "Sandeep presenting WebAI at the Developers Conference 2026",
+      "credit": "MSCC / GDG Mauritius",
+      "source": "https://2026.mscc.mu/photos"
+    },
+    {
+      "src": "/content/images/events/2026-07-23_speaking-2.webp",
+      "alt": "Sandeep's talk WebAI - Exploring agentic capabilities within the browser at DevCon 2026",
+      "credit": "MSCC / GDG Mauritius",
+      "source": "https://2026.mscc.mu/photos"
+    }
+  ]
 }

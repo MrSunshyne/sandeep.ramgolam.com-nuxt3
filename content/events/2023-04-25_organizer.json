@@ -19,5 +19,17 @@
       "url": "https://sandeep.ramgolam.com/blog/developers-institute-x-front-end-coders-april-meetup-2023/"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/2023/05/image-23.png",
+      "alt": "Sandeep speaking at the April 2023 meetup at Developers Institute"
+    },
+    {
+      "src": "/content/images/events/2023-04-25_organizer-2.webp",
+      "alt": "Sandeep presenting to the room at Developers Institute",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2023-april"
+    }
+  ]
 }

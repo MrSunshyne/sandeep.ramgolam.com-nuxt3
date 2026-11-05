@@ -15,5 +15,19 @@
       "url": "https://coders.mu/meetup/45"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2023-06-24_organizer-1.webp",
+      "alt": "Sandeep presenting at the June 2023 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2023-june"
+    },
+    {
+      "src": "/content/images/events/2023-06-24_organizer-2.webp",
+      "alt": "Group photo of the June 2023 Front-end Coders meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2023-june"
+    }
+  ]
 }

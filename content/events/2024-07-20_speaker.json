@@ -15,5 +15,15 @@
       "url": "https://2024.mscc.mu/agenda/639942"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2024-07-20_speaker-1.webp",
+      "alt": "Sandeep giving his Learn by building lightning talk at DevCon 2024"
+    },
+    {
+      "src": "/content/images/events/2024-07-20_speaker-2.webp",
+      "alt": "The Lightning Talks 2024 speakers on stage at the Caudan Arts Centre"
+    }
+  ]
 }

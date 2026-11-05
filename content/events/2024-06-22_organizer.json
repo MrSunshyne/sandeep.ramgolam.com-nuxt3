@@ -17,5 +17,17 @@
       "url": "https://coders.mu/meetup/55"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2024-06-22_organizer-1.webp",
+      "alt": "Sandeep presenting at the June 2024 meetup at ELCA",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2024-june"
+    },
+    {
+      "src": "/content/images/events/2024-06-22_organizer-2.webp",
+      "alt": "Sandeep with the speakers of the June 2024 Front-end Coders meetup"
+    }
+  ]
 }

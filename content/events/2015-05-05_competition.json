@@ -14,5 +14,19 @@
       "url": "https://www.youtube.com/watch?v=trHTAKHKaec"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2015-05-05_competition-1.webp",
+      "alt": "Sandeep receiving the WebCup Mauritius 2015 trophy (MBC news still)",
+      "credit": "MBC",
+      "source": "https://www.youtube.com/watch?v=trHTAKHKaec"
+    },
+    {
+      "src": "/content/images/events/2015-05-05_competition-2.webp",
+      "alt": "Sandeep interviewed on MBC after winning WebCup Mauritius 2015",
+      "credit": "MBC",
+      "source": "https://www.youtube.com/watch?v=trHTAKHKaec"
+    }
+  ]
 }

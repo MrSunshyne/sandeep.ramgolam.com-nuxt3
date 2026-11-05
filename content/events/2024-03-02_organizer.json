@@ -20,5 +20,19 @@
       "url": "https://sandeep.ramgolam.com/blog/frontend-coders-meetup-feb-2024"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2024-03-02_organizer-1.webp",
+      "alt": "Sandeep presenting frontend news at the SD Worx meetup",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2024-february"
+    },
+    {
+      "src": "/content/images/events/2024-03-02_organizer-2.webp",
+      "alt": "Sandeep announcing the frontend.mu conference at SD Worx",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2024-february"
+    }
+  ]
 }

@@ -17,5 +17,17 @@
       "url": "https://coders.mu/meetup/52"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2024-04-27_organizer-1.webp",
+      "alt": "Sandeep thanking the sponsor at the April 2024 meetup at Publicis Global Delivery",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2024-april"
+    },
+    {
+      "src": "/content/images/2024/04/image-9.png",
+      "alt": "Group photo of the April 2024 Front-end Coders meetup"
+    }
+  ]
 }

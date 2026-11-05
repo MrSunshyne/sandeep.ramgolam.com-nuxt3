@@ -15,5 +15,19 @@
       "url": "https://coders.mu/meetup/2025-november"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2025-11-22_organizer-1.webp",
+      "alt": "Group photo of the Beach Meetup 3.0 at La Cambuse",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2025-november"
+    },
+    {
+      "src": "/content/images/events/2025-11-22_organizer-2.webp",
+      "alt": "Sandeep at his laptop behind a bunch of lychees at the Beach Meetup 3.0",
+      "credit": "frontend.mu",
+      "source": "https://coders.mu/meetup/2025-november"
+    }
+  ]
 }

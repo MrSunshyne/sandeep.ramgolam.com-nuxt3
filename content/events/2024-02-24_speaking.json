@@ -17,5 +17,19 @@
             "url": "https://coders.mu/meetup/2024-february"
         }
     ],
-    "video": null
+    "video": null,
+    "photos": [
+        {
+            "src": "/content/images/events/2024-02-24_speaking-1.webp",
+            "alt": "Sandeep presenting the Zed code editor at the SD Worx meetup",
+            "credit": "frontend.mu",
+            "source": "https://coders.mu/meetup/2024-february"
+        },
+        {
+            "src": "/content/images/events/2024-02-24_speaking-2.webp",
+            "alt": "Group photo of the first 2024 Front-end Coders meetup at SD Worx",
+            "credit": "frontend.mu",
+            "source": "https://coders.mu/meetup/2024-february"
+        }
+    ]
 }

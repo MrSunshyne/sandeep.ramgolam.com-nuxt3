@@ -17,5 +17,13 @@
       "url": "https://www.meetup.com/frontendcodersmauritius/events/270040148/"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2020-04-21_speaking-1.webp",
+      "alt": "The online April 2020 Front-end Coders meetup on Jitsi, Sandeep top left (recording still)",
+      "credit": "Front-End Coders Mauritius",
+      "source": "https://www.youtube.com/watch?v=KTZWYOM8haE"
+    }
+  ]
 }

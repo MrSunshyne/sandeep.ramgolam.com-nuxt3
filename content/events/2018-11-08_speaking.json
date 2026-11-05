@@ -23,5 +23,19 @@
       "url": "https://www.facebook.com/bildulloo/media_set?set=a.2072068246136753&type=3"
     }
   ],
-  "video": ""
+  "video": "",
+  "photos": [
+    {
+      "src": "/content/images/events/2018-11-08_speaking-1.webp",
+      "alt": "Sandeep presenting Modern front end development at Code Saturday 2018",
+      "credit": "MSCC",
+      "source": "https://www.meetup.com/mauritiussoftwarecraftsmanshipcommunity/events/253335385/photos/"
+    },
+    {
+      "src": "/content/images/events/2018-11-08_speaking-2.webp",
+      "alt": "The audience at Sandeep's Code Saturday 2018 talk, his about-me slide on screen",
+      "credit": "MSCC",
+      "source": "https://www.meetup.com/mauritiussoftwarecraftsmanshipcommunity/events/253335385/photos/"
+    }
+  ]
 }

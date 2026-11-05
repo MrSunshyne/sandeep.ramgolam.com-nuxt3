@@ -15,5 +15,13 @@
       "url": "http://2017.mscc.mu/"
     }
   ],
-  "video": ""
+  "video": "",
+  "photos": [
+    {
+      "src": "/content/images/events/2017-03-01_speaking-1.webp",
+      "alt": "Sandeep with the mic during the Web Development in Mauritius panel at the Developers Conference 2017",
+      "credit": "MSCC",
+      "source": "https://2018.mscc.mu/"
+    }
+  ]
 }
