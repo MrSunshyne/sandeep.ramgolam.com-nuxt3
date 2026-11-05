@@ -12,5 +12,13 @@
   "talk_title": "The frontend development community in Mauritius",
   "description": "Represent frontend.mu",
   "links": [],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2025-09-07_speaking-1.webp",
+      "alt": "Sandeep with Cedric and Kushul at Programmers Day 2025",
+      "credit": "Ish Sookun",
+      "source": "https://sysadmin-journal.com/programmers-day-2025/"
+    }
+  ]
 }

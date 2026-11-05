@@ -19,5 +19,13 @@
       "url": "https://www.slideshare.net/MrSunshyne/a-story-of-deck-cards"
     }
   ],
-  "video": ""
+  "video": "",
+  "photos": [
+    {
+      "src": "/content/images/events/2016-05-01_speaking-1.webp",
+      "alt": "Sandeep (back row, left) with the lexpress.mu team at their Developers Conference booth",
+      "credit": "ict.io",
+      "source": "https://ict.io/en/devcon-2017-join-us/"
+    }
+  ]
 }

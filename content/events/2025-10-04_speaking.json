@@ -15,5 +15,19 @@
       "url": "https://gdg.community.dev/events/details/google-gdg-mauritius-presents-devfest-mauritius-2025/cohost-gdg-mauritius/"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2025-10-04_speaking-1.webp",
+      "alt": "Sandeep presenting at DevFest Mauritius 2025 at the University of Mauritius",
+      "credit": "GDG Mauritius",
+      "source": "https://gdg.community.dev/events/details/google-gdg-mauritius-presents-devfest-mauritius-2025/cohost-gdg-mauritius/"
+    },
+    {
+      "src": "/content/images/events/2025-10-04_speaking-2.webp",
+      "alt": "Sandeep with fellow speakers at DevFest Mauritius 2025",
+      "credit": "GDG Mauritius",
+      "source": "https://gdg.community.dev/events/details/google-gdg-mauritius-presents-devfest-mauritius-2025/cohost-gdg-mauritius/"
+    }
+  ]
 }

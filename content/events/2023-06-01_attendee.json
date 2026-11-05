@@ -18,5 +18,15 @@
       "url": "https://sandeep.ramgolam.com/blog/attending-jsnation-in-amsterdam/"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/2023/06/image-15.png",
+      "alt": "Sandeep in the audience at JSNation Amsterdam 2023"
+    },
+    {
+      "src": "/content/images/2023/06/image-19.png",
+      "alt": "Sandeep at the JSNation 2023 venue in Amsterdam"
+    }
+  ]
 }

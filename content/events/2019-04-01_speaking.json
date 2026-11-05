@@ -27,5 +27,19 @@
       "url": "https://twitter.com/VanessaChellen/status/1117045231592013825"
     }
   ],
-  "video": ""
+  "video": "",
+  "photos": [
+    {
+      "src": "/content/images/events/2019-04-01_speaking-1.webp",
+      "alt": "Sandeep hosting the Lightning Talks at the Developers Conference 2019",
+      "credit": "Ish Sookun",
+      "source": "https://sysadmin-journal.com/devcon-2019-lightning-talks/"
+    },
+    {
+      "src": "/content/images/events/2019-04-01_speaking-2.webp",
+      "alt": "Sandeep introducing the Lightning Talks at DevCon 2019 (video still)",
+      "credit": "Nirvan Pagooah",
+      "source": "https://www.youtube.com/watch?v=8RF6m3ahlI8"
+    }
+  ]
 }

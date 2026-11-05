@@ -16,5 +16,15 @@
       "url": "https://2024.mscc.mu/agenda/639943"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/2024/07/devcon-2024/IMG_8115%20Large.jpeg",
+      "alt": "Sandeep presenting to a full room at the Developers Conference 2024"
+    },
+    {
+      "src": "/content/images/2024/07/devcon-2024/IMG_2484%20Large.jpeg",
+      "alt": "Sandeep at the Developers Conference 2024"
+    }
+  ]
 }

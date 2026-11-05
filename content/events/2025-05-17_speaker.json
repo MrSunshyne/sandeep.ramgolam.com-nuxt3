@@ -15,5 +15,19 @@
       "url": "https://www.linkedin.com/posts/mobile-horizon_mobilehorizon-techcommunity-mauritiustech-activity-7330668533795762176-6ZeY"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2025-05-17_speaker-1.webp",
+      "alt": "Sandeep setting up his MCP server talk at the Mobile Horizon meetup at Emtel",
+      "credit": "Mobile Horizon",
+      "source": "https://www.linkedin.com/posts/mobile-horizon_mobilehorizon-techcommunity-mauritiustech-activity-7330668533795762176-6ZeY"
+    },
+    {
+      "src": "/content/images/events/2025-05-17_speaker-2.webp",
+      "alt": "Group photo of the Mobile Horizon meetup at Emtel",
+      "credit": "Mobile Horizon",
+      "source": "https://www.linkedin.com/posts/mobile-horizon_mobilehorizon-techcommunity-mauritiustech-activity-7330668533795762176-6ZeY"
+    }
+  ]
 }

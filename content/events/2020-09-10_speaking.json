@@ -15,5 +15,19 @@
       "url": "https://conference.mscc.mu"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/events/2020-09-10_speaking-1.webp",
+      "alt": "Title slide of the Virtual Developers Conference 2020 talk by Kushul Soomaree and Sandeep (recording still)",
+      "credit": "MSCC",
+      "source": "https://www.youtube.com/watch?v=5L7-GV0fqzc"
+    },
+    {
+      "src": "/content/images/events/2020-09-10_speaking-2.webp",
+      "alt": "Sandeep explaining the Vue 3 Composition API at the Virtual Developers Conference 2020 (recording still)",
+      "credit": "MSCC",
+      "source": "https://www.youtube.com/watch?v=5L7-GV0fqzc"
+    }
+  ]
 }

@@ -12,5 +12,11 @@
       "url": "https://io.google/"
     }
   ],
-  "video": null
+  "video": null,
+  "photos": [
+    {
+      "src": "/content/images/2024/07/IMG_7634%20Large.jpeg",
+      "alt": "Sandeep with fellow attendees at Google I/O Connect Berlin"
+    }
+  ]
 } 
