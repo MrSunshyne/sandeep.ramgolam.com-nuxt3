@@ -8,13 +8,14 @@ Each event in `content/events/*.json` can carry up to two photos that show me at
 ]
 ```
 
-- Photos already used in a blog post are referenced in place (no `credit`/`source`, they are mine or already credited in the post).
+- Photos already used in a blog post are referenced in place (no `credit`/`source`, they are mine or already credited in the post). The exception is files with a space in the name: the dev server's image resizer (IPX) hangs on those, so they get a copy under `public/content/images/events/` instead.
+- The event rows (`components/event-row.vue`) show the photos as thumbnails through `<NuxtImg>`. Some blog originals are 10+ MB PNGs, so both the thumbnail and the larger copy behind it go through the image provider.
 - Everything else is resized to at most 1280px and stored as WebP in `public/content/images/events/<event-id>-<n>.webp`, with `credit` and `source` pointing at where the photo was found.
 - Every photo was checked by eye; a face-matching pass was only used to shortlist candidates.
 
 ## Coverage
 
-59 of the 92 events have photos: 49 with two and 10 with one, 108 photos in all. 28 of them are blog images referenced in place; the other 80 are new files in `public/content/images/events/` (5.5 MB).
+59 of the 92 events have photos: 49 with two and 10 with one, 108 photos in all. 22 of them are blog images referenced in place; the other 86 are new files in `public/content/images/events/` (6.1 MB).
 
 Where the photos came from:
 
