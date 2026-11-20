@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // sticky: desktop-only behavior — the homepage dock follows the scroll and
 // compacts; other pages let it scroll away with the content.
-const props = defineProps({
+defineProps({
   sticky: {
     type: Boolean,
     default: true,
@@ -19,10 +19,20 @@ const links = [
 </script>
 
 <template>
-  <nav class="site-nav-bottom" :class="{ 'nav-not-sticky': !sticky }" style="view-transition-name: dock;">
+  <nav
+    class="site-nav-bottom"
+    :class="{ 'nav-not-sticky': !sticky }"
+    style="view-transition-name: dock"
+  >
     <div class="nav-dock">
       <!-- Hand-drawn border SVG with morphing paths -->
-      <svg class="dock-border" viewBox="0 0 500 70" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        class="dock-border"
+        viewBox="0 0 500 70"
+        preserveAspectRatio="none"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <!-- Unstuck state: larger, more organic blob shape -->
         <path
           class="dock-path"
@@ -40,7 +50,14 @@ const links = [
           <span class="sr-only">Sandeep Ramgolam Logo</span>
         </NuxtLink>
         <ul class="nav-links">
-          <li v-for="link in links" :key="link.href" :class="{ 'sm:hidden': link.label === 'Home', 'hidden sm:block': link.label === 'About' }">
+          <li
+            v-for="link in links"
+            :key="link.href"
+            :class="{
+              'sm:hidden': link.label === 'Home',
+              'hidden sm:block': link.label === 'About',
+            }"
+          >
             <NuxtLink :href="link.href" class="nav-link">
               {{ link.label }}
             </NuxtLink>
@@ -125,12 +142,12 @@ html.dark .site-nav-bottom > .nav-dock {
     display: block;
     inset: -12px -32px;
   }
-
 }
 
 .site-nav-bottom .dock-path {
-  transition: d 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-              stroke-width 0.3s ease-out;
+  transition:
+    d 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    stroke-width 0.3s ease-out;
 }
 
 html.dark .site-nav-bottom .dock-border {
@@ -201,7 +218,7 @@ html.dark .site-nav-bottom .nav-link {
 
 /* Hand-drawn underline on hover */
 .site-nav-bottom .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0.625rem;
   right: 0.625rem;
@@ -217,7 +234,10 @@ html.dark .site-nav-bottom .nav-link {
   -webkit-mask-size: auto 8px;
   mask-size: auto 8px;
   opacity: 0;
-  transition: opacity 0.3s ease-out, -webkit-mask-size 0.3s ease-out, mask-size 0.3s ease-out;
+  transition:
+    opacity 0.3s ease-out,
+    -webkit-mask-size 0.3s ease-out,
+    mask-size 0.3s ease-out;
   pointer-events: none;
 }
 
@@ -278,7 +298,9 @@ html.dark .site-nav-bottom .nav-link {
     }
 
     .site-nav-bottom .dock-path {
-      d: path("M25 35C25 18 40 12 70 13C100 11 140 14 185 12C235 14 285 11 335 13C385 11 425 14 460 12C485 11 495 18 490 35C495 52 485 59 460 58C425 60 385 57 335 58C285 57 235 60 185 58C140 57 100 60 70 58C40 59 25 52 25 35Z");
+      d: path(
+        "M25 35C25 18 40 12 70 13C100 11 140 14 185 12C235 14 285 11 335 13C385 11 425 14 460 12C485 11 495 18 490 35C495 52 485 59 460 58C425 60 385 57 335 58C285 57 235 60 185 58C140 57 100 60 70 58C40 59 25 52 25 35Z"
+      );
     }
   }
 }

@@ -69,7 +69,8 @@ const scale = computed(() => {
     minYear: min,
     maxYear: max,
     x: (date: string) =>
-      PAD_X + ((new Date(date).getTime() - start) / (end - start)) * (W - PAD_X * 2),
+      PAD_X +
+      ((new Date(date).getTime() - start) / (end - start)) * (W - PAD_X * 2),
   };
 });
 
@@ -101,7 +102,11 @@ const yearTicks = computed(() => {
   if (!s) return [];
   const ticks = [];
   for (let y = s.minYear; y <= s.maxYear; y++) {
-    ticks.push({ year: y, short: "’" + String(y).slice(2), x: s.x(`${y}-01-01`) });
+    ticks.push({
+      year: y,
+      short: "’" + String(y).slice(2),
+      x: s.x(`${y}-01-01`),
+    });
   }
   return ticks;
 });
@@ -130,7 +135,12 @@ const roleOrder = [
 
 // ---- tooltip -------------------------------------------------------------
 const wrapper = ref<HTMLElement>();
-const tooltip = ref<{ text: string; x: number; y: number; below: boolean } | null>(null);
+const tooltip = ref<{
+  text: string;
+  x: number;
+  y: number;
+  below: boolean;
+} | null>(null);
 
 function showTooltip(evt: Event, dot: { label: string }) {
   const el = evt.target as SVGGraphicsElement;
@@ -142,7 +152,10 @@ function showTooltip(evt: Event, dot: { label: string }) {
   const below = box.y - host.y < 60;
   tooltip.value = {
     text: dot.label,
-    x: Math.min(Math.max(box.x + box.width / 2 - host.x, 110), host.width - 110),
+    x: Math.min(
+      Math.max(box.x + box.width / 2 - host.x, 110),
+      host.width - 110,
+    ),
     y: (below ? box.bottom : box.y) - host.y,
     below,
   };
@@ -158,15 +171,23 @@ function openEvents(type: string) {
   <!-- min-w-0 lets this grid item shrink below the svg's min-width so the
        ribbon scrolls inside its own wrapper instead of the whole page -->
   <div class="events-timeline min-w-0">
-    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold pt-8 sm:pt-10 text-center mb-3 sm:mb-4">
+    <h2
+      class="text-2xl sm:text-3xl lg:text-4xl font-bold pt-8 sm:pt-10 text-center mb-3 sm:mb-4"
+    >
       Events
     </h2>
-    <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-center mb-6 sm:mb-8 leading-relaxed">
-      <span class="font-bold text-indigo-500 dark:text-indigo-400">{{ stats.total }}</span>
+    <p
+      class="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-center mb-6 sm:mb-8 leading-relaxed"
+    >
+      <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
+        stats.total
+      }}</span>
       events across
-      <span class="font-bold text-indigo-500 dark:text-indigo-400">{{ stats.communities }}</span>
-      communities since {{ stats.firstYear }} —
-      {{ stats.talks }} talks given, {{ stats.organized }} organized
+      <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
+        stats.communities
+      }}</span>
+      communities since {{ stats.firstYear }} — {{ stats.talks }} talks given,
+      {{ stats.organized }} organized
     </p>
 
     <div ref="wrapper" class="relative overflow-x-auto">
@@ -223,20 +244,28 @@ function openEvents(type: string) {
       </div>
     </div>
 
-    <ul class="legend flex flex-wrap justify-center gap-x-4 gap-y-1 mt-3 sm:mt-4">
+    <ul
+      class="legend flex flex-wrap justify-center gap-x-4 gap-y-1 mt-3 sm:mt-4"
+    >
       <li
         v-for="role in roleOrder"
         :key="role.type"
         class="flex items-center gap-1.5 text-xs sm:text-sm text-gray-500 dark:text-gray-400"
       >
-        <span class="legend-dot" :class="`dot--${role.type}`" aria-hidden="true" />
+        <span
+          class="legend-dot"
+          :class="`dot--${role.type}`"
+          aria-hidden="true"
+        />
         {{ role.label }}
       </li>
     </ul>
 
     <!-- px absorbs EventRow's -mx-3 hover bleed so rows never poke past the viewport -->
     <div class="max-w-3xl mx-auto mt-8 sm:mt-10 px-4 sm:px-6">
-      <h3 class="text-xs sm:text-sm font-medium tracking-wide uppercase text-gray-400 dark:text-gray-500 mb-2">
+      <h3
+        class="text-xs sm:text-sm font-medium tracking-wide uppercase text-gray-400 dark:text-gray-500 mb-2"
+      >
         Latest
       </h3>
       <div class="flex flex-col gap-1">
@@ -300,11 +329,21 @@ function openEvents(type: string) {
   r: 9;
 }
 
-.dot--speaking { fill: var(--c-speaking); }
-.dot--organizer { fill: var(--c-organizer); }
-.dot--attendee { fill: var(--c-attendee); }
-.dot--competition { fill: var(--c-competition); }
-.dot--jury { fill: var(--c-jury); }
+.dot--speaking {
+  fill: var(--c-speaking);
+}
+.dot--organizer {
+  fill: var(--c-organizer);
+}
+.dot--attendee {
+  fill: var(--c-attendee);
+}
+.dot--competition {
+  fill: var(--c-competition);
+}
+.dot--jury {
+  fill: var(--c-jury);
+}
 
 .legend-dot {
   width: 10px;
@@ -314,11 +353,26 @@ function openEvents(type: string) {
   background: currentColor;
 }
 
-.legend-dot.dot--speaking { background: var(--c-speaking); color: var(--c-speaking); }
-.legend-dot.dot--organizer { background: var(--c-organizer); color: var(--c-organizer); }
-.legend-dot.dot--attendee { background: var(--c-attendee); color: var(--c-attendee); }
-.legend-dot.dot--competition { background: var(--c-competition); color: var(--c-competition); }
-.legend-dot.dot--jury { background: var(--c-jury); color: var(--c-jury); }
+.legend-dot.dot--speaking {
+  background: var(--c-speaking);
+  color: var(--c-speaking);
+}
+.legend-dot.dot--organizer {
+  background: var(--c-organizer);
+  color: var(--c-organizer);
+}
+.legend-dot.dot--attendee {
+  background: var(--c-attendee);
+  color: var(--c-attendee);
+}
+.legend-dot.dot--competition {
+  background: var(--c-competition);
+  color: var(--c-competition);
+}
+.legend-dot.dot--jury {
+  background: var(--c-jury);
+  color: var(--c-jury);
+}
 
 .tooltip {
   position: absolute;

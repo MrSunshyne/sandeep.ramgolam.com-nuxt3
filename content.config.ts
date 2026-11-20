@@ -1,10 +1,10 @@
-import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+import { defineCollection, defineContentConfig, z } from "@nuxt/content";
 
 export default defineContentConfig({
   collections: {
     blog: defineCollection({
-      type: 'page',
-      source: 'blog/**/*.md',
+      type: "page",
+      source: "blog/**/*.md",
       schema: z.object({
         slug: z.string(),
         title: z.string(),
@@ -17,8 +17,8 @@ export default defineContentConfig({
       }),
     }),
     events: defineCollection({
-      type: 'data',
-      source: 'events/**/*.json',
+      type: "data",
+      source: "events/**/*.json",
       schema: z.object({
         event_date: z.string(),
         event_name: z.string(),
@@ -28,14 +28,20 @@ export default defineContentConfig({
         topic: z.string().optional(),
         talk_title: z.string().optional(),
         description: z.string().optional(),
-        links: z.array(z.object({ title: z.string(), url: z.string() })).optional(),
-        photos: z.array(z.object({
-          src: z.string(),
-          alt: z.string(),
-          credit: z.string().optional(),
-          source: z.string().optional(),
-        })).optional(),
+        links: z
+          .array(z.object({ title: z.string(), url: z.string() }))
+          .optional(),
+        photos: z
+          .array(
+            z.object({
+              src: z.string(),
+              alt: z.string(),
+              credit: z.string().optional(),
+              source: z.string().optional(),
+            }),
+          )
+          .optional(),
       }),
     }),
-  }
-})
+  },
+});

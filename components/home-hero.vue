@@ -1,31 +1,34 @@
 <template>
-    <div
-        class="home-hero container mx-auto text-center sm:text-left flex flex-wrap items-center justify-between w-full"
-      >
-        <HomeSelfIntro />
+  <div
+    class="home-hero container mx-auto text-center sm:text-left flex flex-wrap items-center justify-between w-full"
+  >
+    <HomeSelfIntro />
 
-        <div ref="splashWrapper" class="splash-wrapper hidden md:flex content-center md:w-1/3">
-          <InspiraParticleImageBust
-            v-if="isDesktop && bustHeight"
-            ref="bust"
-            image-src="/assets/sun-bust.png"
-            :responsive-width="true"
-            :canvas-height="String(bustHeight)"
-            :noise="2"
-            particle-size="2"
-            particle-gap="1"
-            :grow-duration="10"
-            :initPosition="'bottom'"
-            :initDirection="'bottom'"
-            gravity="0.2"
-          />
-        </div>
-      </div>
+    <div
+      ref="splashWrapper"
+      class="splash-wrapper hidden md:flex content-center md:w-1/3"
+    >
+      <InspiraParticleImageBust
+        v-if="isDesktop && bustHeight"
+        ref="bust"
+        image-src="/assets/sun-bust.png"
+        :responsive-width="true"
+        :canvas-height="String(bustHeight)"
+        :noise="2"
+        particle-size="2"
+        particle-gap="1"
+        :grow-duration="10"
+        :init-position="'bottom'"
+        :init-direction="'bottom'"
+        gravity="0.2"
+      />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import HomeSelfIntro from './home-self-intro.vue';
-import InspiraParticleImageBust from './inspira/ParticleImage/Bust.vue';
+import HomeSelfIntro from "./home-self-intro.vue";
+import InspiraParticleImageBust from "./inspira/ParticleImage/Bust.vue";
 
 const { isDesktop } = useBreakpoints();
 
@@ -45,14 +48,17 @@ const bustHeight = ref(0);
 const measureBust = () => {
   if (!splashWrapper.value) return;
 
-  const available = Number.parseFloat(getComputedStyle(splashWrapper.value).maxHeight);
+  const available = Number.parseFloat(
+    getComputedStyle(splashWrapper.value).maxHeight,
+  );
 
   // Snapped to 20px steps: the canvas is redrawn whenever this value changes,
   // so a drag-resize should not redraw it on every frame. A screen with room
   // to spare keeps the full-size bust.
-  bustHeight.value = Number.isFinite(available) && available < BUST_NATURAL_HEIGHT
-    ? Math.max(240, Math.floor(available / 20) * 20)
-    : BUST_NATURAL_HEIGHT;
+  bustHeight.value =
+    Number.isFinite(available) && available < BUST_NATURAL_HEIGHT
+      ? Math.max(240, Math.floor(available / 20) * 20)
+      : BUST_NATURAL_HEIGHT;
 
   // The prop only counts on the first render; afterwards the canvas is resized
   // in place, so the particle system is never torn down and rebuilt.
@@ -68,12 +74,12 @@ const onResize = () => {
 
 onMounted(() => {
   measureBust();
-  window.addEventListener('resize', onResize);
+  window.addEventListener("resize", onResize);
 });
 
 onBeforeUnmount(() => {
   clearTimeout(resizeTimer);
-  window.removeEventListener('resize', onResize);
+  window.removeEventListener("resize", onResize);
 });
 </script>
 
@@ -91,7 +97,11 @@ onBeforeUnmount(() => {
 /* The room the dock and the hero padding leave for the bust. Also the value
    the canvas height is measured from. */
 .splash-wrapper {
-  max-height: calc(100vh - var(--dock-height-unstuck) - var(--hero-padding-y) * 2);
-  max-height: calc(100dvh - var(--dock-height-unstuck) - var(--hero-padding-y) * 2);
+  max-height: calc(
+    100vh - var(--dock-height-unstuck) - var(--hero-padding-y) * 2
+  );
+  max-height: calc(
+    100dvh - var(--dock-height-unstuck) - var(--hero-padding-y) * 2
+  );
 }
 </style>

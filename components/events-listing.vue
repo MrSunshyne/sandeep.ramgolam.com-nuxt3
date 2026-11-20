@@ -21,26 +21,18 @@ const { data: events } = await useAsyncData(
 
     if (isHomepage) {
       // Homepage: only fetch published events, limited count
-      return query
-        .where("published", "=", true)
-        .limit(props.count)
-        .all();
+      return query.where("published", "=", true).limit(props.count).all();
     }
 
     // Events page: fetch all for filtering
     return query.all();
-  }
+  },
 );
 
 const localEvents = ref(events);
 
 type EventType =
-  | "all"
-  | "speaking"
-  | "organizer"
-  | "attendee"
-  | "competition"
-  | "jury"
+  "all" | "speaking" | "organizer" | "attendee" | "competition" | "jury";
 
 const presentAsList: {
   [key in EventType]: string;
@@ -69,9 +61,13 @@ const eventsSortedByDate = computed(() => {
     return [];
   }
 
-  return localEvents.value?.sort(
-    (a, b) =>
-      new Date(b.event_date).getTime() - new Date(a.event_date).getTime(),
+  // copy before sorting: sort() mutates, and computeds must not have side effects
+  return (
+    localEvents.value &&
+    [...localEvents.value].sort(
+      (a, b) =>
+        new Date(b.event_date).getTime() - new Date(a.event_date).getTime(),
+    )
   );
 });
 
@@ -84,7 +80,7 @@ const showCurrentEventType = computed(() => {
 
   if (currentEventType.value !== "all") {
     filtered = filtered?.filter((event) =>
-      event.event_type?.includes(currentEventType.value)
+      event.event_type?.includes(currentEventType.value),
     );
   }
 
@@ -93,7 +89,10 @@ const showCurrentEventType = computed(() => {
 
 // Events page: group the (sorted, filtered) events by year, newest first
 const eventsByYear = computed(() => {
-  const groups: { year: number; events: NonNullable<typeof showCurrentEventType.value> }[] = [];
+  const groups: {
+    year: number;
+    events: NonNullable<typeof showCurrentEventType.value>;
+  }[] = [];
   for (const event of showCurrentEventType.value ?? []) {
     const year = new Date(event.event_date).getFullYear();
     const last = groups[groups.length - 1];
@@ -107,13 +106,43 @@ const presentAs = computed(() => {
   return presentAsList[currentEventType.value];
 });
 
-const filterOptions: { type: EventType; label: string; color?: string; textClass?: string }[] = [
+const filterOptions: {
+  type: EventType;
+  label: string;
+  color?: string;
+  textClass?: string;
+}[] = [
   { type: "all", label: "Show All" },
-  { type: "speaking", label: "Speaking", color: "#3b82f6", textClass: "text-blue-500" },
-  { type: "attendee", label: "Attendee", color: "#22c55e", textClass: "text-green-500" },
-  { type: "organizer", label: "Organizer", color: "#a855f7", textClass: "text-purple-500" },
-  { type: "competition", label: "Competition", color: "#ef4444", textClass: "text-red-500" },
-  { type: "jury", label: "Jury", color: "#eab308", textClass: "text-yellow-500" },
+  {
+    type: "speaking",
+    label: "Speaking",
+    color: "#3b82f6",
+    textClass: "text-blue-500",
+  },
+  {
+    type: "attendee",
+    label: "Attendee",
+    color: "#22c55e",
+    textClass: "text-green-500",
+  },
+  {
+    type: "organizer",
+    label: "Organizer",
+    color: "#a855f7",
+    textClass: "text-purple-500",
+  },
+  {
+    type: "competition",
+    label: "Competition",
+    color: "#ef4444",
+    textClass: "text-red-500",
+  },
+  {
+    type: "jury",
+    label: "Jury",
+    color: "#eab308",
+    textClass: "text-yellow-500",
+  },
 ];
 
 function setCurrentEventType(eventType: EventType) {
@@ -135,20 +164,27 @@ function setCurrentEventType(eventType: EventType) {
   <div :class="count === -1 ? 'max-w-3xl mx-auto' : ''">
     <template v-if="count === -1">
       <h1 class="font-bold tracking-tight text-3xl sm:text-4xl mb-2">Events</h1>
-      <p class="page-subtitle mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
+      <p
+        class="page-subtitle mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed"
+      >
         <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
           showCurrentEventType?.length || 0
         }}</span>
         <template v-if="currentEventType !== 'all'">
-          {{ currentEventType }} event{{ showCurrentEventType?.length === 1 ? '' : 's' }}
+          {{ currentEventType }} event{{
+            showCurrentEventType?.length === 1 ? "" : "s"
+          }}
         </template>
         <template v-else>
-          event{{ showCurrentEventType?.length === 1 ? '' : 's' }} I was involved in
+          event{{ showCurrentEventType?.length === 1 ? "" : "s" }} I was
+          involved in
         </template>
       </p>
 
       <!-- Event type filters -->
-      <div class="flex flex-wrap gap-x-1.5 gap-y-2 sm:gap-2 mt-6 sm:mt-8 mb-10 sm:mb-12">
+      <div
+        class="flex flex-wrap gap-x-1.5 gap-y-2 sm:gap-2 mt-6 sm:mt-8 mb-10 sm:mb-12"
+      >
         <button
           v-for="option in filterOptions"
           :key="option.type"
@@ -164,25 +200,39 @@ function setCurrentEventType(eventType: EventType) {
           />
           <span
             class="pill-text"
-            :class="currentEventType === option.type && option.textClass ? option.textClass : ''"
-          >{{ option.label }}</span>
+            :class="
+              currentEventType === option.type && option.textClass
+                ? option.textClass
+                : ''
+            "
+            >{{ option.label }}</span
+          >
         </button>
       </div>
     </template>
     <template v-else>
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold pt-8 sm:pt-10 text-center mb-3 sm:mb-4">Events</h2>
-      <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-center mb-8 sm:mb-12 leading-relaxed">
+      <h2
+        class="text-2xl sm:text-3xl lg:text-4xl font-bold pt-8 sm:pt-10 text-center mb-3 sm:mb-4"
+      >
+        Events
+      </h2>
+      <p
+        class="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-center mb-8 sm:mb-12 leading-relaxed"
+      >
         <span class="font-bold text-indigo-500 dark:text-indigo-400">{{
           showCurrentEventType?.length || 0
         }}</span>
-        event{{ showCurrentEventType?.length === 1 ? '' : 's' }} I was involved in
+        event{{ showCurrentEventType?.length === 1 ? "" : "s" }} I was involved
+        in
         <span :class="currentEventType">{{ presentAs }}</span>
       </p>
     </template>
 
     <!-- Homepage: card grid -->
     <div
-      v-if="isHomepage && showCurrentEventType && showCurrentEventType.length > 0"
+      v-if="
+        isHomepage && showCurrentEventType && showCurrentEventType.length > 0
+      "
       class="event-wrapper--grid"
     >
       <EventCard

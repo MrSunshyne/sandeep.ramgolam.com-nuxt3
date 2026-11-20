@@ -1,5 +1,5 @@
-import BaselineBannerVue from '@baseline-banner/vue'
+import BaselineBannerVue from "@baseline-banner/vue";
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.use(BaselineBannerVue)
-})
+  nuxtApp.vueApp.use(BaselineBannerVue);
+});

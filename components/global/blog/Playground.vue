@@ -3,7 +3,7 @@
     <h1 class="text-sm font-bold p-1">Interactive</h1>
 
     <div class="p-4">
-        <slot />
+      <slot />
     </div>
   </div>
 </template>

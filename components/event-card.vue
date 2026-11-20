@@ -5,10 +5,12 @@
       :color="categoryColor"
       :hover-morph="true"
     />
-    
+
     <div class="card-content flex flex-col">
       <!-- Date -->
-      <div class="event-date flex items-center gap-2 text-gray-500 dark:text-gray-400">
+      <div
+        class="event-date flex items-center gap-2 text-gray-500 dark:text-gray-400"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="14"
@@ -31,12 +33,16 @@
       </div>
 
       <!-- Title -->
-      <h2 class="event-title text-xl lg:text-2xl font-black leading-tight mt-3 mb-2">
+      <h2
+        class="event-title text-xl lg:text-2xl font-black leading-tight mt-3 mb-2"
+      >
         {{ event.topic }}
       </h2>
 
       <!-- Description -->
-      <p class="event-description text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+      <p
+        class="event-description text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4"
+      >
         {{ event.description }}
       </p>
 
@@ -69,11 +75,15 @@
       <div v-if="event.video">{{ event.video }}</div>
 
       <!-- Footer -->
-      <div class="event-footer flex justify-between items-center mt-auto pt-4 border-t border-gray-100 dark:border-gray-700">
+      <div
+        class="event-footer flex justify-between items-center mt-auto pt-4 border-t border-gray-100 dark:border-gray-700"
+      >
         <span class="text-sm font-semibold text-gray-800 dark:text-gray-200">
           {{ event.event_name }}
         </span>
-        <span class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+        <span
+          class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide"
+        >
           {{ event.location }}
         </span>
       </div>
@@ -92,16 +102,16 @@ const props = defineProps({
 });
 
 const categoryColors: Record<string, string> = {
-  speaking: '#3b82f6',
-  jury: '#eab308',
-  competition: '#ef4444',
-  attendee: '#22c55e',
-  organizer: '#a855f7',
+  speaking: "#3b82f6",
+  jury: "#eab308",
+  competition: "#ef4444",
+  attendee: "#22c55e",
+  organizer: "#a855f7",
 };
 
 const categoryColor = computed(() => {
   const type = props.event.event_type?.[0];
-  return categoryColors[type] || '#9ca3af';
+  return categoryColors[type] || "#9ca3af";
 });
 </script>
 
@@ -126,7 +136,7 @@ const categoryColor = computed(() => {
 
 /* Category indicator dot */
 .event-date::before {
-  content: '';
+  content: "";
   width: 8px;
   height: 8px;
   border-radius: 50%;

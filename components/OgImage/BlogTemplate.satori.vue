@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    title: string;
+    title?: string;
     backgroundColor?: string;
     description?: string;
     customImage?: string;
@@ -111,7 +111,7 @@ const hasFeaturedImage = props.customImage && props.customImage !== "";
   </div>
 </template>
 
-<style  scoped>
+<style scoped>
 /* .og-image-wrapper {
     background-color: #000;
     background-image: url('~/og-image-assets/blog.png');

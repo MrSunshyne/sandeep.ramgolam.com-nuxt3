@@ -7,21 +7,44 @@
       >
         Print
       </button>
-      <p class="uppercase text-xs text-gray-600 dark:text-gray-400">This page is also my printable CV</p>
+      <p class="uppercase text-xs text-gray-600 dark:text-gray-400">
+        This page is also my printable CV
+      </p>
     </div>
     <div class="print:block">
-      <h1 class="font-bold tracking-tight text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4">Sandeep Ramgolam</h1>
-      <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-8 sm:mb-12">
+      <h1
+        class="font-bold tracking-tight text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4"
+      >
+        Sandeep Ramgolam
+      </h1>
+      <p
+        class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-8 sm:mb-12"
+      >
         Technologist, Mauritian, who loves programming, UX design, Linux, &amp;
         nature.
       </p>
-      <div class="grid lg:grid-cols-[2fr,1fr] gap-8 sm:gap-12 lg:gap-16 mb-12 sm:mb-16">
-        <div class="space-y-4 sm:space-y-5 text-base sm:text-lg leading-relaxed">
+      <div
+        class="grid lg:grid-cols-[2fr,1fr] gap-8 sm:gap-12 lg:gap-16 mb-12 sm:mb-16"
+      >
+        <div
+          class="space-y-4 sm:space-y-5 text-base sm:text-lg leading-relaxed"
+        >
           <p class="font-bold text-lg sm:text-xl">
             Passionate front-end developer based in Mauritius.
           </p>
           <p>
-            <a class="underline print:no-underline hover:opacity-80 font-bold" target="_blank" href="https://developers.google.com/profile/u/sandeepramgolam">Google Developer Expert in Web Technologies.</a> <a class="underline print:no-underline hover:opacity-80 print:hidden" href="https://developers.google.com/community/experts" target="_blank"><span>What is a GDE?</span></a>
+            <a
+              class="underline print:no-underline hover:opacity-80 font-bold"
+              target="_blank"
+              href="https://developers.google.com/profile/u/sandeepramgolam"
+              >Google Developer Expert in Web Technologies.</a
+            >
+            <a
+              class="underline print:no-underline hover:opacity-80 print:hidden"
+              href="https://developers.google.com/community/experts"
+              target="_blank"
+              ><span>What is a GDE?</span></a
+            >
           </p>
           <p>
             In my free time I teach, contribute to open source and write on my
@@ -38,19 +61,28 @@
 
         <div class="text-sm sm:text-base space-y-2 sm:space-y-3 pt-2">
           <div>
-            <span class="uppercase text-xs text-gray-500 dark:text-gray-400">email: </span
+            <span class="uppercase text-xs text-gray-500 dark:text-gray-400"
+              >email: </span
             ><span class="break-all">sandeep@ramgolam.com</span>
           </div>
           <div>
-            <span class="uppercase text-xs text-gray-500 dark:text-gray-400">website: </span
+            <span class="uppercase text-xs text-gray-500 dark:text-gray-400"
+              >website: </span
             ><span class="break-all">https://sandeep.ramgolam.com</span>
           </div>
           <div>
-            <span class="uppercase text-xs text-gray-500 dark:text-gray-400">github: </span
+            <span class="uppercase text-xs text-gray-500 dark:text-gray-400"
+              >github: </span
             ><span class="break-all">https://github.com/MrSunshyne</span>
           </div>
-          <div><span class="uppercase text-xs text-gray-500 dark:text-gray-400">mob: </span>57083334</div>
-          <div class="pt-2 text-gray-600 dark:text-gray-400">Driver, Blogger & Gamer</div>
+          <div>
+            <span class="uppercase text-xs text-gray-500 dark:text-gray-400"
+              >mob: </span
+            >57083334
+          </div>
+          <div class="pt-2 text-gray-600 dark:text-gray-400">
+            Driver, Blogger & Gamer
+          </div>
         </div>
       </div>
     </div>
@@ -65,7 +97,9 @@
             :key="item.title"
             class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0"
           >
-            <div class="font-bold tracking-wide text-sm sm:text-base text-gray-600 dark:text-gray-400 sm:pr-6 sm:w-44">
+            <div
+              class="font-bold tracking-wide text-sm sm:text-base text-gray-600 dark:text-gray-400 sm:pr-6 sm:w-44"
+            >
               {{ item.title }}
             </div>
             <div
@@ -80,7 +114,9 @@
 
     <section class="mb-12 sm:mb-16">
       <h2 class="page-title">Career</h2>
-      <p class="page-subtitle">The places I had the opportunity to contribute</p>
+      <p class="page-subtitle">
+        The places I had the opportunity to contribute
+      </p>
 
       <div class="mt-6 sm:mt-8">
         <div class="space-y-6 sm:space-y-7">
@@ -89,10 +125,14 @@
             :key="job.job_title + index"
             class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0"
           >
-            <div class="font-bold tracking-wide text-sm sm:text-base text-gray-600 dark:text-gray-400 sm:pr-6 sm:w-64 flex-shrink-0">
+            <div
+              class="font-bold tracking-wide text-sm sm:text-base text-gray-600 dark:text-gray-400 sm:pr-6 sm:w-64 flex-shrink-0"
+            >
               {{ job.date_start }} - {{ job.date_end }}
             </div>
-            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+            <div
+              class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3"
+            >
               <component
                 :is="job.company_website ? 'a' : 'div'"
                 :href="job.company_website ? job.company_website : ''"
@@ -127,8 +167,14 @@
             :key="item.title"
             class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0"
           >
-            <div class="font-bold tracking-wide text-sm sm:text-base text-gray-600 dark:text-gray-400 sm:pr-6 sm:w-24 flex-shrink-0">{{ item.year }}</div>
-            <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+            <div
+              class="font-bold tracking-wide text-sm sm:text-base text-gray-600 dark:text-gray-400 sm:pr-6 sm:w-24 flex-shrink-0"
+            >
+              {{ item.year }}
+            </div>
+            <div
+              class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3"
+            >
               <div
                 class="text-lg sm:text-xl lg:text-2xl font-bold dark:text-white text-black"
               >
@@ -151,35 +197,50 @@
 
       <div class="mt-6 sm:mt-8 space-y-8 sm:space-y-10">
         <div v-for="group in projectGroups" :key="group.label">
-          <h3 class="uppercase text-xs font-bold tracking-wider text-gray-500 dark:text-gray-400 mb-3 sm:mb-4">
+          <h3
+            class="uppercase text-xs font-bold tracking-wider text-gray-500 dark:text-gray-400 mb-3 sm:mb-4"
+          >
             {{ group.label }}
           </h3>
           <div class="space-y-3 sm:space-y-4">
-          <div
-            v-for="project in group.projects"
-            :key="project.name"
-            class="sm:flex items-baseline gap-3 min-w-0"
-          >
-            <h4 class="shrink-0 text-base sm:text-lg font-bold">
-              <span
-                class="inline-block w-2 h-2 rounded-full mr-1.5 align-middle"
-                :class="project.status === 'active' ? 'bg-green-500' : 'bg-gray-300 dark:bg-gray-600'"
-                :title="project.status === 'active' ? 'Actively maintained' : 'Archived'"
-              ></span>
-              <a
-                :href="project.url"
-                target="_blank"
-                rel="noopener"
-                class="hover:underline print:no-underline"
+            <div
+              v-for="project in group.projects"
+              :key="project.name"
+              class="sm:flex items-baseline gap-3 min-w-0"
+            >
+              <h4 class="shrink-0 text-base sm:text-lg font-bold">
+                <span
+                  class="inline-block w-2 h-2 rounded-full mr-1.5 align-middle"
+                  :class="
+                    project.status === 'active'
+                      ? 'bg-green-500'
+                      : 'bg-gray-300 dark:bg-gray-600'
+                  "
+                  :title="
+                    project.status === 'active'
+                      ? 'Actively maintained'
+                      : 'Archived'
+                  "
+                ></span>
+                <a
+                  :href="project.url"
+                  target="_blank"
+                  rel="noopener"
+                  class="hover:underline print:no-underline"
+                >
+                  {{ project.name }}
+                  <Icon
+                    name="solar:link-bold"
+                    class="text-sm text-gray-400 print:hidden"
+                  />
+                </a>
+              </h4>
+              <p
+                class="sm:truncate text-sm sm:text-base text-gray-600 dark:text-gray-400"
               >
-                {{ project.name }}
-                <Icon name="solar:link-bold" class="text-sm text-gray-400 print:hidden" />
-              </a>
-            </h4>
-            <p class="sm:truncate text-sm sm:text-base text-gray-600 dark:text-gray-400">
-              {{ project.text }}
-            </p>
-          </div>
+                {{ project.text }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -192,7 +253,9 @@
       >
         Print
       </button>
-      <p class="uppercase text-xs text-gray-600 dark:text-gray-400">This page is also my printable CV</p>
+      <p class="uppercase text-xs text-gray-600 dark:text-gray-400">
+        This page is also my printable CV
+      </p>
     </div>
   </div>
 </template>
@@ -202,9 +265,15 @@ import { employment, education, stack } from "@/data/experience";
 import { projects } from "@/data/projects/";
 
 const projectGroups = [
-  { label: "Actively maintained", projects: projects.filter(p => p.status === "active") },
-  { label: "Archived", projects: projects.filter(p => p.status !== "active") },
-].filter(group => group.projects.length > 0);
+  {
+    label: "Actively maintained",
+    projects: projects.filter((p) => p.status === "active"),
+  },
+  {
+    label: "Archived",
+    projects: projects.filter((p) => p.status !== "active"),
+  },
+].filter((group) => group.projects.length > 0);
 
 function print() {
   window.print();

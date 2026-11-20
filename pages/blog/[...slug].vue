@@ -5,9 +5,7 @@ const route = useRoute();
 const slug = route.params.slug[0];
 
 const { data: post } = await useAsyncData("blogpost" + slug, () =>
-  queryCollection<BlogPost>("blog")
-    .where("slug", "=", slug)
-    .first(),
+  queryCollection<BlogPost>("blog").where("slug", "=", slug).first(),
 );
 
 if (post.value) {
@@ -68,7 +66,7 @@ const coverImage = computed(() => {
     return post.value?.feature_image;
   }
 
-  return `/_og/d/image?path=/blog/${slug}&title=${encodeURIComponent(post.value?.title || '')}`;
+  return `/_og/d/image?path=/blog/${slug}&title=${encodeURIComponent(post.value?.title || "")}`;
 });
 </script>
 
@@ -76,7 +74,10 @@ const coverImage = computed(() => {
   <article v-if="post" class="">
     <BlogHead :post="post" />
 
-    <div v-if="post.feature_image" class="mx-auto w-full aspect-[2/1] max-w-4xl px-4 sm:px-6 lg:px-0">
+    <div
+      v-if="post.feature_image"
+      class="mx-auto w-full aspect-[2/1] max-w-4xl px-4 sm:px-6 lg:px-0"
+    >
       <img
         :src="coverImage"
         class="w-full h-full object-cover shadow-xl rounded-xl"
@@ -86,9 +87,7 @@ const coverImage = computed(() => {
       />
     </div>
 
-    <div
-      class="mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl flex flex-col lg:gap-8"
-    >
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl flex flex-col lg:gap-8">
       <article class="">
         <div
           class="mt-8 pb-24 dark:text-gray-300 dark:prose-pre:!bg-gray-800/60 prose prose-primary dark:prose-invert max-w-none mx-auto"

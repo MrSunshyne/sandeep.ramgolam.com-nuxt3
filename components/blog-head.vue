@@ -27,56 +27,65 @@ const formattedDate =
         </clipPath>
       </defs>
     </svg>
-    <header class="mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl pt-10 pb-8 sm:pt-14 sm:pb-10">
-    <div class="prose dark:prose-invert">
-      <h1 class="text-balance" :style="transitionName(post.slug, 'blog-title')">
-        {{ post.title }}
-      </h1>
+    <header
+      class="mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl pt-10 pb-8 sm:pt-14 sm:pb-10"
+    >
+      <div class="prose dark:prose-invert">
+        <h1
+          class="text-balance"
+          :style="transitionName(post.slug, 'blog-title')"
+        >
+          {{ post.title }}
+        </h1>
 
-      <p class="text-lg sm:text-xl text-gray-500 dark:text-gray-300 text-pretty">
-        {{ post.custom_excerpt }}
-      </p>
-    </div>
+        <p
+          class="text-lg sm:text-xl text-gray-500 dark:text-gray-300 text-pretty"
+        >
+          {{ post.custom_excerpt }}
+        </p>
+      </div>
 
-    <div class="pt-6">
-      <section class="flex items-center gap-4">
-        <ul v-if="post" class="author-list">
-          <li class="author-list-item">
-            <a
-              href="/about"
-              class="w-14 h-14 sm:w-20 sm:h-20 rounded-full overflow-hidden block"
+      <div class="pt-6">
+        <section class="flex items-center gap-4">
+          <ul v-if="post" class="author-list">
+            <li class="author-list-item">
+              <a
+                href="/about"
+                class="w-14 h-14 sm:w-20 sm:h-20 rounded-full overflow-hidden block"
+              >
+                <img
+                  class="w-full h-full block"
+                  src="https://github.com/MrSunshyne.png"
+                  alt="Written by Sandeep Ramgolam"
+                />
+              </a>
+            </li>
+          </ul>
+
+          <section class="">
+            <div
+              class="text-[11px] font-medium uppercase tracking-widest text-gray-400 dark:text-gray-500"
             >
-              <img
-                class="w-full h-full block"
-                src="https://github.com/MrSunshyne.png"
-                alt="Written by Sandeep Ramgolam"
-              />
-            </a>
-          </li>
-        </ul>
+              Written by
+            </div>
+            <h4
+              class="text-lg md:text-xl font-semibold text-gray-600 dark:text-gray-300"
+            >
+              <a :href="`/about`"> Sandeep Ramgolam </a>
+            </h4>
 
-        <section class="">
-          <div class="text-[11px] font-medium uppercase tracking-widest text-gray-400 dark:text-gray-500">
-            Written by
-          </div>
-          <h4
-            class="text-lg md:text-xl font-semibold text-gray-600 dark:text-gray-300"
-          >
-            <a :href="`/about`"> Sandeep Ramgolam </a>
-          </h4>
-
-          <div class="text-sm text-gray-500">
-            <time class="byline-meta-date" datetime="post.published_at">
-              {{ formattedDate }}
-            </time>
-            <span class="byline-reading-time">
-              <span class="bull px-2">•</span>
-              5 min read
-            </span>
-          </div>
+            <div class="text-sm text-gray-500">
+              <time class="byline-meta-date" datetime="post.published_at">
+                {{ formattedDate }}
+              </time>
+              <span class="byline-reading-time">
+                <span class="bull px-2">•</span>
+                5 min read
+              </span>
+            </div>
+          </section>
         </section>
-      </section>
-    </div>
+      </div>
     </header>
   </div>
 </template>
