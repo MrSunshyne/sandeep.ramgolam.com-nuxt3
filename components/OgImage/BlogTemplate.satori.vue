@@ -82,9 +82,10 @@ const hasFeaturedImage = props.customImage && props.customImage !== "";
         >
           <h1
             :style="{
+              position: 'relative',
               fontSize: '64px',
               left: '110px',
-              top: '90px',
+              top: '68px',
               lineHeight: '1.2em',
             }"
           >
@@ -94,9 +95,10 @@ const hasFeaturedImage = props.customImage && props.customImage !== "";
           <p
             v-if="description"
             :style="{
+              position: 'relative',
               fontSize: '36px',
               left: '118px',
-              top: '100px',
+              top: '73px',
               color: 'black',
               lineHeight: '1.5em',
             }"

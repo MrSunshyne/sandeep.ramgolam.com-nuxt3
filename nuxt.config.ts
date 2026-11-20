@@ -4,6 +4,12 @@ export default defineNuxtConfig({
     compatibilityVersion: 5,
   },
 
+  // Absolute base for og:image URLs. Without it, Cloudflare Pages builds
+  // point og:image at the per-deployment *.pages.dev URL.
+  site: {
+    url: "https://sandeep.ramgolam.com",
+  },
+
   content: {
     highlight: {
       preload: ['scss'],
@@ -114,9 +120,6 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    esbuild: {
-      target: 'esnext'
-    },
     optimizeDeps: {
       include: [
         '@baseline-banner/vue',
