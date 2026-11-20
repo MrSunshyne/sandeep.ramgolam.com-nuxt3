@@ -26,7 +26,6 @@
     "@css-inline/css-inline-wasm": "^0.20.2",
     "@iconify-json/solar": "^1.2.16",
     "@nuxt/eslint-config": "^1.17.0",
-    "@nuxt/test-utils": "^3.23.0",
     "@nuxtjs/color-mode": "^4.1.0",
     "@playwright/test": "^1.65.1",
     "@resvg/resvg-js": "^2.6.2",
