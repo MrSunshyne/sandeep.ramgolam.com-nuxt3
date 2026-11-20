@@ -13,7 +13,8 @@ dist
 # Cloudflare worker local state (comments-worker)
 .wrangler/
 .dev.vars
-playwright-report/*
+playwright-report/
+test-results/
 TODO.md
 GEMINI.md
 .claude/skills/

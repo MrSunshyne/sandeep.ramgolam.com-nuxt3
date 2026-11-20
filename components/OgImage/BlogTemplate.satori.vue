@@ -18,6 +18,13 @@ const props = withDefaults(
 const strippedTitle =
   props.title && props.title.replace(" | Sandeep Ramgolam", "");
 const hasFeaturedImage = props.customImage && props.customImage !== "";
+
+// At 64px, titles past ~40 characters wrap to three lines and push the date
+// onto the avatar baked into the background image. Step the size down so long
+// titles stay clear of it.
+const titleLength = strippedTitle?.length ?? 0;
+const titleFontSize =
+  titleLength > 55 ? "44px" : titleLength > 40 ? "52px" : "64px";
 </script>
 <template>
   <div
@@ -83,7 +90,8 @@ const hasFeaturedImage = props.customImage && props.customImage !== "";
           <h1
             :style="{
               position: 'relative',
-              fontSize: '64px',
+              fontSize: titleFontSize,
+              maxWidth: '700px',
               left: '110px',
               top: '68px',
               lineHeight: '1.2em',
