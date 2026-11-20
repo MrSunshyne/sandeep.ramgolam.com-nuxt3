@@ -1,5 +1,17 @@
 const projects = [
   {
+    name: "Moris 3D",
+    url: "https://moris3d.ramgolam.com/",
+    role: ["Maintainer"],
+    tech: ["Nuxt", "Three.js", "Python", "Cloudflare"],
+    text: "Mauritius in 3D from 1 m elevation data: fly over the island, then cut out Le Morne, Pieter Both or any mountain as a diorama to save as PNG or GLB",
+    featured: true,
+    thumbnail: "moris3d.png",
+    company: "Web Artisan",
+    year: "2026",
+    status: "active",
+  },
+  {
     name: "Pentaforce Movers",
     url: "https://pentaforcemu.biro.mu/",
     role: ["Design Engineer"],
