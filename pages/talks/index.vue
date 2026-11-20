@@ -2,8 +2,11 @@
   <div class="contain pb-16 sm:pb-20">
     <div class="max-w-3xl mx-auto">
       <h1 class="font-bold tracking-tight text-3xl sm:text-4xl mb-2">Talks</h1>
-      <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8 sm:mb-12">
-        {{ talks?.length }} talks I have given at conferences and meetups since {{ firstYear }}
+      <p
+        class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8 sm:mb-12"
+      >
+        {{ talks?.length }} talks I have given at conferences and meetups since
+        {{ firstYear }}
       </p>
 
       <div class="space-y-10 sm:space-y-12">
@@ -19,56 +22,83 @@
               :style="'--delay:' + index + 's'"
             >
               <div class="flex items-baseline gap-3 min-w-0">
-                <div class="shrink-0 w-10 sm:w-12 text-xs sm:text-sm font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase">
-                  {{ new Date(talk.event_date).toLocaleDateString("en", { month: "short" }) }}
+                <div
+                  class="shrink-0 w-10 sm:w-12 text-xs sm:text-sm font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase"
+                >
+                  {{
+                    new Date(talk.event_date).toLocaleDateString("en", {
+                      month: "short",
+                    })
+                  }}
                 </div>
                 <div class="min-w-0 flex-1">
-                <h3
-                  class="min-w-0 text-base sm:text-lg font-bold"
-                  :title="talk.talk_title ?? talk.topic ?? talk.event_name"
-                >
-                  <!-- single link: the title is the link; multiple: drawer below -->
-                  <a
-                    v-if="talk.links?.length === 1"
-                    :href="talk.links[0].url"
-                    target="_blank"
-                    rel="noopener"
-                    class="title-link sm:flex sm:items-center sm:gap-1 min-w-0 transition-colors hover:text-blue-500 dark:hover:text-blue-400"
+                  <h3
+                    class="min-w-0 text-base sm:text-lg font-bold"
+                    :title="talk.talk_title ?? talk.topic ?? talk.event_name"
                   >
-                    <span class="sm:truncate">{{ talk.talk_title ?? talk.topic ?? talk.event_name }}</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="external-icon inline-block ml-1 sm:ml-0 sm:shrink-0 text-gray-400 dark:text-gray-500 transition-colors"
-                      aria-hidden="true"
+                    <!-- single link: the title is the link; multiple: drawer below -->
+                    <a
+                      v-if="talk.links?.length === 1"
+                      :href="talk.links[0].url"
+                      target="_blank"
+                      rel="noopener"
+                      class="title-link sm:flex sm:items-center sm:gap-1 min-w-0 transition-colors hover:text-blue-500 dark:hover:text-blue-400"
                     >
-                      <path d="M7 17l9.2-9.2M17 17V7H7" />
-                    </svg>
-                  </a>
-                  <span v-else class="block sm:truncate">{{ talk.talk_title ?? talk.topic ?? talk.event_name }}</span>
-                </h3>
-                <!-- event details below the title, small and very subtle -->
-                <div class="min-w-0 sm:truncate text-xs sm:text-sm text-gray-400 dark:text-gray-500">
-                  {{ [talk.event_name, talk.location].filter(Boolean).join(" · ") }}
-                </div>
+                      <span class="sm:truncate">{{
+                        talk.talk_title ?? talk.topic ?? talk.event_name
+                      }}</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="external-icon inline-block ml-1 sm:ml-0 sm:shrink-0 text-gray-400 dark:text-gray-500 transition-colors"
+                        aria-hidden="true"
+                      >
+                        <path d="M7 17l9.2-9.2M17 17V7H7" />
+                      </svg>
+                    </a>
+                    <span v-else class="block sm:truncate">{{
+                      talk.talk_title ?? talk.topic ?? talk.event_name
+                    }}</span>
+                  </h3>
+                  <!-- event details below the title, small and very subtle -->
+                  <div
+                    class="min-w-0 sm:truncate text-xs sm:text-sm text-gray-400 dark:text-gray-500"
+                  >
+                    {{
+                      [talk.event_name, talk.location]
+                        .filter(Boolean)
+                        .join(" · ")
+                    }}
+                  </div>
                 </div>
               </div>
 
               <!-- Drawer: description + links, expands on hover / keyboard focus -->
-              <div v-if="talk.description || talk.links?.length > 1" class="links-reveal hidden sm:grid">
+              <div
+                v-if="talk.description || talk.links?.length > 1"
+                class="links-reveal hidden sm:grid"
+              >
                 <div class="links-clip">
-                  <div class="links-row flex flex-col gap-1 sm:pl-[60px] pt-1 pb-0.5">
-                    <p v-if="talk.description" class="text-xs text-gray-500 dark:text-gray-400 max-w-prose">
+                  <div
+                    class="links-row flex flex-col gap-1 sm:pl-[60px] pt-1 pb-0.5"
+                  >
+                    <p
+                      v-if="talk.description"
+                      class="text-xs text-gray-500 dark:text-gray-400 max-w-prose"
+                    >
                       {{ talk.description }}
                     </p>
-                    <div v-if="talk.links?.length > 1" class="flex flex-wrap gap-x-4 gap-y-1">
+                    <div
+                      v-if="talk.links?.length > 1"
+                      class="flex flex-wrap gap-x-4 gap-y-1"
+                    >
                       <a
                         v-for="link in talk.links"
                         :key="link.url"
@@ -94,13 +124,24 @@
 <script setup lang="ts">
 const { data: talks } = await useAsyncData("talks-list", async () => {
   const events = await queryCollection("events")
-    .select("event_date", "event_name", "event_type", "topic", "talk_title", "location", "description", "published", "links")
+    .select(
+      "event_date",
+      "event_name",
+      "event_type",
+      "topic",
+      "talk_title",
+      "location",
+      "description",
+      "published",
+      "links",
+    )
     .all();
 
   return events
-    .filter(e => e.published !== false && e.event_type?.includes("speaking"))
+    .filter((e) => e.published !== false && e.event_type?.includes("speaking"))
     .sort(
-      (a, b) => new Date(b.event_date).getTime() - new Date(a.event_date).getTime()
+      (a, b) =>
+        new Date(b.event_date).getTime() - new Date(a.event_date).getTime(),
     );
 });
 
@@ -126,13 +167,15 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "All the conference and meetup talks I have given over the years",
+      content:
+        "All the conference and meetup talks I have given over the years",
     },
     { property: "og:type", content: "page" },
     { property: "og:title", content: "Talks | Sandeep Ramgolam" },
     {
       property: "og:description",
-      content: "All the conference and meetup talks I have given over the years",
+      content:
+        "All the conference and meetup talks I have given over the years",
     },
   ],
 });

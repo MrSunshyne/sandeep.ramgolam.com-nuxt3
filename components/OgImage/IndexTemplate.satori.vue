@@ -21,7 +21,7 @@ defineProps<{
   </div>
 </template>
 
-<style  scoped>
+<style scoped>
 .og-image-wrapper {
   background-color: #000;
 }

@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   content: {
     highlight: {
-      preload: ['scss'],
+      preload: ["scss"],
     },
   },
 
@@ -39,28 +39,26 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/image",
     "nuxt-og-image",
-    'nuxt-mcp-dev',
+    "nuxt-mcp-dev",
   ],
 
   components: [
     {
-      path: '~/components',
-      global: false
+      path: "~/components",
+      global: false,
     },
     {
-      path: '~/components/global',
-      global: true
-    }
+      path: "~/components/global",
+      global: true,
+    },
   ],
-
-
 
   nitro: {
     prerender: {
       crawlLinks: true,
       routes: ["/"],
       failOnError: false,
-    }
+    },
   },
 
   // Baked into the static build at `pnpm generate` time — defaults must be the
@@ -77,9 +75,9 @@ export default defineNuxtConfig({
 
   // Configure image optimization
   image: {
-    provider: process.env.NODE_ENV === 'production' ? 'cloudflare' : 'ipx',
+    provider: process.env.NODE_ENV === "production" ? "cloudflare" : "ipx",
     quality: 80,
-    format: ['webp', 'avif', 'jpg', 'png'],
+    format: ["webp", "avif", "jpg", "png"],
     screens: {
       xs: 320,
       sm: 640,
@@ -91,29 +89,28 @@ export default defineNuxtConfig({
     presets: {
       avatar: {
         modifiers: {
-          format: 'webp',
+          format: "webp",
           width: 150,
           height: 150,
-          quality: 80
-        }
+          quality: 80,
+        },
       },
       cover: {
         modifiers: {
-          format: 'webp',
+          format: "webp",
           width: 800,
-          quality: 80
-        }
-      }
-    }
+          quality: 80,
+        },
+      },
+    },
   },
 
   // register a component
   css: ["~/assets/css/main.css", "~/styles/global.css"],
 
   ui: {
-    fonts: false
+    fonts: false,
   },
-
 
   devServer: {
     port: 4242,
@@ -122,15 +119,15 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: {
       include: [
-        '@baseline-banner/vue',
-        '@vueuse/core',
-        'clsx',
-        'tailwind-merge',
-      ]
-    }
+        "@baseline-banner/vue",
+        "@vueuse/core",
+        "clsx",
+        "tailwind-merge",
+      ],
+    },
   },
 
   build: {
-    transpile: []
+    transpile: [],
   },
 });

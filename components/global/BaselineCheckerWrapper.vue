@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import type { WebFeatureId } from '@baseline-banner/vue'
-import { BaselineBannerWebDev } from '@baseline-banner/vue'
-import '@baseline-banner/vue/style.css'
+import type { WebFeatureId } from "@baseline-banner/vue";
+import { BaselineBannerWebDev } from "@baseline-banner/vue";
+import "@baseline-banner/vue/style.css";
 
 interface Props {
-  featureName: WebFeatureId
+  featureName: WebFeatureId;
 }
 
-defineProps<Props>()
+defineProps<Props>();
 </script>
-
 
 <template>
   <ClientOnly>
@@ -23,7 +22,6 @@ defineProps<Props>()
 </template>
 
 <style scoped>
-
 /* BaselineChecker loading fallback styles */
 .baseline-checker-loading {
   border: 1px solid #e2e8f0;
@@ -38,7 +36,12 @@ defineProps<Props>()
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 </style>

@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import type { CommentSubmission, PublicComment, PublicCommentsResponse } from "@/types";
+import type {
+  CommentSubmission,
+  PublicComment,
+  PublicCommentsResponse,
+} from "@/types";
 
 const props = defineProps<{ slug: string }>();
 
@@ -22,13 +26,12 @@ async function loadPendingAsAdmin(): Promise<DisplayComment[]> {
   const token = localStorage.getItem(ADMIN_TOKEN_KEY);
   if (!token) return [];
   try {
-    const res = await $fetch<{ comments: Array<PublicComment & { author_name: string | null }> }>(
-      `${apiBase}/api/admin/comments`,
-      {
-        query: { status: "pending", slug: props.slug },
-        headers: { Authorization: `Bearer ${token}` },
-      },
-    );
+    const res = await $fetch<{
+      comments: Array<PublicComment & { author_name: string | null }>;
+    }>(`${apiBase}/api/admin/comments`, {
+      query: { status: "pending", slug: props.slug },
+      headers: { Authorization: `Bearer ${token}` },
+    });
     return res.comments.map((c) => ({
       id: c.id,
       author_name: c.author_name ?? "Anonymous",
@@ -64,7 +67,7 @@ function writeMine(entries: DisplayComment[]) {
   try {
     const store = JSON.parse(localStorage.getItem(MINE_KEY) ?? "{}");
     if (entries.length) store[props.slug] = entries;
-    else delete store[props.slug];
+    else Reflect.deleteProperty(store, props.slug);
     localStorage.setItem(MINE_KEY, JSON.stringify(store));
   } catch {
     // storage unavailable (private mode etc.) — feature degrades gracefully
@@ -93,7 +96,11 @@ async function loadComments() {
     const mineToShow = stillPending
       .filter((c) => !adminIds.has(c.id))
       .map((c) => ({ ...c, pending: true }));
-    comments.value = sortByDate([...res.comments, ...adminPending, ...mineToShow]);
+    comments.value = sortByDate([
+      ...res.comments,
+      ...adminPending,
+      ...mineToShow,
+    ]);
   } catch {
     loadFailed.value = true;
   } finally {
@@ -210,14 +217,16 @@ async function submit() {
       form_started_at: formStartedAt.value,
       parent_id: replyTo.value?.id,
     };
-    const created = await $fetch<{ id: number; status: "pending" | "approved" }>(
-      `${apiBase}/api/comments`,
-      {
-        method: "POST",
-        body: submission,
-        headers: adminToken ? { Authorization: `Bearer ${adminToken}` } : undefined,
-      },
-    );
+    const created = await $fetch<{
+      id: number;
+      status: "pending" | "approved";
+    }>(`${apiBase}/api/comments`, {
+      method: "POST",
+      body: submission,
+      headers: adminToken
+        ? { Authorization: `Bearer ${adminToken}` }
+        : undefined,
+    });
     const approved = created.status === "approved";
     const mineComment: DisplayComment = {
       id: created.id,
@@ -253,14 +262,21 @@ async function submit() {
       <div v-else-if="loadFailed" class="text-gray-500 dark:text-gray-400">
         <p>
           Couldn't load comments.
-          <button class="underline font-medium" type="button" @click="loadComments">
+          <button
+            class="underline font-medium"
+            type="button"
+            @click="loadComments"
+          >
             Retry
           </button>
         </p>
       </div>
 
       <template v-else>
-        <p v-if="comments.length === 0" class="text-gray-500 dark:text-gray-400">
+        <p
+          v-if="comments.length === 0"
+          class="text-gray-500 dark:text-gray-400"
+        >
           It's quiet in here. Say hi 👋
         </p>
         <ul v-else class="flex flex-col gap-4 list-none p-0">
@@ -341,7 +357,9 @@ async function submit() {
                       author
                     </span>
                   </div>
-                  <p class="whitespace-pre-line dark:text-gray-300 m-0">{{ reply.body }}</p>
+                  <p class="whitespace-pre-line dark:text-gray-300 m-0">
+                    {{ reply.body }}
+                  </p>
                 </article>
               </li>
             </ul>
@@ -354,7 +372,11 @@ async function submit() {
           v-if="submitted"
           class="rounded-xl border border-green-300 dark:border-green-800 bg-green-50 dark:bg-green-950/40 p-4 text-green-800 dark:text-green-300"
         >
-          {{ submittedApproved ? "Posted!" : "Thanks! Your comment is awaiting moderation." }}
+          {{
+            submittedApproved
+              ? "Posted!"
+              : "Thanks! Your comment is awaiting moderation."
+          }}
         </p>
 
         <form
@@ -389,7 +411,9 @@ async function submit() {
             required
             maxlength="4000"
             rows="4"
-            :placeholder="replyTo ? `Reply to ${replyTo.author_name}…` : 'Leave a comment…'"
+            :placeholder="
+              replyTo ? `Reply to ${replyTo.author_name}…` : 'Leave a comment…'
+            "
             class="rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2"
           />
           <input
@@ -403,7 +427,10 @@ async function submit() {
           />
           <div ref="turnstileEl" />
 
-          <p v-if="submitError" class="text-sm text-red-600 dark:text-red-400 m-0">
+          <p
+            v-if="submitError"
+            class="text-sm text-red-600 dark:text-red-400 m-0"
+          >
             {{ submitError }}
           </p>
 
@@ -412,13 +439,17 @@ async function submit() {
             :disabled="submitting || body.trim().length < 2"
             class="self-start rounded-full border-2 border-gray-900 dark:border-gray-100 px-5 py-2 font-bold transition-colors hover:bg-gray-900 hover:text-white dark:hover:bg-gray-100 dark:hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-current"
           >
-            {{ submitting ? "Posting…" : replyTo ? "Post reply" : "Post comment" }}
+            {{
+              submitting ? "Posting…" : replyTo ? "Post reply" : "Post comment"
+            }}
           </button>
         </form>
       </div>
 
       <template #fallback>
-        <div class="comments-skeleton" aria-hidden="true">Loading comments…</div>
+        <div class="comments-skeleton" aria-hidden="true">
+          Loading comments…
+        </div>
       </template>
     </ClientOnly>
   </section>

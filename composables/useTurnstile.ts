@@ -48,8 +48,10 @@ export function useTurnstile(container: Ref<HTMLElement | null>) {
   const siteKey = config.public.turnstileSiteKey;
 
   let widgetId: string | null = null;
-  let pending: { resolve: (token: string) => void; reject: (error: Error) => void } | null =
-    null;
+  let pending: {
+    resolve: (token: string) => void;
+    reject: (error: Error) => void;
+  } | null = null;
 
   async function ensureWidget(): Promise<TurnstileApi> {
     const turnstile = await loadScript();

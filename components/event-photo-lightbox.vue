@@ -27,7 +27,9 @@
       <figcaption class="max-w-2xl text-center text-sm text-white/85">
         {{ photo.alt }}
         <span class="block mt-1 text-xs text-white/60">
-          <span v-if="photos.length > 1">{{ index! + 1 }} / {{ photos.length }}</span>
+          <span v-if="photos.length > 1"
+            >{{ index! + 1 }} / {{ photos.length }}</span
+          >
           <span v-if="photos.length > 1 && photo.credit"> · </span>
           <template v-if="photo.credit">
             Photo:
@@ -37,7 +39,8 @@
               target="_blank"
               rel="noopener"
               class="underline decoration-dotted underline-offset-2 hover:text-white"
-            >{{ photo.credit }}</a>
+              >{{ photo.credit }}</a
+            >
             <span v-else>{{ photo.credit }}</span>
           </template>
         </span>
@@ -88,7 +91,9 @@ const props = defineProps<{
 
 const index = ref<number | null>(null);
 const dialogRef = ref<HTMLDialogElement | null>(null);
-const photo = computed(() => (index.value === null ? null : props.photos[index.value]));
+const photo = computed(() =>
+  index.value === null ? null : props.photos[index.value],
+);
 
 // some originals are multi-MB PNGs from blog posts, so the large copy goes through the image provider too
 const img = useImage();
@@ -104,7 +109,8 @@ function open(i: number) {
 // where available.
 function step(delta: number) {
   if (index.value === null || props.photos.length < 2) return;
-  const next = (index.value + delta + props.photos.length) % props.photos.length;
+  const next =
+    (index.value + delta + props.photos.length) % props.photos.length;
   if (document.startViewTransition) {
     document.startViewTransition(async () => {
       index.value = next;
@@ -120,65 +126,65 @@ defineExpose({ open });
 
 <style scoped>
 .photo-dialog {
-    width: 95vw;
-    height: 90vh;
-    max-width: 95vw;
-    max-height: 90vh;
-    padding: 0;
-    border: none;
-    outline: none;
-    background: transparent;
-    overscroll-behavior: contain;
+  width: 95vw;
+  height: 90vh;
+  max-width: 95vw;
+  max-height: 90vh;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  overscroll-behavior: contain;
 }
 
 .photo-dialog::backdrop {
-    background: rgb(0 0 0 / 0.85);
-    backdrop-filter: blur(6px);
+  background: rgb(0 0 0 / 0.85);
+  backdrop-filter: blur(6px);
 }
 
 /* Same open/close transitions as wallpaper-lightbox.vue */
 .photo-dialog,
 .photo-dialog::backdrop {
-    opacity: 0;
-    transition:
-        opacity 0.25s ease,
-        scale 0.25s ease,
-        display 0.25s ease allow-discrete,
-        overlay 0.25s ease allow-discrete;
+  opacity: 0;
+  transition:
+    opacity 0.25s ease,
+    scale 0.25s ease,
+    display 0.25s ease allow-discrete,
+    overlay 0.25s ease allow-discrete;
 }
 
 .photo-dialog {
-    scale: 0.94;
+  scale: 0.94;
 }
 
 .photo-dialog[open],
 .photo-dialog[open]::backdrop {
-    opacity: 1;
+  opacity: 1;
 }
 
 .photo-dialog[open] {
-    scale: 1;
+  scale: 1;
 }
 
 @starting-style {
-    .photo-dialog[open],
-    .photo-dialog[open]::backdrop {
-        opacity: 0;
-    }
-    .photo-dialog[open] {
-        scale: 0.94;
-    }
+  .photo-dialog[open],
+  .photo-dialog[open]::backdrop {
+    opacity: 0;
+  }
+  .photo-dialog[open] {
+    scale: 0.94;
+  }
 }
 
 /* Prev/next swaps cross-fade through the View Transitions API */
 .photo-dialog-img {
-    view-transition-name: event-photo-lightbox-image;
+  view-transition-name: event-photo-lightbox-image;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .photo-dialog,
-    .photo-dialog::backdrop {
-        transition: none;
-    }
+  .photo-dialog,
+  .photo-dialog::backdrop {
+    transition: none;
+  }
 }
 </style>

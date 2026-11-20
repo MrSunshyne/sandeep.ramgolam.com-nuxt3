@@ -48,8 +48,12 @@ defineOgImage("GenericTemplate");
 <template>
   <div class="contain pb-16 sm:pb-20">
     <div class="max-w-3xl mx-auto">
-      <h1 class="font-bold tracking-tight text-3xl sm:text-4xl mb-2">Sandeep Ramgolam's Blog</h1>
-      <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8 sm:mb-12">
+      <h1 class="font-bold tracking-tight text-3xl sm:text-4xl mb-2">
+        Sandeep Ramgolam's Blog
+      </h1>
+      <p
+        class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8 sm:mb-12"
+      >
         Writings and thoughts
       </p>
 
@@ -69,14 +73,23 @@ defineOgImage("GenericTemplate");
                 :href="`/blog/${post.slug}`"
                 class="rounded-lg px-3 -mx-3 py-1.5 transition-colors hover:bg-gray-100 dark:hover:bg-white/5 flex items-baseline gap-3 min-w-0 group"
               >
-                <div class="shrink-0 w-14 sm:w-16 whitespace-nowrap text-xs sm:text-sm font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase">
-                  {{ new Date(post.date).toLocaleDateString("en", { month: "short", day: "2-digit" }) }}
+                <div
+                  class="shrink-0 w-14 sm:w-16 whitespace-nowrap text-xs sm:text-sm font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase"
+                >
+                  {{
+                    new Date(post.date).toLocaleDateString("en", {
+                      month: "short",
+                      day: "2-digit",
+                    })
+                  }}
                 </div>
                 <h3
                   class="min-w-0 text-base sm:text-lg font-bold transition-colors group-hover:text-blue-500 dark:group-hover:text-blue-400 sm:truncate"
                   :title="post.title"
                 >
-                  <span :style="transitionName(post.slug, 'blog-title')">{{ post.title }}</span>
+                  <span :style="transitionName(post.slug, 'blog-title')">{{
+                    post.title
+                  }}</span>
                 </h3>
               </NuxtLink>
             </li>
