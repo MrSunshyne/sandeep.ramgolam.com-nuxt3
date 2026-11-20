@@ -114,9 +114,6 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    esbuild: {
-      target: 'esnext'
-    },
     optimizeDeps: {
       include: [
         '@baseline-banner/vue',
