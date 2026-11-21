@@ -195,7 +195,7 @@ defineOgImage("GenericTemplate");
         </button>
       </div>
 
-      <div class="space-y-10 sm:space-y-12">
+      <div class="timeline-years space-y-10 sm:space-y-12">
         <section v-for="group in years" :key="group.year">
           <h2 class="text-xl sm:text-2xl font-bold tracking-tight mb-3 sm:mb-4">
             {{ group.year }}
@@ -351,6 +351,43 @@ defineOgImage("GenericTemplate");
     animation: none;
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Desktop: like /projects, the rows near the middle of the screen are in
+   focus and the rest recede as they scroll past. Only where scroll-driven
+   animations exist, and not with reduced motion. */
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .timeline-row {
+      opacity: 1;
+      transform: none;
+      animation: timeline-focus linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      transform-origin: left center;
+    }
+
+    /* room for the last rows to reach the middle of the screen */
+    .timeline-years {
+      padding-bottom: 40vh;
+    }
+  }
+}
+
+@keyframes timeline-focus {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.94);
+  }
+  35%,
+  65% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(0.94);
   }
 }
 
