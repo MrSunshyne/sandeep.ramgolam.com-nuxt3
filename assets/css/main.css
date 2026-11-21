@@ -202,7 +202,9 @@ body:has(dialog:modal) .site-nav-bottom {
   pointer-events: none;
 }
 
-.hand-drawn-underline-hover:hover::after {
+.hand-drawn-underline-hover:hover::after,
+.hand-drawn-underline-group:hover .hand-drawn-underline-hover::after,
+.hand-drawn-underline-group:focus-visible .hand-drawn-underline-hover::after {
   opacity: 1;
   background-size: auto 10px;
   -webkit-mask-size: auto 10px;
