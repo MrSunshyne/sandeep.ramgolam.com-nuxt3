@@ -22,6 +22,7 @@ export type TimelineItem = {
   text?: string;
   href?: string;
   external?: boolean;
+  image?: string; // site-relative path to a thumbnail
 };
 
 export type TimelineYear = { year: number; items: TimelineItem[] };
@@ -79,7 +80,12 @@ export function formatTimelineDate(date: TimelineDate): string {
   return date.day ? `${month} ${String(date.day).padStart(2, "0")}` : month;
 }
 
-type PostInput = { slug: string; title: string; date: string };
+type PostInput = {
+  slug: string;
+  title: string;
+  date: string;
+  feature_image?: string | null;
+};
 type EventInput = {
   event_date: string;
   event_name: string;
@@ -88,6 +94,7 @@ type EventInput = {
   published?: boolean;
   location?: string;
   links?: { title: string; url: string }[];
+  photos?: { src: string }[];
 };
 type ProjectInput = {
   name: string;
@@ -95,6 +102,7 @@ type ProjectInput = {
   text?: string;
   started?: string; // "YYYY-MM-DD" (first commit) or "YYYY"
   status?: string;
+  thumbnail?: string;
 };
 type JobInput = {
   date_start: string;
@@ -105,7 +113,11 @@ type JobInput = {
   text?: string;
 };
 type EducationInput = { title: string; institution: string; year: string };
-type WallpaperInput = { title: string; metadata?: { date?: string } };
+type WallpaperInput = {
+  path: string;
+  title: string;
+  metadata?: { date?: string };
+};
 
 export type TimelineSources = {
   posts?: PostInput[];
@@ -128,6 +140,10 @@ export function buildTimeline(sources: TimelineSources): TimelineItem[] {
       date,
       title: post.title,
       href: `/blog/${post.slug}`,
+      // a few posts store a placeholder instead of a path
+      image: post.feature_image?.startsWith("/")
+        ? post.feature_image
+        : undefined,
     });
   }
 
@@ -145,6 +161,7 @@ export function buildTimeline(sources: TimelineSources): TimelineItem[] {
       tags: event.event_type,
       href: link,
       external: !!link,
+      image: event.photos?.[0]?.src,
     });
   }
 
@@ -162,6 +179,9 @@ export function buildTimeline(sources: TimelineSources): TimelineItem[] {
       text: project.text,
       href: project.url,
       external: !!project.url,
+      image: project.thumbnail
+        ? `/data/projects/${project.thumbnail}`
+        : undefined,
     });
   }
 
@@ -217,6 +237,7 @@ export function buildTimeline(sources: TimelineSources): TimelineItem[] {
       text:
         batch.length === 1 ? undefined : batch.map((w) => w.title).join(", "),
       href: "/wallpapers",
+      image: batch[0].path,
     });
   }
 
