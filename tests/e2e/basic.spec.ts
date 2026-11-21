@@ -3,8 +3,10 @@ import { test, expect } from "@playwright/test";
 test("has title", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveTitle(/Sandeep/);
-  await expect(page.locator("h2", { hasText: /^Projects$/ })).toBeVisible();
-  await expect(page.locator(".project-card")).not.toHaveCount(0);
+  await expect(
+    page.getByRole("heading", { level: 2, name: "Projects", exact: true }),
+  ).toBeVisible();
+  await expect(page.locator(".feed-item")).not.toHaveCount(0);
 
   // Wallpaper lightbox opens and steps to the next wallpaper. Clicks that land
   // before hydration do nothing, so retry until the dialog shows.
@@ -57,7 +59,7 @@ test.describe("Navigation", () => {
     await page.goto("/projects");
     await expect(page.locator("h1")).toContainText("Projects");
     // Check if there are project items
-    await expect(page.locator(".project-card")).not.toHaveCount(0);
+    await expect(page.locator(".feed-item")).not.toHaveCount(0);
   });
 
   test("timeline mixes content kinds and filters by kind", async ({ page }) => {

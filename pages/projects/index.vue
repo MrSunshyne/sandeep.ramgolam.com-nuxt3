@@ -1,97 +1,96 @@
 <template>
-  <div class="contain pb-16 sm:pb-20">
-    <h1 class="font-bold tracking-tight text-3xl sm:text-4xl mb-2">Projects</h1>
-    <p
-      class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-10 sm:mb-12"
-    >
-      Some projects I helped build
-    </p>
-    <div v-if="projects" class="projects-wrapper">
-      <TransitionGroup name="fade">
-        <template v-for="(project, index) in projects" :key="project.name">
-          <div v-if="project.featured" class="project-card">
-            <div class="project-content">
-              <!-- SVG clip path definition for organic image shape -->
-              <svg class="absolute w-0 h-0" aria-hidden="true">
-                <defs>
-                  <clipPath
-                    :id="`project-page-clip-${index}`"
-                    clipPathUnits="objectBoundingBox"
-                  >
-                    <path
-                      d="M0.02 0.04 Q0.01 0.02 0.03 0.01 L0.05 0.02 Q0.15 0 0.3 0.02 T0.6 0 Q0.8 0.02 0.95 0.01 Q0.98 0 0.99 0.03 Q1 0.06 0.99 0.12 L0.99 0.2 Q1 0.35 0.99 0.5 T1 0.75 Q0.99 0.88 0.99 0.94 Q1 0.98 0.97 0.99 Q0.94 1 0.88 0.99 L0.8 0.99 Q0.6 1 0.4 0.98 T0.12 1 Q0.05 0.99 0.03 0.99 Q0 0.98 0.01 0.94 Q0 0.88 0.01 0.75 L0.01 0.6 Q0 0.4 0.01 0.25 T0 0.1 Q0.01 0.06 0.02 0.04 Z"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-              <div
-                class="image-container"
-                :style="`clip-path: url(#project-page-clip-${index})`"
-              >
-                <img
-                  :src="'/data/projects/' + project.thumbnail"
-                  :alt="project.name"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div
-                class="details-container text-center sm:text-left flex flex-col justify-center pt-6 sm:pt-0"
-              >
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
-                  {{ project.name }}
-                </h2>
-                <p
-                  v-if="project.text"
-                  class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-5 sm:mb-5"
-                >
-                  {{ project.text }}
-                </p>
-                <div class="space-y-4 sm:space-y-4 mb-6 sm:mb-6">
-                  <div
-                    class="text-base sm:text-lg font-medium text-gray-800 dark:text-gray-200"
-                  >
-                    <span v-for="role in project.role" :key="role">{{
-                      role
-                    }}</span>
-                    @ {{ project.company }}
-                  </div>
-                  <div
-                    class="flex flex-wrap gap-2 justify-center sm:justify-start"
-                  >
-                    <span
-                      v-for="tech in project.tech"
-                      :key="tech"
-                      class="px-3 py-1.5 text-xs sm:text-sm rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium"
-                      >{{ tech }}</span
-                    >
-                  </div>
-                </div>
-                <div class="mt-2">
-                  <a
-                    :href="project.url"
-                    target="_blank"
-                    rel="noopener"
-                    class="view-button"
-                  >
-                    <HandDrawnShape
-                      variant="pill"
-                      :hover-morph="true"
-                      color="#22c55e"
-                    />
-                    <span class="view-button-text">View</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </template>
-      </TransitionGroup>
+  <div class="mx-auto max-w-[1440px] pb-16 sm:pb-20 lg:pb-0">
+    <div class="lg:grid lg:grid-cols-[minmax(320px,420px)_minmax(0,1fr)]">
+      <!-- Left: stays put while the projects scroll past on the right -->
+      <aside
+        class="relative px-5 sm:px-8 lg:px-12 pb-12 lg:py-0 lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center"
+      >
+        <p
+          class="text-xs sm:text-sm font-semibold uppercase tracking-widest mb-6"
+        >
+          Sandeep Ramgolam
+          <span class="text-gray-500 dark:text-gray-400"
+            >/ Things I've built</span
+          >
+        </p>
+        <h1
+          class="font-black tracking-tight leading-[0.95] text-5xl sm:text-6xl mb-6"
+        >
+          Projects
+        </h1>
+        <p
+          class="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6"
+        >
+          Some projects I helped build: open data about Mauritius, community
+          websites, client work and experiments in the browser.
+        </p>
+        <p
+          class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-8"
+        >
+          {{ shown.length }} projects · {{ activeCount }} still running · since
+          {{ firstYear }}
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            v-for="link in links"
+            :key="link.href"
+            :href="link.href"
+            target="_blank"
+            rel="noopener"
+            class="sidebar-link"
+          >
+            <HandDrawnShape
+              variant="pill"
+              :hover-morph="true"
+              color="#22c55e"
+            />
+            <span class="sidebar-link-text">{{ link.label }}</span>
+          </a>
+        </div>
+
+        <!-- hand-drawn divider between the columns -->
+        <svg
+          class="divider hidden lg:block"
+          viewBox="0 0 10 100"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M5 0 Q2 8 5 16 T5 33 Q8 41 5 50 T5 66 Q2 75 5 83 T5 100"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            vector-effect="non-scaling-stroke"
+          />
+        </svg>
+      </aside>
+
+      <!-- Right: the page itself scrolls; the row in the middle is in focus -->
+      <div
+        class="px-5 sm:px-8 lg:pl-16 lg:pr-12 lg:py-[40vh] flex flex-col gap-16 lg:gap-28"
+      >
+        <ProjectFeedItem
+          v-for="project in shown"
+          :key="project.name"
+          :project="project"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { projects } from "~/data/projects/index";
+
+const shown = projects.filter((project) => project.featured);
+const activeCount = shown.filter((p) => p.status === "active").length;
+const firstYear = Math.min(...shown.map((p) => Number(p.started.slice(0, 4))));
+
+const links = [
+  { label: "GitHub", href: "https://github.com/MrSunshyne" },
+  { label: "Data projects", href: "https://data.ramgolam.com/" },
+];
 
 useHead({
   title: "Work & Projects",
@@ -128,159 +127,42 @@ defineOgImage("GenericTemplate");
 </script>
 
 <style scoped>
-@reference "tailwindcss";
-
-.projects-wrapper {
-  display: grid;
-  gap: 40px;
+.divider {
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  width: 10px;
+  height: 80vh;
+  color: #d1d5db;
+  overflow: visible;
 }
 
-@media (min-width: 640px) {
-  .projects-wrapper {
-    gap: 50px;
-  }
+.dark .divider {
+  color: #475569;
 }
 
-@media (min-width: 1024px) {
-  .projects-wrapper {
-    gap: 60px;
-  }
-}
-
-.project-card {
-  position: relative;
-}
-
-.view-button {
+.sidebar-link {
   position: relative;
   display: inline-block;
-  padding: 12px 32px;
+  padding: 10px 24px;
   transition: transform 0.3s ease-out;
 }
 
-.view-button:hover {
+.sidebar-link:hover {
   transform: translateY(-2px);
 }
 
-.view-button-text {
+.sidebar-link-text {
   position: relative;
   z-index: 1;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: #166534;
 }
 
-@media (min-width: 640px) {
-  .view-button-text {
-    font-size: 1rem;
-  }
-}
-
-:deep(.dark) .view-button-text,
-.dark .view-button-text {
+.dark .sidebar-link-text {
   color: #86efac;
-}
-
-.project-content {
-  position: relative;
-  z-index: 1;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: box-shadow 0.3s ease-out;
-}
-
-.project-content:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-@media (min-width: 640px) {
-  .project-content {
-    padding: 32px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .project-content {
-    padding: 40px;
-  }
-}
-
-:deep(.dark) .project-content,
-.dark .project-content {
-  background: #1f2937;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-:deep(.dark) .project-content:hover,
-.dark .project-content:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-.image-container {
-  margin: 8px;
-  margin-bottom: 8px;
-  background: #e5e7eb;
-  transition: background 0.3s ease-out;
-}
-
-@media (min-width: 640px) {
-  .image-container {
-    margin: 16px;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .image-container {
-    margin-bottom: 16px;
-  }
-}
-
-:deep(.dark) .image-container,
-.dark .image-container {
-  background: #374151;
-}
-
-@media (min-width: 640px) {
-  .project-content {
-    .details-container {
-      padding: 0 20px;
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-  .project-content {
-    display: grid;
-    gap: 40px;
-    grid-template-columns: 3fr 2fr;
-    grid-template-areas: "left right";
-    align-items: center;
-
-    .image-container {
-      grid-area: left;
-    }
-
-    .details-container {
-      grid-area: right;
-      padding: 0;
-    }
-  }
-
-  .project-card:nth-child(odd) .project-content {
-    grid-template-columns: 2fr 3fr;
-
-    .image-container {
-      grid-area: right;
-    }
-
-    .details-container {
-      grid-area: left;
-      text-align: right;
-    }
-  }
 }
 </style>
