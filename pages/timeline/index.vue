@@ -305,14 +305,14 @@ defineOgImage("GenericTemplate");
                   </div>
                   <div
                     v-if="item.image"
-                    class="thumb shrink-0 w-24 sm:w-48 aspect-[16/10] bg-gray-200 dark:bg-gray-700"
+                    class="thumb shrink-0 w-28 sm:w-56 lg:w-72 aspect-[16/10] bg-gray-200 dark:bg-gray-700"
                   >
                     <NuxtImg
                       :src="item.image"
                       alt=""
                       loading="lazy"
-                      width="192"
-                      height="120"
+                      width="288"
+                      height="180"
                       class="w-full h-full object-cover"
                     />
                   </div>
