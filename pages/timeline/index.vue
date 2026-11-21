@@ -29,6 +29,7 @@ const allItems = computed(() =>
       slug: post.slug,
       title: post.title,
       date: String(post.date),
+      feature_image: post.feature_image,
     })),
     events: events.value ?? [],
     projects,
@@ -195,6 +196,17 @@ defineOgImage("GenericTemplate");
         </button>
       </div>
 
+      <!-- one organic, hand-drawn edge shared by every thumbnail -->
+      <svg class="absolute w-0 h-0" aria-hidden="true">
+        <defs>
+          <clipPath id="timeline-thumb-clip" clipPathUnits="objectBoundingBox">
+            <path
+              d="M0.03 0.05 Q0.01 0.02 0.05 0.02 L0.3 0.03 Q0.6 0 0.95 0.02 Q0.99 0.03 0.98 0.08 L0.99 0.4 Q1 0.7 0.98 0.94 Q0.98 0.99 0.93 0.98 L0.6 0.99 Q0.3 1 0.06 0.98 Q0.01 0.98 0.02 0.92 L0.01 0.6 Q0 0.3 0.03 0.05 Z"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+
       <div class="timeline-years space-y-10 sm:space-y-12">
         <section v-for="group in years" :key="group.year">
           <h2 class="text-xl sm:text-2xl font-bold tracking-tight mb-3 sm:mb-4">
@@ -291,6 +303,19 @@ defineOgImage("GenericTemplate");
                       {{ item.text }}
                     </p>
                   </div>
+                  <div
+                    v-if="item.image"
+                    class="thumb shrink-0 self-center w-20 sm:w-28 aspect-[16/10] bg-gray-200 dark:bg-gray-700"
+                  >
+                    <NuxtImg
+                      :src="item.image"
+                      alt=""
+                      loading="lazy"
+                      width="112"
+                      height="70"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
                 </component>
               </li>
             </ol>
@@ -359,13 +384,25 @@ defineOgImage("GenericTemplate");
    animations exist, and not with reduced motion. */
 @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
+    /* the on-load reveal gives way to the scroll focus below */
     .timeline-row {
       opacity: 1;
       transform: none;
+      animation: none;
+    }
+
+    .row-body {
       animation: timeline-focus linear both;
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
       transform-origin: left center;
+    }
+
+    /* the dot stays on the rail and swells as its row comes into focus */
+    .dot {
+      animation: timeline-dot linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
     }
 
     /* room for the last rows to reach the middle of the screen */
@@ -375,19 +412,42 @@ defineOgImage("GenericTemplate");
   }
 }
 
+/* Rows swing in from the left and grow into focus at the middle of the
+   screen, then shrink and fade away again. */
 @keyframes timeline-focus {
   0% {
-    opacity: 0.2;
-    transform: scale(0.94);
+    opacity: 0.05;
+    transform: translateX(-32px) scale(0.82);
   }
-  35%,
-  65% {
+  30% {
+    opacity: 0.45;
+    transform: translateX(-8px) scale(0.93);
+  }
+  45%,
+  55% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateX(0) scale(1.03);
+  }
+  70% {
+    opacity: 0.45;
+    transform: translateX(-8px) scale(0.93);
   }
   100% {
-    opacity: 0.2;
-    transform: scale(0.94);
+    opacity: 0.05;
+    transform: translateX(-32px) scale(0.82);
+  }
+}
+
+@keyframes timeline-dot {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.6);
+  }
+  45%,
+  55% {
+    opacity: 1;
+    transform: scale(1.4);
   }
 }
 

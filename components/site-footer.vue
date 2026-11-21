@@ -18,6 +18,9 @@ const year = new Date().getFullYear();
         <li>
           <a href="/projects">Projects</a>
         </li>
+        <li>
+          <a href="/timeline">Timeline</a>
+        </li>
       </ul>
       <div class="ml-4 pl-4 border-l border-gray-300 dark:border-slate-600">
         <ClientOnly>
