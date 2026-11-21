@@ -56,7 +56,8 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ["/"],
+      // /timeline isn't linked from any menu yet, so the crawler can't find it
+      routes: ["/", "/timeline"],
       failOnError: false,
     },
   },
