@@ -93,7 +93,7 @@ type ProjectInput = {
   name: string;
   url?: string;
   text?: string;
-  year?: string;
+  started?: string; // "YYYY-MM-DD" (first commit) or "YYYY"
   status?: string;
 };
 type JobInput = {
@@ -149,7 +149,9 @@ export function buildTimeline(sources: TimelineSources): TimelineItem[] {
   }
 
   for (const project of sources.projects ?? []) {
-    const date = project.year ? parseLooseDate(project.year) : null;
+    const date = project.started
+      ? (parseIsoDate(project.started) ?? parseLooseDate(project.started))
+      : null;
     if (!date) continue;
     items.push({
       key: `project:${project.name}`,
