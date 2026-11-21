@@ -40,9 +40,7 @@ defineOgImage("IndexTemplate");
 
       <HomeWallpaperSection />
 
-      <!-- <HomeProjectsFeatured /> -->
-
-      <HomeProjectsNeobrutalism />
+      <HomeProjects />
     </div>
   </section>
 </template>
