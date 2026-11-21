@@ -1,34 +1,25 @@
 <template>
-  <div class="mx-auto max-w-[1440px] pb-16 sm:pb-20 lg:pb-0">
-    <div class="lg:grid lg:grid-cols-[minmax(320px,420px)_minmax(0,1fr)]">
+  <div class="projects-page mx-auto max-w-[1440px] pb-16 sm:pb-20 lg:pb-0">
+    <div class="lg:grid lg:grid-cols-[minmax(300px,380px)_minmax(0,1fr)]">
       <!-- Left: stays put while the projects scroll past on the right -->
       <aside
-        class="relative px-5 sm:px-8 lg:px-12 pb-12 lg:py-0 lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center"
+        class="sidebar relative px-5 sm:px-8 lg:px-12 pb-12 flex flex-col justify-center"
       >
-        <p
-          class="text-xs sm:text-sm font-semibold uppercase tracking-widest mb-6"
-        >
-          Sandeep Ramgolam
-          <span class="text-gray-500 dark:text-gray-400"
-            >/ Things I've built</span
-          >
-        </p>
         <h1
-          class="font-black tracking-tight leading-[0.95] text-5xl sm:text-6xl mb-6"
+          class="font-black tracking-tight leading-[0.95] text-5xl sm:text-6xl mb-5"
         >
           Projects
         </h1>
         <p
-          class="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6"
+          class="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-4"
         >
-          Some projects I helped build: open data about Mauritius, community
-          websites, client work and experiments in the browser.
+          Things I've built over the years, for work, for the community and for
+          fun.
         </p>
         <p
           class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-8"
         >
-          {{ shown.length }} projects · {{ activeCount }} still running · since
-          {{ firstYear }}
+          {{ shown.length }} projects since {{ firstYear }}
         </p>
         <div class="flex flex-wrap gap-3">
           <a
@@ -68,7 +59,7 @@
 
       <!-- Right: the page itself scrolls; the row in the middle is in focus -->
       <div
-        class="px-5 sm:px-8 lg:pl-16 lg:pr-12 lg:py-[40vh] flex flex-col gap-16 lg:gap-28"
+        class="feed px-5 sm:px-8 lg:pl-16 lg:pr-12 flex flex-col gap-16 lg:gap-28"
       >
         <ProjectFeedItem
           v-for="project in shown"
@@ -84,7 +75,6 @@
 import { projects } from "~/data/projects/index";
 
 const shown = projects.filter((project) => project.featured);
-const activeCount = shown.filter((p) => p.status === "active").length;
 const firstYear = Math.min(...shown.map((p) => Number(p.started.slice(0, 4))));
 
 const links = [
@@ -127,12 +117,38 @@ defineOgImage("GenericTemplate");
 </script>
 
 <style scoped>
+/* Desktop: the sidebar and the first project both sit on the middle of the
+   screen when the page loads, and the sidebar stays there while scrolling. */
+@media (min-width: 1024px) {
+  .projects-page {
+    /* the site nav plus the layout's top padding above this page */
+    --page-top: calc(var(--dock-height-unstuck) + 3rem);
+    /* about half a project row (rows are ~260-300px tall on desktop) */
+    --half-row: 135px;
+  }
+
+  /* Sticks below where the nav was, with matching room underneath, so its
+     centred content lands on the middle of the viewport before and after the
+     nav scrolls away. */
+  .sidebar {
+    position: sticky;
+    top: var(--page-top);
+    height: calc(100vh - var(--page-top));
+    padding-bottom: var(--page-top);
+  }
+
+  .feed {
+    padding-top: calc(50vh - var(--page-top) - var(--half-row));
+    padding-bottom: calc(50vh - var(--half-row));
+  }
+}
+
 .divider {
   position: absolute;
-  top: 10vh;
+  top: 0;
   right: 0;
   width: 10px;
-  height: 80vh;
+  height: 100%;
   color: #d1d5db;
   overflow: visible;
 }
