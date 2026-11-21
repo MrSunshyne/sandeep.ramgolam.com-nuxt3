@@ -12,12 +12,10 @@
         <NuxtLink class="hand-drawn-underline" :to="{ path: '/blog' }"
           >thoughts</NuxtLink
         >,
-        <NuxtLink
-          class="hand-drawn-underline pr-1"
-          target="_blank"
-          href="https://github.com/MrSunshyne?tab=repositories&q=&type=&language=&sort=stargazers"
-          >projects </NuxtLink
-        >and
+        <NuxtLink class="hand-drawn-underline" :to="{ path: '/projects' }"
+          >projects</NuxtLink
+        >
+        and
         <NuxtLink class="hand-drawn-underline" :to="{ path: '/events' }"
           >event</NuxtLink
         >
@@ -47,78 +45,96 @@
     <div
       class="intro-roles grid grid-cols-[repeat(auto-fit,minmax(15rem,max-content))] gap-4 md:text-base"
     >
-      <div class="flex items-center gap-3">
+      <a
+        href="https://coders.mu"
+        target="_blank"
+        rel="noopener"
+        class="hand-drawn-underline-group flex items-center gap-3"
+      >
         <IconsCodersmuIcon
           alt="Coders.mu"
           class="w-10 h-10 dark:text-white text-black"
         />
-        <div class="flex flex-col items-start text-left leading-snug">
-          <a
-            href="https://coders.mu"
-            target="_blank"
-            class="hand-drawn-underline-hover"
-            >Coders.mu</a
-          >
+        <span class="flex flex-col items-start text-left leading-snug">
+          <span class="hand-drawn-underline-hover">Coders.mu</span>
           <span class="text-gray-500 text-sm">Lead Organizer</span>
-        </div>
-      </div>
-      <div class="flex items-center gap-3">
+        </span>
+      </a>
+      <a
+        href="https://livestorm.co"
+        target="_blank"
+        rel="noopener"
+        class="hand-drawn-underline-group flex items-center gap-3"
+      >
         <IconsLivestormIcon alt="Livestorm" class="w-10 h-10" />
-        <div class="flex flex-col items-start text-left leading-snug">
-          <a
-            href="https://livestorm.co"
-            target="_blank"
-            class="hand-drawn-underline-hover"
-            >Livestorm</a
-          >
+        <span class="flex flex-col items-start text-left leading-snug">
+          <span class="hand-drawn-underline-hover">Livestorm</span>
           <span class="text-gray-500 text-sm">Sr. Front-end Engineer</span>
-        </div>
-      </div>
-      <div class="flex items-center gap-3">
+        </span>
+      </a>
+      <a
+        href="https://biro.mu/"
+        target="_blank"
+        rel="noopener"
+        class="hand-drawn-underline-group flex items-center gap-3"
+      >
         <IconsBiroIcon
           alt="Biro.mu"
           class="w-10 h-10 text-[#1b2a3c] dark:text-white"
         />
-        <div class="flex flex-col items-start text-left leading-snug">
-          <a
-            href="https://biro.mu/"
-            target="_blank"
-            class="hand-drawn-underline-hover"
-            >Biro.mu</a
-          >
+        <span class="flex flex-col items-start text-left leading-snug">
+          <span class="hand-drawn-underline-hover">Biro.mu</span>
           <span class="text-gray-500 text-sm">Co-Founder</span>
-        </div>
-      </div>
-      <div class="flex items-center gap-3">
+        </span>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/upcodemu"
+        target="_blank"
+        rel="noopener"
+        class="hand-drawn-underline-group flex items-center gap-3"
+      >
         <IconsUpcodeIcon
           alt="Upcode"
           class="w-10 h-10 text-[#0031B0] dark:text-white"
         />
-        <div class="flex flex-col items-start text-left leading-snug">
-          <a
-            href="https://www.linkedin.com/company/upcodemu"
-            target="_blank"
-            class="hand-drawn-underline-hover"
-            >Upcode</a
-          >
+        <span class="flex flex-col items-start text-left leading-snug">
+          <span class="hand-drawn-underline-hover">Upcode</span>
           <span class="text-gray-500 text-sm">Co-Founder</span>
-        </div>
-      </div>
-      <div class="flex items-center gap-3">
+        </span>
+      </a>
+      <a
+        href="https://developers.google.com/profile/u/112547642487044982413"
+        target="_blank"
+        rel="noopener"
+        class="hand-drawn-underline-group flex items-center gap-3"
+      >
         <IconsGdeIcon
           alt="Google Developer Expert"
           class="w-10 h-10 text-[#0031B0] dark:text-white"
         />
-        <div class="flex flex-col items-start text-left leading-snug">
-          <a
-            href="https://developers.google.com/profile/u/112547642487044982413"
-            target="_blank"
-            class="hand-drawn-underline-hover"
-            >Google Developer Expert</a
+        <span class="flex flex-col items-start text-left leading-snug">
+          <span class="hand-drawn-underline-hover"
+            >Google Developer Expert</span
           >
           <span class="text-gray-500 text-sm">Web</span>
-        </div>
-      </div>
+        </span>
+      </a>
+      <!-- Not a role: the way into everything above, in the order it happened -->
+      <NuxtLink
+        to="/timeline"
+        class="hand-drawn-underline-group flex items-center gap-3"
+      >
+        <Icon
+          name="solar:history-bold-duotone"
+          class="w-10 h-10 text-black dark:text-white"
+        />
+        <span class="flex flex-col items-start text-left leading-snug">
+          <span class="hand-drawn-underline-hover">My timeline</span>
+          <span class="text-gray-500 text-sm"
+            >Every talk, post and project</span
+          >
+        </span>
+      </NuxtLink>
     </div>
 
     <SharedProfileLinks />
@@ -169,7 +185,7 @@ const organizerCount = computed(() => eventCounts.value?.organizer ?? 0);
     gap: var(--rhythm);
   }
 
-  /* The roles are one group, not five loose lines: more air around the group
+  /* The roles are one group, not six loose lines: more air around the group
      than inside it, and a gutter wide enough to read as two columns. */
   .intro-roles {
     row-gap: calc(var(--rhythm) * 0.75);
