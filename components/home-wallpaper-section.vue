@@ -8,7 +8,6 @@
     <div
       ref="containerRef"
       class="flex overflow-x-auto gap-6 px-4 pb-8 -mx-4 md:px-8 md:-mx-8 scrollbar-hide snap-x snap-mandatory"
-      :style="{ transform: `translateX(${parallaxOffset}px)` }"
     >
       <div
         v-for="(wallpaper, index) in wallpapers"
@@ -77,27 +76,11 @@
 
 <script setup lang="ts">
 import wallpapersData from "@/assets/data/wallpapers.json";
-import { useElementBounding, useWindowSize } from "@vueuse/core";
 import type { Wallpaper } from "@/types/wallpaper";
 
 const wallpapers = ref(wallpapersData);
 const containerRef = ref<HTMLElement | null>(null);
 const lightbox = ref<{ open: (wallpaper: Wallpaper) => void } | null>(null);
-
-// Parallax logic
-const { top } = useElementBounding(containerRef);
-const { height: windowHeight } = useWindowSize();
-
-const parallaxOffset = computed(() => {
-  if (!windowHeight.value) return 0;
-  // Calculate progress of element through viewport (0 to 1 approx)
-  // We want the movement to happen when it's visible
-  const progress = 1 - top.value / windowHeight.value;
-
-  // Map progress to pixel offset (e.g. from 50px to -50px)
-  // Clamping isn't strictly necessary but good for sanity
-  return (progress - 0.5) * -100;
-});
 
 onMounted(() => {
   if (containerRef.value) {

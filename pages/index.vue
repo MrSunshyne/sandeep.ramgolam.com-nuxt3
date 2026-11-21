@@ -38,9 +38,9 @@ defineOgImage("IndexTemplate");
 
       <HomeEventSummary />
 
-      <HomeWallpaperSection />
-
       <HomeProjects />
+
+      <HomeWallpaperSection />
     </div>
   </section>
 </template>
