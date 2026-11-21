@@ -59,4 +59,25 @@ test.describe("Navigation", () => {
     // Check if there are project items
     await expect(page.locator(".project-card")).not.toHaveCount(0);
   });
+
+  test("timeline mixes content kinds and filters by kind", async ({ page }) => {
+    await page.goto("/timeline");
+    await expect(page.locator("h1")).toContainText("Timeline");
+    await expect(page.locator(".timeline-row[data-kind=post]")).not.toHaveCount(
+      0,
+    );
+    await expect(
+      page.locator(".timeline-row[data-kind=event]"),
+    ).not.toHaveCount(0);
+
+    // clicks before hydration do nothing, so retry until the filter applies
+    await expect(async () => {
+      await page.getByRole("button", { name: /^Projects/ }).click();
+      await expect(page).toHaveURL(/type=project/, { timeout: 1000 });
+    }).toPass({ timeout: 30000 });
+    await expect(page.locator(".timeline-row")).not.toHaveCount(0);
+    await expect(
+      page.locator(".timeline-row:not([data-kind=project])"),
+    ).toHaveCount(0);
+  });
 });
