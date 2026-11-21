@@ -412,42 +412,42 @@ defineOgImage("GenericTemplate");
   }
 }
 
-/* Rows swing in from the left and grow into focus at the middle of the
-   screen, then shrink and fade away again. */
+/* Only the row at the middle of the screen is lit: it grows and comes into
+   full colour. Everything else stays a faint, slightly blurred, greyscale
+   ghost so it doesn't compete with it. */
 @keyframes timeline-focus {
-  0% {
-    opacity: 0.05;
-    transform: translateX(-32px) scale(0.82);
-  }
-  30% {
-    opacity: 0.45;
-    transform: translateX(-8px) scale(0.93);
-  }
-  45%,
-  55% {
-    opacity: 1;
-    transform: translateX(0) scale(1.03);
-  }
-  70% {
-    opacity: 0.45;
-    transform: translateX(-8px) scale(0.93);
-  }
+  0%,
   100% {
-    opacity: 0.05;
-    transform: translateX(-32px) scale(0.82);
+    opacity: 0.06;
+    transform: translateX(-24px) scale(0.86);
+    filter: blur(2px) grayscale(1);
+  }
+  38%,
+  62% {
+    opacity: 0.22;
+    transform: translateX(-8px) scale(0.92);
+    filter: blur(1px) grayscale(1);
+  }
+  46%,
+  54% {
+    opacity: 1;
+    transform: translateX(0) scale(1.07);
+    filter: blur(0) grayscale(0);
   }
 }
 
 @keyframes timeline-dot {
   0%,
+  38%,
+  62%,
   100% {
-    opacity: 0.15;
+    opacity: 0.2;
     transform: scale(0.6);
   }
-  45%,
-  55% {
+  46%,
+  54% {
     opacity: 1;
-    transform: scale(1.4);
+    transform: scale(1.6);
   }
 }
 
