@@ -150,7 +150,7 @@ defineOgImage("GenericTemplate");
 
 <template>
   <div class="contain pb-16 sm:pb-20">
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-4xl mx-auto">
       <h1 class="font-bold tracking-tight text-3xl sm:text-4xl mb-2">
         Timeline
       </h1>
@@ -231,7 +231,7 @@ defineOgImage("GenericTemplate");
               />
             </svg>
 
-            <ol class="flex flex-col gap-1">
+            <ol class="flex flex-col gap-2 sm:gap-3">
               <li
                 v-for="(item, index) in group.items"
                 :key="item.key"
@@ -249,7 +249,7 @@ defineOgImage("GenericTemplate");
                   :to="item.href"
                   :target="item.external ? '_blank' : undefined"
                   :rel="item.external ? 'noopener' : undefined"
-                  class="row-body rounded-lg px-3 -mx-3 py-1.5 flex items-baseline gap-3 min-w-0 group"
+                  class="row-body rounded-xl px-3 -mx-3 py-3 sm:py-4 flex items-center gap-3 sm:gap-5 min-w-0 group"
                   :class="
                     item.href
                       ? 'transition-colors hover:bg-gray-100 dark:hover:bg-white/5'
@@ -287,7 +287,7 @@ defineOgImage("GenericTemplate");
                       </span>
                     </div>
                     <h3
-                      class="text-base sm:text-lg font-bold"
+                      class="mt-0.5 text-base sm:text-xl font-bold leading-snug"
                       :class="
                         item.href
                           ? 'transition-colors group-hover:text-blue-500 dark:group-hover:text-blue-400'
@@ -298,21 +298,21 @@ defineOgImage("GenericTemplate");
                     </h3>
                     <p
                       v-if="item.text"
-                      class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2"
+                      class="mt-1 text-sm sm:text-base text-gray-600 dark:text-gray-400 line-clamp-2"
                     >
                       {{ item.text }}
                     </p>
                   </div>
                   <div
                     v-if="item.image"
-                    class="thumb shrink-0 self-center w-20 sm:w-28 aspect-[16/10] bg-gray-200 dark:bg-gray-700"
+                    class="thumb shrink-0 w-24 sm:w-48 aspect-[16/10] bg-gray-200 dark:bg-gray-700"
                   >
                     <NuxtImg
                       :src="item.image"
                       alt=""
                       loading="lazy"
-                      width="112"
-                      height="70"
+                      width="192"
+                      height="120"
                       class="w-full h-full object-cover"
                     />
                   </div>
@@ -345,7 +345,10 @@ defineOgImage("GenericTemplate");
 .dot {
   position: absolute;
   left: 3px;
-  top: 0.95rem;
+  /* centred on the row; `translate` leaves `transform` free for the scroll
+     animation below */
+  top: 50%;
+  translate: 0 -50%;
   width: 9px;
   height: 9px;
   border-radius: 9999px;
@@ -412,42 +415,31 @@ defineOgImage("GenericTemplate");
   }
 }
 
-/* Only the row at the middle of the screen is lit: it grows and comes into
-   full colour. Everything else stays a faint, slightly blurred, greyscale
-   ghost so it doesn't compete with it. */
+/* The same curve as /projects: rows near the middle are full size, the rest
+   are slightly smaller and dimmer. */
 @keyframes timeline-focus {
   0%,
   100% {
-    opacity: 0.06;
-    transform: translateX(-24px) scale(0.86);
-    filter: blur(2px) grayscale(1);
+    opacity: 0.25;
+    transform: scale(0.9);
   }
-  38%,
-  62% {
-    opacity: 0.22;
-    transform: translateX(-8px) scale(0.92);
-    filter: blur(1px) grayscale(1);
-  }
-  46%,
-  54% {
+  40%,
+  60% {
     opacity: 1;
-    transform: translateX(0) scale(1.07);
-    filter: blur(0) grayscale(0);
+    transform: scale(1);
   }
 }
 
 @keyframes timeline-dot {
   0%,
-  38%,
-  62%,
   100% {
-    opacity: 0.2;
-    transform: scale(0.6);
+    opacity: 0.3;
+    transform: scale(0.7);
   }
-  46%,
-  54% {
+  40%,
+  60% {
     opacity: 1;
-    transform: scale(1.6);
+    transform: scale(1.3);
   }
 }
 
