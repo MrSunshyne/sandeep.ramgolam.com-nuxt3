@@ -23,8 +23,8 @@ const latest = featured.slice(0, 4);
         <p
           class="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8"
         >
-          Some projects I helped build, from open data about Mauritius to
-          community websites.
+          Things I've built over the years, for work, for the community and for
+          fun.
         </p>
         <NuxtLink to="/projects" class="view-all hidden lg:inline-block">
           <HandDrawnShape variant="pill" :hover-morph="true" color="#22c55e" />
