@@ -25,6 +25,13 @@ export default defineNuxtConfig({
           href: "/favicon.svg",
         },
       ],
+      script: [
+        {
+          src: "https://gc.zgo.at/count.js",
+          async: true,
+          "data-goatcounter": "https://mrsunshyne.goatcounter.com/count",
+        },
+      ],
     },
   },
 
