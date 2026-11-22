@@ -369,20 +369,44 @@ defineOgImage("GenericTemplate");
                   </div>
                   <div
                     v-if="item.image"
-                    class="thumb shrink-0 aspect-[16/10] bg-gray-200 dark:bg-gray-700"
-                    :class="
+                    class="thumb shrink-0"
+                    :class="[
                       projectView
                         ? 'w-full sm:w-80 lg:w-[26rem]'
-                        : 'w-full max-w-sm sm:w-56 lg:w-72'
-                    "
+                        : 'w-full max-w-sm sm:w-56 lg:w-72',
+                      item.screenshot
+                        ? ''
+                        : 'aspect-[16/10] bg-gray-200 dark:bg-gray-700',
+                    ]"
                   >
+                    <!-- bare project screenshots get a browser window; the
+                         older ones have one drawn into the image -->
+                    <BrowserFrame
+                      v-if="item.screenshot && !item.screenshot.framed"
+                      :address="item.screenshot.address"
+                    >
+                      <NuxtImg
+                        :src="item.image"
+                        alt=""
+                        loading="lazy"
+                        :width="projectView ? 416 : 288"
+                        class="screenshot-img block w-full h-auto"
+                      />
+                    </BrowserFrame>
+                    <!-- screenshots whole, at their own shape; other
+                         pictures fill the box -->
                     <NuxtImg
+                      v-else
                       :src="item.image"
                       alt=""
                       loading="lazy"
                       :width="projectView ? 416 : 288"
-                      :height="projectView ? 260 : 180"
-                      class="w-full h-full object-cover"
+                      :height="item.screenshot ? undefined : 180"
+                      :class="
+                        item.screenshot
+                          ? 'screenshot-img block w-full h-auto'
+                          : 'w-full h-full object-cover'
+                      "
                     />
                   </div>
                 </component>
@@ -396,6 +420,13 @@ defineOgImage("GenericTemplate");
 </template>
 
 <style scoped>
+/* A screenshot takes its own shape once it has loaded. Until then (lazy
+   loading, or an image that fails) it holds the usual screenshot shape, so
+   the row neither collapses nor jumps when the picture arrives. */
+.screenshot-img {
+  aspect-ratio: auto 1024 / 620;
+}
+
 .rail {
   position: absolute;
   left: 2px;
