@@ -390,7 +390,7 @@ defineOgImage("GenericTemplate");
                         alt=""
                         loading="lazy"
                         :width="projectView ? 416 : 288"
-                        class="block w-full h-auto"
+                        class="screenshot-img block w-full h-auto"
                       />
                     </BrowserFrame>
                     <!-- screenshots whole, at their own shape; other
@@ -404,7 +404,7 @@ defineOgImage("GenericTemplate");
                       :height="item.screenshot ? undefined : 180"
                       :class="
                         item.screenshot
-                          ? 'block w-full h-auto'
+                          ? 'screenshot-img block w-full h-auto'
                           : 'w-full h-full object-cover'
                       "
                     />
@@ -420,6 +420,13 @@ defineOgImage("GenericTemplate");
 </template>
 
 <style scoped>
+/* A screenshot takes its own shape once it has loaded. Until then (lazy
+   loading, or an image that fails) it holds the usual screenshot shape, so
+   the row neither collapses nor jumps when the picture arrives. */
+.screenshot-img {
+  aspect-ratio: auto 1024 / 620;
+}
+
 .rail {
   position: absolute;
   left: 2px;
