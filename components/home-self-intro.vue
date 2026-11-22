@@ -129,10 +129,8 @@
           class="w-10 h-10 text-black dark:text-white"
         />
         <span class="flex flex-col items-start text-left leading-snug">
-          <span class="hand-drawn-underline-hover">My timeline</span>
-          <span class="text-gray-500 text-sm"
-            >Every talk, post and project</span
-          >
+          <span class="hand-drawn-underline-hover">..and many more</span>
+          <span class="text-gray-500 text-sm">talks, blogs, and projects</span>
         </span>
       </NuxtLink>
     </div>
