@@ -20,6 +20,7 @@ export type TimelineItem = {
   meta?: string; // small line above the title (event name, company…)
   tags?: string[]; // event roles
   text?: string;
+  tech?: string[]; // what a project is built with
   href?: string;
   external?: boolean;
   image?: string; // site-relative path to a thumbnail
@@ -99,7 +100,10 @@ type EventInput = {
 type ProjectInput = {
   name: string;
   url?: string;
+  role?: string[];
+  company?: string;
   text?: string;
+  tech?: string[];
   started?: string; // "YYYY-MM-DD" (first commit) or "YYYY"
   status?: string;
   thumbnail?: string;
@@ -175,8 +179,17 @@ export function buildTimeline(sources: TimelineSources): TimelineItem[] {
       kind: "project",
       date,
       title: project.name,
-      meta: project.status === "archived" ? "archived" : undefined,
+      meta:
+        [
+          project.role?.length
+            ? `${project.role.join(", ").trim()} @ ${project.company}`
+            : project.company,
+          project.status === "archived" ? "archived" : undefined,
+        ]
+          .filter(Boolean)
+          .join(" · ") || undefined,
       text: project.text,
+      tech: project.tech,
       href: project.url,
       external: !!project.url,
       image: project.thumbnail

@@ -1,0 +1,4 @@
+# Cloudflare Pages redirects
+# The projects page is now the timeline filtered to projects
+/projects /timeline/?type=project 301
+/projects/ /timeline/?type=project 301

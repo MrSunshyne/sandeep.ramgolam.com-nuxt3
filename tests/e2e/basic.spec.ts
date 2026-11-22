@@ -55,11 +55,19 @@ test.describe("Navigation", () => {
     await expect(page.locator("h2", { hasText: "Education" })).toBeVisible();
   });
 
-  test("should navigate to projects page", async ({ page }) => {
-    await page.goto("/projects");
-    await expect(page.locator("h1")).toContainText("Projects");
-    // Check if there are project items
-    await expect(page.locator(".feed-item")).not.toHaveCount(0);
+  test("projects open as the timeline filtered to projects", async ({
+    page,
+  }) => {
+    // a direct load: the static page is unfiltered until the client applies
+    // ?type=, so wait for that rather than reading the first paint
+    await page.goto("/timeline/?type=project");
+    await expect(page.locator("h1")).toContainText("Timeline");
+    await expect(
+      page.locator(".timeline-row:not([data-kind=project])"),
+    ).toHaveCount(0, { timeout: 30000 });
+    await expect(
+      page.locator(".timeline-row[data-kind=project]"),
+    ).not.toHaveCount(0);
   });
 
   test("timeline mixes content kinds and filters by kind", async ({ page }) => {

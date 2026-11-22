@@ -68,15 +68,29 @@ const singular: Record<TimelineKind, string> = {
   wallpapers: "wallpaper drop",
 };
 
-// The URL is the source of truth so filtered views can be linked to
+// The URL is the source of truth so filtered views can be linked to.
+// The static build prerenders /timeline/ once, unfiltered, so the server
+// render and the first client render (hydration) both show everything; a
+// ?type= in the URL applies right after. Arriving by in-app navigation there
+// is nothing to hydrate, so the filter applies from the first render.
 const route = useRoute();
 const router = useRouter();
+const nuxtApp = useNuxtApp();
+const hydrated = ref(import.meta.client && !nuxtApp.isHydrating);
+onMounted(() => (hydrated.value = true));
 const currentKind = computed<TimelineKind | "all">(() => {
   const type = route.query.type;
-  return typeof type === "string" && type in kindByName
+  return hydrated.value && typeof type === "string" && type in kindByName
     ? (type as TimelineKind)
     : "all";
 });
+
+// Projects get the big screenshots, the description in full and the stack
+const projectView = computed(() => currentKind.value === "project");
+const projectLinks = [
+  { label: "GitHub", href: "https://github.com/MrSunshyne" },
+  { label: "Data projects", href: "https://data.ramgolam.com/" },
+];
 
 function setKind(kind: TimelineKind | "all") {
   const next = currentKind.value === kind ? "all" : kind;
@@ -159,6 +173,31 @@ defineOgImage("GenericTemplate");
       >
         {{ summary }}
       </p>
+      <div v-if="projectView" class="mt-3">
+        <p
+          class="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed"
+        >
+          Things I've built over the years, for work, for the community and for
+          fun.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-4">
+          <a
+            v-for="link in projectLinks"
+            :key="link.href"
+            :href="link.href"
+            target="_blank"
+            rel="noopener"
+            class="project-link"
+          >
+            <HandDrawnShape
+              variant="pill"
+              :hover-morph="true"
+              color="#22c55e"
+            />
+            <span class="project-link-text">{{ link.label }}</span>
+          </a>
+        </div>
+      </div>
 
       <div
         class="flex flex-wrap gap-x-1.5 gap-y-2 sm:gap-2 mt-6 sm:mt-8 mb-10 sm:mb-12"
@@ -231,7 +270,10 @@ defineOgImage("GenericTemplate");
               />
             </svg>
 
-            <ol class="flex flex-col gap-2 sm:gap-3">
+            <ol
+              class="flex flex-col"
+              :class="projectView ? 'gap-6 sm:gap-8' : 'gap-2 sm:gap-3'"
+            >
               <li
                 v-for="(item, index) in group.items"
                 :key="item.key"
@@ -295,32 +337,51 @@ defineOgImage("GenericTemplate");
                       </span>
                     </div>
                     <h3
-                      class="mt-0.5 text-lg sm:text-xl font-bold leading-snug [overflow-wrap:anywhere]"
-                      :class="
+                      class="mt-0.5 leading-snug [overflow-wrap:anywhere]"
+                      :class="[
+                        projectView
+                          ? 'text-2xl sm:text-3xl font-black tracking-tight'
+                          : 'text-lg sm:text-xl font-bold',
                         item.href
                           ? 'transition-colors group-hover:text-blue-500 dark:group-hover:text-blue-400'
-                          : ''
-                      "
+                          : '',
+                      ]"
                     >
                       {{ item.title }}
                     </h3>
                     <p
                       v-if="item.text"
-                      class="mt-1 text-sm sm:text-base text-gray-600 dark:text-gray-400 line-clamp-2"
+                      class="text-gray-600 dark:text-gray-400"
+                      :class="
+                        projectView
+                          ? 'mt-2 text-base sm:text-lg leading-relaxed'
+                          : 'mt-1 text-sm sm:text-base line-clamp-2'
+                      "
                     >
                       {{ item.text }}
                     </p>
+                    <ul
+                      v-if="projectView && item.tech?.length"
+                      class="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500"
+                    >
+                      <li v-for="tech in item.tech" :key="tech">{{ tech }}</li>
+                    </ul>
                   </div>
                   <div
                     v-if="item.image"
-                    class="thumb shrink-0 w-full max-w-sm sm:w-56 lg:w-72 aspect-[16/10] bg-gray-200 dark:bg-gray-700"
+                    class="thumb shrink-0 aspect-[16/10] bg-gray-200 dark:bg-gray-700"
+                    :class="
+                      projectView
+                        ? 'w-full sm:w-80 lg:w-[26rem]'
+                        : 'w-full max-w-sm sm:w-56 lg:w-72'
+                    "
                   >
                     <NuxtImg
                       :src="item.image"
                       alt=""
                       loading="lazy"
-                      width="288"
-                      height="180"
+                      :width="projectView ? 416 : 288"
+                      :height="projectView ? 260 : 180"
                       class="w-full h-full object-cover"
                     />
                   </div>
@@ -398,9 +459,9 @@ defineOgImage("GenericTemplate");
   }
 }
 
-/* Desktop: like /projects, the rows near the middle of the screen are in
-   focus and the rest recede as they scroll past. Only where scroll-driven
-   animations exist, and not with reduced motion. */
+/* Desktop: like the projects on the homepage, the rows near the middle of the
+   screen are in focus and the rest recede as they scroll past. Only where
+   scroll-driven animations exist, and not with reduced motion. */
 @media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
     /* the on-load reveal gives way to the scroll focus below */
@@ -431,8 +492,8 @@ defineOgImage("GenericTemplate");
   }
 }
 
-/* The same curve as /projects: rows near the middle are full size, the rest
-   are slightly smaller and dimmer. */
+/* The same curve as the homepage projects: rows near the middle are full
+   size, the rest are slightly smaller and dimmer. */
 @keyframes timeline-focus {
   0%,
   100% {
@@ -457,6 +518,32 @@ defineOgImage("GenericTemplate");
     opacity: 1;
     transform: scale(1.3);
   }
+}
+
+/* Links under the projects intro */
+.project-link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 24px;
+  transition: transform 0.3s ease-out;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+}
+
+.project-link-text {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #166534;
+}
+
+.dark .project-link-text {
+  color: #86efac;
 }
 
 /* Hand-drawn pill styles, as on /events */
