@@ -24,6 +24,10 @@ export type TimelineItem = {
   href?: string;
   external?: boolean;
   image?: string; // site-relative path to a thumbnail
+  // Project screenshots are shown whole, at their own shape, rather than
+  // cropped to the row's box. `framed`: the image already has a browser
+  // window drawn around it; otherwise the page draws one showing `address`.
+  screenshot?: { framed: boolean; address?: string };
 };
 
 export type TimelineYear = { year: number; items: TimelineItem[] };
@@ -107,6 +111,7 @@ type ProjectInput = {
   started?: string; // "YYYY-MM-DD" (first commit) or "YYYY"
   status?: string;
   thumbnail?: string;
+  framed?: boolean; // the thumbnail already has a browser window around it
 };
 type JobInput = {
   date_start: string;
@@ -194,6 +199,14 @@ export function buildTimeline(sources: TimelineSources): TimelineItem[] {
       external: !!project.url,
       image: project.thumbnail
         ? `/data/projects/${project.thumbnail}`
+        : undefined,
+      screenshot: project.thumbnail
+        ? {
+            framed: !!project.framed,
+            address: project.url
+              ?.replace(/^https?:\/\//, "")
+              .replace(/\/$/, ""),
+          }
         : undefined,
     });
   }
