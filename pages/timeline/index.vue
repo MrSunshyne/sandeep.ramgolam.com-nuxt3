@@ -249,7 +249,7 @@ defineOgImage("GenericTemplate");
                   :to="item.href"
                   :target="item.external ? '_blank' : undefined"
                   :rel="item.external ? 'noopener' : undefined"
-                  class="row-body rounded-xl px-3 -mx-3 py-3 sm:py-4 flex items-center gap-3 sm:gap-5 min-w-0 group"
+                  class="row-body rounded-xl px-3 -mx-3 py-3 sm:py-4 flex flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-5 min-w-0 group"
                   :class="
                     item.href
                       ? 'transition-colors hover:bg-gray-100 dark:hover:bg-white/5'
@@ -257,14 +257,22 @@ defineOgImage("GenericTemplate");
                   "
                 >
                   <div
-                    class="shrink-0 w-14 sm:w-16 whitespace-nowrap text-xs sm:text-sm font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase"
+                    class="hidden sm:block shrink-0 w-16 whitespace-nowrap text-sm font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase"
                   >
                     {{ formatTimelineDate(item.date) || "·" }}
                   </div>
-                  <div class="min-w-0 flex-1">
+                  <!-- phones: the date joins the label line and the picture
+                       drops below, so the title gets the full width -->
+                  <div class="min-w-0 basis-full sm:basis-auto sm:flex-1">
                     <div
                       class="flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5 min-w-0"
                     >
+                      <span
+                        v-if="formatTimelineDate(item.date)"
+                        class="sm:hidden text-[11px] font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500"
+                      >
+                        {{ formatTimelineDate(item.date) }}
+                      </span>
                       <span
                         class="text-[11px] font-semibold uppercase tracking-wide"
                         :style="{ color: kindByName[item.kind].color }"
@@ -287,7 +295,7 @@ defineOgImage("GenericTemplate");
                       </span>
                     </div>
                     <h3
-                      class="mt-0.5 text-base sm:text-xl font-bold leading-snug"
+                      class="mt-0.5 text-lg sm:text-xl font-bold leading-snug [overflow-wrap:anywhere]"
                       :class="
                         item.href
                           ? 'transition-colors group-hover:text-blue-500 dark:group-hover:text-blue-400'
@@ -305,7 +313,7 @@ defineOgImage("GenericTemplate");
                   </div>
                   <div
                     v-if="item.image"
-                    class="thumb shrink-0 w-28 sm:w-56 lg:w-72 aspect-[16/10] bg-gray-200 dark:bg-gray-700"
+                    class="thumb shrink-0 w-full max-w-sm sm:w-56 lg:w-72 aspect-[16/10] bg-gray-200 dark:bg-gray-700"
                   >
                     <NuxtImg
                       :src="item.image"
@@ -357,6 +365,14 @@ defineOgImage("GenericTemplate");
 
 .dark .dot {
   box-shadow: 0 0 0 3px var(--color-slate-800);
+}
+
+/* phones: rows stack, so the dot lines up with the label line at the top */
+@media (max-width: 639px) {
+  .dot {
+    top: 1.2rem;
+    translate: 0;
+  }
 }
 
 .timeline-row {
