@@ -171,10 +171,10 @@ const projects = [
   },
   {
     name: "Mauritius Reservoirs",
-    url: "https://mrsunshyne.github.io/mauritius-reservoirs/",
+    url: "https://reservoirs.ramgolam.com/",
     role: ["Maintainer"],
     tech: ["Vue3", "Three.js", "Vite"],
-    text: "The island's seven reservoirs in 3D, each a glass prism on its lake filled to its latest level, with a timeline of every bulletin since 2024",
+    text: "The island's seven reservoirs in 3D, each lake drawn down to its latest level with a gauge above it, 1 m terrain close-ups and a timeline of every bulletin since 2024",
     featured: true,
     thumbnail: "mauritius-reservoirs.jpg",
     started: "2020-02-04",
