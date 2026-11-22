@@ -1,16 +1,18 @@
 <script setup lang="ts">
 import { projects } from "~/data/projects";
 
-// The newest few, in the order the projects page lists them
+// The newest few featured ones, newest first
 const featured = projects.filter((p) => p.featured);
 const latest = featured.slice(0, 4);
 
-// The row after them points at the rest: a peek at what comes next, with the
-// very next project on top of the pile (painted last)
+// The row after them points at the rest, all of them on the timeline: a peek
+// at what comes next, with the very next project on top of the pile (painted
+// last)
 const upNext = featured.slice(4, 7).reverse();
 const firstYear = Math.min(
-  ...featured.map((p) => Number(p.started.slice(0, 4))),
+  ...projects.map((p) => Number(p.started.slice(0, 4))),
 );
+const projectsHref = "/timeline/?type=project";
 
 // SSR-stable id for the shared clipPath of the peek thumbnails
 const clipId = `projects-cta-clip-${useId()}`;
@@ -36,10 +38,10 @@ const clipId = `projects-cta-clip-${useId()}`;
           Things I've built over the years, for work, for the community and for
           fun.
         </p>
-        <NuxtLink to="/projects" class="view-all hidden lg:inline-block">
+        <NuxtLink :to="projectsHref" class="view-all hidden lg:inline-block">
           <HandDrawnShape variant="pill" :hover-morph="true" color="#22c55e" />
           <span class="view-all-text"
-            >See all {{ featured.length }} projects</span
+            >See all {{ projects.length }} projects</span
           >
         </NuxtLink>
       </div>
@@ -49,22 +51,21 @@ const clipId = `projects-cta-clip-${useId()}`;
           v-for="project in latest"
           :key="project.name"
           :project="project"
-          compact
         />
 
         <!-- Not a project: the way to the rest of them -->
         <article class="cta-item">
-          <NuxtLink to="/projects" class="cta-link group">
+          <NuxtLink :to="projectsHref" class="cta-link group">
             <div class="cta-info">
               <p
                 class="mb-2 text-xs sm:text-sm font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400"
               >
-                {{ featured.length - latest.length }} more since {{ firstYear }}
+                {{ projects.length - latest.length }} more since {{ firstYear }}
               </p>
               <h2
                 class="text-3xl sm:text-4xl font-black tracking-tight leading-none transition-colors group-hover:text-green-600 dark:group-hover:text-green-400"
               >
-                See all {{ featured.length }}
+                See all {{ projects.length }}
                 <span class="whitespace-nowrap"
                   >projects
                   <Icon

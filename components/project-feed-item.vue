@@ -5,16 +5,12 @@ type Project = {
   role: string[];
   company: string;
   text?: string;
-  tech?: string[];
   thumbnail: string;
   started?: string;
   status?: string;
 };
 
-const props = withDefaults(
-  defineProps<{ project: Project; compact?: boolean }>(),
-  { compact: false },
-);
+const props = defineProps<{ project: Project }>();
 
 // SSR-stable id: each row needs its own clipPath element
 const clipId = `project-clip-${useId()}`;
@@ -45,12 +41,7 @@ const meta = computed(() =>
           {{ meta }}
         </p>
         <h2
-          class="font-black tracking-tight leading-none transition-colors group-hover:text-green-600 dark:group-hover:text-green-400"
-          :class="
-            compact
-              ? 'text-3xl sm:text-4xl'
-              : 'text-3xl sm:text-4xl lg:text-5xl'
-          "
+          class="text-3xl sm:text-4xl font-black tracking-tight leading-none transition-colors group-hover:text-green-600 dark:group-hover:text-green-400"
         >
           {{ project.name }}
         </h2>
@@ -60,12 +51,6 @@ const meta = computed(() =>
         >
           {{ project.text }}
         </p>
-        <ul
-          v-if="project.tech?.length && !compact"
-          class="feed-tech mt-4 flex flex-wrap gap-x-3 gap-y-1 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500"
-        >
-          <li v-for="tech in project.tech" :key="tech">{{ tech }}</li>
-        </ul>
       </div>
 
       <div>
@@ -122,10 +107,6 @@ const meta = computed(() =>
   .feed-info {
     align-items: flex-end;
     text-align: right;
-  }
-
-  .feed-tech {
-    justify-content: flex-end;
   }
 }
 

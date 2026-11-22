@@ -16,7 +16,7 @@ const year = new Date().getFullYear();
           <a href="/about">About</a>
         </li>
         <li>
-          <a href="/projects">Projects</a>
+          <a href="/timeline/?type=project">Projects</a>
         </li>
         <li>
           <a href="/timeline">Timeline</a>

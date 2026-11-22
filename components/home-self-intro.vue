@@ -12,7 +12,7 @@
         <NuxtLink class="hand-drawn-underline" :to="{ path: '/blog' }"
           >thoughts</NuxtLink
         >,
-        <NuxtLink class="hand-drawn-underline" :to="{ path: '/projects' }"
+        <NuxtLink class="hand-drawn-underline" to="/timeline/?type=project"
           >projects</NuxtLink
         >
         and
