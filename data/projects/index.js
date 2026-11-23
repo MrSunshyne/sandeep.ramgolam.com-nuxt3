@@ -198,6 +198,18 @@ const projects = [
     status: "active",
   },
   {
+    name: "Mauritius Flights Dataset",
+    url: "https://github.com/MrSunshyne/mauritius-dataset-flights",
+    role: ["Maintainer"],
+    tech: ["Node.js", "GitHub Actions"],
+    text: "Arrivals and departures at SSR International Airport, read off its flight board every 10 minutes as JSON, with a daily archive since 23 November 2026",
+    featured: true,
+    thumbnail: "flights-dataset.jpg",
+    started: "2026-11-23",
+    company: "Open Source",
+    status: "active",
+  },
+  {
     name: "Cloud Hosting Mauritius",
     url: "https://mrsunshyne.github.io/cloud-hosting-mauritius/",
     role: ["Maintainer"],
