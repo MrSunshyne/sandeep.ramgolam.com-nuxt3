@@ -4,6 +4,18 @@
 // site shows it as it is instead of adding one.
 const projects = [
   {
+    name: "Area Estimator Mauritius",
+    url: "https://area.ramgolam.com/",
+    role: ["Maintainer"],
+    tech: ["Vue3", "Vite", "MapLibre", "PWA", "Cloudflare"],
+    text: "Measure a plot of land from your phone while standing on it: outline it on satellite imagery or walk its corners with GPS, and get the area in m², perches and arpents with an error range",
+    featured: true,
+    thumbnail: "area-estimator.jpg",
+    company: "Web Artisan",
+    started: "2026-11-25",
+    status: "active",
+  },
+  {
     name: "Moris 3D",
     url: "https://moris3d.ramgolam.com/",
     role: ["Maintainer"],
