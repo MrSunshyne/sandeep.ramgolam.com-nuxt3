@@ -67,14 +67,14 @@ defineOgImage("GenericTemplate");
               v-for="(post, index) in group.posts"
               :key="post.slug"
               class="blog-row"
-              :style="'--delay:' + index + 's'"
+              :style="'--delay:' + Math.min(index, 10) + 's'"
             >
               <NuxtLink
                 :href="`/blog/${post.slug}`"
                 class="rounded-lg px-3 -mx-3 py-1.5 transition-colors hover:bg-gray-100 dark:hover:bg-white/5 flex items-baseline gap-3 min-w-0 group"
               >
                 <div
-                  class="shrink-0 w-14 sm:w-16 whitespace-nowrap text-xs sm:text-sm font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase"
+                  class="shrink-0 w-14 sm:w-16 whitespace-nowrap text-xs sm:text-sm font-medium tracking-wide text-gray-500 dark:text-gray-400 uppercase"
                 >
                   {{
                     new Date(post.date).toLocaleDateString("en", {

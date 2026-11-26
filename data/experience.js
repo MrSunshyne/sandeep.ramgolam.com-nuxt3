@@ -110,11 +110,6 @@ const education = [
     year: "2019",
   },
   {
-    title: "MQA Approved Trainer",
-    institution: "Mauritius Qualifications Authority",
-    year: "2019",
-  },
-  {
     title: "Educators License",
     institution: "Mauritius Institute of Education",
     year: "2013",

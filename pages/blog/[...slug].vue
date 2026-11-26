@@ -88,7 +88,7 @@ const coverImage = computed(() => {
     </div>
 
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl flex flex-col lg:gap-8">
-      <article class="">
+      <article class="w-full min-w-0">
         <div
           class="mt-8 pb-24 dark:text-gray-300 dark:prose-pre:!bg-gray-800/60 prose prose-primary dark:prose-invert max-w-none mx-auto"
         >

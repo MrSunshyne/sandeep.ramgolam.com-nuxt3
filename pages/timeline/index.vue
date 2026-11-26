@@ -202,7 +202,12 @@ defineOgImage("GenericTemplate");
       <div
         class="flex flex-wrap gap-x-1.5 gap-y-2 sm:gap-2 mt-6 sm:mt-8 mb-10 sm:mb-12"
       >
-        <button class="pill-hand-drawn" @click="setKind('all')">
+        <button
+          type="button"
+          class="pill-hand-drawn"
+          :aria-pressed="currentKind === 'all'"
+          @click="setKind('all')"
+        >
           <HandDrawnShape
             variant="pill"
             :hover-morph="true"
@@ -279,7 +284,7 @@ defineOgImage("GenericTemplate");
                 :key="item.key"
                 class="timeline-row relative pl-7 sm:pl-8"
                 :data-kind="item.kind"
-                :style="'--delay:' + index + 's'"
+                :style="'--delay:' + Math.min(index, 10) + 's'"
               >
                 <span
                   class="dot"
@@ -299,7 +304,7 @@ defineOgImage("GenericTemplate");
                   "
                 >
                   <div
-                    class="hidden sm:block shrink-0 w-16 whitespace-nowrap text-sm font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase"
+                    class="hidden sm:block shrink-0 w-16 whitespace-nowrap text-sm font-medium tracking-wide text-gray-500 dark:text-gray-400 uppercase"
                   >
                     {{ formatTimelineDate(item.date) || "·" }}
                   </div>
@@ -311,7 +316,7 @@ defineOgImage("GenericTemplate");
                     >
                       <span
                         v-if="formatTimelineDate(item.date)"
-                        class="sm:hidden text-[11px] font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500"
+                        class="sm:hidden text-[11px] font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400"
                       >
                         {{ formatTimelineDate(item.date) }}
                       </span>
@@ -323,7 +328,7 @@ defineOgImage("GenericTemplate");
                       </span>
                       <span
                         v-if="item.meta"
-                        class="min-w-0 truncate text-xs font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase"
+                        class="min-w-0 truncate text-xs font-medium tracking-wide text-gray-500 dark:text-gray-400 uppercase"
                       >
                         {{ item.meta }}
                       </span>
@@ -362,7 +367,7 @@ defineOgImage("GenericTemplate");
                     </p>
                     <ul
                       v-if="projectView && item.tech?.length"
-                      class="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500"
+                      class="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400"
                     >
                       <li v-for="tech in item.tech" :key="tech">{{ tech }}</li>
                     </ul>
@@ -442,6 +447,10 @@ defineOgImage("GenericTemplate");
   color: #374151;
 }
 
+html.sepia .rail {
+  color: #cbb893;
+}
+
 .dot {
   position: absolute;
   left: 3px;
@@ -457,6 +466,10 @@ defineOgImage("GenericTemplate");
 
 .dark .dot {
   box-shadow: 0 0 0 3px var(--color-slate-800);
+}
+
+html.sepia .dot {
+  box-shadow: 0 0 0 3px #f1e7d0;
 }
 
 /* phones: rows stack, so the dot lines up with the label line at the top */
@@ -614,5 +627,15 @@ defineOgImage("GenericTemplate");
 
 .dark .pill-text {
   color: #9ca3af;
+}
+
+html.sepia .pill-text {
+  color: #5c4932;
+}
+
+html.sepia
+  .pill-hand-drawn
+  :deep(.hand-drawn-shape:not(.selected) .shape-path) {
+  stroke: #b8a582;
 }
 </style>

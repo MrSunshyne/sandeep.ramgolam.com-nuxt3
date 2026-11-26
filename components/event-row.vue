@@ -8,7 +8,7 @@
         <!-- meta line: event name + a label per role, each in its category color -->
         <div class="flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5 min-w-0">
           <div
-            class="min-w-0 truncate text-xs font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase"
+            class="min-w-0 truncate text-xs font-medium tracking-wide text-gray-500 dark:text-gray-400 uppercase"
           >
             {{ event.event_name }}
           </div>
@@ -46,7 +46,7 @@
               stroke-width="2.5"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="external-icon inline-block ml-1 sm:ml-0 sm:shrink-0 text-gray-400 dark:text-gray-500 transition-colors"
+              class="external-icon inline-block ml-1 sm:ml-0 sm:shrink-0 text-gray-500 dark:text-gray-400 transition-colors"
               aria-hidden="true"
             >
               <path d="M7 17l9.2-9.2M17 17V7H7" />
@@ -58,10 +58,26 @@
         </h2>
         <!-- logistics line: date + location, as subtle as the meta line -->
         <div
-          class="min-w-0 sm:truncate text-sm text-gray-400 dark:text-gray-500"
+          class="min-w-0 sm:truncate text-sm text-gray-500 dark:text-gray-400"
         >
           {{ shortDate
           }}<span v-if="event.location"> · {{ event.location }}</span>
+        </div>
+        <!-- Mobile: show multi-link actions directly since touch has no hover -->
+        <div
+          v-if="event.links?.length > 1"
+          class="flex sm:hidden flex-wrap gap-x-4 gap-y-1 pt-1.5"
+        >
+          <a
+            v-for="link in event.links"
+            :key="link.url"
+            :href="link.url"
+            target="_blank"
+            rel="noopener"
+            class="text-xs font-bold uppercase tracking-wider text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors whitespace-nowrap"
+          >
+            {{ link.title }}
+          </a>
         </div>
       </div>
 
@@ -93,7 +109,7 @@
         </div>
         <figcaption
           v-if="photoCredits.length"
-          class="mt-1 max-w-[12.5rem] truncate text-[11px] text-gray-400 dark:text-gray-500"
+          class="mt-1 max-w-[12.5rem] truncate text-[11px] text-gray-500 dark:text-gray-400"
         >
           {{
             event.photos.filter((p) => p.credit).length === 1

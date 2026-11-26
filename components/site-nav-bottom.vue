@@ -8,6 +8,8 @@ defineProps({
   },
 });
 
+const route = useRoute();
+
 const links = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
@@ -16,6 +18,19 @@ const links = [
   { label: "Events", href: "/events/" },
   { label: "Projects", href: "/timeline/?type=project" },
 ];
+
+function isLinkActive(href: string) {
+  const path = route.path;
+  if (href === "/") return path === "/";
+  if (href === "/about") return path === "/about" || path === "/about/";
+  if (href === "/blog/") return path.startsWith("/blog");
+  if (href === "/talks/") return path.startsWith("/talks");
+  if (href === "/events/") return path.startsWith("/events");
+  if (href === "/timeline/?type=project") {
+    return path.startsWith("/timeline") && route.query.type === "project";
+  }
+  return path === href;
+}
 </script>
 
 <template>
@@ -58,7 +73,12 @@ const links = [
               'hidden sm:block': link.label === 'About',
             }"
           >
-            <NuxtLink :href="link.href" class="nav-link">
+            <NuxtLink
+              :href="link.href"
+              class="nav-link"
+              :class="{ 'is-active': isLinkActive(link.href) }"
+              :aria-current="isLinkActive(link.href) ? 'page' : undefined"
+            >
               {{ link.label }}
             </NuxtLink>
           </li>
@@ -103,6 +123,11 @@ html.dark .site-nav-bottom > .nav-dock {
   border-color: rgb(71 85 105);
 }
 
+html.sepia .site-nav-bottom > .nav-dock {
+  --dock-bg: #f6eedc;
+  border-color: #cbb893;
+}
+
 .site-nav-bottom .dock-border {
   display: none;
   position: absolute;
@@ -122,9 +147,10 @@ html.dark .site-nav-bottom > .nav-dock {
     container-type: scroll-state;
   }
 
-  /* Non-homepage: the dock scrolls away with the page */
+  /* Non-homepage: the dock scrolls away with the page while staying above
+     full-viewport canvases (e.g. /quotes) */
   .site-nav-bottom.nav-not-sticky {
-    position: static;
+    position: relative;
   }
 
   .site-nav-bottom > .nav-dock {
@@ -152,6 +178,10 @@ html.dark .site-nav-bottom > .nav-dock {
 
 html.dark .site-nav-bottom .dock-border {
   color: #9ca3af; /* gray-400 */
+}
+
+html.sepia .site-nav-bottom .dock-border {
+  color: #5c4932;
 }
 
 .site-nav-bottom .nav-inner {
@@ -216,6 +246,10 @@ html.dark .site-nav-bottom .nav-link {
   color: #ffffff;
 }
 
+html.sepia .site-nav-bottom .nav-link {
+  color: #433422;
+}
+
 /* Hand-drawn underline on hover */
 .site-nav-bottom .nav-link::after {
   content: "";
@@ -250,7 +284,7 @@ html.dark .site-nav-bottom .nav-link {
 /* Active state - always show underline. Named for the View Transitions API:
    on route change the browser morphs it from the old item to the new one
    instead of fading. transition: none so the snapshot is never mid-fade. */
-.site-nav-bottom .nav-link.router-link-exact-active::after {
+.site-nav-bottom .nav-link.is-active::after {
   opacity: 1;
   -webkit-mask-size: auto 10px;
   mask-size: auto 10px;

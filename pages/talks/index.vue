@@ -19,11 +19,11 @@
               v-for="(talk, index) in group.talks"
               :key="talk.event_date + talk.event_name"
               class="talk-row rounded-lg px-3 -mx-3 py-1.5 transition-colors hover:bg-gray-100 dark:hover:bg-white/5"
-              :style="'--delay:' + index + 's'"
+              :style="'--delay:' + Math.min(index, 10) + 's'"
             >
               <div class="flex items-baseline gap-3 min-w-0">
                 <div
-                  class="shrink-0 w-10 sm:w-12 text-xs sm:text-sm font-medium tracking-wide text-gray-400 dark:text-gray-500 uppercase"
+                  class="shrink-0 w-10 sm:w-12 text-xs sm:text-sm font-medium tracking-wide text-gray-500 dark:text-gray-400 uppercase"
                 >
                   {{
                     new Date(talk.event_date).toLocaleDateString("en", {
@@ -57,7 +57,7 @@
                         stroke-width="2.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="external-icon inline-block ml-1 sm:ml-0 sm:shrink-0 text-gray-400 dark:text-gray-500 transition-colors"
+                        class="external-icon inline-block ml-1 sm:ml-0 sm:shrink-0 text-gray-500 dark:text-gray-400 transition-colors"
                         aria-hidden="true"
                       >
                         <path d="M7 17l9.2-9.2M17 17V7H7" />
@@ -69,13 +69,29 @@
                   </h3>
                   <!-- event details below the title, small and very subtle -->
                   <div
-                    class="min-w-0 sm:truncate text-xs sm:text-sm text-gray-400 dark:text-gray-500"
+                    class="min-w-0 sm:truncate text-xs sm:text-sm text-gray-500 dark:text-gray-400"
                   >
                     {{
                       [talk.event_name, talk.location]
                         .filter(Boolean)
                         .join(" · ")
                     }}
+                  </div>
+                  <!-- Mobile: show multi-link actions directly since touch has no hover -->
+                  <div
+                    v-if="talk.links?.length > 1"
+                    class="flex sm:hidden flex-wrap gap-x-4 gap-y-1 pt-1.5"
+                  >
+                    <a
+                      v-for="link in talk.links"
+                      :key="link.url"
+                      :href="link.url"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-xs font-bold uppercase tracking-wider text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors whitespace-nowrap"
+                    >
+                      {{ link.title }}
+                    </a>
                   </div>
                 </div>
               </div>
