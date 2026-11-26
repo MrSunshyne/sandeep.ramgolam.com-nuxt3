@@ -63,7 +63,7 @@
     <div class="container mx-auto px-4 mt-6 flex justify-center">
       <NuxtLink
         to="/wallpapers"
-        class="text-primary-500 hover:underline inline-flex items-center gap-1 font-medium"
+        class="text-green-700 dark:text-green-400 hover:underline inline-flex items-center gap-1 font-medium"
       >
         View all wallpapers
         <Icon name="solar:arrow-right-linear" />

@@ -249,9 +249,12 @@ const spin = (name: string) => {
   background: #ebfff585;
 }
 
-:deep(html.dark) .blog-summary,
-.dark .blog-summary {
+html.dark .blog-summary {
   @apply bg-gray-900;
+}
+
+html.sepia .blog-summary {
+  background: #e7dcc2;
 }
 
 .view-button {

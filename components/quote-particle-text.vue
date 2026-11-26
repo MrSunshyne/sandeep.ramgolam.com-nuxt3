@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const props = defineProps({
   textList: {
@@ -66,6 +66,8 @@ let uResolution;
 let uFrame;
 let vertexBuffer;
 let frame = 0;
+let rafId = 0;
+let handleResize = null;
 let vertices = [];
 const dVertices = [];
 const vertexCount = 10000 * 4;
@@ -206,9 +208,11 @@ onMounted(() => {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
     gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uResolution) {
+      gl.uniform2fv(uResolution, [canvas.width, canvas.height]);
+    }
   };
   setSize();
-  window.addEventListener("resize", setSize);
 
   const vertexShader = compileShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
   const fragmentShader = compileShader(
@@ -235,6 +239,12 @@ onMounted(() => {
   // Set initial resolution
   gl.uniform2fv(uResolution, [canvas.width, canvas.height]);
 
+  handleResize = () => {
+    setSize();
+    buildQuoteVertices();
+  };
+  window.addEventListener("resize", handleResize);
+
   // Initialize vertices
   for (let i = 0; i < vertexCount; i++) {
     dVertices.push(0);
@@ -242,6 +252,11 @@ onMounted(() => {
 
   render();
   textGeneration();
+});
+
+onBeforeUnmount(() => {
+  if (rafId) cancelAnimationFrame(rafId);
+  if (handleResize) window.removeEventListener("resize", handleResize);
 });
 
 const render = () => {
@@ -260,25 +275,23 @@ const render = () => {
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(dVertices), gl.STATIC_DRAW);
   gl.drawArrays(gl.POINTS, 0, dVertices.length / 4);
 
-  requestAnimationFrame(render);
+  rafId = requestAnimationFrame(render);
 };
 
-const textGeneration = () => {
+const buildQuoteVertices = () => {
   // Create temporary canvas for text measurement
   const refCtx = document.createElement("canvas").getContext("2d");
   vertices = [];
 
-  textIndex.value = (textIndex.value + 1) % props.textList.length;
-
   // Adjust font size and words per line based on screen width
-  const isSmallScreen = window.innerWidth < 1000;
-  const adjustedFontSize = isSmallScreen ? 8 : fontSize;
-  const maxWordsPerLine = isSmallScreen ? 4 : 5;
+  const viewportWidth = canvasRef.value?.width || window.innerWidth;
+  const isSmallScreen = viewportWidth < 768;
+  const maxWordsPerLine = isSmallScreen ? 3 : 5;
+  let adjustedFontSize = isSmallScreen ? 10 : fontSize;
 
   // Increase vertex count for smaller screens
-  const adjustedVertexCount = isSmallScreen ? vertexCount * 4 : vertexCount;
+  const adjustedVertexCount = isSmallScreen ? vertexCount * 2 : vertexCount;
 
-  refCtx.font = `${adjustedFontSize}px ${fontName}`;
   const text = props.textList[textIndex.value].text;
 
   // Split text into lines with a maximum of maxWordsPerLine words per line
@@ -288,12 +301,25 @@ const textGeneration = () => {
     lines.push(words.slice(i, i + maxWordsPerLine).join(" "));
   }
 
-  // Calculate canvas width and height based on the longest line
-  const maxWidth = Math.max(
+  // Fit longest line comfortably inside clip space: vertex shader scales x by
+  // 10 / viewportWidth, so maxWidth must stay below ~0.165 * viewportWidth
+  // to avoid clipping the left/right edges on narrow mobile viewports.
+  refCtx.font = `${adjustedFontSize}px ${fontName}`;
+  let maxWidth = Math.max(
     ...lines.map((line) => refCtx.measureText(line).width),
   );
-  refCtx.canvas.width = maxWidth || 100;
-  refCtx.canvas.height = adjustedFontSize * lines.length;
+  const maxAllowedWidth = viewportWidth * 0.165;
+  if (maxWidth > maxAllowedWidth && maxAllowedWidth > 0) {
+    adjustedFontSize = Math.max(
+      6,
+      Math.floor(adjustedFontSize * (maxAllowedWidth / maxWidth)),
+    );
+    refCtx.font = `${adjustedFontSize}px ${fontName}`;
+    maxWidth = Math.max(...lines.map((line) => refCtx.measureText(line).width));
+  }
+
+  refCtx.canvas.width = Math.ceil(maxWidth) || 100;
+  refCtx.canvas.height = Math.ceil(adjustedFontSize * lines.length) || 20;
   refCtx.font = `${adjustedFontSize}px ${fontName}`;
   refCtx.textBaseline = "top";
   refCtx.clearRect(0, 0, refCtx.canvas.width, refCtx.canvas.height);
@@ -311,6 +337,11 @@ const textGeneration = () => {
     refCtx.canvas.height,
   );
 
+  // Ensure dVertices has enough entries if viewport switched to small screen
+  while (dVertices.length < adjustedVertexCount) {
+    dVertices.push(0);
+  }
+
   // Generate vertices from text
   for (let i = 0; i < adjustedVertexCount; i += 4) {
     const j = i % data.length;
@@ -324,6 +355,11 @@ const textGeneration = () => {
 
     vertices.push(x, y, z, v);
   }
+};
+
+const textGeneration = () => {
+  textIndex.value = (textIndex.value + 1) % props.textList.length;
+  buildQuoteVertices();
 };
 </script>
 
@@ -345,13 +381,30 @@ canvas {
 
 .author {
   position: absolute;
-  bottom: 20px;
-  right: 40px;
-  color: white;
+  bottom: 92px;
+  right: 20px;
+  color: #111827;
   font-family: "Courier New", monospace;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   user-select: none;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .author {
+    bottom: 24px;
+    right: 40px;
+    font-size: 24px;
+  }
+}
+
+html.dark .author {
+  color: #f9fafb;
+}
+
+html.sepia .author {
+  color: #433422;
 }
 
 .tooltip {

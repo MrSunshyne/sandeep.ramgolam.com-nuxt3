@@ -2,12 +2,13 @@
   <div class="container work-page pb-16 sm:pb-20">
     <div class="flex items-center gap-3 print:hidden mb-6 sm:mb-8">
       <button
-        class="border-2 px-4 py-2 bg-green-500 text-white uppercase text-xs sm:text-sm font-bold rounded hover:bg-green-600 transition-colors"
+        type="button"
+        class="border-2 border-green-600 px-4 py-2 bg-green-600 text-white uppercase text-xs sm:text-sm font-bold rounded hover:bg-green-700 hover:border-green-700 transition-colors cursor-pointer"
         @click="print"
       >
         Print
       </button>
-      <p class="uppercase text-xs text-gray-600 dark:text-gray-400">
+      <p class="uppercase text-xs text-gray-600 dark:text-gray-300">
         This page is also my printable CV
       </p>
     </div>
@@ -24,7 +25,7 @@
         nature.
       </p>
       <div
-        class="grid lg:grid-cols-[2fr,1fr] gap-8 sm:gap-12 lg:gap-16 mb-12 sm:mb-16"
+        class="grid lg:grid-cols-[2fr_1fr] gap-8 sm:gap-12 lg:gap-16 mb-12 sm:mb-16"
       >
         <div
           class="space-y-4 sm:space-y-5 text-base sm:text-lg leading-relaxed"
@@ -36,13 +37,15 @@
             <a
               class="underline print:no-underline hover:opacity-80 font-bold"
               target="_blank"
+              rel="noopener"
               href="https://developers.google.com/profile/u/sandeepramgolam"
               >Google Developer Expert in Web Technologies.</a
-            >
-            <a
+            >{{ " "
+            }}<a
               class="underline print:no-underline hover:opacity-80 print:hidden"
               href="https://developers.google.com/community/experts"
               target="_blank"
+              rel="noopener"
               ><span>What is a GDE?</span></a
             >
           </p>
@@ -52,7 +55,7 @@
           </p>
           <p>
             I keep up with the industry trends and help to level up my team
-            whenever necesary.
+            whenever necessary.
           </p>
           <p>
             Working in the web development sphere for a decade and counting.
@@ -61,27 +64,41 @@
 
         <div class="text-sm sm:text-base space-y-2 sm:space-y-3 pt-2">
           <div>
-            <span class="uppercase text-xs text-gray-500 dark:text-gray-400"
+            <span class="uppercase text-xs text-gray-600 dark:text-gray-300"
               >email: </span
-            ><span class="break-all">sandeep@ramgolam.com</span>
+            ><a
+              href="mailto:sandeep@ramgolam.com"
+              class="break-all hover:underline"
+              >sandeep@ramgolam.com</a
+            >
           </div>
           <div>
-            <span class="uppercase text-xs text-gray-500 dark:text-gray-400"
+            <span class="uppercase text-xs text-gray-600 dark:text-gray-300"
               >website: </span
-            ><span class="break-all">https://sandeep.ramgolam.com</span>
+            ><a
+              href="https://sandeep.ramgolam.com"
+              class="break-all hover:underline"
+              >https://sandeep.ramgolam.com</a
+            >
           </div>
           <div>
-            <span class="uppercase text-xs text-gray-500 dark:text-gray-400"
+            <span class="uppercase text-xs text-gray-600 dark:text-gray-300"
               >github: </span
-            ><span class="break-all">https://github.com/MrSunshyne</span>
+            ><a
+              href="https://github.com/MrSunshyne"
+              target="_blank"
+              rel="noopener"
+              class="break-all hover:underline"
+              >https://github.com/MrSunshyne</a
+            >
           </div>
           <div>
-            <span class="uppercase text-xs text-gray-500 dark:text-gray-400"
+            <span class="uppercase text-xs text-gray-600 dark:text-gray-300"
               >mob: </span
             >57083334
           </div>
-          <div class="pt-2 text-gray-600 dark:text-gray-400">
-            Driver, Blogger & Gamer
+          <div class="pt-2 text-gray-600 dark:text-gray-300">
+            Driver, Blogger &amp; Gamer
           </div>
         </div>
       </div>
@@ -135,7 +152,9 @@
             >
               <component
                 :is="job.company_website ? 'a' : 'div'"
-                :href="job.company_website ? job.company_website : ''"
+                :href="job.company_website || undefined"
+                :target="job.company_website ? '_blank' : undefined"
+                :rel="job.company_website ? 'noopener' : undefined"
                 class="text-lg sm:text-xl lg:text-2xl font-bold dark:text-white text-black"
                 :class="job.company_website ? 'hover:underline' : ''"
               >
@@ -164,11 +183,11 @@
         <div class="space-y-6 sm:space-y-7">
           <div
             v-for="item in education"
-            :key="item.title"
+            :key="item.title + item.institution + item.year"
             class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0"
           >
             <div
-              class="font-bold tracking-wide text-sm sm:text-base text-gray-600 dark:text-gray-400 sm:pr-6 sm:w-24 flex-shrink-0"
+              class="font-bold tracking-wide text-sm sm:text-base text-gray-600 dark:text-gray-400 sm:pr-6 sm:w-36 whitespace-nowrap flex-shrink-0"
             >
               {{ item.year }}
             </div>
@@ -248,12 +267,13 @@
 
     <div class="flex items-center gap-3 print:hidden mt-8 sm:mt-12">
       <button
-        class="border-2 px-4 py-2 bg-green-500 text-white uppercase text-xs sm:text-sm font-bold rounded hover:bg-green-600 transition-colors"
+        type="button"
+        class="border-2 border-green-600 px-4 py-2 bg-green-600 text-white uppercase text-xs sm:text-sm font-bold rounded hover:bg-green-700 hover:border-green-700 transition-colors cursor-pointer"
         @click="print"
       >
         Print
       </button>
-      <p class="uppercase text-xs text-gray-600 dark:text-gray-400">
+      <p class="uppercase text-xs text-gray-600 dark:text-gray-300">
         This page is also my printable CV
       </p>
     </div>

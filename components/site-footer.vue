@@ -13,13 +13,13 @@ const year = new Date().getFullYear();
     <div class="flex items-center">
       <ul class="menu">
         <li>
-          <a href="/about">About</a>
+          <NuxtLink to="/about">About</NuxtLink>
         </li>
         <li>
-          <a href="/timeline/?type=project">Projects</a>
+          <NuxtLink to="/timeline/?type=project">Projects</NuxtLink>
         </li>
         <li>
-          <a href="/timeline">Timeline</a>
+          <NuxtLink to="/timeline">Timeline</NuxtLink>
         </li>
       </ul>
       <div class="ml-4 pl-4 border-l border-gray-300 dark:border-slate-600">

@@ -49,8 +49,8 @@ const formattedDate =
         <section class="flex items-center gap-4">
           <ul v-if="post" class="author-list">
             <li class="author-list-item">
-              <a
-                href="/about"
+              <NuxtLink
+                to="/about"
                 class="w-14 h-14 sm:w-20 sm:h-20 rounded-full overflow-hidden block"
               >
                 <img
@@ -58,24 +58,24 @@ const formattedDate =
                   src="https://github.com/MrSunshyne.png"
                   alt="Written by Sandeep Ramgolam"
                 />
-              </a>
+              </NuxtLink>
             </li>
           </ul>
 
           <section class="">
             <div
-              class="text-[11px] font-medium uppercase tracking-widest text-gray-400 dark:text-gray-500"
+              class="text-[11px] font-medium uppercase tracking-widest text-gray-500 dark:text-gray-400"
             >
               Written by
             </div>
             <h4
-              class="text-lg md:text-xl font-semibold text-gray-600 dark:text-gray-300"
+              class="text-lg md:text-xl font-semibold text-gray-700 dark:text-gray-200"
             >
-              <a :href="`/about`"> Sandeep Ramgolam </a>
+              <NuxtLink to="/about"> Sandeep Ramgolam </NuxtLink>
             </h4>
 
-            <div class="text-sm text-gray-500">
-              <time class="byline-meta-date" datetime="post.published_at">
+            <div class="text-sm text-gray-500 dark:text-gray-400">
+              <time class="byline-meta-date" :datetime="String(post.date)">
                 {{ formattedDate }}
               </time>
               <span class="byline-reading-time">
@@ -89,3 +89,10 @@ const formattedDate =
     </header>
   </div>
 </template>
+
+<style scoped>
+html.sepia .blog-intro {
+  background-color: #e8dec6;
+  border-color: rgb(67 52 34 / 0.12);
+}
+</style>

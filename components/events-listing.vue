@@ -188,7 +188,9 @@ function setCurrentEventType(eventType: EventType) {
         <button
           v-for="option in filterOptions"
           :key="option.type"
+          type="button"
           class="pill-hand-drawn"
+          :aria-pressed="currentEventType === option.type"
           @click="setCurrentEventType(option.type)"
         >
           <HandDrawnShape
@@ -261,7 +263,7 @@ function setCurrentEventType(eventType: EventType) {
             :event="event"
             :class="event.event_type?.[0]"
             class="event-box"
-            :style="'--delay:' + index + 's'"
+            :style="'--delay:' + Math.min(index, 10) + 's'"
           />
         </div>
       </section>
@@ -349,8 +351,25 @@ function setCurrentEventType(eventType: EventType) {
   }
 }
 
-:deep(.dark) .pill-text,
-.dark .pill-text {
+html.dark .pill-text {
   color: #9ca3af;
+}
+
+html.sepia .pill-text {
+  color: #5c4932;
+}
+
+html.sepia
+  .pill-hand-drawn
+  :deep(.hand-drawn-shape:not(.selected) .shape-path) {
+  stroke: #b8a582;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-box {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 </style>

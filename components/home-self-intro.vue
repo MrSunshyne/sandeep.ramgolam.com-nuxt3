@@ -37,7 +37,7 @@
         >
           organized
           <span class="font-bold text-purple-500">{{ organizerCount }}</span>
-          events </NuxtLink
+          events</NuxtLink
         >.
       </p>
     </div>
@@ -57,7 +57,9 @@
         />
         <span class="flex flex-col items-start text-left leading-snug">
           <span class="hand-drawn-underline-hover">Coders.mu</span>
-          <span class="text-gray-500 text-sm">Lead Organizer</span>
+          <span class="text-gray-500 dark:text-gray-400 text-sm"
+            >Lead Organizer</span
+          >
         </span>
       </a>
       <a
@@ -69,7 +71,9 @@
         <IconsLivestormIcon alt="Livestorm" class="w-10 h-10" />
         <span class="flex flex-col items-start text-left leading-snug">
           <span class="hand-drawn-underline-hover">Livestorm</span>
-          <span class="text-gray-500 text-sm">Sr. Front-end Engineer</span>
+          <span class="text-gray-500 dark:text-gray-400 text-sm"
+            >Sr. Front-end Engineer</span
+          >
         </span>
       </a>
       <a
@@ -84,7 +88,9 @@
         />
         <span class="flex flex-col items-start text-left leading-snug">
           <span class="hand-drawn-underline-hover">Biro.mu</span>
-          <span class="text-gray-500 text-sm">Co-Founder</span>
+          <span class="text-gray-500 dark:text-gray-400 text-sm"
+            >Co-Founder</span
+          >
         </span>
       </a>
       <a
@@ -99,7 +105,9 @@
         />
         <span class="flex flex-col items-start text-left leading-snug">
           <span class="hand-drawn-underline-hover">Upcode</span>
-          <span class="text-gray-500 text-sm">Co-Founder</span>
+          <span class="text-gray-500 dark:text-gray-400 text-sm"
+            >Co-Founder</span
+          >
         </span>
       </a>
       <a
@@ -116,7 +124,7 @@
           <span class="hand-drawn-underline-hover"
             >Google Developer Expert</span
           >
-          <span class="text-gray-500 text-sm">Web</span>
+          <span class="text-gray-500 dark:text-gray-400 text-sm">Web</span>
         </span>
       </a>
       <!-- Not a role: the way into everything above, in the order it happened -->
@@ -130,7 +138,9 @@
         />
         <span class="flex flex-col items-start text-left leading-snug">
           <span class="hand-drawn-underline-hover">..and many more</span>
-          <span class="text-gray-500 text-sm">talks, blogs, and projects</span>
+          <span class="text-gray-500 dark:text-gray-400 text-sm"
+            >talks, blogs, and projects</span
+          >
         </span>
       </NuxtLink>
     </div>

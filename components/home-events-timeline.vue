@@ -264,7 +264,7 @@ function openEvents(type: string) {
     <!-- px absorbs EventRow's -mx-3 hover bleed so rows never poke past the viewport -->
     <div class="max-w-3xl mx-auto mt-8 sm:mt-10 px-4 sm:px-6">
       <h3
-        class="text-xs sm:text-sm font-medium tracking-wide uppercase text-gray-400 dark:text-gray-500 mb-2"
+        class="text-xs sm:text-sm font-medium tracking-wide uppercase text-gray-500 dark:text-gray-400 mb-2"
       >
         Latest
       </h3>
@@ -298,6 +298,10 @@ function openEvents(type: string) {
   --c-competition: #f43f5e;
   --c-jury: #d97706;
   --dot-ring: #1e293b;
+}
+
+:global(html.sepia .events-timeline) {
+  --dot-ring: #f1e7d0;
 }
 
 .timeline-svg {

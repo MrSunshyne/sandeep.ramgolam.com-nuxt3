@@ -104,4 +104,10 @@ onBeforeUnmount(() => {
     100dvh - var(--dock-height-unstuck) - var(--hero-padding-y) * 2
   );
 }
+
+/* The bust is black line art on transparent background — invert in dark mode
+   so it stays crisp against slate-800. */
+html.dark .splash-wrapper :deep(canvas) {
+  filter: invert(0.92);
+}
 </style>

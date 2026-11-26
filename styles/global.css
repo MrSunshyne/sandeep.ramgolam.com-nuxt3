@@ -11,7 +11,8 @@
 }
 
 .layout-enter-active,
-.layout-leave-active .page-enter-active,
+.layout-leave-active,
+.page-enter-active,
 .page-leave-active {
   transition: opacity 1s ease;
 }
@@ -97,8 +98,37 @@ body,
   min-height: 100vh;
 }
 
+body {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.85);
+}
+
 /* the layout div carries the dark bg; paint the canvas too so the scrollbar
    track and overscroll area don't flash white in dark mode */
-.dark {
+html.dark,
+html.dark body {
   background-color: var(--color-slate-800);
+  color: var(--color-gray-100);
+}
+
+/* @nuxtjs/color-mode sets `.sepia` on <html>, which collides with Tailwind's
+   `.sepia { filter: sepia(100%) }` utility. Cancel the filter and apply a
+   proper warm-paper theme instead. */
+html.sepia {
+  filter: none !important;
+  background-color: #f1e7d0;
+  color: #433422;
+}
+
+html.sepia body {
+  background-color: #f1e7d0;
+  color: #433422;
+}
+
+html.sepia *::-webkit-scrollbar-thumb:vertical {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 120' preserveAspectRatio='none'><path transform='translate(50 0) rotate(90)' d='M8 4 Q3 3 2 8 Q1 12 2 20 T2 38 Q2 45 8 46 L15 46 Q35 47 60 46 T105 47 L112 46 Q117 45 118 40 Q119 35 118 25 T118 10 Q118 5 112 4 L100 4 Q75 3 50 4 T15 3 Z' fill='%23f6eedc' stroke='%235c4932' stroke-width='2.5' vector-effect='non-scaling-stroke'/></svg>");
+}
+
+html.sepia *::-webkit-scrollbar-thumb:horizontal {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 50' preserveAspectRatio='none'><path d='M8 4 Q3 3 2 8 Q1 12 2 20 T2 38 Q2 45 8 46 L15 46 Q35 47 60 46 T105 47 L112 46 Q117 45 118 40 Q119 35 118 25 T118 10 Q118 5 112 4 L100 4 Q75 3 50 4 T15 3 Z' fill='%23f6eedc' stroke='%235c4932' stroke-width='2.5' vector-effect='non-scaling-stroke'/></svg>");
 }
